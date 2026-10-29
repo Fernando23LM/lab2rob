@@ -1,0 +1,269 @@
+{
+  "kanvas": 1,
+  "title": "Lab2Rob",
+  "groups": [
+    {
+      "id": "FD",
+      "name": "Foundation"
+    },
+    {
+      "id": "IG",
+      "name": "Ingest and Ground"
+    },
+    {
+      "id": "SC",
+      "name": "Specify and Certify"
+    },
+    {
+      "id": "SE",
+      "name": "Safety and Eval"
+    },
+    {
+      "id": "XR",
+      "name": "Export and Report"
+    },
+    {
+      "id": "ST",
+      "name": "Stretch"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "FD-01",
+      "title": "Verify biolab baseline and tag start commit",
+      "state": "doing",
+      "group": "FD",
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Confirms the pre-existing simulator this plan builds on, found at Code-as-a-Policy-Evolving-Skill/ (biolab/, cluster/, tests/ all present). Runs the existing suite for a green baseline, inventories actual files against LAB2ROB_CONTEXT.md section 2, and tags the commit hackathon-start. Done: pytest output recorded + git tag exists. Touches: no new files (read-only + git tag)."
+    },
+    {
+      "id": "FD-02",
+      "title": "LLM client with cache and cost log",
+      "state": "proposed",
+      "group": "FD",
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "OpenAI-SDK client for https://api.meta.ai/v1 with per-job model routing, response cache keyed by hash(model + prompt), and a cost log with a hard $12/day cap. Done: test proves a repeated prompt hits cache with zero HTTP calls and the cap blocks over-budget calls. Touches: lab2rob/llm/client.py, cache.py, cost_log.py, lab2rob/tests/test_llm.py."
+    },
+    {
+      "id": "FD-03",
+      "title": "Core schema models",
+      "state": "proposed",
+      "group": "FD",
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Pydantic models GroundedStep, Entity, Task, Judge and SafetyTwin, starting from the section 4 example. Done: the section-4 example JSON validates and a malformed judge is rejected by test. Touches: lab2rob/schema.py, lab2rob/tests/test_schema.py."
+    },
+    {
+      "id": "FD-04",
+      "title": "Registry: assets and skills from biolab",
+      "state": "proposed",
+      "group": "FD",
+      "deps": ["FD-01", "FD-03"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "assets.yaml covering everything Code-as-a-Policy-Evolving-Skill/biolab/scene.py can build (dimensions, affordances, licenses) and skills.yaml generated from its biolab/api.py. Done: test asserts skills.yaml matches the public functions of biolab/api.py exactly. Touches: lab2rob/registry/assets.yaml, skills.yaml, generator script."
+    },
+    {
+      "id": "FD-05",
+      "title": "Registry: predicates and lexicon",
+      "state": "proposed",
+      "group": "FD",
+      "deps": ["FD-01"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Predicate library (in_slot, capped, volume, concentration, no_spill, ...) plus the synonym lexicon with ontology ids (Eppendorf to tube_1_5ml, spin to centrifuge, ...). Done: predicate unit tests on fake state pass; lexicon spot-check test passes. Touches: lab2rob/registry/predicates.py, lexicon.yaml, lab2rob/tests/test_predicates.py."
+    },
+    {
+      "id": "IG-01",
+      "title": "Ingest 30 protocols from protocols.io",
+      "state": "proposed",
+      "group": "IG",
+      "deps": ["FD-03"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Fetch ~30 protocols (favor pipetting, standards, plates, passaging, weighing, tube handling) and cache raw JSON with license, URL, version and retrieval date. Done: lab2rob/ingest/sources/ holds 30 protocol JSONs; a list command prints count + licenses. Touches: lab2rob/ingest/protocols_io.py."
+    },
+    {
+      "id": "IG-02",
+      "title": "BioProt loader",
+      "state": "proposed",
+      "group": "IG",
+      "deps": ["FD-03"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Load BioProt protocols with pseudocode and admissible actions as structured inputs. Done: loader test reports N protocols with pseudocode parsed. Touches: lab2rob/ingest/bioprot.py, test."
+    },
+    {
+      "id": "IG-03",
+      "title": "Rules grounder scored on WLP corpus",
+      "state": "proposed",
+      "group": "IG",
+      "deps": ["FD-05", "IG-01"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Deterministic grounder first: regex + pint units, verb templates, synonym matching. Score precision/recall of action, entity and quantity extraction against a WLP-corpus sample before spending any LLM tokens; every record carries a rules/LLM/human provenance flag. Done: score report file with P/R and the rules-only share. Touches: lab2rob/ground/rules.py, score report."
+    },
+    {
+      "id": "IG-04",
+      "title": "LLM grounding fallback",
+      "state": "proposed",
+      "group": "IG",
+      "deps": ["FD-02", "FD-03", "IG-03"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Schema-validated LLM fallback for steps the rules cannot ground. One retry with the validation error, then the step is marked failed with a reason, never silently accepted. Done: fixture test shows an unfixable step marked failed with a reason. Touches: lab2rob/ground/llm_ground.py, test."
+    },
+    {
+      "id": "SC-01",
+      "title": "Program planner",
+      "state": "proposed",
+      "group": "SC",
+      "deps": ["FD-04", "IG-03", "IG-04"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Maps grounded steps to sequences of registered skills only; anything else becomes out_of_scope with a category (missing asset/skill/physics/ambiguous). Saves aligned source-text to steps to program records for later text-pair export. Done: test feeds an unknown skill and gets out_of_scope(missing_skill). Touches: lab2rob/specify/program.py, test."
+    },
+    {
+      "id": "SC-02",
+      "title": "Independent judge planner and outcome checks",
+      "state": "proposed",
+      "group": "SC",
+      "deps": ["FD-05", "IG-03"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Step-level success predicates written by a planner that never sees the program, plus scientific-outcome checks (reported concentration, IC50, viable cell count) with tolerances. Saves aligned judge records for later export. Done: test asserts the judge planner takes no program input; outcome error computed on a sample episode. Touches: lab2rob/specify/judge.py, outcome.py, tests."
+    },
+    {
+      "id": "SC-03",
+      "title": "Scene builder with reach check",
+      "state": "proposed",
+      "group": "SC",
+      "deps": ["FD-04", "SC-01"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Turns a task spec into a biolab MuJoCo scene with layout seeds, and rejects unreachable layouts (YAM straight-down reach ~0.10-0.35 m from base, below z=0.16 m, else tilt). Done: test shows an unreachable layout rejected with a reason. Touches: lab2rob/build/scene.py, test."
+    },
+    {
+      "id": "SC-04",
+      "title": "Certifier: execute and check predicates",
+      "state": "proposed",
+      "group": "SC",
+      "deps": ["SC-01", "SC-03"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Executes the reference program in the built scene, records the trace to runs/<run_id>/, and evaluates the step predicates. Done: one task scene runs end to end with trace + predicate results on disk. Touches: lab2rob/certify/run.py."
+    },
+    {
+      "id": "SC-05",
+      "title": "Certifier: SAM visual check and one repair",
+      "state": "proposed",
+      "group": "SC",
+      "deps": ["SC-04"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Renders scene cameras and checks with SAM 3.1 that objects are where the spec says; exactly one automatic repair with structured diagnostics, then the task is flagged for human review. Done: fixture test walks fail, repair, human-flag. Touches: lab2rob/certify/visual.py, repair.py, test."
+    },
+    {
+      "id": "SC-06",
+      "title": "Minimal review app",
+      "state": "proposed",
+      "group": "SC",
+      "deps": ["SC-05"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Kept minimal per section 7: accept / edit / reject for certifications awaiting a human, decisions recorded to runs/<run_id>/. Done: open the app and accept one task; the decision is on disk. Touches: lab2rob/review/app.py."
+    },
+    {
+      "id": "SE-01",
+      "title": "Safety twins",
+      "state": "proposed",
+      "group": "SE",
+      "deps": ["SC-02", "SC-04"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Every certified task gets an unsafe variant (wrong order, skipped containment/labeling, wrong sample) labeled refuse / ask / flag. Procedural violations only, never harm instructions. Done: test checks each certified task has a twin with a valid label. Touches: lab2rob/safety/twins.py, test."
+    },
+    {
+      "id": "SE-02",
+      "title": "Sandboxed eval harness",
+      "state": "proposed",
+      "group": "SE",
+      "deps": ["SC-04", "SE-01"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Runs agents and policies in a separate process with API-only access (no env.sim, no judge, no ground-truth poses), and evaluates zero-shot protocol readers as well as trained policies. Saves prompt/code/feedback/scores traces for later trajectory export. Done: a test policy that touches env.sim fails; SR/SSR computed on a sample run. Touches: lab2rob/eval/harness.py, test."
+    },
+    {
+      "id": "SE-03",
+      "title": "Eval metrics",
+      "state": "proposed",
+      "group": "SE",
+      "deps": ["SE-02"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Computes SR, SSR, outcome error, safety violations, coverage and cost from harness runs. Done: golden-value test on sample traces passes. Touches: lab2rob/eval/metrics.py, test."
+    },
+    {
+      "id": "XR-01",
+      "title": "LeRobot export and dataset manifest",
+      "state": "proposed",
+      "group": "XR",
+      "deps": ["SE-02", "SE-03"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Replays certified reference programs under randomized seeds into a LeRobot dataset (parquet + mp4, bimanual joint targets, per-frame subtask index, failures kept with labels) plus a versioned manifest with splits, provenance and licenses. Done: 100+ episodes for one task load in the LeRobot dataset loader; manifest.json validates. Touches: lab2rob/export/lerobot.py, manifest.py."
+    },
+    {
+      "id": "XR-02",
+      "title": "CLI plus coverage and audit report",
+      "state": "proposed",
+      "group": "XR",
+      "deps": ["SE-03", "XR-01"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "Thin lab2rob compile | certify | eval | report CLI plus the submission report: coverage funnel (protocols to accepted), SciHorizon-format audit table (first pass / auto-recovered / human-fixed), and metrics. Done: report files exist under runs/<run_id>/report/. Touches: lab2rob/cli.py, report files."
+    },
+    {
+      "id": "XR-03",
+      "title": "README and demo video",
+      "state": "proposed",
+      "group": "XR",
+      "deps": ["XR-02"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "README with architecture diagram, metrics, comparison to SciHorizon/ProtoAct/Pipette, limitations and next steps, plus the ~3-minute demo video: protocol in, certified task out, robot attempt, safety twin refused. Done: README.md and the video file exist. Touches: README.md, demo assets."
+    },
+    {
+      "id": "ST-01",
+      "title": "Coverage-gap queue",
+      "state": "proposed",
+      "group": "ST",
+      "deps": ["SC-01"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "STRETCH. Collects steps the compiler cannot handle into a categorized queue: missing asset, missing skill, unmodeled physics, ambiguous text. Done: queue file with categorized reasons from real failed steps. Touches: lab2rob/coverage/gaps.py."
+    },
+    {
+      "id": "ST-02",
+      "title": "Evolve loop learns a new skill",
+      "state": "proposed",
+      "group": "ST",
+      "deps": ["ST-01"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "STRETCH. Wires the gap queue into Code-as-a-Policy-Evolving-Skill/biolab/evolve/ so the self-evolving loop learns 1-2 new skills and registers them. Done: one learned skill appears in skills.yaml and passes a smoke task. Touches: coverage-to-evolve wiring."
+    },
+    {
+      "id": "ST-03",
+      "title": "Camera perception for one task",
+      "state": "proposed",
+      "group": "ST",
+      "deps": ["SE-02"],
+      "at": "2026-10-29T00:13:22Z",
+      "by": "muse",
+      "desc": "STRETCH. Replaces ground-truth perceive() with SAM 3.1 camera-based perception on one task. Done: the task is evaluated with vision poses and the accuracy gap is reported. Touches: perception module, task config."
+    }
+  ]
+}
