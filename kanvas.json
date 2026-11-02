@@ -417,12 +417,19 @@
     {
       "id": "XR-03",
       "title": "README and demo video",
-      "state": "todo",
+      "state": "doing",
       "group": "XR",
       "deps": ["XR-02"],
       "at": "2026-10-29T00:13:22Z",
       "by": "muse",
-      "desc": "README with architecture diagram, metrics, comparison to SciHorizon/ProtoAct/Pipette, limitations and next steps, plus the ~3-minute demo video: protocol in, certified task out, robot attempt, safety twin refused. Done: README.md and the video file exist. Touches: README.md, demo assets."
+      "desc": "README with architecture diagram, metrics, comparison to SciHorizon/ProtoAct/Pipette, limitations and next steps, plus the ~3-minute demo video: protocol in, certified task out, robot attempt, safety twin refused. Done: README.md and the video file exist. Touches: README.md, demo assets.",
+      "notes": [
+        {
+          "at": "2026-11-02T17:11:41Z",
+          "by": "muse",
+          "text": "Plan: survey repo (context doc, reports, metrics); write README with architecture diagram, metrics, comparison, limitations, next steps; video shot-list for the human to record. Note: sandbox cannot reach GitHub (no creds), so commits stay local until the human pushes."
+        }
+      ]
     },
     {
       "id": "ST-01",
