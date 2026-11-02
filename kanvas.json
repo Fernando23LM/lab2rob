@@ -417,7 +417,7 @@
     {
       "id": "XR-03",
       "title": "README and demo video",
-      "state": "doing",
+      "state": "review",
       "group": "XR",
       "deps": ["XR-02"],
       "at": "2026-10-29T00:13:22Z",
@@ -428,6 +428,11 @@
           "at": "2026-11-02T17:11:41Z",
           "by": "muse",
           "text": "Plan: survey repo (context doc, reports, metrics); write README with architecture diagram, metrics, comparison, limitations, next steps; video shot-list for the human to record. Note: sandbox cannot reach GitHub (no creds), so commits stay local until the human pushes."
+        },
+        {
+          "at": "2026-11-02T17:17:40Z",
+          "by": "muse",
+          "text": "README.md exists with pipeline diagram, verified quickstart, metrics, SciHorizon/ProtoAct/Pipette comparison, limitations, and next steps. demo_assets/demo.mp4 is a 47s silent reel (sim clips + caption cards, built by make_demo.py); SHOTS.md has the shot list and narration for the 3-minute narrated cut, which needs a human to screen-record the review app and read the voiceover. Committed locally as 94bd702 + board state; I cannot push from the sandbox, so run git push to share with Claude Code. To check: read the README quickstart and play demo.mp4."
         }
       ]
     },
