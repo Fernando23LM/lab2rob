@@ -1,0 +1,1529 @@
+{
+ "protocol_id": 36027,
+ "uri": "passaging-cancer-organoid-cultures-bfe3jjgn",
+ "doi": "dx.doi.org/10.17504/protocols.io.bfe3jjgn",
+ "url": "https://www.protocols.io/view/passaging-cancer-organoid-cultures-bfe3jjgn",
+ "title": "Passaging cancer organoid cultures",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:14:19Z",
+ "query": "passaging",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Hazel",
+    "last_name": "Rogers",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "03CDBCCAF8CC11ED9D4302C0B41BC903",
+    "username": "hazel-rogers",
+    "name": "Hazel Rogers",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Laura",
+    "last_name": "Letchford",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Laura Letchford",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Sara",
+    "last_name": "Vieira",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Sara Vieira",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Maria",
+    "last_name": "Garcia-Casado",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Maria Garcia-Casado",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Mya",
+    "last_name": "Fekry-Troll",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Mya Fekry-Troll",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Charlotte",
+    "last_name": "Beaver",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Charlotte Beaver",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Rachel",
+    "last_name": "Nelson",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "03E4407FF8CC11ED9D4302C0B41BC903",
+    "username": "rachel-nelson",
+    "name": "Rachel Nelson",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "F96402385B2A11EFA2EF0A58A9FEAC02",
+     "file_name": "photo.jpg",
+     "url": "https://files.protocols.io/external/photo-F96402385B2A11EFA2EF0A58A9FEAC02.jpg",
+     "mime": "image/png",
+     "size": 800,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1723742560
+    }
+   },
+   {
+    "first_name": "Hayley",
+    "last_name": "Francies",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "03D06E9CF8CC11ED9D4302C0B41BC903",
+    "username": "m4tle1y1z1s4yle1",
+    "name": "Hayley Francies",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Mathew",
+    "last_name": "Garnett",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "03D07A41F8CC11ED9D4302C0B41BC903",
+    "username": "mathew-garnett1",
+    "name": "Mathew Garnett",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "1. Thaw BME2 aliquot overnight at 4 \u00b0C and dilute 4:1 with appropriate organoid media (tissue specific) to make an 80% stock \n1. Ensure cell culture plates have been stored overnight in 37 \u00b0C incubator\n1. Pre-warm organoid culture media to room temperature\n\n",
+  "created_on": 1587548077,
+  "creator": {
+   "affiliation": "Dr",
+   "affiliation_url": null,
+   "affiliations": [
+    {
+     "affiliation": "Dr",
+     "is_default": true,
+     "job_title": null,
+     "url": null
+    }
+   ],
+   "badges": [
+    {
+     "id": 2,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/bronze.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/bronze.svg"
+     },
+     "name": "Author"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": null,
+   "name": "Hazel Rogers",
+   "username": "hazel-rogers"
+  },
+  "cross_cloud_origin": null,
+  "description": "This protocol describes the passaging of organoid cultures. It has been developed by the organoid derivation team within the Cellular Generation and Phenotyping Group at the Wellcome Sanger Institute. The team has extensive experience passaging and expanding organoid models. The method described has mainly been used for the passaging cancer organoids with successful propagation of organoids derived from colon, pancreas and oesophageal tumours. ",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.bfe3jjgn",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "848BB160847C11EAB53C112B1A2624CA",
+  "guidelines": "**General Tips**\n\n1. We generally use low split ratios of 1:3 or 1:2 with our organoid cultures. We will also passage to the same or a lower number of wells if organoids are not growing (see troubleshooting below).\n1. We use 5 ml Eppendorf tubes to help with sterility. However, if you do not have access to these tubes any alternative sterile tubes of appropriate volume can be used.\n1. Cold PBS is helpful for resolving some pelleting issues (see toubleshooting below). Therefore it is useful to keep a bottle of PBS in fridge.\n\n\n**Reasons for passaging organoids**\n  \n[Reasons for passaging.png]](https://content.protocols.io/public/417fb9cd53044f7c6eb3e93de0e730f2c4aafce8332e96e3c04a19c0dd149ad8/b63ebc2j7.png)\n \n**Troubleshooting**\n[Troubleshooting.png]](https://content.protocols.io/public/417fb9cd53044f7c6eb3e93de0e730f2c4aafce8332e96e3c04a19c0dd149ad8/b6trbc2j7.png)\n \n \n",
+  "id": 36027,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 622651,
+  "keywords": ",Organoids, cancer, passage, propogation, passaging cancer organoid culture, passaging of organoid culture, cancer organoid cultures this protocol, passaging cancer organoid, cancer organoids with successful propagation, organoid culture, organoid derivation team within the cellular generation, organoid derivation team, organoid, expanding organoid model, organoid model, cellular generation, passaging, oesophageal tumour",
+  "link": "",
+  "manuscript_citation": "",
+  "materials": [
+   {
+    "id": 122320,
+    "guid": "419C4FD5341F11EE9D4302C0B41BC903",
+    "name": "Costar\u00ae 6-Well Flat-Bottom Plate, Tissue Culture-Treated 50 Plates\r",
+    "mol_weight": 0,
+    "sku": "38015",
+    "url": "https://www.stemcell.com/products/costar-6-well-flat-bottom-plate-tissue-culture-treated.html",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 82,
+     "name": "STEMCELL Technologies Inc.",
+     "link": "http://www.stemcell.com/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 139734,
+    "guid": "41A464F5341F11EE9D4302C0B41BC903",
+    "name": "TrypLE\u2122 Express Enzyme",
+    "mol_weight": 0,
+    "sku": "12604013",
+    "url": "https://www.thermofisher.com/order/catalog/product/12604013",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 95,
+     "name": "Thermo Fisher Scientific",
+     "link": "https://www.thermofisher.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 204129,
+    "guid": "41ACD1C2341F11EE9D4302C0B41BC903",
+    "name": "Fisherbrand\u2122 Cell Scrapers",
+    "mol_weight": 0,
+    "sku": "11587692",
+    "url": "https://www.fishersci.co.uk/shop/products/fisherbrand-cell-scrapers-3/p-3821025",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 31,
+     "name": "Fisher Scientific",
+     "link": "https://www.fishersci.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 204333,
+    "guid": "41AD16F4341F11EE9D4302C0B41BC903",
+    "name": "Falcon\u2122 15mL Conical Centrifuge Tubes",
+    "mol_weight": 0,
+    "sku": "14-959-53A",
+    "url": "https://www.fishersci.com/shop/products/falcon-15ml-conical-centrifuge-tubes-5/p-193301",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 31,
+     "name": "Fisher Scientific",
+     "link": "https://www.fishersci.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 205510,
+    "guid": "41AEEA28341F11EE9D4302C0B41BC903",
+    "name": "DPBS no calcium no magnesium",
+    "mol_weight": 0,
+    "sku": "14190144",
+    "url": "https://www.thermofisher.com/order/catalog/product/14190144",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 95,
+     "name": "Thermo Fisher Scientific",
+     "link": "https://www.thermofisher.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 347387,
+    "guid": "424B40FF341F11EE9D4302C0B41BC903",
+    "name": "Cultrex\u00ae Reduced Growth Factor Basement Membrane Matrix Type 2 (BME 2)",
+    "mol_weight": 0,
+    "sku": "3533-010-02",
+    "url": "https://trevigen.com/products-services/physiologic-cell-culture/extracellular-matrix-proteins/physiologic-cell-culture-extracellular-matrix-proteins-cultrex-bme/physiologic-cell-culture-extracellular-matrix-proteins-cultrex-bme-organoid-qualified/cultrex-r",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 669,
+     "name": "Trevigen",
+     "link": "https://trevigen.com/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 349761,
+    "guid": "4250A8AA341F11EE9D4302C0B41BC903",
+    "name": "Falcon 50mL Conical Centrifuge Tubes",
+    "mol_weight": 0,
+    "sku": "14-432-22",
+    "url": "https://www.fishersci.com/shop/products/falcon-50ml-conical-centrifuge-tubes-2/p-193321",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 31,
+     "name": "Fisher Scientific",
+     "link": "https://www.fishersci.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 404640,
+    "guid": "42555306341F11EE9D4302C0B41BC903",
+    "name": "Eppendorf Tubes 5.0 ml",
+    "mol_weight": 0,
+    "sku": "0030122321",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 214,
+     "name": "Eppendorf",
+     "link": "https://www.eppendorf.com",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   }
+  ],
+  "materials_text": "MATERIALS\n Costar\u00ae 6-Well Flat-Bottom Plate, Tissue Culture-Treated 50 Plates\r STEMCELL Technologies Inc. Catalog #38015 \n TrypLE\u2122 Express Enzyme Thermo Fisher Scientific Catalog #12604013 \n Fisherbrand\u2122 Cell Scrapers Fisher Scientific Catalog #11587692 \n Falcon\u2122 15mL Conical Centrifuge Tubes Fisher Scientific Catalog #14-959-53A \n DPBS no calcium no magnesium Thermo Fisher Scientific Catalog #14190144 \n Cultrex\u00ae Reduced Growth Factor Basement Membrane Matrix Type 2 (BME 2) Trevigen Catalog #3533-010-02 \n Falcon 50mL Conical Centrifuge Tubes Fisher Scientific Catalog #14-432-22 \n Eppendorf Tubes 5.0 ml Eppendorf Catalog #0030122321 \n **Equipment**\n\n1. Sterile cell culture hood\n1. Centrifuge\n1. 1000 \u00b5l and 200 \u00b5l pipettes and tips\n1. Pipetteboy\n1. Stripettes\n1. 37oC waterbath\n1. 37oC humidified incubator (5% CO2)\n1. Light microscope\n\n",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 1753350627,
+   "file_name": "b6thbc2j7.jpg",
+   "guid": "A0BD3B43687311F08F960A58A9FEAC02",
+   "height": 0,
+   "mime": "image/jpeg",
+   "scan_status": 0,
+   "size": 70059,
+   "url": "https://files.protocols.io/external/b6thbc2j7-A0BD3B43687311F08F960A58A9FEAC02.jpg",
+   "width": 0
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1594115945,
+  "reserved_doi": "",
+  "space_id": 2250,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 3556,
+   "number_of_steps": 14,
+   "number_of_bookmarks": 19,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 467,
+   "number_of_runs": 0,
+   "number_of_votes": 3,
+   "number_of_reagents": 16,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 6,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": "We use this protocol and it's working"
+  },
+  "steps": [
+   {
+    "id": 922803,
+    "guid": "97BB77E0847F11EAB53C112B1A2624CA",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "<p>Process Diagram</p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": " \n[Passaging.png]](https://content.protocols.io/public/417fb9cd53044f7c6eb3e93de0e730f2c4aafce8332e96e3c04a19c0dd149ad8/b7qcbc2j7.png)\n \n   \n",
+    "data": null,
+    "protocol_id": 36027,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 922839,
+    "guid": "1741DCC0849411EAB53C112B1A2624CA",
+    "previous_id": 923874,
+    "previous_guid": "BC7D6920854311EAAE7161651166D294",
+    "section": "<p>Protocol</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Using a P1000 pipette, detach BME2 drops from the plate. (Optional - detach BME2 drops using a cell-scraper; recommended for passaging a large number of plates).",
+    "data": null,
+    "protocol_id": 36027,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 922841,
+    "guid": "4C1BAD90849411EAB53C112B1A2624CA",
+    "previous_id": 922839,
+    "previous_guid": "1741DCC0849411EAB53C112B1A2624CA",
+    "section": "<p>Protocol</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Pipette suspension up and down multiple times to dissociate organoids from BME2 and transfer to an approproate size tube using a P1000 pipette or 10 mL stripette.\n",
+    "data": null,
+    "protocol_id": 36027,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 922867,
+    "guid": "5F2B6C20849B11EAB53C112B1A2624CA",
+    "previous_id": 922841,
+    "previous_guid": "4C1BAD90849411EAB53C112B1A2624CA",
+    "section": "<p>Protocol</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Wash wells with TrypLE (approx 1 mL per well of a 6 well plate) to collect any remaining organoids and add to the collection tube.\n",
+    "data": null,
+    "protocol_id": 36027,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 922869,
+    "guid": "86B72BD0849B11EAB53C112B1A2624CA",
+    "previous_id": 922867,
+    "previous_guid": "5F2B6C20849B11EAB53C112B1A2624CA",
+    "section": "<p>Protocol</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate at 37 \u00b0C  \n",
+    "data": null,
+    "protocol_id": 36027,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 922871,
+    "guid": "CB4E6010849B11EAB53C112B1A2624CA",
+    "previous_id": 922869,
+    "previous_guid": "86B72BD0849B11EAB53C112B1A2624CA",
+    "section": "<p>Protocol</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Check organoid suspension under microscope after 5 minutes and then as required to assess the dissociation of organoids. Use a P1000 to pipette the cell suspension up and down to help dissociate organoids. Stop incubation when organoids broken down to small clumps of cells.\n\n**Avoid breaking organoids down to single cells**\n \n\n\n[Tube on microscope.jpg]](https://content.protocols.io/public/417fb9cd53044f7c6eb3e93de0e730f2c4aafce8332e96e3c04a19c0dd149ad8/b7ccbc2j7.jpg)\nCheck if organoid suspension has broken down to small clumps of cells on a microscope. \n",
+    "data": null,
+    "protocol_id": 36027,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 922874,
+    "guid": "986E9510849C11EAB53C112B1A2624CA",
+    "previous_id": 922871,
+    "previous_guid": "CB4E6010849B11EAB53C112B1A2624CA",
+    "section": "<p>Protocol</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Centrifuge at{\"centrifuge\":\"800\",\"duration\":0,\"guid\":\"B1C6F1D0854E11EAAE7161651166D294\",\"id\":0,\"label\":\"\",\"pause\":null,\"preset\":[],\"start\":null,\"temperature\":\"\",\"temperatureUnit\":10,\"unit\":34} for 2 minutes.\n",
+    "data": null,
+    "protocol_id": 36027,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 922875,
+    "guid": "A2EE6B00849C11EAB53C112B1A2624CA",
+    "previous_id": 922874,
+    "previous_guid": "986E9510849C11EAB53C112B1A2624CA",
+    "section": "<p>Protocol</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Aspirate supernatant to leave organoid cell pellet.\n\n**If the organoid suspension does not pellet during centrifugation or there is a grey haze above the pellet (residual BME2), aspirate as much supernatant as possible. Re-suspend in ice cold PBS and repeat centrifugation.**\n \n\n\n[BME haze.png]](https://content.protocols.io/public/417fb9cd53044f7c6eb3e93de0e730f2c4aafce8332e96e3c04a19c0dd149ad8/cdx2bc2j7.png)\nBME2 layer above prganoid pellet after centrifugation \n",
+    "data": null,
+    "protocol_id": 36027,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 922880,
+    "guid": "62B87890849D11EAB53C112B1A2624CA",
+    "previous_id": 922875,
+    "previous_guid": "A2EE6B00849C11EAB53C112B1A2624CA",
+    "section": "<p>Protocol</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Re-suspend pellet in appropriate amount of 80% BME2 ( 200 \u00b5L per well of a 6 well plate). \n\n\n\n**Start by re-suspending pellet in a small volume to break down, then add additional BME2 to required volume.**\n \n\n\n**BME2 must be dispensed as quickly as possible as it will begin to set at room temperature. A cool block could be used to help keep the temperature down while plating.**\n \n\n\n\n**Avoid creating bubbles while re-suspending pellet.**\n \n",
+    "data": null,
+    "protocol_id": 36027,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 922881,
+    "guid": "9843E620849D11EAB53C112B1A2624CA",
+    "previous_id": 922880,
+    "previous_guid": "62B87890849D11EAB53C112B1A2624CA",
+    "section": "<p>Protocol</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Using a P200 pipette dispense a total of 200 \u00b5L organoid/BME2 suspension per well of a 6 well plate as 10 \u00b5L - 15 \u00b5L droplets.\n\n\n\n[3 Blobbing.mp4]](https://content.protocols.io/public/39d00e41493ec066d7dd0e7c078b5b75f229b95406aa219f66df2f3cfadb4f29/cdwxbc6qx.mp4) \n\n",
+    "data": null,
+    "protocol_id": 36027,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "11",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 922882,
+    "guid": "BC181C10849D11EAB53C112B1A2624CA",
+    "previous_id": 922881,
+    "previous_guid": "9843E620849D11EAB53C112B1A2624CA",
+    "section": "<p>Protocol</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Place in a 37 \u00b0C incubator (5% CO2) for 15-30 minutes to allow BME2 to set.",
+    "data": null,
+    "protocol_id": 36027,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "12",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 922884,
+    "guid": "E5FFCD20849D11EAB53C112B1A2624CA",
+    "previous_id": 922882,
+    "previous_guid": "BC181C10849D11EAB53C112B1A2624CA",
+    "section": "<p>Protocol</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add 2 mL of appropriate organoid media per well of a 6 well plate.\n",
+    "data": null,
+    "protocol_id": 36027,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "13",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 922890,
+    "guid": "28ED4900849E11EAB53C112B1A2624CA",
+    "previous_id": 922884,
+    "previous_guid": "E5FFCD20849D11EAB53C112B1A2624CA",
+    "section": "<p>Protocol</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Return to incubator. Media change twice a week until ready to passage.\n",
+    "data": null,
+    "protocol_id": 36027,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "14",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 923874,
+    "guid": "BC7D6920854311EAAE7161651166D294",
+    "previous_id": 922803,
+    "previous_guid": "97BB77E0847F11EAB53C112B1A2624CA",
+    "section": "<p>Protocol</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Aspirate media from wells and add 1 mL or 2 mL TrypLE to each well.\n\n**If any of the following are true collect organoids and media in a tube and centrifuge to pellet before adding TrypLE**\n- **BME2 droplets detached from plate and floating in media**\n- **Lots of cells or organoids floating in the media**\n- **Lots of fibroblasts attached to the plate**\n \n",
+    "data": null,
+    "protocol_id": 36027,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "<p>Process Diagram</p>",
+    "color": "#A492FF",
+    "first_step_guid": "97BB77E0847F11EAB53C112B1A2624CA"
+   },
+   {
+    "title": "<p>Protocol</p>",
+    "color": "#94EBFF",
+    "first_step_guid": "BC7D6920854311EAAE7161651166D294"
+   }
+  ],
+  "title": "Passaging cancer organoid cultures",
+  "title_html": "<p>Passaging cancer organoid cultures</p>",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775225169
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775225168
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775225169
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775225169
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775225169
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "passaging-cancer-organoid-cultures-bfe3jjgn",
+  "url": "https://www.protocols.io/view/passaging-cancer-organoid-cultures-bfe3jjgn",
+  "version_class": 36027,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "passaging-cancer-organoid-cultures-14egn8jnzg5d/v1",
+  "versions": [
+   {
+    "id": 36027,
+    "title": "Passaging cancer organoid cultures",
+    "title_html": "<p>Passaging cancer organoid cultures</p>",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.bfe3jjgn",
+    "uri": "passaging-cancer-organoid-cultures-bfe3jjgn",
+    "published_on": 1594115945,
+    "modified_on": 1594115945,
+    "version_class": 36027,
+    "version_id": 0,
+    "version_code": "bfe3jjgn",
+    "version_uri": "passaging-cancer-organoid-cultures-14egn8jnzg5d/v1",
+    "created_on": 1587548077,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Hazel Rogers",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "Dr",
+     "affiliation_url": null,
+     "username": "hazel-rogers",
+     "link": null,
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "A0BD3B43687311F08F960A58A9FEAC02",
+     "file_name": "b6thbc2j7.jpg",
+     "url": "https://files.protocols.io/external/b6thbc2j7-A0BD3B43687311F08F960A58A9FEAC02.jpg",
+     "mime": "image/jpeg",
+     "size": 70059,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1753350627
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

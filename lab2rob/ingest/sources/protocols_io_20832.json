@@ -1,0 +1,1796 @@
+{
+ "protocol_id": 20832,
+ "uri": "standardized-immunohistochemical-staining-used-in-yj8furw",
+ "doi": "dx.doi.org/10.17504/protocols.io.yj8furw",
+ "url": "https://www.protocols.io/view/standardized-immunohistochemical-staining-used-in-yj8furw",
+ "title": "Standardized immunohistochemical staining used in the Human Protein Atlas",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:15:48Z",
+ "query": "dilution",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Anna",
+    "last_name": "Martinez Casals",
+    "affiliation": "Science for life laboratory ; KTH - Royal Institute of Technology",
+    "note": "",
+    "guid": "033E4721F8CC11ED9D4302C0B41BC903",
+    "username": "anna-martinez-casals",
+    "name": "Anna Martinez Casals",
+    "affiliation_url": "https://www.scilifelab.se/",
+    "link": "",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "BE3C73D75B2A11EFA2EF0A58A9FEAC02",
+     "file_name": "bdrxa.png",
+     "url": "https://files.protocols.io/external/bdrxa-BE3C73D75B2A11EFA2EF0A58A9FEAC02.png",
+     "mime": "image/png",
+     "size": 135909,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1723742461
+    }
+   },
+   {
+    "first_name": "Cecilia",
+    "last_name": "Lindskog",
+    "affiliation": "Science for Life Lab / Science for life laboratory / KTH - Royal Institute of Technology",
+    "note": "",
+    "guid": "02E5CFA6F8CC11ED9D4302C0B41BC903",
+    "username": "cecilia-lindskog",
+    "name": "Cecilia Lindskog",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "Cut Formalin-Fixed Paraffin-Embedded (FFPE) tissue specimen at 4 \u00b5m thickness using a water fall microtome:\n\nHM 355S Automatic Microtome, ThermoFisher Scientific, 905200 \nSection Transfer System (STS), ThermoFisher Scientific, 771200\n\nPlace the section on a superfrost glass slide.       \n\nThe time the sections can be left in the water depends on the type of paraffin waxed used and the water temperature. \nThe lab uses paraffin wax from HistoLab Products AB, which have a melting point of 56-58 \u00b0 C and we recommend a water bath temperature of 37-39 \u00b0C. \n",
+  "created_on": 1551186070,
+  "creator": {
+   "affiliation": "Science for life laboratory ; KTH - Royal Institute of Technology",
+   "affiliation_url": "https://www.scilifelab.se/",
+   "affiliations": [
+    {
+     "affiliation": "Science for life laboratory ; KTH - Royal Institute of Technology",
+     "is_default": true,
+     "job_title": null,
+     "url": "https://www.scilifelab.se/"
+    }
+   ],
+   "badges": [
+    {
+     "id": 3,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/silver.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/silver.svg"
+     },
+     "name": "Power author!"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://files.protocols.io/thumbnails/external/bdrxa-BE3C73D75B2A11EFA2EF0A58A9FEAC02.png/thumbnail-w100xh100.png",
+    "source": "https://files.protocols.io/external/bdrxa-BE3C73D75B2A11EFA2EF0A58A9FEAC02.png"
+   },
+   "last_name": "",
+   "link": "",
+   "name": "Anna Martinez Casals",
+   "username": "anna-martinez-casals"
+  },
+  "cross_cloud_origin": null,
+  "description": "The Human Protein Atlas provides a map showing the distribution and relative abundance of proteins in the human body. All IHC staining in the Human Protein Atlas project are performed using the following standard protocol. The primary antibody dilution is based on titration optimization, the dilution suggested by the Human Protein Atlas can be found under antibody and antigen information for each antibody. When primary antibody originates from other host animals than rabbit, there are some modifications and different secondary antibody is used.                \n",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.yj8furw",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "86C249DAB9DA11E99CA40242AC110005",
+  "guidelines": "",
+  "id": 20832,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 410071,
+  "keywords": "human protein atlas, human protein atlas the human protein atlas, human protein atlas project, standardized immunohistochemical staining, primary antibody dilution, primary antibody, antigen information for each antibody, antibody, different secondary antibody, secondary antibody, antigen information, protein, relative abundance of protein, ihc",
+  "link": "https://www.ncbi.nlm.nih.gov/pubmed/22688270",
+  "manuscript_citation": "",
+  "materials": [
+   {
+    "id": 181182,
+    "guid": "41A81C0A341F11EE9D4302C0B41BC903",
+    "name": " DAB quanto substrate system",
+    "mol_weight": 0,
+    "sku": "Cat#  TA-125-QHDX ",
+    "url": "https://www.thermofisher.com/order/catalog/product/TA-060-QHDX",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 95,
+     "name": "Thermo Fisher Scientific",
+     "link": "https://www.thermofisher.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 181183,
+    "guid": "41A81C6A341F11EE9D4302C0B41BC903",
+    "name": "UltraVision LP HRP polymer",
+    "mol_weight": 0,
+    "sku": "Cat#  TL-125-HL ",
+    "url": "https://www.thermofisher.com/order/catalog/product/TL-060-HL",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 95,
+     "name": "Thermo Fisher Scientific",
+     "link": "https://www.thermofisher.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 181184,
+    "guid": "41A81D13341F11EE9D4302C0B41BC903",
+    "name": " Ultra V Block",
+    "mol_weight": 0,
+    "sku": "cat# TA-060-UB ",
+    "url": "https://www.fishersci.ie/shop/products/12583158/12583158",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 9,
+     "name": "Thermo Scientific",
+     "link": "https://www.lifetechnologies.com",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 181185,
+    "guid": "41A81D73341F11EE9D4302C0B41BC903",
+    "name": "Mayer\u2019s hematoxylin plus",
+    "mol_weight": 0,
+    "sku": "cat# 01825",
+    "url": "http://histolab.e-line.nu/sv/nya_e-line/Kemikalier/Kemikalier_M-O/Mayers_HTX_PLUS_(fardig_brukslosning)__Histolab_1_L?id=01825",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 592,
+     "name": "Histolab",
+     "link": "http://histolab.e-line.nu/en/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 181190,
+    "guid": "41A81F12341F11EE9D4302C0B41BC903",
+    "name": "Hydrogen peroxid 30%",
+    "mol_weight": 0,
+    "sku": "1.07209.1000",
+    "url": "http://www.merckmillipore.com/SE/en/product/Hydrogen-peroxide-300-0,MDA_CHEM-107209?ReferrerURL=https%3A%2F%2Fwww.google.com%2F",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 8,
+     "name": "Merck Millipore (EMD Millipore)",
+     "link": "http://www.emdmillipore.com/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 181191,
+    "guid": "41A81F66341F11EE9D4302C0B41BC903",
+    "name": "NeoClear",
+    "mol_weight": 0,
+    "sku": " 1.09843.5000",
+    "url": "https://se.vwr.com/store/product/11919767/solvent-xylene-substitute-neo-clear",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 1914,
+     "name": "VWR International (Avantor)",
+     "link": "https://www.vwr.com",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 181192,
+    "guid": "41A81FB7341F11EE9D4302C0B41BC903",
+    "name": "Lithium carbonate",
+    "mol_weight": 0,
+    "sku": "1.05680.0250",
+    "url": "http://www.merckmillipore.com/SE/en/product/Lithium-carbonate,MDA_CHEM-105680?ReferrerURL=https%3A%2F%2Fwww.google.com%2F",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 8,
+     "name": "Merck Millipore (EMD Millipore)",
+     "link": "http://www.emdmillipore.com/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 181193,
+    "guid": "41A82008341F11EE9D4302C0B41BC903",
+    "name": "Pertex ",
+    "mol_weight": 0,
+    "sku": "00871.0500",
+    "url": "http://histolab.e-line.nu/sv/nya_e-line/Kemikalier/Kemikalier_M-O/Monteringsmedel_Pertex__Histolab_for_automated_coverslipping_500_ml?id=00871.0500",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 592,
+     "name": "Histolab",
+     "link": "http://histolab.e-line.nu/en/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 181194,
+    "guid": "41A8205C341F11EE9D4302C0B41BC903",
+    "name": "Antibody Diluent OP Quanto",
+    "mol_weight": 0,
+    "sku": "TA-125-ADQ",
+    "url": "https://www.thermofisher.com/order/catalog/product/TA-125-ADQ?SID=srch-hj-TA-125-ADQ",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 95,
+     "name": "Thermo Fisher Scientific",
+     "link": "https://www.thermofisher.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 181195,
+    "guid": "41A820AE341F11EE9D4302C0B41BC903",
+    "name": "Tris Buffered Saline & Tween 20 (20x) ",
+    "mol_weight": 0,
+    "sku": "TA-999-TT",
+    "url": "https://www.thermofisher.com/order/catalog/product/TA-999-TT?SID=srch-hj-TA-999-TT",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 95,
+     "name": "Thermo Fisher Scientific",
+     "link": "https://www.thermofisher.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 181196,
+    "guid": "41A82100341F11EE9D4302C0B41BC903",
+    "name": "Lab Vision\u2122 Tween\u2122 20 Detergent",
+    "mol_weight": 0,
+    "sku": "cat# TA-125-TW",
+    "url": "https://www.thermofisher.com/order/catalog/product/TA-125-TW?SID=srch-hj-TA-125-TW",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 95,
+     "name": "Thermo Fisher Scientific",
+     "link": "https://www.thermofisher.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 181197,
+    "guid": "41A82151341F11EE9D4302C0B41BC903",
+    "name": "Coverslips 24x50mm",
+    "mol_weight": 0,
+    "sku": "631-0146",
+    "url": "https://in.vwr.com/store/product/564558/undefined",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 1914,
+     "name": "VWR International (Avantor)",
+     "link": "https://www.vwr.com",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 181198,
+    "guid": "41A821A3341F11EE9D4302C0B41BC903",
+    "name": "Thermo Scientific\u2122 SuperFrost Plus\u2122 Adhesion slides ",
+    "mol_weight": 0,
+    "sku": "J1800AMNZ",
+    "url": "https://www.fishersci.co.uk/shop/products/superfrost-plus-adhesion-slides-9/10149870",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 95,
+     "name": "Thermo Fisher Scientific",
+     "link": "https://www.thermofisher.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 181214,
+    "guid": "41A82839341F11EE9D4302C0B41BC903",
+    "name": "Lab Vision\u2122 PT Module\u2122 Deparaffinization and Heat-Induced Epitope Retrieval Solutions (100X)",
+    "mol_weight": 0,
+    "sku": "TA-250-Pm1x",
+    "url": "https://www.thermofisher.com/order/catalog/product/TA-125-PM1X",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 95,
+     "name": "Thermo Fisher Scientific",
+     "link": "https://www.thermofisher.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   }
+  ],
+  "materials_text": "MATERIALS\n  DAB quanto substrate system Thermo Fisher Scientific Catalog #Cat#  TA-125-QHDX  \n UltraVision LP HRP polymer Thermo Fisher Scientific Catalog #Cat#  TL-125-HL  \n  Ultra V Block Thermo Scientific Catalog #cat# TA-060-UB  \n Mayer\u2019s hematoxylin plus Histolab Catalog #cat# 01825 \n Hydrogen peroxid 30% Merck Millipore (EMD Millipore) Catalog #1.07209.1000 \n NeoClear VWR International (Avantor) Catalog # 1.09843.5000 \n Lithium carbonate Merck Millipore (EMD Millipore) Catalog #1.05680.0250 \n Pertex  Histolab Catalog #00871.0500 \n Antibody Diluent OP Quanto Thermo Fisher Scientific Catalog #TA-125-ADQ \n Tris Buffered Saline & Tween 20 (20x)  Thermo Fisher Scientific Catalog #TA-999-TT \n Lab Vision\u2122 Tween\u2122 20 Detergent Thermo Fisher Scientific Catalog #cat# TA-125-TW \n Coverslips 24x50mm VWR International (Avantor) Catalog #631-0146 \n Thermo Scientific\u2122 SuperFrost Plus\u2122 Adhesion slides  Thermo Fisher Scientific Catalog #J1800AMNZ \n Lab Vision\u2122 PT Module\u2122 Deparaffinization and Heat-Induced Epitope Retrieval Solutions (100X) Thermo Fisher Scientific Catalog #TA-250-Pm1x \n**Wash buffer**\n\n9.5L distilled water \n500ml Tris Buffered Saline &amp; Tween 20 (20x)\n15ml Large Volume Tween 20\n\n\n**Retrieval buffer**\n5L distilled water\n50ml PT Module Buffer 1",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 0,
+   "file_name": "avatar.png",
+   "guid": "00000000000000000000000000000001",
+   "height": 400,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 0,
+   "url": "https://www.protocols.io/img/default_protocol.png",
+   "width": 400
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1551192814,
+  "reserved_doi": "",
+  "space_id": 940,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 807,
+   "number_of_steps": 29,
+   "number_of_bookmarks": 0,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 103,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 28,
+   "number_of_equipments": 2,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 1,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": "We use this protocol in our group and it is working."
+  },
+  "steps": [
+   {
+    "id": 713394,
+    "guid": "3732A9C82977454AA84C6EBF82D73EB0",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "Deparaffinization",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Dry paraffin sections at room temperature overnight.\n\n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713370,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713395,
+    "guid": "024708B675F74DAD91F78AD5B005D757",
+    "previous_id": 713394,
+    "previous_guid": "3732A9C82977454AA84C6EBF82D73EB0",
+    "section": "Deparaffinization",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Bake the paraffin sections  from 12:00:00 to  24:00:00  at  50 \u00b0C .\n\n\n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713371,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713396,
+    "guid": "C0E61C410F5B47949A63D58062833378",
+    "previous_id": 713395,
+    "previous_guid": "024708B675F74DAD91F78AD5B005D757",
+    "section": "Deparaffinization",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Xylene incubation: incubate slides in xylene for  00:05:00 .\n                                  incubate slides in xylene for  00:05:00 .\n                                  incubate slides in xylene for  00:01:00 .\n\n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713372,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713397,
+    "guid": "ED090E563C1B4E66ABEEEFBF40905356",
+    "previous_id": 713416,
+    "previous_guid": "DE36A15039CA11E9AB3D0BD7EC965597",
+    "section": "Deparaffinization",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": " 96% ethanol incubation &amp; 30%H2O2 (1:100): incubate slides for  00:05:00 .",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713373,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713398,
+    "guid": "656B7A6B2A8B46609C4C30880530C7F9",
+    "previous_id": 713419,
+    "previous_guid": "7AC9553039CB11E9AB3D0BD7EC965597",
+    "section": "Standard antigen retrieval method",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Heat the slides immersed in retrieval buffer for  00:04:00 at  125 \u00b0C in a pressure boiler (Decloaking chamber model DC2008INTL).\n\n\n\n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713374,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713399,
+    "guid": "6290BB698E35456988074B729EC03BE6",
+    "previous_id": 713398,
+    "previous_guid": "656B7A6B2A8B46609C4C30880530C7F9",
+    "section": "Standard antigen retrieval method",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": " After completed boiling, leave the slides in the pressure boiler and let them cool down till  90 \u00b0C .  \nTotal time  00:45:00 \n \n\n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713375,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713400,
+    "guid": "239B54835CD549B691F7DA596BE3809D",
+    "previous_id": 713399,
+    "previous_guid": "6290BB698E35456988074B729EC03BE6",
+    "section": "Immunohistochemical staining program, Autostainer 480",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Place slides in the Autostainer 480, all the incubations are done at room temperature.\n\n\n Autostainer 480 (ThermoFisher Scientific, cat# A80500007, [https://www.thermofisher.com/order/catalog/product/A80500008](https://www.thermofisher.com/order/catalog/product/A80500008)) \n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713376,
+    "number": "11",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713401,
+    "guid": "0B97C68F0AF341F6AC4D71F274DAB93C",
+    "previous_id": 713400,
+    "previous_guid": "239B54835CD549B691F7DA596BE3809D",
+    "section": "Immunohistochemical staining program, Autostainer 480",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Rinse slides in wash buffer.\n \n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713377,
+    "number": "12",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713402,
+    "guid": "C119CFE5633140DDBD3AA1DC3479D33E",
+    "previous_id": 713401,
+    "previous_guid": "0B97C68F0AF341F6AC4D71F274DAB93C",
+    "section": "Immunohistochemical staining program, Autostainer 480",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate slides with Ultra V Block for  00:05:00 .\n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713378,
+    "number": "13",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713403,
+    "guid": "AB614F2A714642A39A73E4317D04150E",
+    "previous_id": 713402,
+    "previous_guid": "C119CFE5633140DDBD3AA1DC3479D33E",
+    "section": "Immunohistochemical staining program, Autostainer 480",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Rinse slides in wash buffergo to step #14 .\n \n ",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713379,
+    "number": "14",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713404,
+    "guid": "DB2B39C1AE0442CA95CFFB666618C950",
+    "previous_id": 713403,
+    "previous_guid": "AB614F2A714642A39A73E4317D04150E",
+    "section": "Immunohistochemical staining program, Autostainer 480",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate slides with primary antibody, diluted in antibody Diluent OP, for  00:30:00 .\n\n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713380,
+    "number": "15",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713405,
+    "guid": "80927865EF51416CBD9A2ACDD204DC33",
+    "previous_id": 713404,
+    "previous_guid": "DB2B39C1AE0442CA95CFFB666618C950",
+    "section": "Immunohistochemical staining program, Autostainer 480",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Rinse slides in wash buffer go to step #16 .\n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713381,
+    "number": "16",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713406,
+    "guid": "E910A4EF53924E3598A32AD106518833",
+    "previous_id": 713405,
+    "previous_guid": "80927865EF51416CBD9A2ACDD204DC33",
+    "section": "Immunohistochemical staining program, Autostainer 480",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate slides with labeled HRP polymer for  00:30:00 .",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713382,
+    "number": "17",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713407,
+    "guid": "4DF1D073BAE04A23BBF9EF2EAAFC86B6",
+    "previous_id": 713406,
+    "previous_guid": "E910A4EF53924E3598A32AD106518833",
+    "section": "Immunohistochemical staining program, Autostainer 480",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Rinse slides in wash buffer go to step #18 .\n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713383,
+    "number": "18",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713408,
+    "guid": "0FED03F1900E49DC820D938AAAF62CBA",
+    "previous_id": 713407,
+    "previous_guid": "4DF1D073BAE04A23BBF9EF2EAAFC86B6",
+    "section": "Immunohistochemical staining program, Autostainer 480",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate slides with DAB solution for  00:05:00 .\n ",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713384,
+    "number": "19",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713409,
+    "guid": "C35DC12DAA634A468C7D6CCCE2BFED7E",
+    "previous_id": 713408,
+    "previous_guid": "0FED03F1900E49DC820D938AAAF62CBA",
+    "section": "Immunohistochemical staining program, Autostainer 480",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Rinse slides in distilled water.\n ",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713385,
+    "number": "20",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713410,
+    "guid": "77ECE6AF3BA943F991870FCF82AF0747",
+    "previous_id": 713409,
+    "previous_guid": "C35DC12DAA634A468C7D6CCCE2BFED7E",
+    "section": "Counterstaining and coversliping",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Transfer slides in the Autostainer XL.\n\n\n Autostainer XL (Leica biosystems, cat# Leica ST5010 Autostainer XL, [https://www.leicabiosystems.com/histology-equipment/he-stainers-special-stainers-coverslippers/products/leica-st5010/](https://www.leicabiosystems.com/histology-equipment/he-stainers-special-stainers-coverslippers/products/leica-st5010/)) \n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713386,
+    "number": "21",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713411,
+    "guid": "F5266048E1E743E6A545B14164A0240A",
+    "previous_id": 713410,
+    "previous_guid": "77ECE6AF3BA943F991870FCF82AF0747",
+    "section": "",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Counterstain slides with hematoxylin for  00:07:50 .\n\n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713387,
+    "number": "22",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713412,
+    "guid": "70D5521C698C4CD8A762F609AEC473B9",
+    "previous_id": 713411,
+    "previous_guid": "F5266048E1E743E6A545B14164A0240A",
+    "section": "",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Rinse slides in lithium carbonate water diluted 1:5 from saturated solution for  00:01:00 .",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713388,
+    "number": "23",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713413,
+    "guid": "8839AADF4EBC49508FB31A128A3C6E4A",
+    "previous_id": 713412,
+    "previous_guid": "70D5521C698C4CD8A762F609AEC473B9",
+    "section": "",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Rinse slides in tap water for  00:05:00 .\n ",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713389,
+    "number": "24",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713414,
+    "guid": "B72212EA81244812AE634C3371A4DD7C",
+    "previous_id": 713413,
+    "previous_guid": "8839AADF4EBC49508FB31A128A3C6E4A",
+    "section": "",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "80% ethanol incubation: incubate slides in 80% ethanol for  00:03:00 .",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713390,
+    "number": "25",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713415,
+    "guid": "BAAEE1EF19FA416A98EB3D26D20857AA",
+    "previous_id": 713422,
+    "previous_guid": "774FFB0039CD11E9AB3D0BD7EC965597",
+    "section": "",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mount coverslip in each of the slide using Pertex as a mounting media. ",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 713391,
+    "number": "29",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713416,
+    "guid": "DE36A15039CA11E9AB3D0BD7EC965597",
+    "previous_id": 713396,
+    "previous_guid": "C0E61C410F5B47949A63D58062833378",
+    "section": "Deparaffinization",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Ethanol absolute incubation: incubate slides in ethanol absolute for  00:03:00 .\n                                                    incubate slides in ethanol absolute for  00:03:00 .\n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713417,
+    "guid": "4860F99039CB11E9AB3D0BD7EC965597",
+    "previous_id": 713397,
+    "previous_guid": "ED090E563C1B4E66ABEEEFBF40905356",
+    "section": "Deparaffinization",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "96% ethanol incubation: incubate slides in 96% ethanol incubation for  03:00:00 .\n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713418,
+    "guid": "6360718039CB11E9AB3D0BD7EC965597",
+    "previous_id": 713417,
+    "previous_guid": "4860F99039CB11E9AB3D0BD7EC965597",
+    "section": "Deparaffinization",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "80% ethanol incubation: incubate slides in 80% ethanol incubation for  00:03:00 .",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713419,
+    "guid": "7AC9553039CB11E9AB3D0BD7EC965597",
+    "previous_id": 713418,
+    "previous_guid": "6360718039CB11E9AB3D0BD7EC965597",
+    "section": "Deparaffinization",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Distilled water: : incubate slides in distilled water or until antigen retrieval step.",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713420,
+    "guid": "007160A039CD11E9AB3D0BD7EC965597",
+    "previous_id": 713414,
+    "previous_guid": "B72212EA81244812AE634C3371A4DD7C",
+    "section": "",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "96% ethanol incubation: incubate slides in 96% ethanol for 00:03:00 .\n                                           incubate slides in 96% ethanol for 00:03:00 .\n                                        ",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "26",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713421,
+    "guid": "42114DE039CD11E9AB3D0BD7EC965597",
+    "previous_id": 713420,
+    "previous_guid": "007160A039CD11E9AB3D0BD7EC965597",
+    "section": "",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "99% ethanol incubation: incubate slides in 99% ethanol for 00:03:00 .\n                                           incubate slides in 99% ethanol for 00:03:00 .\n                                           incubate slides in 99% ethanol for 00:03:00 .\n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "27",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 713422,
+    "guid": "774FFB0039CD11E9AB3D0BD7EC965597",
+    "previous_id": 713421,
+    "previous_guid": "42114DE039CD11E9AB3D0BD7EC965597",
+    "section": "",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "NeoClear incubation: incubate slides in NeoClear for 00:03:00 .\n                                      incubate slides in NeoClear for 00:03:00 .\n",
+    "data": null,
+    "protocol_id": 20832,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "28",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "Deparaffinization",
+    "color": "",
+    "first_step_guid": "3732A9C82977454AA84C6EBF82D73EB0"
+   },
+   {
+    "title": "Standard antigen retrieval method",
+    "color": "",
+    "first_step_guid": "656B7A6B2A8B46609C4C30880530C7F9"
+   },
+   {
+    "title": "Immunohistochemical staining program, Autostainer 480",
+    "color": "",
+    "first_step_guid": "239B54835CD549B691F7DA596BE3809D"
+   },
+   {
+    "title": "Counterstaining and coversliping",
+    "color": "",
+    "first_step_guid": "77ECE6AF3BA943F991870FCF82AF0747"
+   }
+  ],
+  "title": "Standardized immunohistochemical staining used in the Human Protein Atlas",
+  "title_html": "Standardized immunohistochemical staining used in the Human Protein Atlas",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775223093
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775223094
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775223094
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775223094
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775223094
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "standardized-immunohistochemical-staining-used-in-yj8furw",
+  "url": "https://www.protocols.io/view/standardized-immunohistochemical-staining-used-in-yj8furw",
+  "version_class": 20832,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "standardized-immunohistochemical-staining-used-in-kxygxmozkl8j/v1",
+  "versions": [
+   {
+    "id": 20832,
+    "title": "Standardized immunohistochemical staining used in the Human Protein Atlas",
+    "title_html": "Standardized immunohistochemical staining used in the Human Protein Atlas",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.yj8furw",
+    "uri": "standardized-immunohistochemical-staining-used-in-yj8furw",
+    "published_on": 1551192814,
+    "modified_on": 1551192814,
+    "version_class": 20832,
+    "version_id": 0,
+    "version_code": "yj8furw",
+    "version_uri": "standardized-immunohistochemical-staining-used-in-kxygxmozkl8j/v1",
+    "created_on": 1551186070,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Anna Martinez Casals",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "Science for life laboratory ; KTH - Royal Institute of Technology",
+     "affiliation_url": "https://www.scilifelab.se/",
+     "username": "anna-martinez-casals",
+     "link": "",
+     "user_image_file": {
+      "guid": "BE3C73D75B2A11EFA2EF0A58A9FEAC02",
+      "file_name": "bdrxa.png",
+      "url": "https://files.protocols.io/external/bdrxa-BE3C73D75B2A11EFA2EF0A58A9FEAC02.png",
+      "mime": "image/png",
+      "size": 135909,
+      "width": 0,
+      "height": 0,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 1723742461
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/default_protocol.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 400,
+     "height": 400,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "warning": "Regulations about working with tissue samples may vary between institutions, it is important to be aware about the guidelines before to start any experiment.\n\n\n3,3\u2032-Diaminobenzidine (DAB) is toxic if swallowed, in contact with skin or if inhaled. It may cause cancer and damage to organs.\n\n"
+ }
+}

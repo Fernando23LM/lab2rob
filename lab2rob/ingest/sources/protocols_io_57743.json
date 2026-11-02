@@ -1,0 +1,1446 @@
+{
+ "protocol_id": 57743,
+ "uri": "passaging-of-hpscs-grown-on-mefs-b4mpqu5n",
+ "doi": "dx.doi.org/10.17504/protocols.io.b4mpqu5n",
+ "url": "https://www.protocols.io/view/passaging-of-hpscs-grown-on-mefs-b4mpqu5n",
+ "title": "Passaging of hPSCs grown on MEFs",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:10:44Z",
+ "query": "passaging",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Hanqin",
+    "last_name": "Li",
+    "affiliation": "University of California, Berkeley",
+    "note": "",
+    "guid": "041C8291F8CC11ED9D4302C0B41BC903",
+    "username": "hanqin--li",
+    "name": "Hanqin Li",
+    "affiliation_url": null,
+    "link": "",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Steven",
+    "last_name": "Poser",
+    "affiliation": "Albert Einstein College of Medicine",
+    "note": "",
+    "guid": "0411FA68F8CC11ED9D4302C0B41BC903",
+    "username": "m4vle1x1t115wle1",
+    "name": "Steven Poser",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Dirk",
+    "last_name": "Hockemeyer",
+    "affiliation": "University of California, Berkeley",
+    "note": "",
+    "guid": "041180AAF8CC11ED9D4302C0B41BC903",
+    "username": "m4vle1x1s1u4yle1",
+    "name": "Dirk Hockemeyer",
+    "affiliation_url": "",
+    "link": "",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "25E83C7A5B2B11EFA2EF0A58A9FEAC02",
+     "file_name": "photo.jpg",
+     "url": "https://files.protocols.io/external/photo-25E83C7A5B2B11EFA2EF0A58A9FEAC02.jpg",
+     "mime": "image/png",
+     "size": 1025,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1723742635
+    }
+   },
+   {
+    "first_name": "Frank",
+    "last_name": "Soldner",
+    "affiliation": "Albert Einstein College of Medicine",
+    "note": "",
+    "guid": "041C7E77F8CC11ED9D4302C0B41BC903",
+    "username": "m4vle1z1w105tle1",
+    "name": "Frank Soldner",
+    "affiliation_url": null,
+    "link": "",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "30408CF35B2B11EFA2EF0A58A9FEAC02",
+     "file_name": "photo.jpg",
+     "url": "https://files.protocols.io/external/photo-30408CF35B2B11EFA2EF0A58A9FEAC02.jpg",
+     "mime": "image/png",
+     "size": 476,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1723742652
+    }
+   },
+   {
+    "first_name": "Oriol",
+    "last_name": "Busquets",
+    "affiliation": "Albert Einstein College of Medicine",
+    "note": "",
+    "guid": "042FDE9CF8CC11ED9D4302C0B41BC903",
+    "username": "oriol-busquets",
+    "name": "Oriol Busquets",
+    "affiliation_url": "",
+    "link": "",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "3FB5B7F45B2B11EFA2EF0A58A9FEAC02",
+     "file_name": "c6g8bi5tp.jpg",
+     "url": "https://files.protocols.io/external/c6g8bi5tp-3FB5B7F45B2B11EFA2EF0A58A9FEAC02.jpg",
+     "mime": "image/jpeg",
+     "size": 872326,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1723742678
+    }
+   }
+  ],
+  "before_start": "",
+  "created_on": 1643866935,
+  "creator": {
+   "affiliation": "UC Berkeley",
+   "affiliation_url": null,
+   "affiliations": [
+    {
+     "affiliation": "UC Berkeley",
+     "is_default": true,
+     "job_title": null,
+     "url": null
+    }
+   ],
+   "badges": [
+    {
+     "id": 4,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg"
+     },
+     "name": "Gold power author!"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": "",
+   "name": "Hanqin Li",
+   "username": "hanqin--li"
+  },
+  "cross_cloud_origin": null,
+  "description": "This protocol describes the standard procedure of using collagenase to passage human pluripotenct stem cells (hPSCs) on inactivated mouse embryonic fibroblasts (MEFs).\n\n**General notes**\n1. Throughout this protocol, the term hPSC is used to collectively refer to both hiPSCs and hESCs. All described procedures have been tested and work equally well for hiPSCs and hESCs.\n2. Until otherwise indicated, hPSCs are routinely grown in a humidified cell culture incubator under \u201clow\u201d oxygen conditions. We have successfully maintained hPSCs using either 3% O2 (3% O2, 5% CO2) or 5% O2 (5% O2, 5% CO2) conditions. \n3. While bulk/collagenase passaging is used for routine maintenance of hPSC cultures, manual/microdissection passaging is used to enrich for undifferentiated hPSC colonies (\u201cclean-up\u201d of culture based on undifferentiated hPSC colony morphology) or to expand (\u201cpick\u201d) individual colonies (e.g.,for clonal expansion of individual targeted cells in the process of establishing genome edited cell lines). Manual passaging/ microdissection requires (_i_) the identification and discrimination of undifferentiated and differentiated hPSC colonies and (_ii_) the capacity to excise the undifferentiated cells and transfer them to a new plate and can be performed using various approaches as established in many hPSC laboratories.",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.b4mpqu5n",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [
+   {
+    "funder_name": "Aligning Science Across Parkinson's",
+    "grant_id": "ASAP-000486"
+   }
+  ],
+  "guid": "0B22B98884B411EC99D00A58A9FEAC02",
+  "guidelines": "",
+  "id": 57743,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": false,
+  "is_subprotocol": null,
+  "item_id": 871645,
+  "keywords": "ASAPCRN, routine maintenance of hpsc culture, hpsc culture, using collagenase, differentiated hpsc colony, undifferentiated hpsc colony morphology, hpsc colony, cell culture incubator, undifferentiated hpsc colony, humidified cell culture incubator, human pluripotenct stem cell, many hpsc laboratory, inactivated mouse embryonic fibroblast, term hpsc, mouse embryonic fibroblast, collagenase, hpsc, embryonic fibroblast, cells in the process, targeted cell, cell, undifferentiated cell, mefs this protocol, described procedure, microdissection",
+  "link": "",
+  "manuscript_citation": "",
+  "materials": [],
+  "materials_text": " \n<table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n     Item      Vendor      Catalog #        DMEM/F12      Thermo   Fisher      11320082        DPBS w/o   Calcium and magnesium      Corning      MT21031CV        Fetal Bovine   Serum (FBS)      Corning      35-011-CV        Knockout Serum Replacement      Thermo   Fisher      10828-028        FB Essence      Avantor      10803-034        Newborn Calf Serum      Sigma      N4762        L-Glutamine      Sigma      G8540        Penicillin &amp; Streptomycin (100X)      Thermo   Fisher      15140163        MEM Non-Essential Amino Acids (100X)      Thermo   Fisher      11140050        Heat Stable Recombinant Human FGF2      Thermo   Fisher      PHG0360        Collagenase type IV      Thermo   Fisher      17104019        DMSO      Fisher   Scientific      BP231-100        BSA      Sigma      A4503        Y-27632      Chemdea      CD0141        2-Mercaptoethanol      Sigma      M3148        0.25% Trypsin with EDTA      Thermo   Fisher      25200114        Styrofoam   microtube freezer box      Labnet      R8000        Nalgene\u00ae   Mr. Frosty\u00ae Cryo 1\u00b0C Freezing Containers       Thermo   Fisher                \n ",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 0,
+   "file_name": "avatar.png",
+   "guid": "00000000000000000000000000000001",
+   "height": 400,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 0,
+   "url": "https://www.protocols.io/img/default_protocol.png",
+   "width": 400
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1662479965,
+  "reserved_doi": "",
+  "space_id": 8782,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 261,
+   "number_of_steps": 24,
+   "number_of_bookmarks": 0,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 2,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 0,
+   "number_of_equipments": 0,
+   "number_of_collections": 1,
+   "number_of_forks": {
+    "private": 0,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": ""
+  },
+  "steps": [
+   {
+    "id": 1337175,
+    "guid": "0B7E06A384B411EC99D00A58A9FEAC02",
+    "previous_id": 1337315,
+    "previous_guid": "0B7D8DF484B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Wash hPSCs with DPBS",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329591,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337176,
+    "guid": "0B7E7F8B84B411EC99D00A58A9FEAC02",
+    "previous_id": 1337175,
+    "previous_guid": "0B7E06A384B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Use 1 ml Collagenase solution/well of a 6-well plate.",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329593,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337177,
+    "guid": "0B7F0BA784B411EC99D00A58A9FEAC02",
+    "previous_id": 1337188,
+    "previous_guid": "0B843DC584B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate  00:45:00   37 \u00b0C  . Watch for edge curling of the colonies as this indicates that collagenase incubation is complete.\n",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 2700,
+    "original_id": 1329594,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337178,
+    "guid": "0B7F86E984B411EC99D00A58A9FEAC02",
+    "previous_id": 1337177,
+    "previous_guid": "0B7F0BA784B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add 2 ml wash medium to each well.",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329595,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337179,
+    "guid": "0B8004D584B411EC99D00A58A9FEAC02",
+    "previous_id": 1337189,
+    "previous_guid": "0B84BAB884B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Pipette repeatedly with 5 ml pipette to lift colonies, careful not to carry over too many MEFs.",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329596,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337180,
+    "guid": "0B807DCD84B411EC99D00A58A9FEAC02",
+    "previous_id": 1337179,
+    "previous_guid": "0B8004D584B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Collect into 15 ml conical tube.",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329597,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337181,
+    "guid": "0B80F84E84B411EC99D00A58A9FEAC02",
+    "previous_id": 1337180,
+    "previous_guid": "0B807DCD84B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add 4-5 ml Wash Medium.",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329598,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337182,
+    "guid": "0B816FE984B411EC99D00A58A9FEAC02",
+    "previous_id": 1337181,
+    "previous_guid": "0B80F84E84B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Gravity precipitate cells 5- 10 min.",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329599,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337183,
+    "guid": "0B81E7BB84B411EC99D00A58A9FEAC02",
+    "previous_id": 1337190,
+    "previous_guid": "0B85352884B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Repeat steps 8-10 once",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329601,
+    "number": "11",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337184,
+    "guid": "0B825E9684B411EC99D00A58A9FEAC02",
+    "previous_id": 1337183,
+    "previous_guid": "0B81E7BB84B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add 5 ml hPSCs medium",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329603,
+    "number": "12",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337185,
+    "guid": "0B82D47884B411EC99D00A58A9FEAC02",
+    "previous_id": 1337316,
+    "previous_guid": "BBF3EE5084B711ECA60F07246AE7D2E3",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Repeat steps 9-10 once",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329604,
+    "number": "13",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337186,
+    "guid": "0B834C4084B411EC99D00A58A9FEAC02",
+    "previous_id": 1337185,
+    "previous_guid": "0B82D47884B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add 3 ml hPSCs medium",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329606,
+    "number": "14",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337187,
+    "guid": "0B83C31D84B411EC99D00A58A9FEAC02",
+    "previous_id": 1337186,
+    "previous_guid": "0B834C4084B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Use a 10 ml strip pipette and triturate the colonies 5-10 times against the bottom of the tube to break up cell clusters\n\na. The objective is to reduce cluster size, not to completely dissociate to single cells.\nb. Avoid introducing air bubbles.\n \n",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329607,
+    "number": "15",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337188,
+    "guid": "0B843DC584B411EC99D00A58A9FEAC02",
+    "previous_id": 1337176,
+    "previous_guid": "0B7E7F8B84B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "**Collagenase solution**\n<table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n     Collagenase type IV      10 mg        KSR medium      10 ml   \n \n**KSR medium**\n<table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n     DMEM/F12      385 ml        Knockout Serum Replacement      100 ml        L-Glutamine (200 mM)      5 ml        Penicillin &amp; Streptomycin (100X)      5 ml        MEM Non-Essential Amino Acids (100X)      5 ml   \n ",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329608,
+    "number": "3.1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337189,
+    "guid": "0B84BAB884B411EC99D00A58A9FEAC02",
+    "previous_id": 1337178,
+    "previous_guid": "0B7F86E984B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "**Wash medium**\n<table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n     DMEM/F12      470 ml        Newborn Calf Serum      25 ml        Penicillin &amp; Streptomycin (100X)      5 ml   \n ",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329611,
+    "number": "5.1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337190,
+    "guid": "0B85352884B411EC99D00A58A9FEAC02",
+    "previous_id": 1337182,
+    "previous_guid": "0B816FE984B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Aspirate Wash Medium, leave 0.5 ml. Don\u2019t disturb the colonies that are loosely pelleted.",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329612,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337191,
+    "guid": "0B85ACF084B411EC99D00A58A9FEAC02",
+    "previous_id": 1337187,
+    "previous_guid": "0B83C31D84B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "In preparation for the hPSCs, plate 1 ml hPSCs medium onto each MEFs well.",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329615,
+    "number": "16",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337192,
+    "guid": "0B86243A84B411EC99D00A58A9FEAC02",
+    "previous_id": 1337191,
+    "previous_guid": "0B85ACF084B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add more hPSCs medium to the triturated colonies suspension to a proper dilution so that each MEFs wells will receive 2 ml. Splitting ratio varies between different cell lines and different operators. It\u2019s usually within a range of 1:6 to 1:20.",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329616,
+    "number": "17",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337193,
+    "guid": "0B869CFE84B411EC99D00A58A9FEAC02",
+    "previous_id": 1337192,
+    "previous_guid": "0B86243A84B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix well, distribute 2 ml to each MEFs wells. \n\n\na. Use of 5 ml pipette to mix cell suspension is preferred as it has the widest bore size, but 10 ml can be used if the volume of cells to plate is large.\nb. When mixing, expel and take up the entire volume of medium and cells 2 - 3 times, then take 4 ml of cell suspension to plate two wells at a time.\nc. Repeat until all cells are plated.\n \n",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329617,
+    "number": "18",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337194,
+    "guid": "0B8715EA84B411EC99D00A58A9FEAC02",
+    "previous_id": 1337193,
+    "previous_guid": "0B869CFE84B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Place the plate in the low oxygen incubator\n\n\na. Do not stack the plates more than two high, preferably leave them as single level.\nb. Spread the cells by moving the plate in left-right, then backward-forward motion.\nc. Repeat cycle 2 - 3 times.\nd. Give the plate a final jerking motion in the backward-forward direction as the last spreading motion.\ne. Close the door of the incubator gently as to not disturb the position of the cell clusters.\n \n",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329618,
+    "number": "19",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337195,
+    "guid": "0B87907E84B411EC99D00A58A9FEAC02",
+    "previous_id": 1337194,
+    "previous_guid": "0B8715EA84B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "From day 3, change 2-3 ml pre-warmed hPSCs medium for each well daily.",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329622,
+    "number": "20",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337196,
+    "guid": "0B88082184B411EC99D00A58A9FEAC02",
+    "previous_id": 1337195,
+    "previous_guid": "0B87907E84B411EC99D00A58A9FEAC02",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "When hPSC density reaches 50-70% confluency, passage again. We usually adjust the splitting ratio to passage every 7 days.",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1329624,
+    "number": "21",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337315,
+    "guid": "0B7D8DF484B411EC99D00A58A9FEAC02",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Check MEFs plates for suitability to receive passaged hPSCs prior to beginning. Refer to the &#34;Maintenance and inactivation of mouse embryonic fibroblasts (MEFs) as feeder cells for human pluripotent stem cell culture&#34; collection; dx.doi.org/10.17504/protocols.io.b4pbqvin",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1337316,
+    "guid": "BBF3EE5084B711ECA60F07246AE7D2E3",
+    "previous_id": 1337184,
+    "previous_guid": "0B825E9684B411EC99D00A58A9FEAC02",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "**hPSCs Medium**\n<table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n     DMEM/F12      385 ml        Fetal Bovine   Serum (FBS)      75 ml        Knockout Serum Replacement      25 ml        L-Glutamine (100X)      5 ml        Penicillin &amp; Streptomycin (100X)      5 ml        MEM Non-Essential Amino Acids (100X)      5 ml        2-Mercaptoethanol (10,000X)      50 ul        Heat Stable Recombinant Human FGF2 (25ug/ml)*      80 ul   \n \n\n**L-Glutamine (100X)**\n<table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n     L-Glutamine,   powder      14.6 g        MilliQ H2O      500 ml   \n \n**2-Mercaptoethanol (10,000X)**\n<table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n     2-Mercaptoethanol      0.78 ml        MilliQ H2O      9.22 ml   \n \n \n**Heat Stable Recombinant Human FGF2 (25\u00b5g/ml)**\n<table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n     Heat Stable Recombinant Human FGF2      500 ug        0.1% BSA      20 ml   \n ",
+    "data": null,
+    "protocol_id": 57743,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "12.1",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [],
+  "title": "Passaging of hPSCs grown on MEFs",
+  "title_html": "Passaging of hPSCs grown on MEFs",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775227499
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775227499
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775227499
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775227498
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775227499
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "passaging-of-hpscs-grown-on-mefs-b4mpqu5n",
+  "url": "https://www.protocols.io/view/passaging-of-hpscs-grown-on-mefs-b4mpqu5n",
+  "version_class": 57743,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "passaging-of-hpscs-grown-on-mefs-4r3l2oo7xv1y/v1",
+  "versions": [
+   {
+    "id": 57743,
+    "title": "Passaging of hPSCs grown on MEFs",
+    "title_html": "Passaging of hPSCs grown on MEFs",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.b4mpqu5n",
+    "uri": "passaging-of-hpscs-grown-on-mefs-b4mpqu5n",
+    "published_on": 1644555439,
+    "modified_on": 1734120274,
+    "version_class": 57743,
+    "version_id": 0,
+    "version_code": "b4mpqu5n",
+    "version_uri": "passaging-of-hpscs-grown-on-mefs-4r3l2oo7xv1y/v1",
+    "created_on": 1643866935,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Hanqin Li",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "UC Berkeley",
+     "affiliation_url": null,
+     "username": "hanqin--li",
+     "link": "",
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/default_protocol.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 400,
+     "height": 400,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

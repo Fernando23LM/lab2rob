@@ -1,0 +1,1388 @@
+{
+ "protocol_id": 37443,
+ "uri": "passaging-adherent-cancer-cell-lines-bgtbjwin",
+ "doi": "dx.doi.org/10.17504/protocols.io.bgtbjwin",
+ "url": "https://www.protocols.io/view/passaging-adherent-cancer-cell-lines-bgtbjwin",
+ "title": "Passaging adherent cancer cell lines",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:14:18Z",
+ "query": "passaging",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Emily",
+    "last_name": "Souster",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "03DA3FFCF8CC11ED9D4302C0B41BC903",
+    "username": "m4tle112u1t4ple1",
+    "name": "Emily Souster",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Verity",
+    "last_name": "Goodwin",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "03DABE47F8CC11ED9D4302C0B41BC903",
+    "username": "m4tle112v1w4qle1",
+    "name": "Verity Goodwin",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Adam",
+    "last_name": "Jackson",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Adam Jackson",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Charlotte",
+    "last_name": "Beaver",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "03C64441F8CC11ED9D4302C0B41BC903",
+    "username": "m4tle1w1y1x4wle1",
+    "name": "Charlotte Beaver",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Fiona",
+    "last_name": "Behan",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "03EC130BF8CC11ED9D4302C0B41BC903",
+    "username": "m4ule1w1t115ule1",
+    "name": "Fiona Behan",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Rizwan",
+    "last_name": "Ansari",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Rizwan Ansari",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Mathew",
+    "last_name": "Garnett",
+    "affiliation": "Wellcome Sanger Institute",
+    "note": "",
+    "guid": "03D07A41F8CC11ED9D4302C0B41BC903",
+    "username": "mathew-garnett1",
+    "name": "Mathew Garnett",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "1. Pre-warm complete culture media to room-temperature. \n\n\n1. Check the cells under a microscope and record percentage confluency. Cancer cells should be passaged when ~80-90% confluent. ",
+  "created_on": 1590324218,
+  "creator": {
+   "affiliation": "",
+   "affiliation_url": null,
+   "affiliations": [],
+   "badges": [
+    {
+     "id": 4,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg"
+     },
+     "name": "Gold power author!"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": null,
+   "name": "Emily Souster",
+   "username": "m4tle112u1t4ple1"
+  },
+  "cross_cloud_origin": null,
+  "description": "This SOP is for the routine maintenance and expansion of adherent cancer cell lines. \nIt also details how cells are harvested and counted for use in downstream protocols.\nThis protocol is also used in expasion of Cas9 transduced cell lines, prior to banking.\n\nProcess diagram:\n[image.png]](https://content.protocols.io/public/b94e6458af3e4aa17dc6c162a5d28b87f529d83e9d05c0764f6eb3fffa72f21d/ccgfbdsax.png)\n \n",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.bgtbjwin",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "B0A89EA09DBA11EA814529A47F98D72C",
+  "guidelines": "1. Cancer cells should be passaged at ~80-90% confluent where possible. They should not be allowed to reach 100% confluence.\n\n\n[image.png]](https://content.protocols.io/public/b94e6458af3e4aa17dc6c162a5d28b87f529d83e9d05c0764f6eb3fffa72f21d/b9tybdsax.png)\nFigure 1. Adherent cancer cell line ready to be passaged (x5). \n",
+  "id": 37443,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 641522,
+  "keywords": "adherent cancer cell lines this sop, passaging adherent cancer cell line, adherent cancer cell line, expansion of adherent cancer cell line, transduced cell line, cell line, use in downstream protocol, expasion of cas9, sop, downstream protocol, cell",
+  "link": "",
+  "manuscript_citation": "",
+  "materials": [
+   {
+    "id": 204333,
+    "guid": "41AD16F4341F11EE9D4302C0B41BC903",
+    "name": "Falcon\u2122 15mL Conical Centrifuge Tubes",
+    "mol_weight": 0,
+    "sku": "14-959-53A",
+    "url": "https://www.fishersci.com/shop/products/falcon-15ml-conical-centrifuge-tubes-5/p-193301",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 31,
+     "name": "Fisher Scientific",
+     "link": "https://www.fishersci.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 212364,
+    "guid": "41BA7B4C341F11EE9D4302C0B41BC903",
+    "name": "TrypLE&trade; Express Enzyme (1X), no phenol red",
+    "mol_weight": 0,
+    "sku": "12604021",
+    "url": "https://www.thermofisher.com/order/catalog/product/12604021",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 440,
+     "name": "Thermo Fisher",
+     "link": "https://www.thermofisher.com",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/440.png",
+      "placeholder": "/img/vendors/440.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 480672,
+    "guid": "4258B3D2341F11EE9D4302C0B41BC903",
+    "name": "Cell culture treated T75 flasks",
+    "mol_weight": 0,
+    "sku": "430641",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 40,
+     "name": "Corning",
+     "link": "https://www.corning.com/worldwide/en.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 480673,
+    "guid": "4258B425341F11EE9D4302C0B41BC903",
+    "name": "Cell Culture Treated T150 Flasks",
+    "mol_weight": 0,
+    "sku": "430825",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 40,
+     "name": "Corning",
+     "link": "https://www.corning.com/worldwide/en.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 480674,
+    "guid": "4258B476341F11EE9D4302C0B41BC903",
+    "name": "DPBS",
+    "mol_weight": 0,
+    "sku": "14190",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 191,
+     "name": "Invitrogen - Thermo Fisher",
+     "link": "http://www.thermofisher.com/us/en/home/brands/invitrogen.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 480675,
+    "guid": "4258B4C8341F11EE9D4302C0B41BC903",
+    "name": "10mg/ml Blasticidin",
+    "mol_weight": 0,
+    "sku": "ant-bl-1",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 421,
+     "name": "InvivoGen",
+     "link": "https://www.invivogen.com/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   }
+  ],
+  "materials_text": "MATERIALS\n Falcon\u2122 15mL Conical Centrifuge Tubes Fisher Scientific Catalog #14-959-53A \n TrypLE&trade; Express Enzyme (1X), no phenol red Thermo Fisher Catalog #12604021 \n Cell culture treated T75 flasks Corning Catalog #430641 \n Cell Culture Treated T150 Flasks Corning Catalog #430825 \n DPBS Invitrogen - Thermo Fisher Catalog #14190 \n 10mg/ml Blasticidin InvivoGen Catalog #ant-bl-1 \nSelect an appropriate culture media for your cell line. Common culture medias used for cancer cell lines are serum supplemented Advanced DMEM F-12 or RPMI, in the presence of pen-strep.\n\n**Equipment**\n\nMicrobiological Safety Cabinet (MSC)\nLight Microscope\nNucleocounter/Cell counter\nPipette Boy\nStripettes\nCentrifuge\nPipettes and tips\n 37 \u00b0C  , 5% CO2 incubator\n\n\n",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 0,
+   "file_name": "avatar.png",
+   "guid": "00000000000000000000000000000001",
+   "height": 400,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 0,
+   "url": "https://www.protocols.io/img/default_protocol.png",
+   "width": 400
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1595497975,
+  "reserved_doi": "",
+  "space_id": 1939,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 4609,
+   "number_of_steps": 12,
+   "number_of_bookmarks": 4,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 859,
+   "number_of_runs": 0,
+   "number_of_votes": 1,
+   "number_of_reagents": 12,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 11,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": "We use this protocol and it's working"
+  },
+  "steps": [
+   {
+    "id": 948398,
+    "guid": "BAC0EE409DBC11EA814529A47F98D72C",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "<p>Detaching and collecting cells</p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Remove the old culture media using a sterile aspirator pipette.",
+    "data": null,
+    "protocol_id": 37443,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 948420,
+    "guid": "524C42009DCC11EA814529A47F98D72C",
+    "previous_id": 948398,
+    "previous_guid": "BAC0EE409DBC11EA814529A47F98D72C",
+    "section": "<p>Detaching and collecting cells</p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Gently wash the cells with PBS (see Table 1, column B for recommended volume). Aspirate the PBS from the flask.\n\nAlways aim to add reagents at the side/back of the flask initially to avoid dislodging any cells.\n \n\n<table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n \n",
+    "data": null,
+    "protocol_id": 37443,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 948421,
+    "guid": "31B58E609DCD11EA814529A47F98D72C",
+    "previous_id": 948420,
+    "previous_guid": "524C42009DCC11EA814529A47F98D72C",
+    "section": "<p>Detaching and collecting cells</p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add sufficient TrypLE Express Enzyme to cover the bottom of the flask (see Table 1, column C for recommended volume). Rock the flask to allow the TrypLE to cover the surface of the cells.",
+    "data": null,
+    "protocol_id": 37443,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 948422,
+    "guid": "F4D333C09DCD11EA814529A47F98D72C",
+    "previous_id": 948421,
+    "previous_guid": "31B58E609DCD11EA814529A47F98D72C",
+    "section": "<p>Detaching and collecting cells</p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate the flask at  37 \u00b0C   for 3-5 minutes. Use the microscope to check if the cells have detached. If necessary, tap the side of the flask, or return to incubator until all cells have detached.\n",
+    "data": null,
+    "protocol_id": 37443,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 948423,
+    "guid": "E02D99509DCE11EA814529A47F98D72C",
+    "previous_id": 948422,
+    "previous_guid": "F4D333C09DCD11EA814529A47F98D72C",
+    "section": "<p>Detaching and collecting cells</p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add fresh media to the flask at an equal volume to the TrypLE added in Step 3. Use the liquid in the flask to rinse the cells off the bottom of the flask. Transfer the entire volume to an appropriately sized sterile tube. ",
+    "data": null,
+    "protocol_id": 37443,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 948424,
+    "guid": "7DD16F109DCF11EA814529A47F98D72C",
+    "previous_id": 948423,
+    "previous_guid": "E02D99509DCE11EA814529A47F98D72C",
+    "section": "<p>Detaching and collecting cells</p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Spin the tube at {\"centrifuge\":\"300\",\"duration\":0,\"guid\":\"94C4AD909DCF11EA814529A47F98D72C\",\"id\":0,\"label\":\"\",\"pause\":null,\"preset\":[],\"start\":null,\"temperature\":\"\",\"temperatureUnit\":10,\"unit\":34}  for 3 minutes. \n\nTubes should be spun inside centrifuge buckets with sealed safety caps. After spinning, the sealed bucket should be transferred to a microbiology safety cabinet before removing the tubes.\n \n\n",
+    "data": null,
+    "protocol_id": 37443,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 948425,
+    "guid": "579D33A09DD011EA814529A47F98D72C",
+    "previous_id": 948424,
+    "previous_guid": "7DD16F109DCF11EA814529A47F98D72C",
+    "section": "<p>Detaching and collecting cells</p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Aspirate the supernatant, taking care to avoid disturbing the cell pellet. Resuspend the pellet in an appropriate volume of fresh media (around  5 mL  - 20 mL  ) and mix well to ensure a single cell suspension.\n",
+    "data": null,
+    "protocol_id": 37443,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 948426,
+    "guid": "D144D9109DD011EA814529A47F98D72C",
+    "previous_id": 948425,
+    "previous_guid": "579D33A09DD011EA814529A47F98D72C",
+    "section": "<p>Detaching and collecting cells</p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "If a cell count is **not required**, proceed to Step 9. \nTo take a cell count, aliquot  100 \u00b5L  of cell suspension and count using your preferred method.\n",
+    "data": null,
+    "protocol_id": 37443,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 974865,
+    "guid": "35D32D90BFA611EA922DB5E06021B5E1",
+    "previous_id": 948426,
+    "previous_guid": "D144D9109DD011EA814529A47F98D72C",
+    "section": "<p>Re-seeding cells</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add fresh media and an appropriate volume of cell suspension to a new flask, to achieve the desired split ratio or cell number (where possible, aim for the total volume of media and cells in the flask to follow the recommeded volumes in Table 1, column D). \n\nFor example, **if splitting a T75 flask 1:2, either** add the entire cell suspension to fresh media in a T150 flask (achieving a total volume of  24 mL  ), **OR** add half the cell suspension to fresh media in a T75 (achieving a total volume of  12 mL  ).\n\n\nThe required split ratio will be dependend on the growth rate and behaviour of individual cell lines.\n \n",
+    "data": null,
+    "protocol_id": 37443,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 974866,
+    "guid": "91FDB0E0BFA611EA922DB5E06021B5E1",
+    "previous_id": 974865,
+    "previous_guid": "35D32D90BFA611EA922DB5E06021B5E1",
+    "section": "<p>Re-seeding cells</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "**If maintaining a selected population of Cas9 cells**, add blasticidin to achieve the desired concentration, as determined by: &#39;Blasticidin titration of cancer cell lines&#39; protocol. \n\nAdd the required volume of 10mg/ml blasticidin depending on the flask size (Table 2), to achieve the desired final concentration.\n\n<table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n \n\n\nBlasticidin is toxic if swallowed and harmful in contact with skin.\n \n",
+    "data": null,
+    "protocol_id": 37443,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9.1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 974878,
+    "guid": "69726610BFA711EA922DB5E06021B5E1",
+    "previous_id": 974866,
+    "previous_guid": "91FDB0E0BFA611EA922DB5E06021B5E1",
+    "section": "<p>Re-seeding cells</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Transfer the flask to a  37 \u00b0C  , 5% CO2 incubator. Agitate the flask gently back and forth and side to side to ensure even distribution of cells across the flask.",
+    "data": null,
+    "protocol_id": 37443,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 974880,
+    "guid": "7C3393A0BFA711EA922DB5E06021B5E1",
+    "previous_id": 974878,
+    "previous_guid": "69726610BFA711EA922DB5E06021B5E1",
+    "section": "<p>Re-seeding cells</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Inspect the cells daily and record confluency. Cancer cell lines should have a complete media change twice per week, or as needed if the media looks yellow.",
+    "data": null,
+    "protocol_id": 37443,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "11",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "<p>Detaching and collecting cells</p>",
+    "color": "#A492FF",
+    "first_step_guid": "BAC0EE409DBC11EA814529A47F98D72C"
+   },
+   {
+    "title": "<p>Re-seeding cells</p>",
+    "color": "#94EBFF",
+    "first_step_guid": "35D32D90BFA611EA922DB5E06021B5E1"
+   }
+  ],
+  "title": "Passaging adherent cancer cell lines",
+  "title_html": "<p>Passaging adherent cancer cell lines</p>",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775225298
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775225298
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775225298
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775225298
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775225298
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "passaging-adherent-cancer-cell-lines-bgtbjwin",
+  "url": "https://www.protocols.io/view/passaging-adherent-cancer-cell-lines-bgtbjwin",
+  "version_class": 37443,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "passaging-adherent-cancer-cell-lines-4r3l28zm4l1y/v1",
+  "versions": [
+   {
+    "id": 37443,
+    "title": "Passaging adherent cancer cell lines",
+    "title_html": "<p>Passaging adherent cancer cell lines</p>",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.bgtbjwin",
+    "uri": "passaging-adherent-cancer-cell-lines-bgtbjwin",
+    "published_on": 1595497975,
+    "modified_on": 1595497975,
+    "version_class": 37443,
+    "version_id": 0,
+    "version_code": "bgtbjwin",
+    "version_uri": "passaging-adherent-cancer-cell-lines-4r3l28zm4l1y/v1",
+    "created_on": 1590324218,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Emily Souster",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": null,
+     "affiliation_url": null,
+     "username": "m4tle112u1t4ple1",
+     "link": null,
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/default_protocol.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 400,
+     "height": 400,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "warning": "1. Blasticidin is toxic if swallowed and harmful in contact with skin."
+ }
+}

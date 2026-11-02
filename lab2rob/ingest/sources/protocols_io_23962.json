@@ -1,0 +1,1121 @@
+{
+ "protocol_id": 23962,
+ "uri": "the-protocol-for-the-mannequin-crossover-trial-ent-3m2gk8e",
+ "doi": "dx.doi.org/10.17504/protocols.io.3m2gk8e",
+ "url": "https://www.protocols.io/view/the-protocol-for-the-mannequin-crossover-trial-ent-3m2gk8e",
+ "title": "The protocol for the mannequin crossover trial entitled &quot;Comparison of video and conventional laryngoscopes for simulated difficult emergency tracheal intubations in presence of liquids in the airway&quot;",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:15:07Z",
+ "query": "passage",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Kei",
+    "last_name": "Suzuki",
+    "affiliation": "Department of Emergency and Critical Care Medicine, Graduate School of Biomedical and Health Sciences, Hiroshima University, Hiroshima, Japan",
+    "note": "",
+    "guid": "03712FF6F8CC11ED9D4302C0B41BC903",
+    "username": "kei-suzuki1",
+    "name": "Kei Suzuki",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Shinji",
+    "last_name": "Kusunoki",
+    "affiliation": "Critical Care Medical Center, Hiroshima Prefectural Hospital, Hiroshima, Japan",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Shinji Kusunoki",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Takuma",
+    "last_name": "Sadamori",
+    "affiliation": "Department of Emergency and Critical Care Medicine, Graduate School of Biomedical and Health Sciences, Hiroshima University, Hiroshima, Japan",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Takuma Sadamori",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Yuko",
+    "last_name": "Tanabe",
+    "affiliation": "Department of Emergency and Critical Care Medicine, Graduate School of Biomedical and Health Sciences, Hiroshima University, Hiroshima, Japan",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Yuko Tanabe",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Junji",
+    "last_name": "Itai",
+    "affiliation": "Department of Emergency and Critical Care Medicine, Graduate School of Biomedical and Health Sciences, Hiroshima University, Hiroshima, Japan",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Junji Itai",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Nobuaki",
+    "last_name": "Shime",
+    "affiliation": "Department of Emergency and Critical Care Medicine, Graduate School of Biomedical and Health Sciences, Hiroshima University, Hiroshima, Japan",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Nobuaki Shime",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "",
+  "created_on": 1559563955,
+  "creator": {
+   "affiliation": "",
+   "affiliation_url": null,
+   "affiliations": [],
+   "badges": [
+    {
+     "id": 2,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/bronze.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/bronze.svg"
+     },
+     "name": "Author"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": null,
+   "name": "Kei Suzuki",
+   "username": "kei-suzuki1"
+  },
+  "cross_cloud_origin": null,
+  "description": "The objective of this protocol was to compare the Airway ScopeTM(AWS) and the Macintosh laryngoscope (ML) for their performance in tracheal intubations (TIs) performed by emergency medical technicians (EMTs) using mannequin models with liquids in the airway. Rice gruel and mock blood were used to fill the upper airways of mannequins to create mock vomit and hematemesis models, respectively. TIs were performed by certified EMTs after visualizing the glottis using an AWS with an 18-Fr suction catheter and a ML with an 18-Fr suction catheter. TIs with AWS and ML were performed in random order in a comparative crossover trial. The TI success rate was evaluated based on the following: (a) the time taken from laryngoscope insertion into the oral cavity to glottis visualization, tracheal tube passage through the glottis, until the initiation of ventilation and (b) the subjective level of difficulty, which was assessed using a visual analog scale (VAS).",
+  "disclaimer": "",
+  "documents": [
+   {
+    "id": 42269,
+    "guid": "",
+    "type_id": 0,
+    "filename": "",
+    "key": "",
+    "color": "",
+    "height": 0,
+    "width": 0,
+    "is_document": null,
+    "original_file_id": null,
+    "thumb_url": "",
+    "size": 12680390,
+    "is_private": 0,
+    "is_new": 0,
+    "ofn": "Figure1_r2.pptx",
+    "url": "https://content.protocols.io/bakkhn.",
+    "bucket_name": null,
+    "s3_webp_url": "",
+    "file_id": 42269
+   }
+  ],
+  "doi": "dx.doi.org/10.17504/protocols.io.3m2gk8e",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "8AFED0D0B9DA11E99CA40242AC110005",
+  "guidelines": "",
+  "id": 23962,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": false,
+  "is_subprotocol": null,
+  "item_id": 465528,
+  "keywords": "airway scope, video-laryngoscope, prehospital care, difficult emergency tracheal intubations in presence, tracheal intubation, simulated difficult emergency tracheal intubation, performance in tracheal intubation, tracheal tube passage through the glottis, upper airways of mannequin, conventional laryngoscope, laryngoscope insertion, laryngoscope insertion into the oral cavity, tracheal tube passage, macintosh laryngoscope, upper airway, airway, initiation of ventilation, mannequin crossover trial, mannequin models with liquid, fr suction catheter, using mannequin model, mock vomit, ventilation, oral cavity, mannequin, emergency medical technician",
+  "link": "https://doi.org/10.1371/journal.pone.0220006",
+  "manuscript_citation": "",
+  "materials": [],
+  "materials_text": "",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 1753350524,
+   "file_name": "bakkie.png",
+   "guid": "632F2A54687311F08F960A58A9FEAC02",
+   "height": 0,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 433953,
+   "url": "https://files.protocols.io/external/bakkie-632F2A54687311F08F960A58A9FEAC02.png",
+   "width": 0
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1563638763,
+  "reserved_doi": "",
+  "space_id": 0,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 122,
+   "number_of_steps": 6,
+   "number_of_bookmarks": 1,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 70,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 0,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 0,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": ""
+  },
+  "steps": [
+   {
+    "id": 755631,
+    "guid": "95003B608DDD11E9B6F1878970B781C8",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Ethics Approval: This study was approved by the Ethics committee of the Hiroshima University (E-115, E-609). Written consent to participate in the study was obtained from all EMT participants. Data were collected from EMTs who were qualified and certified to perform TIs with ML and AWS in patients with cardiac arrest.",
+    "data": null,
+    "protocol_id": 23962,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 755632,
+    "guid": "CC54D0308DDD11E9B6F1878970B781C8",
+    "previous_id": 755631,
+    "previous_guid": "95003B608DDD11E9B6F1878970B781C8",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "To reproduce scenarios of presenting of liquids in the airway, vomit and hematemesis mannequin models were created. The Airway Management Trainer (Laerdal\u00ae, Stavanger, Norway) was used as the mannequin. Commercially available rice gruel was used as mock vomit, and mock blood used in venous route puncture training was used to simulate hematemesis. The vomit and hematemesis models were created by clamping a mannequin\u2019s trachea and esophagus and then filling the oral cavity up to the incisors with mock vomit or blood.",
+    "data": null,
+    "protocol_id": 23962,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 755633,
+    "guid": "CC551E508DDD11E9B6F1878970B781C8",
+    "previous_id": 755632,
+    "previous_guid": "CC54D0308DDD11E9B6F1878970B781C8",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "During the training session, the EMTs received three hours of practical and oral instructions from four specialists in emergency care and anesthesiology on performing TIs with AWS on a regular mannequin, followed by one hour of practical and oral instructions on performing TIs with AWS and ML in a variety of airway obstruction scenarios, including vomiting and hematemesis. Finally, they used an AWS and ML to perform one TI on the vomit or hematemesis mannequin model.",
+    "data": null,
+    "protocol_id": 23962,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 755634,
+    "guid": "CC5545608DDD11E9B6F1878970B781C8",
+    "previous_id": 755633,
+    "previous_guid": "CC551E508DDD11E9B6F1878970B781C8",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "[\u30b9\u30af\u30ea\u30fc\u30f3\u30b7\u30e7\u30c3\u30c8 2019-06-19 22.02.12.png]](https://content.protocols.io/bakrfw.png)\nFifure 1. Two methods of tracheal intubation and suctioning \n[\u56f31.png]](https://content.protocols.io/bakrf6.png)\nFigure 2. The suction catheter extended 1 cm deeper than the distal end of the tracheal tube.  \nFor TIs with an AWS (AWS-S100, Nihon Kohden, Japan), an 18-Fr suction catheter (Terumo, Tokyo, Japan) was first inserted into the tracheal tube (TT) (internal diameter 7.0 mm, Portex\u00ae, Smiths Medical, Minneapolis, MN, U.S.A.) attached to the guiding groove of the AWS blade (PBLADE\u00ae\uff0cNihon Kohden, Japan) (Figure 1A). The catheter extended 1 cm deeper than the distal end of the TT (Figure 2). With the suction catheter already connected to the suction device, the AWS was inserted into the oral cavity. The foreign material in the airway was suctioned until the glottis was visualized, and then TI was performed. For TIs with the ML (conventional Macintosh-type blade without external output function, Karl Storz SE &amp; Co., Tuttlingen, Germany), the larynx was exposed using the ML, and the foreign material was suctioned using a suction catheter (18 Fr) (Figure 1B), and the TI was performed after glottis visualization. An assistant EMT aided the primary EMT with the procedure. The suction pressure was set to 20 kPa.\n\n",
+    "data": null,
+    "protocol_id": 23962,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 755635,
+    "guid": "009239F08DDE11E9B6F1878970B781C8",
+    "previous_id": 755634,
+    "previous_guid": "CC5545608DDD11E9B6F1878970B781C8",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "The TI was considered to have failed when the laryngoscope was removed from the oral cavity before completing the TI or when the procedure took \u2265 120 s. Time from the moment of insertion of the laryngoscope into the oral cavity until the completion of suctioning, glottis visualization, tube passage through the glottis, and initiation of bag-valve-mask ventilation were evaluated. Each EMT was required to announce orally when he/she had completed each of the above steps of the TI. The TIs were performed by the EMTs using the AWS and ML in random order to conduct a crossover trial using both methods. All the TIs were video recorded, and emergency care physicians who were not involved in the training sessions used these videos to extract data. A visual analog scale (VAS, 0 mm = very easy, 100 mm = very difficult) was used to subjectively evaluate the level of difficulty in performing the TI with the AWS and ML in both scenarios of presenting liquids in the airway. Data on the EMTs included their age, experience as a TI-certified EMT, and the number of TIs performed with the ML.",
+    "data": null,
+    "protocol_id": 23962,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 755636,
+    "guid": "200168108DDE11E9B6F1878970B781C8",
+    "previous_id": 755635,
+    "previous_guid": "009239F08DDE11E9B6F1878970B781C8",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Sample size and Statistical analysis: A sample size of 25 was estimated as necessary to compare the two laryngoscopes with an initial pass success rate difference of 30%, an \u03b1 error of 0.05, and a \u03b2 error of 0.2. The endpoints were TI success rate, the time required for the TI, and difficulty assessed using a VAS. The results were expressed as median values (interquartile range). The TI times and VAS were compared using the Mann-Whitney U test. All analyses were performed using SPSS 23 software (SPSS, Chicago, IL, USA). Statistical significance was accepted at P &lt; 0.05.",
+    "data": null,
+    "protocol_id": 23962,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [],
+  "title": "The protocol for the mannequin crossover trial entitled &quot;Comparison of video and conventional laryngoscopes for simulated difficult emergency tracheal intubations in presence of liquids in the airway&quot;",
+  "title_html": "The protocol for the mannequin crossover trial entitled &quot;Comparison of video and conventional laryngoscopes for simulated difficult emergency tracheal intubations in presence of liquids in the airway&quot;",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775224247
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775224247
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775224248
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775224248
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775224248
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "the-protocol-for-the-mannequin-crossover-trial-ent-3m2gk8e",
+  "url": "https://www.protocols.io/view/the-protocol-for-the-mannequin-crossover-trial-ent-3m2gk8e",
+  "version_class": 23962,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "the-protocol-for-the-mannequin-crossover-trial-ent-e6nvw6n2zgmk/v1",
+  "versions": [
+   {
+    "id": 23962,
+    "title": "The protocol for the mannequin crossover trial entitled &quot;Comparison of video and conventional laryngoscopes for simulated difficult emergency tracheal intubations in presence of liquids in the airway&quot;",
+    "title_html": "The protocol for the mannequin crossover trial entitled &quot;Comparison of video and conventional laryngoscopes for simulated difficult emergency tracheal intubations in presence of liquids in the airway&quot;",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.3m2gk8e",
+    "uri": "the-protocol-for-the-mannequin-crossover-trial-ent-3m2gk8e",
+    "published_on": 1560950126,
+    "modified_on": 1563638763,
+    "version_class": 23962,
+    "version_id": 0,
+    "version_code": "3m2gk8e",
+    "version_uri": "the-protocol-for-the-mannequin-crossover-trial-ent-e6nvw6n2zgmk/v1",
+    "created_on": 1559563955,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Kei Suzuki",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": null,
+     "affiliation_url": null,
+     "username": "kei-suzuki1",
+     "link": null,
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "632F2A54687311F08F960A58A9FEAC02",
+     "file_name": "bakkie.png",
+     "url": "https://files.protocols.io/external/bakkie-632F2A54687311F08F960A58A9FEAC02.png",
+     "mime": "image/png",
+     "size": 433953,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1753350524
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

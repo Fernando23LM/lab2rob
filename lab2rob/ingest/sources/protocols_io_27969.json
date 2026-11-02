@@ -1,0 +1,1061 @@
+{
+ "protocol_id": 27969,
+ "uri": "spot-assay-7i9hkh6",
+ "doi": "dx.doi.org/10.17504/protocols.io.7i9hkh6",
+ "url": "https://www.protocols.io/view/spot-assay-7i9hkh6",
+ "title": "Spot assay",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:15:21Z",
+ "query": "dilution",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Marijn",
+    "last_name": "Ceelen",
+    "affiliation": "iGEM Wageningen",
+    "note": "",
+    "guid": "038C0F87F8CC11ED9D4302C0B41BC903",
+    "username": "marijn-ceelen",
+    "name": "Marijn Ceelen",
+    "affiliation_url": "",
+    "link": "",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "",
+  "created_on": 1569143014,
+  "creator": {
+   "affiliation": "Wageningen University",
+   "affiliation_url": "",
+   "affiliations": [
+    {
+     "affiliation": "Wageningen University",
+     "is_default": true,
+     "job_title": null,
+     "url": ""
+    }
+   ],
+   "badges": [
+    {
+     "id": 3,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/silver.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/silver.svg"
+     },
+     "name": "Power author!"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": "",
+   "name": "Marijn Ceelen",
+   "username": "marijn-ceelen"
+  },
+  "cross_cloud_origin": null,
+  "description": "A variant of the plaque assay in which entire phage dilution ranges can be tested on a single plate. ",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.7i9hkh6",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "CC5FAF80DD1711E9874B51EF08DCE5BB",
+  "guidelines": "",
+  "id": 27969,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 520243,
+  "keywords": "Plaque assay, phage, bacteriophage, lambda, variant of the plaque assay, plaque assay, entire phage dilution range, plaque, assay, single plate, plate",
+  "link": "",
+  "manuscript_citation": "",
+  "materials": [],
+  "materials_text": "",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 0,
+   "file_name": "avatar.png",
+   "guid": "00000000000000000000000000000001",
+   "height": 400,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 0,
+   "url": "https://www.protocols.io/img/default_protocol.png",
+   "width": 400
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1569145017,
+  "reserved_doi": "",
+  "space_id": 1405,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 8810,
+   "number_of_steps": 10,
+   "number_of_bookmarks": 5,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 139,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 0,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 7,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": "We use this protocol and it's working"
+  },
+  "steps": [
+   {
+    "id": 816214,
+    "guid": "748C8D80DD1911E9874B51EF08DCE5BB",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Streak LB plate with E. coli (strain should susceptible to phage lambda. Strains that include a prophage lambda are likely to be resistant. Strains LE392 and DH10B have been used with this protocol) and incubate overnight at  37 \u00b0C \n",
+    "data": null,
+    "protocol_id": 27969,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 816215,
+    "guid": "748E1420DD1911E9874B51EF08DCE5BB",
+    "previous_id": 816214,
+    "previous_guid": "748C8D80DD1911E9874B51EF08DCE5BB",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Pick a colony from this plate and use it to inoculate  10 mL  of LB. Incubate this culture at 37 \u00b0C  until OD reaches 2-3. Overnight culture is recommended.\n",
+    "data": null,
+    "protocol_id": 27969,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 816216,
+    "guid": "84AA1250DD1911E9874B51EF08DCE5BB",
+    "previous_id": 816217,
+    "previous_guid": "FF164040DD1911E9874B51EF08DCE5BB",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix  200 \u00b5L  of cell culture with  3 mL  of liquid soft LB agar  ( 50 \u00b0C ).\n",
+    "data": null,
+    "protocol_id": 27969,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 816217,
+    "guid": "FF164040DD1911E9874B51EF08DCE5BB",
+    "previous_id": 816219,
+    "previous_guid": "8132D070DD1A11E9874B51EF08DCE5BB",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Make a phage dilution range in a 96 wells plate in LB medium. It is advisable to make a wide range of dilutions. 10-1 to 10-12 covers the range of possible titers.",
+    "data": null,
+    "protocol_id": 27969,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 816218,
+    "guid": "651DF0E0DD1A11E9874B51EF08DCE5BB",
+    "previous_id": 816216,
+    "previous_guid": "84AA1250DD1911E9874B51EF08DCE5BB",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Pour the mixture on the preheated LB agar plates and spread the mixture on the plate by moving it. Make sure to work quickly to avoid clumps of solidified agar. Incubate for  00:15:00  at room temperature. \n",
+    "data": null,
+    "protocol_id": 27969,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 816219,
+    "guid": "8132D070DD1A11E9874B51EF08DCE5BB",
+    "previous_id": 816215,
+    "previous_guid": "748E1420DD1911E9874B51EF08DCE5BB",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Preheat LB agar plates at 37 \u00b0C . Store soft LB agar (LB agar with 0.7% agar) at  50 \u00b0C . \n",
+    "data": null,
+    "protocol_id": 27969,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 816220,
+    "guid": "C31BAD90DD1A11E9874B51EF08DCE5BB",
+    "previous_id": 816218,
+    "previous_guid": "651DF0E0DD1A11E9874B51EF08DCE5BB",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Use a multichannel pipet with 8 channels to gently drop  3 \u00b5L  drops of the phage dilution on the plates. 4 rows of 8 drops fit on a plate. Mark the plate beforehand to indicate the range of dilution. Be careful to not touch the plate with the pipet and to keep the plate steady. Avoid moving the plate to prevent the drops from spilling out.\n\n",
+    "data": null,
+    "protocol_id": 27969,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 816221,
+    "guid": "4C5A1BA0DD1B11E9874B51EF08DCE5BB",
+    "previous_id": 816220,
+    "previous_guid": "C31BAD90DD1A11E9874B51EF08DCE5BB",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate the plates for  00:15:00  at room temperature . Check whether the drops have dried. If the drops are still clearly visible allow the plate to incubate for a longer time.\n\n",
+    "data": null,
+    "protocol_id": 27969,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 816222,
+    "guid": "8A585110DD1B11E9874B51EF08DCE5BB",
+    "previous_id": 816221,
+    "previous_guid": "4C5A1BA0DD1B11E9874B51EF08DCE5BB",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "After the drops have dried, turn the plates over and incubate overnight at  37 \u00b0C .\n",
+    "data": null,
+    "protocol_id": 27969,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 816223,
+    "guid": "A94D4620DD1B11E9874B51EF08DCE5BB",
+    "previous_id": 816222,
+    "previous_guid": "8A585110DD1B11E9874B51EF08DCE5BB",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Count the amount of plaques visible for the individual drops.  Plaque Forming Units (PFU)/mL can be calculated with the following formula: PFU/mL = \ud835\udc41 \u00d7 1/\ud835\udc37\ud835\udc39 \u00d7 1/V.\nN is the number of plaques of lysis counted on the plate (expressed as PFU); DF is the dilution factor and V is the volume of phage dilution pipetted on the plate.",
+    "data": null,
+    "protocol_id": 27969,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [],
+  "title": "Spot assay",
+  "title_html": "<p>Spot assay</p>",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775224514
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775224514
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775224514
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775224514
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775224514
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "spot-assay-7i9hkh6",
+  "url": "https://www.protocols.io/view/spot-assay-7i9hkh6",
+  "version_class": 27969,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "spot-assay-ewov18j72gr2/v1",
+  "versions": [
+   {
+    "id": 27969,
+    "title": "Spot assay",
+    "title_html": "<p>Spot assay</p>",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.7i9hkh6",
+    "uri": "spot-assay-7i9hkh6",
+    "published_on": 1569145017,
+    "modified_on": 1569145017,
+    "version_class": 27969,
+    "version_id": 0,
+    "version_code": "7i9hkh6",
+    "version_uri": "spot-assay-ewov18j72gr2/v1",
+    "created_on": 1569143014,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Marijn Ceelen",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "Wageningen University",
+     "affiliation_url": "",
+     "username": "marijn-ceelen",
+     "link": "",
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/default_protocol.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 400,
+     "height": 400,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

@@ -1,0 +1,261 @@
+# Protocol words -> registry names. Canonical names are skills.yaml entries
+# (kind: action/query) or assets.yaml entries (kind: object). Lookups are
+# case-insensitive (see registry.lexicon_index). ontology_id is filled from
+# OBI/ChEBI/UO lookups by a later task with network access; null until then.
+lexicon:
+  - canonical: transfer
+    kind: action
+    ontology_id: null
+    synonyms: [transfer, pipet, move liquid]
+  - canonical: mix_by_pipetting
+    kind: action
+    ontology_id: null
+    synonyms: [pipette mix, mix by pipetting, triturate]
+  - canonical: serial_dilution
+    kind: action
+    ontology_id: null
+    synonyms: [serial dilution, dilution series, serially dilute]
+  - canonical: change_tip
+    kind: action
+    ontology_id: null
+    synonyms: [change tip, new tip, fresh tip, replace tip]
+  - canonical: aspirate
+    kind: action
+    ontology_id: null
+    synonyms: [aspirate, draw up, suck up]
+  - canonical: dispense
+    kind: action
+    ontology_id: null
+    synonyms: [dispense, expel, push out]
+  - canonical: incubate
+    kind: action
+    ontology_id: null
+    synonyms: [incubate, incubation, put in the incubator]
+  - canonical: centrifuge
+    kind: action
+    ontology_id: null
+    synonyms: [spin, spin down, pellet]
+  - canonical: vortex
+    kind: action
+    ontology_id: null
+    synonyms: [vortex, vortex mix]
+  - canonical: mix
+    kind: action
+    ontology_id: null
+    synonyms: [mix, stir]
+  - canonical: thermocycle
+    kind: action
+    ontology_id: null
+    synonyms: [pcr, thermocycle, thermal cycle, amplify]
+  - canonical: seal_plate
+    kind: action
+    ontology_id: null
+    synonyms: [seal, seal the plate]
+  - canonical: unseal_plate
+    kind: action
+    ontology_id: null
+    synonyms: [unseal, remove seal]
+  - canonical: cover_plate
+    kind: action
+    ontology_id: null
+    synonyms: [cover, lid the plate, put the lid on]
+  - canonical: uncover_plate
+    kind: action
+    ontology_id: null
+    synonyms: [uncover, remove the lid]
+  - canonical: weigh_sample
+    kind: action
+    ontology_id: null
+    synonyms: [weigh, weight out, tare]
+  - canonical: measure_ph
+    kind: query
+    ontology_id: null
+    synonyms: [ph, measure ph, check ph]
+  - canonical: filter_sterilize
+    kind: action
+    ontology_id: null
+    synonyms: [filter sterilize, sterile filter, 0.22 um filter]
+  - canonical: aliquot
+    kind: action
+    ontology_id: null
+    synonyms: [aliquot, split into aliquots]
+  - canonical: consolidate
+    kind: action
+    ontology_id: null
+    synonyms: [consolidate, pool wells]
+  - canonical: distribute
+    kind: action
+    ontology_id: null
+    synonyms: [distribute, dispense across]
+  - canonical: pool_samples
+    kind: action
+    ontology_id: null
+    synonyms: [pool, combine samples]
+  - canonical: dilute
+    kind: action
+    ontology_id: null
+    synonyms: [dilute, dilution]
+  - canonical: wash_plate
+    kind: action
+    ontology_id: null
+    synonyms: [wash, wash wells]
+  - canonical: sonicate
+    kind: action
+    ontology_id: null
+    synonyms: [sonicate, sonication]
+  - canonical: homogenize
+    kind: action
+    ontology_id: null
+    synonyms: [homogenize, homogenise]
+  - canonical: flash_freeze
+    kind: action
+    ontology_id: null
+    synonyms: [flash freeze, snap freeze, liquid nitrogen]
+  - canonical: thaw
+    kind: action
+    ontology_id: null
+    synonyms: [thaw]
+  - canonical: autoclave
+    kind: action
+    ontology_id: null
+    synonyms: [autoclave]
+  - canonical: uv_sterilize
+    kind: action
+    ontology_id: null
+    synonyms: [uv sterilize, uv]
+  - canonical: blot_dry
+    kind: action
+    ontology_id: null
+    synonyms: [blot, blot dry, pat dry]
+  - canonical: stamp_transfer
+    kind: action
+    ontology_id: null
+    synonyms: [stamp, pin tool, replicate with pins]
+  - canonical: concentrate_sample
+    kind: action
+    ontology_id: null
+    synonyms: [concentrate, speed-vac, speedvac]
+  - canonical: image_plate
+    kind: query
+    ontology_id: null
+    synonyms: [image, photograph, take a picture]
+  - canonical: measure_fluorescence
+    kind: query
+    ontology_id: null
+    synonyms: [fluorescence, read fluorescence]
+  - canonical: measure_luminescence
+    kind: query
+    ontology_id: null
+    synonyms: [luminescence, read luminescence]
+  - canonical: attach_tip
+    kind: action
+    ontology_id: null
+    synonyms: [attach tip, fit tip, pick up tip]
+  - canonical: eject_tip
+    kind: action
+    ontology_id: null
+    synonyms: [eject tip, discard tip, throw away tip]
+  - canonical: move_to
+    kind: action
+    ontology_id: null
+    synonyms: [move, go to, bring to]
+  - canonical: inspect
+    kind: action
+    ontology_id: null
+    synonyms: [inspect, microscope, look at cells]
+  - canonical: read_plate
+    kind: action
+    ontology_id: null
+    synonyms: [read the plate, plate read, absorbance]
+  - canonical: microcentrifuge_tube_1_5ml
+    kind: object
+    ontology_id: null
+    synonyms: [eppendorf, eppendorf tube, microfuge tube, 1.5 ml tube, microcentrifuge tube]
+  - canonical: centrifuge_tube_15ml
+    kind: object
+    ontology_id: null
+    synonyms: [15 ml tube, falcon tube, conical tube]
+  - canonical: centrifuge_tube_50ml
+    kind: object
+    ontology_id: null
+    synonyms: [50 ml tube]
+  - canonical: plate_96_well
+    kind: object
+    ontology_id: null
+    synonyms: [96-well plate, 96 well plate]
+  - canonical: plate_384_well
+    kind: object
+    ontology_id: null
+    synonyms: [384-well plate, 384 well plate]
+  - canonical: petri_dish_90mm
+    kind: object
+    ontology_id: null
+    synonyms: [petri dish, petri, culture plate]
+  - canonical: tip_rack
+    kind: object
+    ontology_id: null
+    synonyms: [tip rack, tip box]
+  - canonical: pipette_tip_200ul
+    kind: object
+    ontology_id: null
+    synonyms: [200 ul tip, pipette tip]
+  - canonical: pipette_tip_1000ul
+    kind: object
+    ontology_id: null
+    synonyms: [1000 ul tip, 1 ml tip]
+  - canonical: reagent_reservoir_50ml
+    kind: object
+    ontology_id: null
+    synonyms: [reservoir, reagent reservoir, trough]
+  - canonical: centrifuge_mini
+    kind: object
+    ontology_id: null
+    synonyms: [centrifuge, microcentrifuge, minifuge]
+  - canonical: incubator_co2
+    kind: object
+    ontology_id: null
+    synonyms: [incubator, co2 incubator]
+  - canonical: plate_reader
+    kind: object
+    ontology_id: null
+    synonyms: [plate reader, reader]
+  - canonical: vortexer
+    kind: object
+    ontology_id: null
+    synonyms: [vortexer]
+  - canonical: ph_meter
+    kind: object
+    ontology_id: null
+    synonyms: [ph meter, ph probe]
+  - canonical: tube_vial
+    kind: object
+    ontology_id: null
+    synonyms: [vial, sample vial, tube]
+  - canonical: pipette
+    kind: object
+    ontology_id: null
+    synonyms: [pipette, micropipette, pipetman]
+  - canonical: culture_dish
+    kind: object
+    ontology_id: null
+    synonyms: [dish, culture dish]
+  - canonical: balance
+    kind: object
+    ontology_id: null
+    synonyms: [balance, scale]
+  - canonical: mix
+    kind: action
+    ontology_id: null
+    synonyms: [dissolve]
+  - canonical: weigh_sample
+    kind: action
+    ontology_id: null
+    synonyms: [weigh]
+  - canonical: transfer
+    kind: action
+    ontology_id: null
+    synonyms: [add]
+  - canonical: dilute
+    kind: action
+    ontology_id: null
+    synonyms: [make up, make to volume]

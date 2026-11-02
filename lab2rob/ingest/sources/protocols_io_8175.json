@@ -1,0 +1,1140 @@
+{
+ "protocol_id": 8175,
+ "uri": "molten-streaking-for-singles-rapid-tube-free-seria-j8pcrvn",
+ "doi": "dx.doi.org/10.17504/protocols.io.j8pcrvn",
+ "url": "https://www.protocols.io/view/molten-streaking-for-singles-rapid-tube-free-seria-j8pcrvn",
+ "title": "Molten Streaking for Singles: rapid tube-free serial purification of viruses",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:15:35Z",
+ "query": "dilution",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Kathryn",
+    "last_name": "Kauffman",
+    "affiliation": "Massachusetts Institute of Technology",
+    "note": "",
+    "guid": "0302CCBCF8CC11ED9D4302C0B41BC903",
+    "username": "kathryn-kauffman",
+    "name": "Kathryn Kauffman",
+    "affiliation_url": "",
+    "link": "https://mobile.twitter.com/k6logc",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "A40B00F05B2A11EFA2EF0A58A9FEAC02",
+     "file_name": "n8yg49e.jpeg",
+     "url": "https://files.protocols.io/external/n8yg49e-A40B00F05B2A11EFA2EF0A58A9FEAC02.jpeg",
+     "mime": "image/jpeg",
+     "size": 10112,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1723742417
+    }
+   },
+   {
+    "first_name": "Martin",
+    "last_name": "Polz",
+    "affiliation": "Massachusetts Institute of Technology",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Martin Polz",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "Materials to prepare in advance for agar overlay approaches\n \n**Host culture:**This procedure\u00a0works well with 100uL of overnight host culture for each standard size (90mm) petri dish.\n\n**Virus material:\u00a0**\n1. For\u00a0**_Serial Purification of Viruses\u00a0_**the starting material may be an agar overlay plate containing a plaque to be purified, or may be a liquid or frozen stock of unknown titer - such as, for example, an archived plaque or plaque-eluates generated using the &#39;Archiving Plaques&#39; protocol.\n\n \n**Bottom agar plates:\u00a0**Prepare 1.0% agar containing media (&#39;bottom agar&#39;) in a glass bottle or flask with a stirbar and sterilize, pour 25mL per standard size petri dishes, and allow to solidify.\u00a0\n\n**Top agar bottle:\u00a0**Prepare 0.3% agar containing media (&#39;0.3% top agar&#39;) in a glass bottle with a stirbar and sterilize; though each plate will require only 2mL of top agar, volumes of up to 500mL can be prepared and re-used across multiple days of plating.",
+  "created_on": 1507476177,
+  "creator": {
+   "affiliation": "University at Buffalo",
+   "affiliation_url": "",
+   "affiliations": [
+    {
+     "affiliation": "University at Buffalo",
+     "is_default": true,
+     "job_title": null,
+     "url": ""
+    }
+   ],
+   "badges": [
+    {
+     "id": 2,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/bronze.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/bronze.svg"
+     },
+     "name": "Author"
+    },
+    {
+     "id": 5,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/star.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/star.svg"
+     },
+     "name": "Early adopter"
+    },
+    {
+     "id": 6,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/accelerator.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/accelerator.svg"
+     },
+     "name": "Science accelerator"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://files.protocols.io/thumbnails/external/n8yg49e-A40B00F05B2A11EFA2EF0A58A9FEAC02.jpeg/thumbnail-w100xh100.jpeg",
+    "source": "https://files.protocols.io/external/n8yg49e-A40B00F05B2A11EFA2EF0A58A9FEAC02.jpeg"
+   },
+   "last_name": "",
+   "link": "https://mobile.twitter.com/k6logc",
+   "name": "Kathryn Kauffman",
+   "username": "kathryn-kauffman"
+  },
+  "cross_cloud_origin": null,
+  "description": "This protocol presents a simplified approach for purification of viral strains directly from plaques without the need for preparation of dilutions. Using the &#39;Tube-free agar overlay&#39; approach viruses are &#39;picked&#39; directly from source plaques with a toothpick and streaked into molten host lawns in a manner directly analogous to re-streaking based colony purification of bacteria. This approach requires less time and material than dilution based approaches and yields equivalent purification of viruses.\u00a0Formation of plaques along streaks also offers further confidence that plaques selected for further purification derive from an isolated phage particle rather than a splash containing multiple viruses or a prophage induction event.\u00a0\n\nA video demonstrating the approach is available as supplementary material with the original publication (direct link [here](https://ars.els-cdn.com/content/image/1-s2.0-S221501611830013X-mmc3.mp4)).\n\n```\n\n```\n \n\n```\n\n```\n \n\n",
+  "disclaimer": "",
+  "documents": [
+   {
+    "id": 32809,
+    "guid": "",
+    "type_id": 0,
+    "filename": "",
+    "key": "",
+    "color": "",
+    "height": 0,
+    "width": 0,
+    "is_document": null,
+    "original_file_id": null,
+    "thumb_url": "https://www.protocols.io/img/extensions/pdf.png",
+    "size": 1222957,
+    "is_private": 0,
+    "is_new": 0,
+    "ofn": "Kauffman and Polz - 2018 - Streamlining standard bacteriophage methods for hi.pdf",
+    "url": "https://content.protocols.io/babjg49e.pdf",
+    "bucket_name": null,
+    "s3_webp_url": "",
+    "file_id": "32809"
+   }
+  ],
+  "doi": "dx.doi.org/10.17504/protocols.io.j8pcrvn",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "871FE55CB9DA11E99CA40242AC110005",
+  "guidelines": "Please also refer to the original publication for a  **&#34;Microreview of additional considerations relevant to agar overlays&#34;**, which highlights methodological aspects that are known or expected to impact the nature, number, and diversity of viruses recovered using agar overlay approaches.",
+  "id": 8175,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 253827,
+  "keywords": "virus, viruses, phage, phages, bacteriophages, plaques, overlay, plaque assay, yields equivalent purification of virus, free serial purification of virus, viral strain, containing multiple virus, approach virus, multiple virus, colony purification of bacteria, based colony purification, molten streaking for single, molten streaking, formation of plaque, preparation of dilution, purification, further purification derive from an isolated phage particle, simplified approach for purification, molten host lawn, free serial purification, isolated phage particle, dilution, material than dilution, equivalent purification, plaques without the need, plaque, source plaque",
+  "link": "https://doi.org/10.1016/j.mex.2018.01.007",
+  "manuscript_citation": "",
+  "materials": [],
+  "materials_text": "See &#34;Guidelines &amp; Warnings&#34; section for materials to have ready before start.",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 1753350452,
+   "file_name": "s25g49e.jpg",
+   "guid": "387D12AD687311F08F960A58A9FEAC02",
+   "height": 0,
+   "mime": "image/jpeg",
+   "scan_status": 0,
+   "size": 35649,
+   "url": "https://files.protocols.io/external/s25g49e-387D12AD687311F08F960A58A9FEAC02.jpg",
+   "width": 0
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1542625070,
+  "reserved_doi": "",
+  "space_id": 0,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 399,
+   "number_of_steps": 10,
+   "number_of_bookmarks": 5,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 64,
+   "number_of_runs": 1,
+   "number_of_votes": 0,
+   "number_of_reagents": 0,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 1,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": ""
+  },
+  "steps": [
+   {
+    "id": 590053,
+    "guid": "D78BB45D7C27486C9B57D290380104F4",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "I. Setting up the top agar in a beaker-waterbath",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "**Prepare a beaker-waterbath:** Place bottle of top agar into a glass beaker and add water to the beaker up to the level of the top agar in the bottle; for example, a 500mL glass bottle into a 1L beaker.",
+    "data": null,
+    "protocol_id": 8175,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 590055,
+    "guid": "286F547B0C604278ABF66D6F32BFE39F",
+    "previous_id": 590053,
+    "previous_guid": "D78BB45D7C27486C9B57D290380104F4",
+    "section": "I. Setting up the top agar in a beaker-waterbath",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "**Melt the top agar:** Place the beaker-waterbath with the top agar bottle into a microwave and cook without boil-over until thoroughly melted.\n\n_Note:_ It is exceedingly important to achieve a &#39;smooth melt&#39; of the top agar to ensure that plaques will form and be visible. Media composition affects the time it takes to achieve a \u2018smooth melt\u2019, however a general approach is as follows: start by melting the top agar for several 5-minute cycles at low % power, once the top agar appears nearly completely melted increase the % power and cook until the top agar comes to a boil, observe the top agar during high power cooking to prevent boil-over, bring to a boil 3 times.\n ",
+    "data": null,
+    "protocol_id": 8175,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 590057,
+    "guid": "3AB61953339547818180F4DB02AD0776",
+    "previous_id": 590055,
+    "previous_guid": "286F547B0C604278ABF66D6F32BFE39F",
+    "section": "I. Setting up the top agar in a beaker-waterbath",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "**Equilibrate the top agar to 50-52\u00b0C:** Place the beaker-waterbath with the top agar onto a hot plate with stirring, place a thermometer into the beaker-waterbath and leave it there to wait for equilibration to 50-53\u00b0C (Figure 1).\n\na\n\n\n_Note:_ This will require setting the heat block to a temperature greater than the target temperature, for example up to 85\u00b0C, but this is dependent on specific heat block models and must be determined by the user.\n ",
+    "data": null,
+    "protocol_id": 8175,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 590061,
+    "guid": "830B3394A7204D2EAFB5CD2349FCE582",
+    "previous_id": 590057,
+    "previous_guid": "3AB61953339547818180F4DB02AD0776",
+    "section": "II. Streaking for singles: rapid serial purification of viruses from plaques - <strong>Streak 1 (Day 1)</strong>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "**Prepare the molten agar overlay:\u00a0**Have all materials ready to advance to Streak 1 steps (Steps 5, 6, 7, &amp; 8) before starting this step as the lawn cannot be allowed to solidify before the streak.",
+    "data": null,
+    "protocol_id": 8175,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 590063,
+    "guid": "3114A4ADC5F54A7F8449A34E9F9AF443",
+    "previous_id": 590061,
+    "previous_guid": "830B3394A7204D2EAFB5CD2349FCE582",
+    "section": "II. Streaking for singles: rapid serial purification of viruses from plaques - <strong>Streak 1 (Day 1)</strong>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "**Add host -** Pipette 100uL of overnight host culture directly onto the bottom agar\n\n \n[Overlay-addingHost.jpg]](https://content.protocols.io/babqg49e.jpg)\n \n",
+    "data": null,
+    "protocol_id": 8175,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 590064,
+    "guid": "19A25256BAD6461BB3AA3AB79ED091AF",
+    "previous_id": 590063,
+    "previous_guid": "3114A4ADC5F54A7F8449A34E9F9AF443",
+    "section": "II. Streaking for singles: rapid serial purification of viruses from plaques - <strong>Streak 1 (Day 1)</strong>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "**Add molten top agar -** Pipette 2mL of molten top agar from the bottle directly to the bottom agar next to the hosts using either a 5mL pipette or a serological pipette",
+    "data": null,
+    "protocol_id": 8175,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 590065,
+    "guid": "D0940D48BD944377B793FE909573A9BF",
+    "previous_id": 590064,
+    "previous_guid": "19A25256BAD6461BB3AA3AB79ED091AF",
+    "section": "II. Streaking for singles: rapid serial purification of viruses from plaques - <strong>Streak 1 (Day 1)</strong>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "**Make overlay -** Swirl vigorously\u00a0but briefly to mix the bacteria and molten top agar and spread it across the plate.\n ",
+    "data": null,
+    "protocol_id": 8175,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 590066,
+    "guid": "0CC10DAF3E8A49D5890D60E3AC40DFC6",
+    "previous_id": 590065,
+    "previous_guid": "D0940D48BD944377B793FE909573A9BF",
+    "section": "II. Streaking for singles: rapid serial purification of viruses from plaques - <strong>Streak 1 (Day 1)</strong>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "**Streak viruses -** from the source plate directly into the still-molten top agar (link to demonstration Video 1 is [here](https://ars.els-cdn.com/content/image/1-s2.0-S221501611830013X-mmc3.mp4)) such that when the host lawn forms it will contain single colonies; it is necessary to do this swiftly such that streaking is completed before the agar solidifies.\n1. Insert a sterile toothpick (or pipette tip) into the source plaque or solution\n1. Swirl the toothpick into a small area of still-molten agar overlay\n1. Use a second toothpick to make three separate strokes in the same direction through the still-molten top agar, each time passing through the area where the first toothpick was touched.\n1. Use a third toothpick to make a repeating Z-stroke through the still-molten top agar, first passing once through the streaks from the second toothpick.\n\n\n\n\nNote: If the starting material is a liquid stock then drop up to 20 ul of the sample into one spot in the molten overlay and streak as described. If the starting material is a frozen stock then collect a small mass of that stock with a sterile toothpick or tip and transfer into one spot in the molten overlay and streak as described. Take care to ensure that frozen stocks remain frozen during the procedure to prevent loss of viruses sensitive to freeze-thaw cycles.\n \n",
+    "data": null,
+    "protocol_id": 8175,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 590071,
+    "guid": "C92DD2CA57154399B0276F54994D4B5A",
+    "previous_id": 590066,
+    "previous_guid": "0CC10DAF3E8A49D5890D60E3AC40DFC6",
+    "section": "II. Streaking for singles: rapid serial purification of viruses from plaques - <strong>Streak 1 (Day 1)</strong>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "**Allow agar overlay to solidify:\u00a0**Leave the plate on the bench, top agar side up, for 20 minutes to allow the agar to completely solidify, then place in desired incubation conditions and monitor for plaque formation.\n\n\n\nNote: Some plaques may take days or weeks to form (see original publication for discussion and reference), if keeping plates for extended periods of time to monitor for plaque formation ensure that the plates are protected from dessication.\n \n\n \n\n \n[Fig.3.jpg]](https://content.protocols.io/babpg49e.jpg)\n \n\n \n",
+    "data": null,
+    "protocol_id": 8175,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 590072,
+    "guid": "B10BFD61B2EB4C6DA6797538DDFDBDCD",
+    "previous_id": 590071,
+    "previous_guid": "C92DD2CA57154399B0276F54994D4B5A",
+    "section": "III. Streaking for singles: rapid serial purification of viruses from plaques - <strong>Streaks 2 &amp; 3 (Days 2 &amp; 3, or later)</strong>",
+    "section_color": "#84CE84",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Once plaques appear on the first plate, use this plate as a source, insert a sterile toothpick into a single plaque and repeat the streaking for singles approach for the desired number of purifications. Single plaques arising\u00a0from\u00a0the\u00a0final streak\u00a0can be picked and archived, or used to generate large-scale liquid or plate lysates of the purified\u00a0virus.\n \n\nNote: When isolating from a plaque, ensure that the plaque is well separated from other plaques (such as those as indicated by the arrows in Step 9).\n \n\n\nNote: It is common practice to consider plaques generated from the third streak as \u201cpurified\u201d. When deciding on number of serial purifications consider that use of fewer serial passages may result in recovery of mixed stocks of viruses but may also minimize changes in viruses resulting from adaptation or selection on the host during passage.\n \n\n\n",
+    "data": null,
+    "protocol_id": 8175,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "I. Setting up the top agar in a beaker-waterbath",
+    "color": "",
+    "first_step_guid": "D78BB45D7C27486C9B57D290380104F4"
+   },
+   {
+    "title": "II. Streaking for singles: rapid serial purification of viruses from plaques - <strong>Streak 1 (Day 1)</strong>",
+    "color": "#94EBFF",
+    "first_step_guid": "830B3394A7204D2EAFB5CD2349FCE582"
+   },
+   {
+    "title": "III. Streaking for singles: rapid serial purification of viruses from plaques - <strong>Streaks 2 &amp; 3 (Days 2 &amp; 3, or later)</strong>",
+    "color": "#84CE84",
+    "first_step_guid": "B10BFD61B2EB4C6DA6797538DDFDBDCD"
+   }
+  ],
+  "title": "Molten Streaking for Singles: rapid tube-free serial purification of viruses",
+  "title_html": "Molten Streaking for Singles: rapid tube-free serial purification of viruses",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775221447
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775221447
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775221447
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775221447
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775221447
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "molten-streaking-for-singles-rapid-tube-free-seria-j8pcrvn",
+  "url": "https://www.protocols.io/view/molten-streaking-for-singles-rapid-tube-free-seria-j8pcrvn",
+  "version_class": 8175,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "molten-streaking-for-singles-rapid-tube-free-seria-14egnj7yv5dy/v1",
+  "versions": [
+   {
+    "id": 8175,
+    "title": "Molten Streaking for Singles: rapid tube-free serial purification of viruses",
+    "title_html": "Molten Streaking for Singles: rapid tube-free serial purification of viruses",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.j8pcrvn",
+    "uri": "molten-streaking-for-singles-rapid-tube-free-seria-j8pcrvn",
+    "published_on": 1542625070,
+    "modified_on": 1542625070,
+    "version_class": 8175,
+    "version_id": 0,
+    "version_code": "j8pcrvn",
+    "version_uri": "molten-streaking-for-singles-rapid-tube-free-seria-14egnj7yv5dy/v1",
+    "created_on": 1507476177,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Kathryn Kauffman",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "University at Buffalo",
+     "affiliation_url": "",
+     "username": "kathryn-kauffman",
+     "link": "https://mobile.twitter.com/k6logc",
+     "user_image_file": {
+      "guid": "A40B00F05B2A11EFA2EF0A58A9FEAC02",
+      "file_name": "n8yg49e.jpeg",
+      "url": "https://files.protocols.io/external/n8yg49e-A40B00F05B2A11EFA2EF0A58A9FEAC02.jpeg",
+      "mime": "image/jpeg",
+      "size": 10112,
+      "width": 0,
+      "height": 0,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 1723742417
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "387D12AD687311F08F960A58A9FEAC02",
+     "file_name": "s25g49e.jpg",
+     "url": "https://files.protocols.io/external/s25g49e-387D12AD687311F08F960A58A9FEAC02.jpg",
+     "mime": "image/jpeg",
+     "size": 35649,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1753350452
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

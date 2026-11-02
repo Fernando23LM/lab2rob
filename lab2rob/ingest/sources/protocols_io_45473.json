@@ -1,0 +1,1001 @@
+{
+ "protocol_id": 45473,
+ "uri": "passaging-and-plating-a549-cells-bqm9mu96",
+ "doi": null,
+ "url": "https://www.protocols.io/view/passaging-and-plating-a549-cells-bqm9mu96",
+ "title": "Passaging and plating A549 cells",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:14:17Z",
+ "query": "passaging",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Jcprice",
+    "last_name": "",
+    "affiliation": "BYU",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Jcprice ",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "Warm all solutions to 37 deg C and prepare biosafety cabinet by starting the blower and wiping down all surfaces with 70% ethanol.  Organize your workspace in the biosafety cabinet to have all clean/fresh reagents on one side and all waste on the other.  Anything you will be taking into the biosafety cabinet should also be wiped clean using 70% ethanol and paper towels",
+  "created_on": 1607717332,
+  "creator": {
+   "affiliation": "BYU",
+   "affiliation_url": "",
+   "affiliations": [
+    {
+     "affiliation": "BYU",
+     "is_default": true,
+     "job_title": null,
+     "url": ""
+    }
+   ],
+   "badges": [
+    {
+     "id": 3,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/silver.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/silver.svg"
+     },
+     "name": "Power author!"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": "",
+   "name": "JCPrice",
+   "username": "jcprice-"
+  },
+  "cross_cloud_origin": null,
+  "description": "",
+  "disclaimer": "",
+  "documents": null,
+  "doi": null,
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "AC8797603BEC11EBBFE09DE231A97DB5",
+  "guidelines": "Most human cell lines are vulnerable to infection by the microbes on your skin, be careful to work aseptically to avoid contaminating your cultures and keep yourself safe. ",
+  "id": 45473,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": false,
+  "is_subprotocol": null,
+  "item_id": 747226,
+  "keywords": "cell",
+  "link": "",
+  "manuscript_citation": "",
+  "materials": [],
+  "materials_text": "Complete Growth Medium containing Dulbecco\u2019s Modified Eagle\u2019s Medium (DMEM) (ATCC 30-2002). To make the  complete growth medium, add the following components to the base medium:  10% Fetal Bovine Serum (heat inactivated) (ATCC 30-2020), 2mM  L-glutamine (ATCC 30-2214), 1% Penicillin/Streptomycin.\n\nSterile 6 cm plates\nTrypsin-EDTA solution\nsterile serological pipettes (1mL and 10 mL)\n",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 0,
+   "file_name": "avatar.png",
+   "guid": "00000000000000000000000000000001",
+   "height": 400,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 0,
+   "url": "https://www.protocols.io/img/default_protocol.png",
+   "width": 400
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1607720301,
+  "reserved_doi": "",
+  "space_id": 14959,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 236,
+   "number_of_steps": 7,
+   "number_of_bookmarks": 0,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 54,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 0,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 0,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 2,
+   "info": "We are still developing and optimizing this protocol"
+  },
+  "steps": [
+   {
+    "id": 1091325,
+    "guid": "CB0E6F103BF111EBBFE09DE231A97DB5",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Remove and discard culture medium, by tipping dish carefully to one side and aspirating the media without disturbing the adherent cells",
+    "data": null,
+    "protocol_id": 45473,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1091326,
+    "guid": "CB10E0103BF111EBBFE09DE231A97DB5",
+    "previous_id": 1091325,
+    "previous_guid": "CB0E6F103BF111EBBFE09DE231A97DB5",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Briefly rinse the cell layer with 1 mL 0.05% (w/v) Trypsin - 53 mM EDTA solution to remove all traces of serum which contains trypsin inhibitor.",
+    "data": null,
+    "protocol_id": 45473,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1091327,
+    "guid": "CB1266B03BF111EBBFE09DE231A97DB5",
+    "previous_id": 1091326,
+    "previous_guid": "CB10E0103BF111EBBFE09DE231A97DB5",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add 0.5mL of Trypsin-EDTA solution to flask and observe cells under an inverted microscope until cell layer is dispersed (usually within 5  00:05:00  to 15 minutes). Note: To avoid clumping do not agitate the cells by hitting or shaking the flask while waiting for the cells to detach. Cells that are difficult to detach may be placed at 37\u00b0C to facilitate dispersal. \n",
+    "data": null,
+    "protocol_id": 45473,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 300,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1091328,
+    "guid": "CB1414603BF111EBBFE09DE231A97DB5",
+    "previous_id": 1091327,
+    "previous_guid": "CB1266B03BF111EBBFE09DE231A97DB5",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add 3 to 4 mL of complete growth medium and aspirate cells by gently pipetting. ",
+    "data": null,
+    "protocol_id": 45473,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1091329,
+    "guid": "CB159B003BF111EBBFE09DE231A97DB5",
+    "previous_id": 1091328,
+    "previous_guid": "CB1414603BF111EBBFE09DE231A97DB5",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add appropriate aliquots of the cell suspension to new culture vessels. Incubate cultures at 37\u00b0C for at least an hour.  Cells will adhere but not grow well until EDTA/trypsin is asperated off.",
+    "data": null,
+    "protocol_id": 45473,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1091330,
+    "guid": "CB17E4F03BF111EBBFE09DE231A97DB5",
+    "previous_id": 1091329,
+    "previous_guid": "CB159B003BF111EBBFE09DE231A97DB5",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "After cells have adhered to plate carefully aspirate away the media and feed cells new media",
+    "data": null,
+    "protocol_id": 45473,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1091331,
+    "guid": "CB1992A03BF111EBBFE09DE231A97DB5",
+    "previous_id": 1091330,
+    "previous_guid": "CB17E4F03BF111EBBFE09DE231A97DB5",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Allow cells to grow at 37\u00b0C",
+    "data": null,
+    "protocol_id": 45473,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [],
+  "title": "Passaging and plating A549 cells",
+  "title_html": "<p>Passaging and plating A549 cells</p>",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775226234
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775226234
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775226234
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775226234
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775226233
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "passaging-and-plating-a549-cells-bqm9mu96",
+  "url": "https://www.protocols.io/view/passaging-and-plating-a549-cells-bqm9mu96",
+  "version_class": 45473,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "passaging-and-plating-a549-cells-j8nlk4oz1g5r/v1",
+  "versions": [
+   {
+    "id": 45473,
+    "title": "Passaging and plating A549 cells",
+    "title_html": "<p>Passaging and plating A549 cells</p>",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": null,
+    "uri": "passaging-and-plating-a549-cells-bqm9mu96",
+    "published_on": 1607720301,
+    "modified_on": 1607720301,
+    "version_class": 45473,
+    "version_id": 0,
+    "version_code": "bqm9mu96",
+    "version_uri": "passaging-and-plating-a549-cells-j8nlk4oz1g5r/v1",
+    "created_on": 1607717332,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "JCPrice",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "BYU",
+     "affiliation_url": "",
+     "username": "jcprice-",
+     "link": "",
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/default_protocol.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 400,
+     "height": 400,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "warning": "A549 cells like most human cell lines host adenovirus and other transmissible pathogens. Only handle closed containers or denatured homogenates outside of a biosafety cabinet.  "
+ }
+}

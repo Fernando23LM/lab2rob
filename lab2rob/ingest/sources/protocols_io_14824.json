@@ -1,0 +1,1700 @@
+{
+ "protocol_id": 14824,
+ "uri": "protein-extraction-and-western-blot-mouse-tissues-sqgedtw",
+ "doi": "dx.doi.org/10.17504/protocols.io.sqgedtw",
+ "url": "https://www.protocols.io/view/protein-extraction-and-western-blot-mouse-tissues-sqgedtw",
+ "title": "Protein extraction and western blot (mouse tissues)",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:15:30Z",
+ "query": "dilution",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Kristin",
+    "last_name": "Anderson",
+    "affiliation": "University of Washington and Fred Hutchinson Cancer Research Center",
+    "note": "",
+    "guid": "032E35BFF8CC11ED9D4302C0B41BC903",
+    "username": "kristin-anderson",
+    "name": "Kristin Anderson",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Breanna",
+    "last_name": "Bates",
+    "affiliation": "University of Washington and Fred Hutchinson Cancer Research Center",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Breanna Bates",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "",
+  "created_on": 1534537401,
+  "creator": {
+   "affiliation": "University of Virginia",
+   "affiliation_url": null,
+   "affiliations": [
+    {
+     "affiliation": "University of Virginia",
+     "is_default": true,
+     "job_title": null,
+     "url": null
+    }
+   ],
+   "badges": [
+    {
+     "id": 4,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg"
+     },
+     "name": "Gold power author!"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": null,
+   "name": "Kristin Anderson",
+   "username": "kristin-anderson"
+  },
+  "cross_cloud_origin": null,
+  "description": "This protocol outlines how to extract protein from mouse tissues and running a Western Blot.\n \nIn brief:\nB6 WT or ID8VEGF mice were dissected and tissues or tumor flash frozen on dry ice and stored at -80\u00b0C or immediately lysed with ice-cold RIPA buffer (Thermo Scientific, cat: 89900) containing protease and phosphatase inhibitors (Thermo Scientific, cat: A32965 &amp; 88667) using the gentleMACS Dissociator (Miltenyi). Lysates were centrifuged (12,000 RPM) for 20min at 4\u00b0C.\u00a0 Protein concentrations were determined using the Pierce BCA Protein Assay Kit (Thermo Scientific, cat: 23225).\nProteins (20mg/lane) were separated on a mini-protean TGX stain-free gel 4-20% (BioRad; cat: 4568094) and transferred to 0.2mm PVDF membrane (Invitrogen; cat: LC2005). Membranes were blocked for 1h with 5% nonfat dry milk in TBS-T (1xTBS BioRad +0.1% Tween-20) then incubated overnight with 1:100 dilution of MSLN antibody (IBL America; cat: 28127) or 1:1000 Vinculin antibody (R&amp;D systems; cat: MAB6896) in TBS-T. Following incubation with appropriate horseradish peroxidase-conjugated secondary antibodies, proteins were visualized by enhanced chemiluminescence (BioRad; cat: 1705060) on the ChemiDoc XRS system (BioRad).",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.sqgedtw",
+  "ethics_statement": "The protocols.io team notes that research involving animals and humans must be conducted according to internationally-accepted standards and should always have prior approval from an Institutional Ethics Committee or Board.",
+  "fork_id": null,
+  "funders": [],
+  "guid": "8977CECDB9DA11E99CA40242AC110005",
+  "guidelines": "",
+  "id": 14824,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": false,
+  "is_subprotocol": null,
+  "item_id": 341072,
+  "keywords": "protein extraction, mouse tissue, western blot, protein, extraction, tissue, mouse, protein from mouse tissue, pierce bca protein assay kit, protein concentration, containing protease, dilution of msln antibody, phosphatase inhibitor, msln antibody, incubation with appropriate horseradish peroxidase, antibody, 1xtbs biorad",
+  "link": "",
+  "manuscript_citation": "",
+  "materials": [
+   {
+    "id": 124871,
+    "guid": "419E5C32341F11EE9D4302C0B41BC903",
+    "name": "Pierce BCA Protein Assay Kit",
+    "mol_weight": 0,
+    "sku": "23225",
+    "url": "https://www.thermofisher.com/order/catalog/product/23225",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 95,
+     "name": "Thermo Fisher Scientific",
+     "link": "https://www.thermofisher.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 127850,
+    "guid": "41A26567341F11EE9D4302C0B41BC903",
+    "name": "RIPA buffer",
+    "mol_weight": 0,
+    "sku": "89900",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 95,
+     "name": "Thermo Fisher Scientific",
+     "link": "https://www.thermofisher.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 127851,
+    "guid": "41A265B7341F11EE9D4302C0B41BC903",
+    "name": "Protease inhibitor",
+    "mol_weight": 0,
+    "sku": "A32965",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 95,
+     "name": "Thermo Fisher Scientific",
+     "link": "https://www.thermofisher.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 127852,
+    "guid": "41A26607341F11EE9D4302C0B41BC903",
+    "name": "Phosphatase inhibitor",
+    "mol_weight": 0,
+    "sku": "88667",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 95,
+     "name": "Thermo Fisher Scientific",
+     "link": "https://www.thermofisher.com/us/en/home.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 127853,
+    "guid": "41A26659341F11EE9D4302C0B41BC903",
+    "name": "4\u201320% Mini-PROTEAN\u00ae TGX Stain-Free\u2122 Protein Gels, 10 well, 50 \u00b5l",
+    "mol_weight": 0,
+    "sku": "4568094",
+    "url": "http://www.bio-rad.com/en-us/sku/4568094-4-20-mini-protean-tgx-stain-free-protein-gels-10-well-50-ul?ID=4568094",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 41,
+     "name": "Bio-Rad Laboratories",
+     "link": "http://www.bio-rad.com/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 127854,
+    "guid": "41A266AB341F11EE9D4302C0B41BC903",
+    "name": "0.2mm PVDF membrane",
+    "mol_weight": 0,
+    "sku": "LC2005",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 191,
+     "name": "Invitrogen - Thermo Fisher",
+     "link": "http://www.thermofisher.com/us/en/home/brands/invitrogen.html",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 127855,
+    "guid": "41A266FC341F11EE9D4302C0B41BC903",
+    "name": "10x TBS",
+    "mol_weight": 0,
+    "sku": "170-6435",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 41,
+     "name": "Bio-Rad Laboratories",
+     "link": "http://www.bio-rad.com/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 127856,
+    "guid": "41A2674F341F11EE9D4302C0B41BC903",
+    "name": "C-ERC/Mesothelin (308) Anti-Mouse Rabbit IgG Affinity Purify",
+    "mol_weight": 0,
+    "sku": "28127",
+    "url": "https://www.ibl-america.com/anti-mouse-c-erc-mesothelin-308-rabbit-igg-affinity-purify",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 403,
+     "name": "IBL America",
+     "link": "https://www.ibl-america.com/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 127857,
+    "guid": "41A267A2341F11EE9D4302C0B41BC903",
+    "name": "Human/Mouse/Rat Vinculin Antibody ",
+    "mol_weight": 0,
+    "sku": "MAB6896",
+    "url": "https://www.rndsystems.com/products/human-mouse-rat-vinculin-antibody-728526_mab6896",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 1,
+     "name": "Contributed by users",
+     "link": "https://www.protocols.io",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/1.png",
+      "placeholder": "/img/vendors/1.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 127858,
+    "guid": "41A267F5341F11EE9D4302C0B41BC903",
+    "name": "Clarity\u2122 Western ECL Substrate, 200 ml ",
+    "mol_weight": 0,
+    "sku": "1705060",
+    "url": "http://www.bio-rad.com/en-us/sku/1705060-clarity-western-ecl-substrate-200-ml?ID=1705060",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 41,
+     "name": "Bio-Rad Laboratories",
+     "link": "http://www.bio-rad.com/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 127859,
+    "guid": "41A26847341F11EE9D4302C0B41BC903",
+    "name": "gentleMACS M Tubes ",
+    "mol_weight": 0,
+    "sku": "130-096-335",
+    "url": "https://www.miltenyibiotec.com/US-en/products/macs-sample-preparation/tissue-dissociators-and-tubes/m-tubes/gentlemacs-m-tubes.html#100-tubes-sterile-packed-as-4x25-pieces",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 78,
+     "name": "Miltenyi Biotec",
+     "link": "http://www.miltenyibiotec.com/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   }
+  ],
+  "materials_text": "MATERIALS\n Pierce BCA Protein Assay Kit Thermo Fisher Scientific Catalog #23225 \n RIPA buffer Thermo Fisher Scientific Catalog #89900 \n Protease inhibitor Thermo Fisher Scientific Catalog #A32965 \n Phosphatase inhibitor Thermo Fisher Scientific Catalog #88667 \n 4\u201320% Mini-PROTEAN\u00ae TGX Stain-Free\u2122 Protein Gels, 10 well, 50 \u00b5l Bio-Rad Laboratories Catalog #4568094 \n 0.2mm PVDF membrane Invitrogen - Thermo Fisher Catalog #LC2005 \n 10x TBS Bio-Rad Laboratories Catalog #170-6435 \n C-ERC/Mesothelin (308) Anti-Mouse Rabbit IgG Affinity Purify IBL America Catalog #28127 \n Human/Mouse/Rat Vinculin Antibody  Contributed by users Catalog #MAB6896 \n Clarity\u2122 Western ECL Substrate, 200 ml  Bio-Rad Laboratories Catalog #1705060 \n gentleMACS M Tubes  Miltenyi Biotec Catalog #130-096-335 ",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 0,
+   "file_name": "avatar.png",
+   "guid": "00000000000000000000000000000001",
+   "height": 400,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 0,
+   "url": "https://www.protocols.io/img/default_protocol.png",
+   "width": 400
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1787242033,
+  "reserved_doi": "",
+  "space_id": 4131,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 13137,
+   "number_of_steps": 28,
+   "number_of_bookmarks": 3,
+   "number_of_comments": 1,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 1,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 28,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 22,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 15,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": ""
+  },
+  "steps": [
+   {
+    "id": 655712,
+    "guid": "1FCC73F39E3B4DD4BE1ABD7765B50FCA",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "Protein Extraction",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Flash freeze tissues in small chunks on dry ice immediately as dissected store in -80 until ready to use.\n \nPrepare RIPA buffer:\n0.876g NaCl\n1ml 1M Tris\n1ml 10% SDS\n100ul Triton X-100\n1g\u00a0 Deoxycholate\n1ml 0.5M EDTA\n \n_Don\u2019t forget to add protease inhibitors at the time of sample lysis._\n ",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655713,
+    "guid": "9E5F27E076604445A8DC13BFE17C2F05",
+    "previous_id": 655712,
+    "previous_guid": "1FCC73F39E3B4DD4BE1ABD7765B50FCA",
+    "section": "Protein Extraction",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add 1 (10x protease) and 1 (10x phosphatase) inhibitor tablet per 10mL of RIPA buffer.\n ",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655714,
+    "guid": "4C873B3F946247AB84666761A0E4175E",
+    "previous_id": 655713,
+    "previous_guid": "9E5F27E076604445A8DC13BFE17C2F05",
+    "section": "Protein Extraction",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add 500 ul ice cold lysis (RIPA) buffer per 10-20mg tissue to M-Tube on ice and add tissue.\n ",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655715,
+    "guid": "D4BF3367B1E7442B8107AAF9506C2B8D",
+    "previous_id": 655714,
+    "previous_guid": "4C873B3F946247AB84666761A0E4175E",
+    "section": "Protein Extraction",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Run program Protein_01 on the gentleMACS Dissociator (Miltenyi).\n ",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655716,
+    "guid": "37820111A8C5471990880E19A82874FB",
+    "previous_id": 655715,
+    "previous_guid": "D4BF3367B1E7442B8107AAF9506C2B8D",
+    "section": "Protein Extraction",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Centrifuge M-tube for 1min at 2000_xg_ at 4\u00b0C\u00a0 to collect everything and transfer to eppendorf tube on ice.\n ",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655717,
+    "guid": "051AB75FB4574875A9F89D2D99906258",
+    "previous_id": 655716,
+    "previous_guid": "37820111A8C5471990880E19A82874FB",
+    "section": "Protein Extraction",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Centrifuge eppendorf tubes for 20min at 12,000 rpm at 4\u00b0C (tabletop centrifuge).\n ",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655718,
+    "guid": "194F652853584C0F8C217B61B0D3F2BB",
+    "previous_id": 655717,
+    "previous_guid": "051AB75FB4574875A9F89D2D99906258",
+    "section": "Protein Extraction",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Transfer supernatant to new tube on ice and proceed with protein quantification assay.\n ",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655719,
+    "guid": "E73621484F014E0BBFB4D24A22793091",
+    "previous_id": 655718,
+    "previous_guid": "194F652853584C0F8C217B61B0D3F2BB",
+    "section": "Protein Extraction",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Store samples in -80.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655724,
+    "guid": "69AAEFA8163D4A39B226B9FB9DD3C205",
+    "previous_id": 655719,
+    "previous_guid": "E73621484F014E0BBFB4D24A22793091",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Prepare samples: Add 20ug of protein\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 \u00a0 Reducing agent (b-mercaptoethanol)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 \u00a0 Loading dye (one fourth volume for 4X dye)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 \u00a0 Ripa\n \nTotal volume (Max) = 20ul for 12-15 well comb and 50ul for 10 well comb.\nHeat samples for 90 C for 10 minutes and place on ice. Do not heat molecular marker.\n \nPrepare gel reagents:\n10X running Buffer: Tris Base 30.2g, Glycine 144g, SDS 10g\nTransfer Buffer: Tris Base 2.42g, Glycine 11.26g, 10% SDS 1ml, Methanol 200ml, Water (make up to 1l)\n10X TBS (Cell signaling protocol): Tris Base 48.4g, NaCl 160g, Adjust pH to 7.6 with HCl\nTBS-Tween: 1X TBS, 0.1% Tween 20\n ",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655919,
+    "guid": "453E62735A0F4145B19F2F581AAA7254",
+    "previous_id": 655724,
+    "previous_guid": "69AAEFA8163D4A39B226B9FB9DD3C205",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "To run gel, assemble gel so that wells face the gasket. Fill the gel with running buffer and make sure apparatus is not leaking. Remove combs and flush the wells with 1ml micropipette to remove any gel pieces. Ensure running buffer is full is the inside compartment of the gel box.\n \nFor Mesothelin and Vinculin blot, a mini-protean stain-free gel (4-20%) 10 well x 50ul was used.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655920,
+    "guid": "33E4E7640AFA433F971FD88FCEC6747D",
+    "previous_id": 655919,
+    "previous_guid": "453E62735A0F4145B19F2F581AAA7254",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Load molecular markers and denatured samples. Connect gel box to power pack. Ensure negative is connected to negative supply of pack (black to black &amp; red to red). Run gel at 60V for 25-30 minutes and then at 100-110V for 60 minutes. You can judge how far the gel should run by the molecular weight markers. Ensure good separation. Make transfer buffer and keep at 4C (as soon as you start running gel).\n \nFor Mesothelin and Vinculin blot, 20ug of protein (40ul of sample) was combined with 8ul of Precision Plus Protein Standards, Dual Color.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "11",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655921,
+    "guid": "73AC0958762A43AFB4E9E6B1817B5BA4",
+    "previous_id": 655920,
+    "previous_guid": "33E4E7640AFA433F971FD88FCEC6747D",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Image stainfree gel(s) with chemidoc system after running.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "12",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655922,
+    "guid": "F1A7A2E7F44449C1A50523308FE1A7E1",
+    "previous_id": 655921,
+    "previous_guid": "73AC0958762A43AFB4E9E6B1817B5BA4",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "For each gel to transfer, you need PVDF membrane (0.20um)\u00a0 and 2 pieces of blotting paper cut to the size of the gel (0.5cm bigger on each side).",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "13",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655923,
+    "guid": "5104B9DA973E4A0B88C67CCA4207B5A9",
+    "previous_id": 655922,
+    "previous_guid": "F1A7A2E7F44449C1A50523308FE1A7E1",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Activate PVDF membrane for 1 minute in 100% methanol, wash 3X with water and then soak in transfer buffer on shaker. Immerse the blotting paper and sponge pads in transfer buffer.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "14",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655924,
+    "guid": "E0D13DB1D66642F891BB38FC12D84F3D",
+    "previous_id": 655923,
+    "previous_guid": "5104B9DA973E4A0B88C67CCA4207B5A9",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Prepare transfer sandwich. Place white side down, place sponge, place a blotting paper, membrane, gel, blotting paper, sponge and close sandwich.\nTry to roll out bubbles after placing the second piece of blotting paper.\nFill the transfer case with transfer buffer, add ice pack &amp; stir bar OR place entire apparatus in ice box to keep transfer apparatus cool. Place sandwich cassettes in apparatus so that black side of cassette faces black side of apparatus. Fill with cool transfer buffer till the top.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "15",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655925,
+    "guid": "E2B19A06F7154850A5AD8337F9CEA82A",
+    "previous_id": 655924,
+    "previous_guid": "E0D13DB1D66642F891BB38FC12D84F3D",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Connect leads. Transfer at 100V for 90 minutes.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "16",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655926,
+    "guid": "BC09F8B5209946CE8A3D530B5ACE2F15",
+    "previous_id": 655925,
+    "previous_guid": "E2B19A06F7154850A5AD8337F9CEA82A",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Take down transfer case. Ladders should have transferred to membrane. Mark position of ladders with pen. Always keep protein side up.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "17",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655927,
+    "guid": "0EE1F62B750043629B811C22E1FDE52B",
+    "previous_id": 655926,
+    "previous_guid": "BC09F8B5209946CE8A3D530B5ACE2F15",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Image blot on Chemidoc for total protein image.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "18",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655928,
+    "guid": "DF55979D2F9C490D96C7FEC1D97B4124",
+    "previous_id": 655927,
+    "previous_guid": "0EE1F62B750043629B811C22E1FDE52B",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Block membrane for 60 minutes in 5% non-fat dry milk, TBS-Tween (TBS-T) for 1hr on shaker.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "19",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655929,
+    "guid": "FA44A25FBAF04D7CBF43207AC0067201",
+    "previous_id": 655928,
+    "previous_guid": "DF55979D2F9C490D96C7FEC1D97B4124",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Wash with TBST to remove milk.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "20",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655930,
+    "guid": "529AFAC525FD4256985A962F3222AED5",
+    "previous_id": 655929,
+    "previous_guid": "FA44A25FBAF04D7CBF43207AC0067201",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add diluted primary antibody (Can dilute in 5% BSA in TBS-T) overnight at 4C on a shaker.\n \nMesothelin primary antibody: ~40-70kDa diluted 1:75 = 133ul in 10ml TBS-T (Rabbit, from IBL 28127)\nVinculin primary antibody: ~125KDa diluted 1:1000 = [1ug/mL] (Monoclonal Mouse, from R&amp;D systems)",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "21",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655931,
+    "guid": "BB75EF1CD39B486DBC8510C70A5E46FA",
+    "previous_id": 655930,
+    "previous_guid": "529AFAC525FD4256985A962F3222AED5",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Wash 5 time for 5 minutes with TBS-T.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "22",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655932,
+    "guid": "77A9C16316444F3AAE167F9BDA32366E",
+    "previous_id": 655931,
+    "previous_guid": "BB75EF1CD39B486DBC8510C70A5E46FA",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add diluted secondary antibody conjugated to HRP for 1 hour at room temperature.\n \nFor Mesothelin and Vinculin blot:\nGoat Anti-Rabbit IgG-HRP (Thermo) = 1:1500\nGoat Anti-Mouse IgG-HRP (Santa Cruz) = 1:3000 ",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "23",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655933,
+    "guid": "C8562F093753494A8ECE237A14D43D6B",
+    "previous_id": 655932,
+    "previous_guid": "77A9C16316444F3AAE167F9BDA32366E",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Wash 5 time for 5 minutes with TBS-T.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "24",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655934,
+    "guid": "7C966F8735CE4624B62DDF1C8738EE45",
+    "previous_id": 655933,
+    "previous_guid": "C8562F093753494A8ECE237A14D43D6B",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Develop with ECL solution according protocol on specific product. Ensure ECL solution covers membrane for approximately 5 minutes.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "25",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655935,
+    "guid": "6CBC5482A59941618E0CCB19B9FDE670",
+    "previous_id": 655934,
+    "previous_guid": "7C966F8735CE4624B62DDF1C8738EE45",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Let excess ECL solution drip off on Kimwipe.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "26",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655936,
+    "guid": "9A278877BF8E433CA039E82F29BE54F6",
+    "previous_id": 655935,
+    "previous_guid": "6CBC5482A59941618E0CCB19B9FDE670",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Expose to film/develop blots in dark room and on ChemiDoc System.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "27",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 655937,
+    "guid": "9193082DA7934D84B2963B02FBD15769",
+    "previous_id": 655936,
+    "previous_guid": "9A278877BF8E433CA039E82F29BE54F6",
+    "section": "Western Blot",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Can store membrane at 4C in saran wrap.",
+    "data": null,
+    "protocol_id": 14824,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "28",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "Protein Extraction",
+    "color": "",
+    "first_step_guid": "1FCC73F39E3B4DD4BE1ABD7765B50FCA"
+   },
+   {
+    "title": "Western Blot",
+    "color": "",
+    "first_step_guid": "69AAEFA8163D4A39B226B9FB9DD3C205"
+   }
+  ],
+  "title": "Protein extraction and western blot (mouse tissues)",
+  "title_html": "Protein extraction and western blot (mouse tissues)",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1790747640
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1790747639
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1790747639
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1790747639
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1790747638
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "protein-extraction-and-western-blot-mouse-tissues-sqgedtw",
+  "url": "https://www.protocols.io/view/protein-extraction-and-western-blot-mouse-tissues-sqgedtw",
+  "version_class": 14824,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "protein-extraction-and-western-blot-mouse-tissues-bp2l644ezvqe/v1",
+  "versions": [
+   {
+    "id": 14824,
+    "title": "Protein extraction and western blot (mouse tissues)",
+    "title_html": "Protein extraction and western blot (mouse tissues)",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.sqgedtw",
+    "uri": "protein-extraction-and-western-blot-mouse-tissues-sqgedtw",
+    "published_on": 1534784310,
+    "modified_on": 1790597627,
+    "version_class": 14824,
+    "version_id": 0,
+    "version_code": "sqgedtw",
+    "version_uri": "protein-extraction-and-western-blot-mouse-tissues-bp2l644ezvqe/v1",
+    "created_on": 1534537401,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Kristin Anderson",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "University of Virginia",
+     "affiliation_url": null,
+     "username": "kristin-anderson",
+     "link": null,
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 1,
+     "last_comment_time": 1654587435
+    },
+    "protocol_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/default_protocol.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 400,
+     "height": 400,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

@@ -1,0 +1,1684 @@
+{
+ "protocol_id": 41618,
+ "uri": "harmony-transfer-pipette-protocol-bkvskw6e",
+ "doi": "dx.doi.org/10.17504/protocols.io.bkvskw6e",
+ "url": "https://www.protocols.io/view/harmony-transfer-pipette-protocol-bkvskw6e",
+ "title": "Harmony Transfer Pipette Protocol",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:14:47Z",
+ "query": "pipette",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Jack H",
+    "last_name": "Kotnik",
+    "affiliation": "University of Washington",
+    "note": "",
+    "guid": "03F97D91F8CC11ED9D4302C0B41BC903",
+    "username": "m4ule102s1y4yle1",
+    "name": "Jack H Kotnik",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "0D2758135B2B11EFA2EF0A58A9FEAC02",
+     "file_name": "photo.jpg",
+     "url": "https://files.protocols.io/external/photo-0D2758135B2B11EFA2EF0A58A9FEAC02.jpg",
+     "mime": "image/png",
+     "size": 800,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1723742593
+    }
+   },
+   {
+    "first_name": "Nuttada",
+    "last_name": "Panpradist",
+    "affiliation": "University of Washington",
+    "note": "",
+    "guid": "03F97F9EF8CC11ED9D4302C0B41BC903",
+    "username": "m4ule102s1z4rle1",
+    "name": "Nuttada Panpradist",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Ian",
+    "last_name": "Hull",
+    "affiliation": "University of Washington",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Ian Hull",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Qin",
+    "last_name": "Wang",
+    "affiliation": "University of Washington",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Qin Wang",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Mike",
+    "last_name": "Roller",
+    "affiliation": "University of Washington",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Mike Roller",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Amy",
+    "last_name": "Oreskovic",
+    "affiliation": "University of Washington",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Amy Oreskovic",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Enos",
+    "last_name": "Kline",
+    "affiliation": "University of Washington",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Enos Kline",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Daniel",
+    "last_name": "Leon",
+    "affiliation": "University of Washington",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Daniel Leon",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Barry",
+    "last_name": "Lutz",
+    "affiliation": "University of Washington",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Barry Lutz",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Bob",
+    "last_name": "Atkinson",
+    "affiliation": "University of Washington",
+    "note": "",
+    "guid": "03FD02F0F8CC11ED9D4302C0B41BC903",
+    "username": "robert-atkinson",
+    "name": "Robert Atkinson",
+    "affiliation_url": null,
+    "link": "",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "",
+  "created_on": 1599253812,
+  "creator": {
+   "affiliation": "",
+   "affiliation_url": null,
+   "affiliations": [],
+   "badges": [
+    {
+     "id": 2,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/bronze.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/bronze.svg"
+     },
+     "name": "Author"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://files.protocols.io/thumbnails/external/photo-0D2758135B2B11EFA2EF0A58A9FEAC02.jpg/thumbnail-w100xh100.jpg",
+    "source": "https://files.protocols.io/external/photo-0D2758135B2B11EFA2EF0A58A9FEAC02.jpg"
+   },
+   "last_name": "",
+   "link": null,
+   "name": "Jack H Kotnik",
+   "username": "m4ule102s1y4yle1"
+  },
+  "cross_cloud_origin": null,
+  "description": "",
+  "disclaimer": "DISCLAIMER \u2013 FOR INFORMATIONAL PURPOSES ONLY; USE AT YOUR OWN RISK\n\nThe protocol content here is for informational purposes only and does not constitute legal, medical, clinical, or safety advice, or otherwise; content added to [protocols.io](http://protocols.io) is not peer reviewed and may not have undergone a formal approval of any kind. Information presented in this protocol should not substitute for independent professional judgment, advice, diagnosis, or treatment. Any action you take or refrain from taking using or relying upon the information presented here is strictly at your own risk. You agree that neither the Company nor any of the authors, contributors, administrators, or anyone else associated with [protocols.io](http://protocols.io), can be held responsible for your use of the information contained in or linked to this protocol or any of our Sites/Apps and Services.",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.bkvskw6e",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "03BF8C50EEF311EABFB50D178CDB3653",
+  "guidelines": "",
+  "id": 41618,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 712321,
+  "keywords": "protocol, transfer",
+  "link": "",
+  "manuscript_citation": "",
+  "materials": [
+   {
+    "id": 582891,
+    "guid": "4264528E341F11EE9D4302C0B41BC903",
+    "name": "Sterile Swab",
+    "mol_weight": 0,
+    "sku": "",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 1,
+     "name": "Contributed by users",
+     "link": "https://www.protocols.io",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/1.png",
+      "placeholder": "/img/vendors/1.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 582892,
+    "guid": "426452E0341F11EE9D4302C0B41BC903",
+    "name": "Test Buffer (lysis buffer)",
+    "mol_weight": 0,
+    "sku": "",
+    "url": "http://null",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 1,
+     "name": "Contributed by users",
+     "link": "https://www.protocols.io",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/1.png",
+      "placeholder": "/img/vendors/1.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 582893,
+    "guid": "42645332341F11EE9D4302C0B41BC903",
+    "name": "40 microliter Transfer Pipette",
+    "mol_weight": 0,
+    "sku": "",
+    "url": "http://null",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 1,
+     "name": "Contributed by users",
+     "link": "https://www.protocols.io",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/1.png",
+      "placeholder": "/img/vendors/1.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 582894,
+    "guid": "42645384341F11EE9D4302C0B41BC903",
+    "name": "Reaction tube with LAMP reagents",
+    "mol_weight": 0,
+    "sku": "",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 1,
+     "name": "Contributed by users",
+     "link": "https://www.protocols.io",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/1.png",
+      "placeholder": "/img/vendors/1.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   }
+  ],
+  "materials_text": "MATERIALS\n Sterile Swab Contributed by users \n Test Buffer (lysis buffer) Contributed by users \n 40 microliter Transfer Pipette Contributed by users \n Reaction tube with LAMP reagents Contributed by users \nEach test kit includes a **sterile swab** for sample collection, a vial of lysis buffer (**test buffer**) that contains detergents to help lyse the viruses and some salts needed in the reaction, a **reaction tube** with a dry reagent pellet containing the proper enzymes, ribonuclease inhibitors, primers and probes to sustain an RT-LAMP reaction, and a transfer pipette to transfer sample from the test buffer vial to the reaction tube. The reagents in the reaction tube amplify 3 unique regions of the SARS-CoV-2 genome and an internal amplification control (IAC).\u00a0",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 0,
+   "file_name": "avatar.png",
+   "guid": "00000000000000000000000000000001",
+   "height": 400,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 0,
+   "url": "https://www.protocols.io/img/default_protocol.png",
+   "width": 400
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1599586984,
+  "reserved_doi": "",
+  "space_id": 7186,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 198,
+   "number_of_steps": 24,
+   "number_of_bookmarks": 0,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 130,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 8,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 1,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": "We use this protocol and it's working"
+  },
+  "steps": [
+   {
+    "id": 1023185,
+    "guid": "AE4D7280EEF911EA8C509F5B7AE9A43F",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "<p>Intended Use</p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "The Harmony assay is used with the Harmony instrument for the detection of SARS-CoV-2 viral RNA in lower nares (nasal swab) specimens collected from individuals suspected of SARS-CoV-2 infection. The assay is intended for the qualitative detection of SARS-CoV-2 nucleic acid from direct specimens.The assay should not be used with specimens collected by other swabs not provided in the kits or specimens stored in Viral Transport Media (VTM), Universal Transport Media(UTM)or other media not provided in the kit.\n\nThe Harmony instrumentis small, fast (results within 60 minutes), and moderate-throughput (up to 4 samples per run). Results are for the identification of SARS-CoV-2 RNA. The SARS-CoV-2 RNA is generally detectable in nasal swab specimens during the acute phase of infection.\u00a0",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023186,
+    "guid": "AFB47C90EEF911EA8C509F5B7AE9A43F",
+    "previous_id": 1023185,
+    "previous_guid": "AE4D7280EEF911EA8C509F5B7AE9A43F",
+    "section": "<p>Principles of the Test</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "The Harmony assay uses loop-mediated isothermal amplification (LAMP) to detect viral RNA from the SARS-CoV-2 virus. The Harmony instrument consists of a touch screen display and a 4-well heating block/fluorescence reader. Each test kit includes a **sterile swab** for sample collection, a vial of lysis buffer (**test buffer**) that contains detergents to help lyse the viruses and some salts needed in the reaction, a **reaction tube** with a dry reagent pellet containing the proper enzymes, ribonuclease inhibitors, primers and probes to sustain an RT-LAMP reaction, and a transfer pipette to transfer sample from the test buffer vial to the reaction tube. The reagents in the reaction tube amplify 3 unique regions of the SARS-CoV-2 genome and an internal amplification control (IAC).\u00a0\n\nTo perform the assay, a swab is collected from the patient\u2019s nares.To prepare the sample, the swab is\u00a0gently agitated in the lysis buffer container to release the sample. The transfer pipette is used to transfer a fixed volume of the lysed sample from the buffer container to the reaction tube, and the reaction tube is placed in the heater/reader. Software on the instrument interprets the fluorescent signal from the reader and calls each sample \u201cPositive,\u201d \u201cNegative,\u201d or \u201cFailed\u201d (when neither a viral target nor the IAC produces a signal).",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023266,
+    "guid": "8DD1EB30EEFE11EA8C509F5B7AE9A43F",
+    "previous_id": 1023186,
+    "previous_guid": "AFB47C90EEF911EA8C509F5B7AE9A43F",
+    "section": "<p>General Precautions</p>",
+    "section_color": "#84CE84",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "- All patient specimens and positive controls should be considered potentially infectious and handled with appropriate caution. Refer to Interim Laboratory Biosafety Guidelines for Handling and Processing Specimens Associated with 2019-nCoV\u00a0[https://www.cdc.gov/coronavirus/2019-nCoV/lab-biosafety-guidelines.html](https://www.cdc.gov/coronavirus/2019-nCoV/lab-biosafety-guidelines.html).\n- Use personal protective equipment such as (but not limited to) gloves, eye protection, and lab coats when handling kit reagents while performing this assay and handling materials including samples, reagents, pipettes, and other equipment and reagents.\n- Always check the expiration date prior to use. Do not use expired reagents.\u00a0Use\u00a0of expired reagents may\u00a0cause inaccurate results.\n- During preparation of samples, fresh gloves should be used with each new sample to minimize the risk of\u00a0introducing contaminants that\u00a0degrade RNA\u00a0or cross-contaminate samples.\n- Keep reagent and reaction tubes capped or covered as much as possible.\n- Work surfaces and the Harmony\u00a0instrument\u00a0should be cleaned and decontaminated with cleaning products such as 10% bleach or CDC approved decontaminants between each new sample to minimize risk of nucleic acid contamination. Residual bleach should be removed using 70% ethanol.\u00a0The reaction tube holder can be detached and rinsed with soap\u00a0water and let dry after each use.\n- Never open the reaction tube after the completion of the run. The product after the run\u00a0if spilled onto the surface can contaminate subsequent runs and cause false positive.\n- Dispose of unused kit reagents and human specimens according to local, state, and federal regulations.",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023268,
+    "guid": "CEF94D10EEFE11EA8C509F5B7AE9A43F",
+    "previous_id": 1023266,
+    "previous_guid": "8DD1EB30EEFE11EA8C509F5B7AE9A43F",
+    "section": "<p>Built in Procedural Controls</p>",
+    "section_color": "#FFED92",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "The Harmony assay\u00a0uses an internal amplification control (IAC) in every test run. For test results to be valid, a SARS-CoV-2 target or the IAC must amplify. If neither are detected, the run result will be \u201cfailed\u201d, and the test result is considered invalid and should be retested.\u00a0",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023273,
+    "guid": "84FF81B0EEFF11EA8C509F5B7AE9A43F",
+    "previous_id": 1023268,
+    "previous_guid": "CEF94D10EEFE11EA8C509F5B7AE9A43F",
+    "section": "<p>Sample Collection, Handling, and Storage</p>",
+    "section_color": "#EA9F6C",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Each collection kit contains a sterile swab, a vial of test buffer, a reaction tube, and a transfer pipette. Harmony is intended to run fresh samples immediately or shortly after they are collected. \n\nSpecimens can be self-collected, collected under supervision, or collected by trained personnel. Using the sterile swab provided, follow the CDC recommended guidelines to collect a Lower Nares (Nasal Swab) specimen: Insert the swab at least 1 cm (0.5 inch) inside the nostril (naris) and firmly sample the nasal membrane by rotating the swab and leaving in place for 10 to 15 seconds; sample both nostrils with same swab ([https://www.cdc.gov/coronavirus/2019-ncov/lab/guidelines-clinical-specimens.html#:~:text=Using%20a%20flocked%20or%20spun%20polyester%20swab%2C%20insert%20the%20swab,both%20nostrils%20with%20same%20swab.](https://www.cdc.gov/coronavirus/2019-ncov/lab/guidelines-clinical-specimens.html#:~:text=Using%20a%20flocked%20or%20spun%20polyester%20swab%2C%20insert%20the%20swab,both%20nostrils%20with%20same%20swab.)).\u00a0\n\nDO NOT place the swab into VTM or UTM or any buffer other than that provided in the kit because they will interfere with the assay. Samples stored in other media not provided in the kit should NOT be tested on the Harmony.\u00a0\n\nIf the swab will not be immediately tested, return the swab to the foil pouch. Do NOT place the swab into VTM or UTM or any buffer other than that provided by the manufacturer. Samples may be stored dry for up to 2 hours at room temperature (15-30\u00b0C). If testing cannot be completed in that window, samples should be stored dry at 2-8\u00b0C for up to 24 hours. After the swabbed sample has been submerged in\u00a0the test buffer vial, it\u00a0can no longer be stored and the test procedure must be carried out immediately.\n",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023276,
+    "guid": "D7F33460EF0011EA8C509F5B7AE9A43F",
+    "previous_id": 1023273,
+    "previous_guid": "84FF81B0EEFF11EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Check expiration date on each individual test package or outer box before using. Do not use any test past the expiration date on the label.\n\nHandle all materials during sample preparation and testing as if they were infectious. Wear the appropriate personal protective equipment as recommended by the CDC, including powder-free latex or nitrile rubber gloves (full guidelines here: [https://www.cdc.gov/coronavirus/2019-nCoV/lab/guidelines-clinical-specimens.html](https://www.cdc.gov/coronavirus/2019-nCoV/lab/guidelines-clinical-specimens.html)). _To avoid cross-contamination, be sure to change gloves between test runs and decontaminate high-touch surfaces such as the tablet and the lid of the instrument between runs._",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023277,
+    "guid": "3D4BB940EF0111EA8C509F5B7AE9A43F",
+    "previous_id": 1023276,
+    "previous_guid": "D7F33460EF0011EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "Instrument Preparation\nPlug in the Harmony instrumentand turn it on. Be sure to allow at least 7 minutes for the instrument to heat to testing temperature. You may proceed to sample preparation after turning the instrument on while the instrument is heating. The device will not allow you to proceed with loading the samples if the instrument is not at temperature. If the instrument is already turned on and at temperature, you may skip this step.\n 00:07:00, if the instrument is cold.  \n",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6.1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023279,
+    "guid": "64EF46B0EF0111EA8C509F5B7AE9A43F",
+    "previous_id": 1023277,
+    "previous_guid": "3D4BB940EF0111EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Sample preparation and set-up\n",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023292,
+    "guid": "8B800490EF0111EA8C509F5B7AE9A43F",
+    "previous_id": 1023279,
+    "previous_guid": "64EF46B0EF0111EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "Remove the reaction tube from the foil pouch labelled \u201creaction tube.\u201d Place it in the smaller well\u00a0of the sample prep block attached to the Harmony instrument.",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7.1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023293,
+    "guid": "8F3655D0EF0111EA8C509F5B7AE9A43F",
+    "previous_id": 1023292,
+    "previous_guid": "8B800490EF0111EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "Remove the vial of test buffer from the foil pouch labelled \u201ctest buffer.\u201d Take the cap off and place the vial in the larger well\u00a0of the sample prep block.",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7.2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023294,
+    "guid": "98154D00EF0111EA8C509F5B7AE9A43F",
+    "previous_id": 1023293,
+    "previous_guid": "8F3655D0EF0111EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "Submerge the patient swab (after collecting the patient nasal sample) in the test buffer and swirl it 5 times, pressing it against the sides of the vial.\n",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7.3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023295,
+    "guid": "9FE85270EF0111EA8C509F5B7AE9A43F",
+    "previous_id": 1023294,
+    "previous_guid": "98154D00EF0111EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "Leave the swab in the test buffer for 30 seconds.\n 00:00:30  \n",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7.4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023296,
+    "guid": "AB40FC30EF0111EA8C509F5B7AE9A43F",
+    "previous_id": 1023295,
+    "previous_guid": "9FE85270EF0111EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "Rotate the swab head against the inside of the vial as you remove it. Dispose of the swab in a biohazardous waste container.",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7.5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023297,
+    "guid": "BAC28F20EF0111EA8C509F5B7AE9A43F",
+    "previous_id": 1023296,
+    "previous_guid": "AB40FC30EF0111EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Sample Transfer\nUse the transfer pipette to transfer fluid from the vial to the tube.",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023300,
+    "guid": "F816C8F0EF0111EA8C509F5B7AE9A43F",
+    "previous_id": 1023297,
+    "previous_guid": "BAC28F20EF0111EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "FIRMLY squeeze the top bulb of the transfer pipette.",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8.1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023301,
+    "guid": "13059F10EF0211EA8C509F5B7AE9A43F",
+    "previous_id": 1023300,
+    "previous_guid": "F816C8F0EF0111EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "Still squeezing, place the pipette tip into the test buffer vial.",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8.2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023302,
+    "guid": "192946D0EF0211EA8C509F5B7AE9A43F",
+    "previous_id": 1023301,
+    "previous_guid": "13059F10EF0211EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "With the pipette tip still in the test buffer vial, slowly release the pressure on the bulb of the transfer pipette. NOTE: some liquid will flow into the lower bulb of the pipette \u2013 this is okay!",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8.3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023304,
+    "guid": "323AF880EF0211EA8C509F5B7AE9A43F",
+    "previous_id": 1023302,
+    "previous_guid": "192946D0EF0211EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "Remove the pipette from the test buffer and place the pipette tip into the reaction tube.",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8.4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023305,
+    "guid": "3A4624F0EF0211EA8C509F5B7AE9A43F",
+    "previous_id": 1023304,
+    "previous_guid": "323AF880EF0211EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "Firmly but slowly squeeze the top bulb of the pipette to empty the contents of the 40 microliter fixed volume pipette into the reaction tube. STILL SQUEEZING, remove the pipette from the reaction tube.\n 40 \u00b5L, or 1 fixed volume transfer pipette  \n",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8.5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023306,
+    "guid": "41547AD0EF0211EA8C509F5B7AE9A43F",
+    "previous_id": 1023305,
+    "previous_guid": "3A4624F0EF0211EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Note: The fixed-volume transfer pipette is designed to collect an excess of liquid sample and dispense the correct volume of liquid sample into the reaction tube. Do not try to add fluid left in the lower \u201coverflow\u201d reservoir to the reaction tube. Discard the pipette in the biohazard waste.",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023307,
+    "guid": "4BBC34E0EF0211EA8C509F5B7AE9A43F",
+    "previous_id": 1023306,
+    "previous_guid": "41547AD0EF0211EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Screw the cap back onto the vial of test buffer. Discard this in the biohazardous waste.",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023308,
+    "guid": "5363BD80EF0211EA8C509F5B7AE9A43F",
+    "previous_id": 1023307,
+    "previous_guid": "4BBC34E0EF0211EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Close the reaction tube.\n**Do not** **place the sample into the heater/reader unit of the instrument until all samples for this run are ready.** Samples should be placed in the wells at the same time and the lid should be closed immediately to start the test run.\u00a0",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "11",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023310,
+    "guid": "57D1ED10EF0211EA8C509F5B7AE9A43F",
+    "previous_id": 1023308,
+    "previous_guid": "5363BD80EF0211EA8C509F5B7AE9A43F",
+    "section": "<p>Test Procedure</p>",
+    "section_color": "#E57785",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "If you only intend to run one sample, you may proceed to the onscreen instructions on the Harmony instrument. Otherwise, set this sample in the **sample queue block **and repeat the &#34;Test Procedure&#34; section for each additional sample.\u00a0Do NOT set the sample in the heater/reader until you are ready to start the run.\n\nBe sure to change gloves for each sample, and before using the touch screen on the instrument.\n\ngo to step #6  \n",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "12",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1023338,
+    "guid": "9F14C3E0EF0311EA8C509F5B7AE9A43F",
+    "previous_id": 1023310,
+    "previous_guid": "57D1ED10EF0211EA8C509F5B7AE9A43F",
+    "section": "<p>On-Screen Instructions</p>",
+    "section_color": "#EA94FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "The Harmony touch screen display will guide you through the steps to load the samples into the instrument. The software supports three methods of sample identification: manual text entry of an alphanumeric sample ID, photographing a barcode that can be read by instrument software, or photographing the patient directly. Please choose the method most suited to your institution\u2019s sample tracking systems and compliant with your institution\u2019s privacy and data security guidelines.",
+    "data": null,
+    "protocol_id": 41618,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "13",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "<p>Intended Use</p>",
+    "color": "#A492FF",
+    "first_step_guid": "AE4D7280EEF911EA8C509F5B7AE9A43F"
+   },
+   {
+    "title": "<p>Principles of the Test</p>",
+    "color": "#94EBFF",
+    "first_step_guid": "AFB47C90EEF911EA8C509F5B7AE9A43F"
+   },
+   {
+    "title": "<p>General Precautions</p>",
+    "color": "#84CE84",
+    "first_step_guid": "8DD1EB30EEFE11EA8C509F5B7AE9A43F"
+   },
+   {
+    "title": "<p>Built in Procedural Controls</p>",
+    "color": "#FFED92",
+    "first_step_guid": "CEF94D10EEFE11EA8C509F5B7AE9A43F"
+   },
+   {
+    "title": "<p>Sample Collection, Handling, and Storage</p>",
+    "color": "#EA9F6C",
+    "first_step_guid": "84FF81B0EEFF11EA8C509F5B7AE9A43F"
+   },
+   {
+    "title": "<p>Test Procedure</p>",
+    "color": "#E57785",
+    "first_step_guid": "D7F33460EF0011EA8C509F5B7AE9A43F"
+   },
+   {
+    "title": "<p>On-Screen Instructions</p>",
+    "color": "#EA94FF",
+    "first_step_guid": "9F14C3E0EF0311EA8C509F5B7AE9A43F"
+   }
+  ],
+  "title": "Harmony Transfer Pipette Protocol",
+  "title_html": "<p>Harmony Transfer Pipette Protocol</p>",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775225785
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775225785
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775225785
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775225785
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775225785
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "harmony-transfer-pipette-protocol-bkvskw6e",
+  "url": "https://www.protocols.io/view/harmony-transfer-pipette-protocol-bkvskw6e",
+  "version_class": 41618,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "harmony-transfer-pipette-protocol-36wgq4r35vk5/v1",
+  "versions": [
+   {
+    "id": 41618,
+    "title": "Harmony Transfer Pipette Protocol",
+    "title_html": "<p>Harmony Transfer Pipette Protocol</p>",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.bkvskw6e",
+    "uri": "harmony-transfer-pipette-protocol-bkvskw6e",
+    "published_on": 1599585733,
+    "modified_on": 1599586984,
+    "version_class": 41618,
+    "version_id": 0,
+    "version_code": "bkvskw6e",
+    "version_uri": "harmony-transfer-pipette-protocol-36wgq4r35vk5/v1",
+    "created_on": 1599253812,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Jack H Kotnik",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": null,
+     "affiliation_url": null,
+     "username": "m4ule102s1y4yle1",
+     "link": null,
+     "user_image_file": {
+      "guid": "0D2758135B2B11EFA2EF0A58A9FEAC02",
+      "file_name": "photo.jpg",
+      "url": "https://files.protocols.io/external/photo-0D2758135B2B11EFA2EF0A58A9FEAC02.jpg",
+      "mime": "image/png",
+      "size": 800,
+      "width": 0,
+      "height": 0,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 1723742593
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/default_protocol.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 400,
+     "height": 400,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

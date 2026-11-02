@@ -1,0 +1,11 @@
+# run outputs (sweep reports ship as CI artifacts, not commits)
+runs/
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-of-*/
+.venv/
+*.egg-info/
+# local caches
+.muse/

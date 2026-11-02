@@ -1,0 +1,710 @@
+{
+  "sample": "WLP-style sample v1",
+  "n_steps": 21,
+  "action": {
+    "precision": 0.9375,
+    "recall": 0.6522,
+    "f1": 0.7692,
+    "tp": 15,
+    "fp": 1,
+    "fn": 8,
+    "accuracy": 0.619
+  },
+  "entity": {
+    "precision": 0.2353,
+    "recall": 0.0656,
+    "f1": 0.1026,
+    "tp": 4,
+    "fp": 13,
+    "fn": 57
+  },
+  "quantity": {
+    "precision": 1.0,
+    "recall": 0.7742,
+    "f1": 0.8727,
+    "tp": 24,
+    "fp": 0,
+    "fn": 7
+  },
+  "rules_only_share": 0.3333,
+  "status_counts": {
+    "out_of_scope": 9,
+    "grounded": 7,
+    "needs_llm": 5
+  },
+  "reason_counts": {
+    "missing_asset": 2,
+    "-": 7,
+    "not_implemented": 6,
+    "unknown_skill": 5,
+    "missing_skill": 1
+  },
+  "quantity_miss_units": {
+    "ul": 1,
+    "c": 1,
+    "min": 2,
+    "rpm": 2,
+    "x": 1
+  },
+  "top_entity_misses": {
+    "cells": 6,
+    "plate": 3,
+    "cdna": 3,
+    "mtesr1": 3,
+    "reservoir": 2,
+    "alpaqua 384 post magnet plate": 2,
+    "adaptor": 2,
+    "elution buffer": 2,
+    "supernatant": 2,
+    "magnetic rack": 2
+  },
+  "rows": [
+    {
+      "id": "15421:s1",
+      "status": "out_of_scope",
+      "reason": "missing_asset",
+      "detail": "entity reagent_reservoir_50ml is not buildable",
+      "by": "rules",
+      "gold_action": [
+        "aspirate",
+        "mix"
+      ],
+      "pred_action": "aspirate",
+      "action_exact": false,
+      "action_fp": [],
+      "action_fn": [
+        "mix"
+      ],
+      "entity_tp": 0,
+      "entity_fp": [
+        "reagent_reservoir_50ml"
+      ],
+      "entity_fn": [
+        "ampure beads",
+        "reservoir",
+        "sample plate"
+      ],
+      "quantity_tp": 0,
+      "quantity_fp": [],
+      "quantity_fn": [
+        [
+          1.0,
+          "ul"
+        ]
+      ],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "15421:s2",
+      "status": "grounded",
+      "reason": null,
+      "detail": "",
+      "by": "rules",
+      "gold_action": [
+        "transfer",
+        "incubate"
+      ],
+      "pred_action": "transfer",
+      "action_exact": false,
+      "action_fp": [],
+      "action_fn": [
+        "incubate"
+      ],
+      "entity_tp": 0,
+      "entity_fp": [],
+      "entity_fn": [
+        "plate",
+        "alpaqua 384 post magnet plate",
+        "adaptor",
+        "magnet",
+        "elution buffer",
+        "cdna"
+      ],
+      "quantity_tp": 2,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "15421:s3",
+      "status": "out_of_scope",
+      "reason": "not_implemented",
+      "detail": "wash_plate is declared, not implemented",
+      "by": "rules",
+      "gold_action": [],
+      "pred_action": "wash_plate",
+      "action_exact": false,
+      "action_fp": [
+        "wash_plate"
+      ],
+      "action_fn": [],
+      "entity_tp": 0,
+      "entity_fp": [],
+      "entity_fn": [
+        "supernatant",
+        "magnetic pellet",
+        "magnetic rack",
+        "beads",
+        "cdna"
+      ],
+      "quantity_tp": 1,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "15421:s4",
+      "status": "out_of_scope",
+      "reason": "missing_asset",
+      "detail": "entity reagent_reservoir_50ml is not buildable",
+      "by": "rules",
+      "gold_action": [
+        "aspirate",
+        "transfer",
+        "incubate"
+      ],
+      "pred_action": "aspirate",
+      "action_exact": false,
+      "action_fp": [],
+      "action_fn": [
+        "transfer",
+        "incubate"
+      ],
+      "entity_tp": 1,
+      "entity_fp": [
+        "freshly prepared 80% ethanol",
+        "reagent_reservoir_50ml"
+      ],
+      "entity_fn": [
+        "reservoir",
+        "samples",
+        "magnetic rack"
+      ],
+      "quantity_tp": 3,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "15421:s5",
+      "status": "out_of_scope",
+      "reason": "not_implemented",
+      "detail": "mix is declared, not implemented",
+      "by": "rules",
+      "gold_action": [
+        "mix"
+      ],
+      "pred_action": "mix",
+      "action_exact": true,
+      "action_fp": [],
+      "action_fn": [],
+      "entity_tp": 0,
+      "entity_fp": [],
+      "entity_fn": [
+        "plate",
+        "magnetic stand",
+        "beads",
+        "elution buffer",
+        "barcodes",
+        "nuclease-free water"
+      ],
+      "quantity_tp": 0,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "15421:s6",
+      "status": "grounded",
+      "reason": null,
+      "detail": "",
+      "by": "rules",
+      "gold_action": [
+        "incubate",
+        "transfer"
+      ],
+      "pred_action": "incubate",
+      "action_exact": false,
+      "action_fp": [],
+      "action_fn": [
+        "transfer"
+      ],
+      "entity_tp": 0,
+      "entity_fp": [],
+      "entity_fn": [
+        "plate",
+        "alpaqua 384 post magnet plate",
+        "adaptor"
+      ],
+      "quantity_tp": 2,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "15421:s7",
+      "status": "grounded",
+      "reason": null,
+      "detail": "",
+      "by": "rules",
+      "gold_action": [
+        "aspirate",
+        "transfer"
+      ],
+      "pred_action": "aspirate",
+      "action_exact": false,
+      "action_fp": [],
+      "action_fn": [
+        "transfer"
+      ],
+      "entity_tp": 0,
+      "entity_fp": [],
+      "entity_fn": [
+        "supernatant",
+        "cdna",
+        "pcr plate"
+      ],
+      "quantity_tp": 0,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "20446:s1",
+      "status": "needs_llm",
+      "reason": "unknown_skill",
+      "detail": "no lexicon verb matched",
+      "by": "none",
+      "gold_action": [],
+      "pred_action": null,
+      "action_exact": true,
+      "action_fp": [],
+      "action_fn": [],
+      "entity_tp": 0,
+      "entity_fp": [
+        "matrigel (supplemented",
+        "rgd fragment"
+      ],
+      "entity_fn": [
+        "6 well plate",
+        "matrigel"
+      ],
+      "quantity_tp": 1,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "20446:s2",
+      "status": "grounded",
+      "reason": null,
+      "detail": "",
+      "by": "rules",
+      "gold_action": [
+        "aspirate"
+      ],
+      "pred_action": "aspirate",
+      "action_exact": true,
+      "action_fp": [],
+      "action_fn": [],
+      "entity_tp": 0,
+      "entity_fp": [],
+      "entity_fn": [
+        "media",
+        "cells"
+      ],
+      "quantity_tp": 0,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "20446:s3",
+      "status": "out_of_scope",
+      "reason": "not_implemented",
+      "detail": "wash_plate is declared, not implemented",
+      "by": "rules",
+      "gold_action": [
+        "wash_plate"
+      ],
+      "pred_action": "wash_plate",
+      "action_exact": true,
+      "action_fp": [],
+      "action_fn": [],
+      "entity_tp": 0,
+      "entity_fp": [
+        "- 2 ml pbs per well",
+        "pbs per well"
+      ],
+      "entity_fn": [
+        "pbs"
+      ],
+      "quantity_tp": 2,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "20446:s4",
+      "status": "grounded",
+      "reason": null,
+      "detail": "",
+      "by": "rules",
+      "gold_action": [
+        "transfer"
+      ],
+      "pred_action": "transfer",
+      "action_exact": true,
+      "action_fp": [],
+      "action_fn": [],
+      "entity_tp": 0,
+      "entity_fp": [
+        "accutase per well"
+      ],
+      "entity_fn": [
+        "accutase"
+      ],
+      "quantity_tp": 1,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "20446:s5",
+      "status": "grounded",
+      "reason": null,
+      "detail": "",
+      "by": "rules",
+      "gold_action": [
+        "incubate"
+      ],
+      "pred_action": "incubate",
+      "action_exact": true,
+      "action_fp": [],
+      "action_fn": [],
+      "entity_tp": 0,
+      "entity_fp": [],
+      "entity_fn": [
+        "cells"
+      ],
+      "quantity_tp": 0,
+      "quantity_fp": [],
+      "quantity_fn": [
+        [
+          37.0,
+          "c"
+        ],
+        [
+          10.0,
+          "min"
+        ]
+      ],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "20446:s6",
+      "status": "out_of_scope",
+      "reason": "missing_skill",
+      "detail": "15 mL exceeds pipette capacity (1 mL); no pour primitive",
+      "by": "rules",
+      "gold_action": [
+        "transfer"
+      ],
+      "pred_action": "transfer",
+      "action_exact": true,
+      "action_fp": [],
+      "action_fn": [],
+      "entity_tp": 1,
+      "entity_fp": [
+        "conical tube",
+        "centrifuge_tube_15ml",
+        "tube_vial"
+      ],
+      "entity_fn": [
+        "cells",
+        "15ml conical tube"
+      ],
+      "quantity_tp": 2,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "20446:s7",
+      "status": "out_of_scope",
+      "reason": "not_implemented",
+      "detail": "centrifuge is declared, not implemented",
+      "by": "rules",
+      "gold_action": [
+        "centrifuge"
+      ],
+      "pred_action": "centrifuge",
+      "action_exact": true,
+      "action_fp": [],
+      "action_fn": [],
+      "entity_tp": 0,
+      "entity_fp": [],
+      "entity_fn": [],
+      "quantity_tp": 0,
+      "quantity_fp": [],
+      "quantity_fn": [
+        [
+          750.0,
+          "rpm"
+        ],
+        [
+          800.0,
+          "rpm"
+        ],
+        [
+          3.0,
+          "min"
+        ]
+      ],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "20446:s9",
+      "status": "needs_llm",
+      "reason": "unknown_skill",
+      "detail": "no lexicon verb matched",
+      "by": "none",
+      "gold_action": [],
+      "pred_action": null,
+      "action_exact": true,
+      "action_fp": [],
+      "action_fn": [],
+      "entity_tp": 1,
+      "entity_fp": [],
+      "entity_fn": [
+        "cells",
+        "mtesr1"
+      ],
+      "quantity_tp": 1,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "20446:s10",
+      "status": "needs_llm",
+      "reason": "unknown_skill",
+      "detail": "no lexicon verb matched",
+      "by": "none",
+      "gold_action": [],
+      "pred_action": null,
+      "action_exact": true,
+      "action_fp": [],
+      "action_fn": [],
+      "entity_tp": 0,
+      "entity_fp": [],
+      "entity_fn": [
+        "cells",
+        "mtesr1"
+      ],
+      "quantity_tp": 4,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "20446:s11",
+      "status": "needs_llm",
+      "reason": "unknown_skill",
+      "detail": "no lexicon verb matched",
+      "by": "none",
+      "gold_action": [],
+      "pred_action": null,
+      "action_exact": true,
+      "action_fp": [],
+      "action_fn": [],
+      "entity_tp": 1,
+      "entity_fp": [],
+      "entity_fn": [
+        "cells",
+        "ipsc freezing media",
+        "fbs"
+      ],
+      "quantity_tp": 1,
+      "quantity_fp": [],
+      "quantity_fn": [
+        [
+          2.0,
+          "x"
+        ]
+      ],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "20446:s13",
+      "status": "needs_llm",
+      "reason": "unknown_skill",
+      "detail": "no lexicon verb matched",
+      "by": "none",
+      "gold_action": [],
+      "pred_action": null,
+      "action_exact": true,
+      "action_fp": [],
+      "action_fn": [],
+      "entity_tp": 0,
+      "entity_fp": [],
+      "entity_fn": [
+        "mtesr1"
+      ],
+      "quantity_tp": 0,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "15461:s4",
+      "status": "grounded",
+      "reason": null,
+      "detail": "",
+      "by": "rules",
+      "gold_action": [
+        "dispense"
+      ],
+      "pred_action": "dispense",
+      "action_exact": true,
+      "action_fp": [],
+      "action_fn": [],
+      "entity_tp": 0,
+      "entity_fp": [],
+      "entity_fn": [
+        "echo",
+        "sequencing libraries",
+        "384 pcr plate",
+        "96 well pcr plate",
+        "destination plate"
+      ],
+      "quantity_tp": 1,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "15461:s5",
+      "status": "out_of_scope",
+      "reason": "not_implemented",
+      "detail": "pool_samples is declared, not implemented",
+      "by": "rules",
+      "gold_action": [
+        "pool_samples",
+        "dispense"
+      ],
+      "pred_action": "pool_samples",
+      "action_exact": false,
+      "action_fp": [],
+      "action_fn": [
+        "dispense"
+      ],
+      "entity_tp": 0,
+      "entity_fp": [
+        "plate_384_well"
+      ],
+      "entity_fn": [
+        "labcyte echo",
+        "library",
+        "384-well destination plate",
+        "384 pcr plate",
+        "96 well pcr plate"
+      ],
+      "quantity_tp": 3,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    },
+    {
+      "id": "15461:s6",
+      "status": "out_of_scope",
+      "reason": "not_implemented",
+      "detail": "pool_samples is declared, not implemented",
+      "by": "rules",
+      "gold_action": [
+        "pool_samples",
+        "mix"
+      ],
+      "pred_action": "pool_samples",
+      "action_exact": false,
+      "action_fp": [],
+      "action_fn": [
+        "mix"
+      ],
+      "entity_tp": 0,
+      "entity_fp": [
+        "tube_vial"
+      ],
+      "entity_fn": [
+        "dna lo-bind tube"
+      ],
+      "quantity_tp": 0,
+      "quantity_fp": [],
+      "quantity_fn": [],
+      "provenance": {
+        "gold": "human",
+        "pred": "rules"
+      }
+    }
+  ]
+}

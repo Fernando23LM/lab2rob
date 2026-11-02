@@ -1,0 +1,5 @@
+# Minimal deps for the ST-04 corpus sweep (no simulator needed).
+openai==3.41.0
+pydantic==2.14.1
+pint==0.25.3
+pyyaml==6.0.3

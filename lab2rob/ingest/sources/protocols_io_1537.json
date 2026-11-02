@@ -1,0 +1,1167 @@
+{
+ "protocol_id": 1537,
+ "uri": "Adsorption-of-phage-to-cyanobacteria-dq95z5",
+ "doi": "dx.doi.org/10.17504/protocols.io.dq95z5",
+ "url": "https://www.protocols.io/view/Adsorption-of-phage-to-cyanobacteria-dq95z5",
+ "title": "Adsorption of phage to cyanobacteria",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:15:52Z",
+ "query": "dilution",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Mathias",
+    "last_name": "Middelboe",
+    "affiliation": "Manual of Aquatic Viral Ecology",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Mathias Middelboe",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "",
+    "last_name": "Amy M. Chan",
+    "affiliation": "Manual of Aquatic Viral Ecology",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": " Amy M. Chan",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "",
+    "last_name": "and Sif K. Bertelsen",
+    "affiliation": "Manual of Aquatic Viral Ecology",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": " and Sif K. Bertelsen",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "Because of the short sampling intervals, it is very important to have everything ready before you begin. Having media equilibrated to the appropriate temperature, pre-labeled agar plates and tubes, tables to record the time etc will facilitate acquisition of better data.",
+  "created_on": 1441316556,
+  "creator": {
+   "affiliation": "",
+   "affiliation_url": null,
+   "affiliations": [
+    {
+     "affiliation": null,
+     "is_default": true,
+     "job_title": null,
+     "url": null
+    }
+   ],
+   "badges": [
+    {
+     "id": 4,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg"
+     },
+     "name": "Gold power author!"
+    },
+    {
+     "id": 5,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/star.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/star.svg"
+     },
+     "name": "Early adopter"
+    },
+    {
+     "id": 6,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/accelerator.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/accelerator.svg"
+     },
+     "name": "Science accelerator"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": null,
+   "name": "Amy Chan",
+   "username": "amy-chan"
+  },
+  "cross_cloud_origin": null,
+  "description": "Several methods have been presented by Adams (1959) to determine adsorption kinetics of bacteriophages. One way to measure the adsorption efficiency of cyanophages is to assay for free unadsorbed phages (Suttle and Chan 1993). The principle of this assay is to add a known quantity of viruses to host cells (e.g., at an MOI = 0.01 to 0.1). Over a period of 1 to 2 h, small subsamples of the virus:host solution are removed ca. every 15 min and diluted 100-fold to stop further adsorption. The host is then separated from free viruses by centrifugation, and the number of free viruses remaining in the supernatant determined by plaque or end-point dilution assays. A plot of the abundance of free viruses remaining in solution as a function of time should produce a straight line. The slope of this line is then used to calculate the adsorption rate.\n\nThis procedure can be adapted for other host\u2013virus systems. The example given is for host BBC1 and cyanophage BBC1-P1 (Suttle and Chan 1993).",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.dq95z5",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "8ACB8389B9DA11E99CA40242AC110005",
+  "guidelines": "The first step in the life cycle of a virus is adsorption to host cells. If the virus does not adsorb to a viable host, infection will not take place. Where bacteriophage adsorption rates are often in the order of minutes, cyanophages usually adsorb to their host cells at a much slower rate; and not all contacts result in an infection. Suttle and Chan (1993) found that it took 45 min for 80% of cyanophage BBC1-P1 to be adsorbed to its host. Some factors that can affect adsorption rates are (1) host abundance (a minimum of 104 cells per mL are needed to have a sufficiently high rate of adsorption); (2) physiological state of the host (which could affect the availability of receptor sites); (3) physical environment (temperature, viscosity); (4) chemical environment (ions, salts, co-factors); (5) light (adsorption rate is light dependent in some species (Clokie et al. 2006); and (6) host strain. If every contact results in an infection, this would have tremendous ecological impact. Understanding how these factors affect the rate of virus adsorption would help one design better experiments, interpret data, and construct better models for virus-host cell relationships.\n\nUnder constant environmental and cultural conditions of the host cell, the rate of adsorption can be described using the following equation: \n\n**K = 2.3/(B)t x log (p****0****/p)**\n\nwhere B = concentration of cyanobacteria (cells mL-1), p0 = phage assayed at time zero, p = phage not adsorbed at time t (min), K is the velocity constant (ml min-1).\n\n<table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n   Table 1. Suggested table for recording sampling times and details for adsorption kinetics experiments. <table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n   Time point (minutes) Replicate Time: subsampled from tube Time:centrifuged Time: tube placed on ice Time: added to plating cells Volume titered Results: # of PFUs Average # of PFUs   T=0 \u00a0\u00a0\u00a0 A                 \u00c2\u00a0 \u00a0\u00a0\u00a0 B               \u00c2\u00a0 \u00a0\u00a0\u00a0 C               T=15 \u00a0\u00a0\u00a0 A                 \u00c2\u00a0 \u00a0\u00a0\u00a0 B               \u00c2\u00a0 \u00a0\u00a0\u00a0 C               Etc.                   <table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n    ",
+  "id": 1537,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 222877,
+  "keywords": "adsorption kinetics of bacteriophage, adsorption efficiency of cyanophage, adsorption of phage, cyanobacteria several method, bacteriophage, quantity of virus, adsorption kinetic, cyanobacteria, small subsamples of the virus, free viruses by centrifugation, number of free virus, adsorption, adsorption rate, point dilution assay, further adsorption, adsorption efficiency, cyanophage bbc1, free unadsorbed phage, phage, virus system, principle of this assay, cyanophage, free virus, virus, host cell",
+  "link": "http://www.aslo.org/books/mave/MAVE_118.pdf",
+  "manuscript_citation": "",
+  "materials": [],
+  "materials_text": "",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 0,
+   "file_name": "avatar.png",
+   "guid": "00000000000000000000000000000001",
+   "height": 400,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 0,
+   "url": "https://www.protocols.io/img/default_protocol.png",
+   "width": 400
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1454969338,
+  "reserved_doi": "",
+  "space_id": 0,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 1829,
+   "number_of_steps": 12,
+   "number_of_bookmarks": 4,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 46,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 0,
+   "number_of_equipments": 0,
+   "number_of_collections": 1,
+   "number_of_forks": {
+    "private": 1,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": ""
+  },
+  "steps": [
+   {
+    "id": 131890,
+    "guid": "03527E5D98014ACBAD99B4CECDE481A4",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Have everything ready to perform plaque assay:\na. Plating cells, aliquoted, and set aside. \nb. Bottom plates labeled (24 + plates). \nc. Top agar aliquoted and temperature equilibrated. \nd. Dilution tubes\u2014these contain 1.5 mL media, labeled and kept on ice. \ne. Cyanophage stock diluted into 1\u20135 mL media  \n\nAllow for 8 time points, in triplicate.\n ",
+    "data": null,
+    "protocol_id": 1537,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131891,
+    "guid": "5323072AEEE244CDB18CACD46ADF9AE0",
+    "previous_id": 131890,
+    "previous_guid": "03527E5D98014ACBAD99B4CECDE481A4",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Set up a table to record times such as Table 1\u00a0(guidelines).",
+    "data": null,
+    "protocol_id": 1537,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131892,
+    "guid": "C97BCB7B5CC445E7AC70CB149DDCF8C7",
+    "previous_id": 131891,
+    "previous_guid": "5323072AEEE244CDB18CACD46ADF9AE0",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Set up adsorption cultures (e.g., 250 mL polycarbonate Erlenmeyer flasks with screw cap).  \n\nCyanobacteria should be in exponential growth, e.g., for BBC1, about 106 to 107 cells/mL (The actual numbers should be predetermined by microscopy).\n ",
+    "data": null,
+    "protocol_id": 1537,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131893,
+    "guid": "2648F0416D54495DA7B4A0EB58A6ECD9",
+    "previous_id": 131892,
+    "previous_guid": "C97BCB7B5CC445E7AC70CB149DDCF8C7",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Fill flask with 100 mL host cells.",
+    "data": null,
+    "protocol_id": 1537,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131894,
+    "guid": "BD1E4CD7B11A4C0BBD89C8B2B0BCC40C",
+    "previous_id": 131893,
+    "previous_guid": "2648F0416D54495DA7B4A0EB58A6ECD9",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add cyanophage stock of known titer to host at an MOI of ca. 0.01 and quickly mix to disperse the virus.  \n\nFor example, for a host concentration of 1 \u00d7 107 cells mL\u20131 (i.e., total number in 100 mL = 109 cells), a total of 107 infectious viruses is needed to achieve an MOI = 0.01. Thus, if the virus stock is 1 \u00d7 109 infectious units mL\u20131, add 0.01 mL to the host culture. If the virus stock is highly concentrated, we recommend diluting the virus into a larger volume before adding to the host cells. This will enhance rapid dispersal of the viruses.\n ",
+    "data": null,
+    "protocol_id": 1537,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131895,
+    "guid": "87904EFEEA5340CFBBC87B3FD88F5221",
+    "previous_id": 131894,
+    "previous_guid": "BD1E4CD7B11A4C0BBD89C8B2B0BCC40C",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Immediately remove a subsample and dilute 100\u00d7 for time zero: Transfer 15 \u00b5L to a tube containing 1.5 mL of ice cold media.",
+    "data": null,
+    "protocol_id": 1537,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131896,
+    "guid": "250197B67A2D47CC82E2F7001503291A",
+    "previous_id": 131895,
+    "previous_guid": "87904EFEEA5340CFBBC87B3FD88F5221",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Vortex to mix.",
+    "data": null,
+    "protocol_id": 1537,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131897,
+    "guid": "CDF10FD3ABC74C2698A922D6B8D19E8B",
+    "previous_id": 131896,
+    "previous_guid": "250197B67A2D47CC82E2F7001503291A",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Pellet host for 5 min at ca. 16,000g and 4\u00b0C; note the time. \n 00:05:00 ",
+    "data": null,
+    "protocol_id": 1537,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131898,
+    "guid": "5D585B58BC9C4B2ABDED5FF9F2423FD5",
+    "previous_id": 131897,
+    "previous_guid": "CDF10FD3ABC74C2698A922D6B8D19E8B",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Carefully remove a small aliquot (50 \u00b5L) of the supernatant to a new tube and keep cold for plaque assay; note time.",
+    "data": null,
+    "protocol_id": 1537,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131899,
+    "guid": "E10007EF4FCF42F4B87B74A48C332C90",
+    "previous_id": 131898,
+    "previous_guid": "5D585B58BC9C4B2ABDED5FF9F2423FD5",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Place adsorption cultures under usual conditions (e.g., light and temp).",
+    "data": null,
+    "protocol_id": 1537,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131900,
+    "guid": "8846D5B6A4C042D5AC761E4FC94B3250",
+    "previous_id": 131899,
+    "previous_guid": "E10007EF4FCF42F4B87B74A48C332C90",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Repeat sampling at 15 min intervals for 1 to 1.5 h \n 00:15:00 ",
+    "data": null,
+    "protocol_id": 1537,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "11",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131901,
+    "guid": "9ADE956DC83346AD9167249DEB149124",
+    "previous_id": 131900,
+    "previous_guid": "8846D5B6A4C042D5AC761E4FC94B3250",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Determine the concentration of viruses remaining in the supernatant for each time point by plaque assay.",
+    "data": null,
+    "protocol_id": 1537,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "12",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [],
+  "title": "Adsorption of phage to cyanobacteria",
+  "title_html": "Adsorption of phage to cyanobacteria",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775220780
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775220780
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775220780
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775220780
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775220780
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "Adsorption-of-phage-to-cyanobacteria-dq95z5",
+  "url": "https://www.protocols.io/view/Adsorption-of-phage-to-cyanobacteria-dq95z5",
+  "version_class": 1537,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "Adsorption-of-phage-to-cyanobacteria-dm6gprm8vzpn/v1",
+  "versions": [
+   {
+    "id": 1537,
+    "title": "Adsorption of phage to cyanobacteria",
+    "title_html": "Adsorption of phage to cyanobacteria",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.dq95z5",
+    "uri": "Adsorption-of-phage-to-cyanobacteria-dq95z5",
+    "published_on": 1454969338,
+    "modified_on": 1510247633,
+    "version_class": 1537,
+    "version_id": 0,
+    "version_code": "dq95z5",
+    "version_uri": "Adsorption-of-phage-to-cyanobacteria-dm6gprm8vzpn/v1",
+    "created_on": 1441316556,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Amy Chan",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": null,
+     "affiliation_url": null,
+     "username": "amy-chan",
+     "link": null,
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/default_protocol.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 400,
+     "height": 400,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

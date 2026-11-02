@@ -1,0 +1,89 @@
+{
+  "tier": 1,
+  "note": "steps_raw is copied verbatim from BioProt, including scraping noise ('None', '1amount', 'reagents', 'NOTES ...') that the rules parser must strip. expected_grounding_hints are human-written expectations for tests, NOT inputs to the parser.",
+  "protocols": [
+    {
+      "dataset": "bioprot",
+      "protocol_id": "1779",
+      "source": {
+        "dataset": "BioProt (BioPlanner, github.com/bioplanner/bioplanner, repo MIT)",
+        "url": "https://www.protocols.io/view/1779",
+        "license": "check on protocols.io (record per protocol)"
+      },
+      "title": "CTAB mix",
+      "description": "This solution is used in the coral genomic DNA extraction protocol.  The following recipe is for 50 mL of CTAB mix. Store at -20°C.",
+      "steps_raw": "\nNone\n1. Dissolve 0.75 g CTAB in ~ 20 mL MilliQ water \n1amount \nreagents\n2. Add 12.5 mL of 4 M NaCl  \nreagents\n3. Add 75 µL of E. coli tRNA at 20 mg/mL  \nNOTES E. coli tRNA is used as a carrier nucleic acid to boost total nucleic acid concentrations and increase the extraction yield\n4. Make up to a final volume of 50 mL with MilliQ water  \nreagents\n",
+      "number_of_steps": 4,
+      "pseudocode_reference": "def prepare_solution(reagent, amount, solvent, total_volume):\n    pass\n\ndef add_to_solution(reagent, amount):\n    pass\n\n# Protocol steps\nprepare_solution(reagent=\"CTAB\", amount=\"0.75 g\", solvent=\"MilliQ water\", total_volume=\"~20 mL\")\nadd_to_solution(reagent=\"4 M NaCl\", amount=\"12.5 mL\")\nadd_to_solution(reagent=\"E. coli tRNA at 20 mg/mL\", amount=\"75 µL\")\nmake_to_final_volume(reagent=None, amount=None, solvent=\"MilliQ water\", total_volume=\"50 mL\")",
+      "pseudocode_is_human_edited": true,
+      "expected_grounding_hints": {
+        "in_scope_candidates": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "notes": [
+          "Step 1 = weigh 0.75 g solid + dissolve in ~20 mL water (weighing like weigh_salt; 'dissolve' likely needs a declared mixing action).",
+          "Steps 2-4 use mL-scale volumes: need a container larger than a tube (beaker/bottle/graduated cylinder) -> missing_asset if not in registry.",
+          "Step 3 (75 uL) is pipette scale -> should map to implemented pipetting skills.",
+          "NOTES line is commentary, not an action.",
+          "Description says 'Store at -20 C' -> out_of_scope (unmodeled equipment), not a step."
+        ]
+      }
+    },
+    {
+      "dataset": "bioprot",
+      "protocol_id": "1780",
+      "source": {
+        "dataset": "BioProt (BioPlanner, github.com/bioplanner/bioplanner, repo MIT)",
+        "url": "https://www.protocols.io/view/1780",
+        "license": "check on protocols.io (record per protocol)"
+      },
+      "title": "Sodium acetate solution",
+      "description": "Sodium acetate solution is used in DNA extraction. This recipe makes 50 mL of a 3 M stock solution at ph 5.2  -- dilute tenfold in water to a working concentration of 0.3 M for use in the DNA extraction protocol.",
+      "steps_raw": "\nNone\n1. Dissolve 12.3 g of Sodium acetate (anhydrous) in ~ 40 mL MilliQ water. \n12amount \nreagents\n2. Adjust pH to 5.2 with glacial acetic acid\n3. Make up to 50 mL with MilliQ water  \nreagents\n4. Dilute an aliquot of the 3 M stock solution to 0.3 M for use in the DNA extraction protocol.\n",
+      "number_of_steps": 4,
+      "pseudocode_reference": "def dissolve_sodium_acetate(sodium_acetate_weight, initial_water_volume):\n    pass\n\ndef adjust_pH(target_pH, acid_type):\n    pass\n\ndef add_water(target_volume):\n    pass\n\ndef dilute_sodium_acetate_solution(stock_solution_volume, source_concentration, target_concentration):\n    pass\n\n# Protocol steps\ndissolve_sodium_acetate(sodium_acetate_weight=\"12.3 g\", initial_water_volume=\"~40 mL MilliQ water\")\nadjust_pH(target_pH=5.2, acid_type=\"glacial acetic acid\")\nadd_water(target_volume=\"50 mL\")\ndilute_sodium_acetate_solution(stock_solution_volume=\"aliquot\", source_concentration=\"3 M\", target_concentration=\"0.3 M\")\n# end of protocol\n",
+      "pseudocode_is_human_edited": false,
+      "expected_grounding_hints": {
+        "in_scope_candidates": [
+          1,
+          3,
+          4
+        ],
+        "notes": [
+          "Step 2 'Adjust pH to 5.2' -> out_of_scope (pH meter / titration not modeled).",
+          "Step 4 'Dilute an aliquot ... 3 M to 0.3 M' is a 1:10 dilution: volumes must be computed (e.g. 100 uL stock + 900 uL water); ambiguous 'aliquot' size -> flag as ambiguous or choose a default and record it."
+        ]
+      }
+    },
+    {
+      "dataset": "bioprot",
+      "protocol_id": "1778",
+      "source": {
+        "dataset": "BioProt (BioPlanner, github.com/bioplanner/bioplanner, repo MIT)",
+        "url": "https://www.protocols.io/view/1778",
+        "license": "check on protocols.io (record per protocol)"
+      },
+      "title": "1% SDS in DNA Buffer",
+      "description": "This buffer is used to stabilize samples for archiving and subsequentgenomic DNA extraction.   SDS is dissolved to a concentration of 1% (w/v) in DNAB (DNA buffer: 0.4 M NaCl + 0.05 M EDTA in MilliQ water). The buffer may need to be warmed for SDS to completely dissolve. Tissue samples are added to small aliquots of 1% SDS in DNAB and heated to 65°C for 60-90 minutes. They are then stable at room temperature and ready for extraction of genomic DNA.",
+      "steps_raw": "\nNone\n1. Prepare stock solution of 4 M Sodium chloride in MilliQ water  \nreagents\n2. Prepare stock solution of 0.5 M EDTA in MilliQ water  \nreagents\n3. Mix 50 mL 4 M NaCl and 50 mL 0.5 M EDTA\n4. Make up to a final volume of 500 mL with MilliQ water  \nreagents\n5. Dissolve SDS in DNA Buffer to a final concentration of 1% (w/v).\ne.g., 5 g SDS in 500 mL of DNA Buffer.  \nreagents\n",
+      "number_of_steps": 5,
+      "pseudocode_reference": "def prepare_stock_solution(solute_name, solute_concentration, solvent_name):\n    pass\n\ndef mix_solutions(solution1_volume, solution2_volume):\n    pass\n\ndef adjust_final_volume(mixture_volume, final_volume, solvent):\n    pass\n\ndef dissolve_solute(solute, solute_amount, solution, concentration):\n    pass\n\n# Protocol Steps\nprepare_stock_solution(solute_name=\"Sodium chloride\", solute_concentration=\"4 M\", solvent_name=\"MilliQ water\")\nprepare_stock_solution(solute_name=\"EDTA\", solute_concentration=\"0.5 M\", solvent_name=\"MilliQ water\")\nmixture_volume = mix_solutions(solution1_volume=\"50 mL 4 M NaCl\", solution2_volume=\"50 mL 0.5 M EDTA\")\nadjust_final_volume(mixture_volume=mixture_volume, final_volume=\"500 mL\", solvent=\"MilliQ water\")\ndissolve_solute(solute=\"SDS\", solute_amount=\"5 g\", solution=\"DNA Buffer\", concentration=\"1% (w/v)\")\n\n# end of protocol",
+      "pseudocode_is_human_edited": false,
+      "expected_grounding_hints": {
+        "in_scope_candidates": [
+          3,
+          4,
+          5
+        ],
+        "notes": [
+          "Steps 1-2 'Prepare stock solution' are sub-protocols with no amounts -> treat stocks as given initial_state (pre-made reagents), or flag ambiguous_text.",
+          "Step 5 gives the example '5 g SDS in 500 mL' -> use it; description says warming may be needed -> heating is out_of_scope/declared.",
+          "500 mL volumes require large containers -> likely missing_asset."
+        ]
+      }
+    }
+  ]
+}

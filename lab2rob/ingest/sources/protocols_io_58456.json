@@ -1,0 +1,1375 @@
+{
+ "protocol_id": 58456,
+ "uri": "introductory-hydra-activities-b5byq2pw",
+ "doi": "dx.doi.org/10.17504/protocols.io.b5byq2pw",
+ "url": "https://www.protocols.io/view/introductory-hydra-activities-b5byq2pw",
+ "title": "Introductory Hydra Activities",
+ "version_id": 2,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:14:49Z",
+ "query": "pipette",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Callen",
+    "last_name": "Hyland",
+    "affiliation": "University of San Diego",
+    "note": "",
+    "guid": "03E9141CF8CC11ED9D4302C0B41BC903",
+    "username": "m4tle152u115xle1",
+    "name": "Callen Hyland",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "Please read through the entire protocol before beginning.\nFamiliarize yourself with the components of the microscope and its basic operation and review the basic anatomy of Hydra.",
+  "created_on": 1645217518,
+  "creator": {
+   "affiliation": "University of San Diego",
+   "affiliation_url": null,
+   "affiliations": [
+    {
+     "affiliation": "University of San Diego",
+     "is_default": true,
+     "job_title": null,
+     "url": null
+    }
+   ],
+   "badges": [
+    {
+     "id": 3,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/silver.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/silver.svg"
+     },
+     "name": "Power author!"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": null,
+   "name": "Callen Hyland",
+   "username": "m4tle152u115xle1"
+  },
+  "cross_cloud_origin": null,
+  "description": "This is a series of introductory lab activities for BIOL309-03: Research Methods. The purpose is to master vocabulary related to Hydra anatomy, become familiar with compound microscopes and dissecting microscopes, and practice microdissections and micropipette use. The second section sets up a head and tentacle regeneration experiment that will be documented a week later to provide quantitative data for a statistics activity.",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.b5byq2pw",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "DFCBB8BAF0F742CE9B767E4AA31647F7",
+  "guidelines": "Microscopes are delicate and expensive instruments. Please handle them with care at all times and follow these guidelines:\n\n1. Hold the microscope by its base and carry it with two hands.\n1. Avoid touching any of the optical components.\n1. Only clean lenses with a lens paper and lens clearer or DI water.\n1. When you are on high power (20X, 40X, or 100X) only use the fine focus adjustment. On 4X or 10X, you can use the course focus adjustment.\n1. Don&#39;t adjust any components if you don&#39;t know what they do or try to fix anything you don&#39;t know how to fix. Alert your instructor if there are any issues with the microscopes.\n1. When you are done using the microscope turn off the light, move the objective to 4X, and cover it with the dust cover.\n\n\nEveryone&#39;s eyes are a different distance apart, so it&#39;s critical to adjust the distance between the oculars every time you use a microscope that someone else may have used before. If the oculars are too far apart or close together you will see double images or nothing at all.",
+  "id": 58456,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 878577,
+  "keywords": "introductory hydra activity, hydra anatomy, tentacle regeneration experiment, introductory lab activity, series of introductory lab activity, familiar with compound microscope, biol309, compound microscope, activity, lab, experiment, dissecting microscope, micropipette use",
+  "link": "",
+  "manuscript_citation": "",
+  "materials": [],
+  "materials_text": "\n Stereo dissecting microscope (lab equipment, Meiji Techno, unknown, Any stereo dissecting microscope will do. This model might be discontinued., [https://meijitechno.com/](https://meijitechno.com/)) \n\n Compound upright binocular microscope (Lab equipment, Olympus, CX31, Any compound microscope will do., [https://www.olympus-lifescience.com/](https://www.olympus-lifescience.com/)) \n\n Multi-well plates, not treated (Lab consumable, Corning, CLS3738, [https://www.sigmaaldrich.com/US/en](https://www.sigmaaldrich.com/US/en)) \n\n 60 x 15 mm plastic petri dish (Lab consumable, CellTreat, T9FB2782491, Can use any plastic petri dish, [https://www.globalindustrial.com/](https://www.globalindustrial.com/)) \n\n Disposable scalpel (Lab consumable, Feather, 08-927-5A, Use blade shape #10. They can be cleaned and used multiple times., [https://www.fishersci.com/us/en/home.html](https://www.fishersci.com/us/en/home.html)) \n\n 100-1000 \u00b5l Micropipette (lab equipment, MiniOne, M2011, Optional. Only needed for dispensing rifampicin solution., [https://theminione.com/](https://theminione.com/)) \n\n TipOne Pipette tips in racks, blue graduated 1000uL (Pipette tips in racks, 1000uL, TipOne, 1111-2831, [https://www.usascientific.com/tipone-racks/p/tipone-racks](https://www.usascientific.com/tipone-racks/p/tipone-racks), [B2fed6dc-398c-49d2-Be61-391f773e378d.Jpg](https://s3.amazonaws.com/protocols-files/public/ac0aac55a261658d91da88fa1c498bf1c07a32fcaaf3717647ffbc8fa3c37297/cjk5bf32p.jpg)) \n\n Glass pasteur pipettes, 5 3/4 inch (glass consumables, Fisher Scientific, 1367820B, Any brand of glass Pasteur pipette will do, just make sure you have bulbs that fit. Plastic Pasteur pipettes are not recommended because Hydra tend to stick to plastic., [https://www.amazon.com/Disposable-Borosilicate-Glass-Pasteur-Pipets/dp/B00GB9L85A](https://www.amazon.com/Disposable-Borosilicate-Glass-Pasteur-Pipets/dp/B00GB9L85A)) \n\n Rubber bulbs for Pasteur pipette (Lab equipment, Heathrow Scientific, HS20622B, Look for 2 mL latex rubber bulbs, [https://www.amazon.com/Heathrow-HS20622B-Natural-Rubber-Dropper/dp/B00TPT951C/ref=sr_1_4?dchild=1&keywords=rubber+bulbs+for+pasteur+pipette&qid=1628567559&sr=8-4](https://www.amazon.com/Heathrow-HS20622B-Natural-Rubber-Dropper/dp/B00TPT951C/ref=sr_1_4?dchild=1&keywords=rubber+bulbs+for+pasteur+pipette&qid=1628567559&sr=8-4)) \n\n Hydra with Bud (Preserved organism, Ward's Science, 470176-910, [https://www.wardsci.com/store/](https://www.wardsci.com/store/)) \n\n Hydra, Nematocysts (Preserved organism, Ward's Science, 470181-506, [https://www.wardsci.com/store/](https://www.wardsci.com/store/)) \n\n Hydra, General Structure (Preserved organism, Ward's Science, 470181-502, Can be cross-section or longitudinal section, [https://www.wardsci.com/store/](https://www.wardsci.com/store/)) \n\n Preserved cnidarian specimens (preserved organisms, Any, NA, Set of preserved cnidarians (sea anemones, jellyfish, corals, Velella, etc.), can be from any vendor., [https://www.nilesbio.com/](https://www.nilesbio.com/)) \n",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 1753350888,
+   "file_name": "gp4vber8x.jpg",
+   "guid": "3C34226F687411F08F960A58A9FEAC02",
+   "height": 0,
+   "mime": "binary/octet-stream",
+   "scan_status": 0,
+   "size": 35380,
+   "url": "https://files.protocols.io/external/gp4vber8x-3C34226F687411F08F960A58A9FEAC02.jpg",
+   "width": 0
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1645421501,
+  "reserved_doi": "",
+  "space_id": 18971,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 1297,
+   "number_of_steps": 19,
+   "number_of_bookmarks": 0,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 1,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 0,
+   "number_of_equipments": 13,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 2,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": "We use this protocol and it\u2019s working"
+  },
+  "steps": [
+   {
+    "id": 1349948,
+    "guid": "78F0E62B5CE549A9992C5796C64DB059",
+    "previous_id": null,
+    "previous_guid": null,
+    "section": "<p>Observation activities</p>",
+    "section_color": "#A492FF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "In this activity you will become familiar with the anatomy of Hydra including areas of the body, cell layers, and nematocysts, while practicing the new vocabulary we learned in lecture.\n\nLearning objectives:\n1. Use a compound microscope to examine prepared slides\n1. Master vocabulary related to Hydra anatomy\n1. Correctly identify body parts and cell layers in fixed Hydra specimens\n1. Sketch biological structures under a microscope\n1. Identify similarities and differences in animal anatomy\n\n\nMaterials:\n1. Compound microscope\n1. Microscope slides with Hydra whole mount, cross section, and nematocysts\n1. Selection of preserved Cnidarian specimens\n1. Lab notebook, pen, and pencil (optional)\n\n\nIn this activity, you will be sketching biological structures that you observe under the microscope. Your sketches don&#39;t have to be &#34;good&#34;, they just have to show the general shapes and relative positions of the structures you are asked to examine. You probably know not to write in pencil in your lab notebook, but you can make an exception here. It may be convenient to sketch the structures first with pencil then copy over the final lines in pen.\n \n\n[compound microscope.png]](https://content.protocols.io/files/gp4xber8x.jpg)\nFigure 1. Parts of the compound microscope, just what you need to know for this activity. \n \n",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340299,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349949,
+    "guid": "A461D85DF3684FA39236349E9745C7B6",
+    "previous_id": 1349948,
+    "previous_guid": "78F0E62B5CE549A9992C5796C64DB059",
+    "section": "<p>Observation activities</p>",
+    "section_color": "#A492FF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "Basic Hydra anatomy\n\nExamine the whole mount Hydra slides with the 4X objective. Adjust the distance between the oculars and focus on the specimen if necessary. Sketch the whole Hydra in your lab notebook and label the following body parts:\n\n1. Tentacles\n1. Hypostome\n1. Head\n1. Body column\n1. Peduncle\n1. Basal disk\n1. Bud\n1. Budding zone\n1. Label the hypostome and tentacles on the bud",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340300,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349950,
+    "guid": "76FB8D47C34543B2818CCFCB7549BA09",
+    "previous_id": 1349949,
+    "previous_guid": "A461D85DF3684FA39236349E9745C7B6",
+    "section": "<p>Observation activities</p>",
+    "section_color": "#A492FF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "Body wall structure\n\nExamine the Hydra cross section (transverse section) with the 40X objective. The cross section should already be centered in the field, so don&#39;t move the stage. Adjust the distance between the oculars and focus on the specimen if necessary (use only the fine focus adjustment). In your lab notebook, sketch just a section of the body wall and label:\n\n1. Endodermal cells\n1. Ectodermal cells\n1. Mesoglea",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340301,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349951,
+    "guid": "ECB56C20A2D94CB8988AB53307A2D8E3",
+    "previous_id": 1349950,
+    "previous_guid": "76FB8D47C34543B2818CCFCB7549BA09",
+    "section": "<p>Observation activities</p>",
+    "section_color": "#A492FF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "Hydra nematocysts\n\nExamine the smear of Hydra nematocysts with the 40X objective. Adjust the distance between the oculars and focus on the specimen if necessary. Feel free to move the stage around to view different parts of the smear. Try to find at least two of the four different types of nematocysts (Figure 1) and sketch them in your lab notebook.\n\n \n[nematocysts.png]](https://content.protocols.io/files/gp43ber8x.jpg)\nFigure 2. Four types of nematocysts in Hydra.\n\nDesmoneme: coiled filaments wrap around prey.\nStenotele: pierces prey cuticle and injects venom.\nHolotrichous isorhiza: sticky filament with barbs used for defense.\nAtrichous isorhiza: sticky filament without barbs used for locomotion.. \n",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340302,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349952,
+    "guid": "55DB13BCE0174FEFA73BF919704EBE07",
+    "previous_id": 1349951,
+    "previous_guid": "ECB56C20A2D94CB8988AB53307A2D8E3",
+    "section": "<p>Observation activities</p>",
+    "section_color": "#A492FF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "Comparing Hydra to other Cnidarians\n\nExamine the preserved specimens. In your lab notebook, make a list of the features that all of these animals have in common. What do they have in common with Hydra? What features make them appear different from each other and from Hydra?",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340303,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349953,
+    "guid": "A7C61E11B2CA400D84054A481F2560F1",
+    "previous_id": 1349952,
+    "previous_guid": "55DB13BCE0174FEFA73BF919704EBE07",
+    "section": "<p>Start your regeneration experiment</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "Anyone who examines a large number of Hydra in a dish can clearly see that they do not all have the same number of tentacles. You may wonder, does each animal have a fixed number of tentacles? If we were to hypothesize that each animal has a fixed number of tentacles, it might follow that we cut a Hydra in half and allowed the foot-end to regenerate a head, this head would have the same number of tentacles as the head that was removed. We will keep the head-end of the Hydra to test whether the number of tentacles on an intact Hydra head spontaneously changes in the course of a week.\n\nLearning objectives:\n1. Use a dissecting microscope to view live animals\n1. Become proficient with using an adjustable volume micropipette\n1. Practice moving Hydra with a Pasteur pipette\n1. Apply micro-dissection skills to create transverse sections of Hydra\n\n\nMaterials:\n1. Common dish with Hydra\n1. Dissecting microscope\n1. Scalpel\n1. 60 mm Petri dish\n1. Hydra medium\n1. 100-1000 \u00b5L micropipette and tips\n1. 24-well plate\n1. Glass Pasteur pipette and bulb\n1. Waste container\n1. Permanent marker\n1. Labeling tape\n\n\n\nFor Hydra medium recipe and and methods for maintaining Hydra in the lab, please see:\n<img src=\"https://files.protocols.io/external/gpfzber8x-0F8DC9F6687411F08F960A58A9FEAC02.jpg\" width=\"30\" height=\"30\"/> [Low cost methods for Hydra care ](https://www.protocols.io/view/low-cost-methods-for-hydra-care-bw79phr6) by [Callen Hyland](https://www.protocols.io/researchers/m4tle152u115xle1) \n\n\n[dissecting microscope.png]](https://content.protocols.io/files/gp47ber8x.jpg)\nFigure 3. Parts of the dissecting microscope, just what you need to know for this activity. \n",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340304,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349954,
+    "guid": "99138D705E8746BE9985FCF23699E870",
+    "previous_id": 1349953,
+    "previous_guid": "A7C61E11B2CA400D84054A481F2560F1",
+    "section": "<p>Start your regeneration experiment</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "Check your workstation to make sure you have all materials listed above.\nFill your Petri dish halfway with Hydra medium. \nUse your glass Pasteur pipette to transfer six adult asexual Hydra without buds, one by one, from the common dish to your Petri dish.",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340305,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349955,
+    "guid": "CEF7ADAED3F9467EA0BB1DB5CCE98CE0",
+    "previous_id": 1349954,
+    "previous_guid": "99138D705E8746BE9985FCF23699E870",
+    "section": "<p>Start your regeneration experiment</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "Set your 100-1000 \u00b5L adjustable volume micropipette to 1000 \u00b5L. Get a new tip.\nFill 12 wells of your 24-well plate with 2 mL (2 X 1000 \u00b5L) of Hydra medium using your micropipette.\nDispose of used tips in the waste container.\n\n12-well plates and 6-well plates can also be used, just adjust the volume of medium in each well.\nTwo students can share a 24-well plate.\n \n\n",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340306,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349956,
+    "guid": "273A609EB3F543A5B26A9F19FA640363",
+    "previous_id": 1349955,
+    "previous_guid": "CEF7ADAED3F9467EA0BB1DB5CCE98CE0",
+    "section": "<p>Start your regeneration experiment</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "Put a piece of labeling tape on the lid of your 24-well plate. \nUse a permanent marker to label it with your name and date.",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340307,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349957,
+    "guid": "0D6C6C27FF04411ABC298271A31D89E6",
+    "previous_id": 1349956,
+    "previous_guid": "273A609EB3F543A5B26A9F19FA640363",
+    "section": "<p>Start your regeneration experiment</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "Place your Petri dish on the stage of your dissecting microscope and turn the light control knob to the &#34;I&#34; (incident light) setting.\nAdjust the zoom to the lowest setting.\nAdjust the distance between the oculars until you see a single field.\n\n",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340308,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349958,
+    "guid": "FB5218734C49439D9DA8BA2CFB6BE7CE",
+    "previous_id": 1349957,
+    "previous_guid": "0D6C6C27FF04411ABC298271A31D89E6",
+    "section": "<p>Start your regeneration experiment</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "Adjust the focus knob to get a crisp image of one of your Hydra. \nTry slowly zooming in on it, adjusting the focus as you go.\nWhile doing the dissection, you&#39;ll have to find a magnification that works for you.",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340309,
+    "number": "11",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349959,
+    "guid": "168BFA88A200489799050219553FB8E3",
+    "previous_id": 1349958,
+    "previous_guid": "FB5218734C49439D9DA8BA2CFB6BE7CE",
+    "section": "<p>Start your regeneration experiment</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "Count the number of tentacles that the Hydra has and record it in your lab notebook.\nSince you are going to dissect six Hydra you may want to set up a table to record the following information for each Hydra:\n\n1. Initial number of tentacles\n1. Well containing head-end\n1. Number of tentacles on head-end after a week\n1. Well containing foot-end\n1. Number of tentacles on foot-end after a week",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340310,
+    "number": "12",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349960,
+    "guid": "516D0078E2D74127AAF6D9CF84FCC439",
+    "previous_id": 1349959,
+    "previous_guid": "168BFA88A200489799050219553FB8E3",
+    "section": "<p>Start your regeneration experiment</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "Use your scalpel to cut the Hydra transversely (horizontally) in two. This is called a mid-gastric bisection.\nTry to cut it right above the budding zone. In some adult Hydra, you can see a visible &#34;bulge&#34; near the budding zone. If this is not visible, just try to cut it into two equal parts.\n\nHydra are sometimes elongated and sometimes contracted. They are easiest to cut when they are elongated. If your Hydra is contracted, let it sit undisturbed until it elongates again before trying to make the cut.\n\nSometimes the Hydra will be floating on the surface of the water. Use your scalpel or the tip of your glass pipette to push them down to the bottom of the dish before cutting.\n \n",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340311,
+    "number": "13",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349961,
+    "guid": "F445316776F34B0BAE1FCD2F4C47CF66",
+    "previous_id": 1349960,
+    "previous_guid": "516D0078E2D74127AAF6D9CF84FCC439",
+    "section": "<p>Start your regeneration experiment</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "What happened to your Hydra right after you cut it?\nRecord any behaviors you observed in your lab notebook. Also record any &#34;mistakes&#34; that you make while cutting the Hydra (for example, cutting the same animal twice, or cutting in the wrong place).",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340312,
+    "number": "14",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349962,
+    "guid": "CA190F6E0FC0423AA134A9BE0036159E",
+    "previous_id": 1349961,
+    "previous_guid": "F445316776F34B0BAE1FCD2F4C47CF66",
+    "section": "<p>Start your regeneration experiment</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "You should not have a head-end and a foot-end. Transfer both into separate wells of your 24-well plate. \nRecord which well the head and foot ends were placed in.",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340313,
+    "number": "15",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1349963,
+    "guid": "C2BE5C2C18CB462CB76AAE94385F53C3",
+    "previous_id": 1349962,
+    "previous_guid": "CA190F6E0FC0423AA134A9BE0036159E",
+    "section": "<p>Start your regeneration experiment</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "Repeat steps 11 through 15 for five more Hydra. \nWhen you are done, place the lid on your 24-well plate and give it to your instructor.\nTurn your microscope off when you&#39;re done and cover with the dust cover.\n\nIf the number of tentacles is not fixed for an individual Hydra, what factors do you think might effect the number of tentacles?\nAre there any other control groups you think should have been included in this experiment?\n \n",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 1340314,
+    "number": "16",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1350005,
+    "guid": "E47A5B80910911ECAB0023A5C13098D9",
+    "previous_id": 1349963,
+    "previous_guid": "C2BE5C2C18CB462CB76AAE94385F53C3",
+    "section": "<p>Document results of your regeneration experiment</p>",
+    "section_color": "#84CE84",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "We will allow the Hydra to regenerate for 7 days before counting the number of tentacles on the head and foot-ends. Get you 24-well plate that you used in the previous class session from your instructor.\n\nMaterials:\n1. Dissecting microscope\n1. Your 24-well plate\n1. Forceps (optional)",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "17",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1350007,
+    "guid": "595DEC60910E11ECAB0023A5C13098D9",
+    "previous_id": 1350005,
+    "previous_guid": "E47A5B80910911ECAB0023A5C13098D9",
+    "section": "<p>Document results of your regeneration experiment</p>",
+    "section_color": "#84CE84",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "With the dissecting microscope, examine the Hydra in each well and record the number of tentacles in the table you started in step 12. If the Hydra are hard to see because they are stuck to the side of the well, you can use the forceps to push them into the center of the well.\n\nWorking with a partner, you can have one person observe and the other record, then switch roles.\n \n",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "18",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1350008,
+    "guid": "90998580910F11ECAB0023A5C13098D9",
+    "previous_id": 1350007,
+    "previous_guid": "595DEC60910E11ECAB0023A5C13098D9",
+    "section": "<p>Document results of your regeneration experiment</p>",
+    "section_color": "#84CE84",
+    "section_duration": 1800,
+    "is_substep": false,
+    "step": "When you&#39;re done, turn off the light on your microscope and cover the microscope with dust cover.\nWe will use the data you have recorded for statistical analysis to determine whether individual Hydra tend to regenerate the same number of tentacles that they had before bisection.",
+    "data": null,
+    "protocol_id": 58456,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "19",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "<p>Observation activities</p>",
+    "color": "#A492FF",
+    "first_step_guid": "78F0E62B5CE549A9992C5796C64DB059"
+   },
+   {
+    "title": "<p>Start your regeneration experiment</p>",
+    "color": "#94EBFF",
+    "first_step_guid": "A7C61E11B2CA400D84054A481F2560F1"
+   },
+   {
+    "title": "<p>Document results of your regeneration experiment</p>",
+    "color": "#84CE84",
+    "first_step_guid": "E47A5B80910911ECAB0023A5C13098D9"
+   }
+  ],
+  "title": "Introductory Hydra Activities",
+  "title_html": "<p>Introductory Hydra Activities</p>",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775227559
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775227559
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775227559
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775227559
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775227559
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "introductory-hydra-activities-b5byq2pw",
+  "url": "https://www.protocols.io/view/introductory-hydra-activities-b5byq2pw",
+  "version_class": 57672,
+  "version_data": null,
+  "version_id": 2,
+  "version_uri": "introductory-hydra-activities-bp2l611bkvqe/v3",
+  "versions": [
+   {
+    "id": 57672,
+    "title": "Introductory Hydra Activities",
+    "title_html": "<p>Introductory Hydra Activities</p>",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": null,
+    "uri": "introductory-hydra-activities-b4jgqujw",
+    "published_on": 1643876768,
+    "modified_on": 1710995791,
+    "version_class": 57672,
+    "version_id": 0,
+    "version_code": "b4jgqujw",
+    "version_uri": "introductory-hydra-activities-bp2l611bkvqe/v1",
+    "created_on": 1643780029,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Callen Hyland",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "University of San Diego",
+     "affiliation_url": null,
+     "username": "m4tle152u115xle1",
+     "link": null,
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "37C782F2687411F08F960A58A9FEAC02",
+     "file_name": "giuwber8x.jpg",
+     "url": "https://files.protocols.io/external/giuwber8x-37C782F2687411F08F960A58A9FEAC02.jpg",
+     "mime": "binary/octet-stream",
+     "size": 35377,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1753350881
+    }
+   },
+   {
+    "id": 57858,
+    "title": "Introductory Hydra Activities",
+    "title_html": "<p>Introductory Hydra Activities</p>",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.b4raqv2e",
+    "uri": "introductory-hydra-activities-b4raqv2e",
+    "published_on": 1644211478,
+    "modified_on": 1710995791,
+    "version_class": 57672,
+    "version_id": 1,
+    "version_code": "b4raqv2e",
+    "version_uri": "introductory-hydra-activities-bp2l611bkvqe/v2",
+    "created_on": 1644112032,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Callen Hyland",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "University of San Diego",
+     "affiliation_url": null,
+     "username": "m4tle152u115xle1",
+     "link": null,
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 5,
+     "last_comment_time": 1644276488
+    },
+    "protocol_image_file": {
+     "guid": "389B628B687411F08F960A58A9FEAC02",
+     "file_name": "gjhbber8x.jpg",
+     "url": "https://files.protocols.io/external/gjhbber8x-389B628B687411F08F960A58A9FEAC02.jpg",
+     "mime": "binary/octet-stream",
+     "size": 35380,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1753350882
+    }
+   },
+   {
+    "id": 58456,
+    "title": "Introductory Hydra Activities",
+    "title_html": "<p>Introductory Hydra Activities</p>",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.b5byq2pw",
+    "uri": "introductory-hydra-activities-b5byq2pw",
+    "published_on": 1645421501,
+    "modified_on": 1710995792,
+    "version_class": 57672,
+    "version_id": 2,
+    "version_code": "b5byq2pw",
+    "version_uri": "introductory-hydra-activities-bp2l611bkvqe/v3",
+    "created_on": 1645217518,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Callen Hyland",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "University of San Diego",
+     "affiliation_url": null,
+     "username": "m4tle152u115xle1",
+     "link": null,
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "3C34226F687411F08F960A58A9FEAC02",
+     "file_name": "gp4vber8x.jpg",
+     "url": "https://files.protocols.io/external/gp4vber8x-3C34226F687411F08F960A58A9FEAC02.jpg",
+     "mime": "binary/octet-stream",
+     "size": 35380,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1753350888
+    }
+   }
+  ],
+  "warning": "Scalpels, microscope slides, and glass Pasteur pipettes should be handled with care. Dispose of used Pasteur pipettes in the broken glass bin and dispose of all blades in the red sharps container.\n\nDo not put any living organisms down the sink. Dispose of all media that comes in contact with Hydra in the &#34;Hydra Waste&#34; container."
+ }
+}

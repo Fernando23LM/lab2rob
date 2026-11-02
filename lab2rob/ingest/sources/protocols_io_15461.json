@@ -1,0 +1,1181 @@
+{
+ "protocol_id": 15461,
+ "uri": "high-throughput-library-pooling-for-ngs-tcdeis6",
+ "doi": "dx.doi.org/10.17504/protocols.io.tcdeis6",
+ "url": "https://www.protocols.io/view/high-throughput-library-pooling-for-ngs-tcdeis6",
+ "title": "High-Throughput Library Pooling for NGS",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T21:59:39Z",
+ "query": "pipetting",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Madeline",
+    "last_name": "Mayday",
+    "affiliation": "Yale University",
+    "note": "",
+    "guid": "03247B16F8CC11ED9D4302C0B41BC903",
+    "username": "madeline-mayday",
+    "name": "Madeline Y Mayday",
+    "affiliation_url": "",
+    "link": "",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Lillian",
+    "last_name": "Khan",
+    "affiliation": "UCSF School of Medicine, Department of Biochemistry & Biophysics",
+    "note": "",
+    "guid": "0327E440F8CC11ED9D4302C0B41BC903",
+    "username": "lillian-khan",
+    "name": "Lillian M Khan",
+    "affiliation_url": "",
+    "link": "",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Eric",
+    "last_name": "D. Chow",
+    "affiliation": "UCSF School of Medicine, Department of Biochemistry & Biophysics",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Eric D. Chow",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Matt",
+    "last_name": "S. Zinter",
+    "affiliation": "UCSF School of Medicine, Benioff Children\u2019s Hospital, Department of Pediatrics, Division of Critical Care",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Matt S. Zinter",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Joseph",
+    "last_name": "L. DeRisi",
+    "affiliation": "UCSF School of Medicine, Department of Biochemistry & Biophysics",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Joseph L. DeRisi",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "Libraries should be in a 384-well Echo source plate at a volume of\u00a0\u226521uL at the start of this protocol. Adjust if needed. \n\n",
+  "created_on": 1536353735,
+  "creator": {
+   "affiliation": "Yale University",
+   "affiliation_url": "",
+   "affiliations": [
+    {
+     "affiliation": "Yale University",
+     "is_default": true,
+     "job_title": null,
+     "url": ""
+    },
+    {
+     "affiliation": "University of California, San Francisco",
+     "is_default": false,
+     "job_title": null,
+     "url": ""
+    }
+   ],
+   "badges": [
+    {
+     "id": 2,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/bronze.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/bronze.svg"
+     },
+     "name": "Author"
+    },
+    {
+     "id": 6,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/accelerator.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/accelerator.svg"
+     },
+     "name": "Science accelerator"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": "",
+   "name": "Madeline Y Mayday",
+   "username": "madeline-mayday"
+  },
+  "cross_cloud_origin": null,
+  "description": "Preparation of high-quality sequencing libraries is a costly and time-consuming component of metagenomic next generation sequencing (mNGS).  While the overall cost of sequencing has dropped significantly over recent years, the reagents needed to prepare sequencing samples are likely to become the dominant expense in the process.  Furthermore, libraries prepared by hand are subject to human variability and needless waste due to limitations of manual pipetting volumes. Reduction of reaction volumes, combined with sub-microliter automated dispensing of reagents without consumable pipette tips, has the potential to provide significant advantages.  Here, we describe the integration of several instruments, including the Labcyte Echo 525 acoustic liquid handler and the iSeq and NovaSeq Illumina sequencing platforms, to miniaturize and automate mNGS library preparation, significantly reducing the cost and the time required to prepare samples. Through the use of External RNA Controls Consortium (ERCC) spike-in RNAs, we demonstrated the fidelity of the miniaturized preparation to be equivalent to full volume reactions. Furthermore, detection of viral and microbial species from cell culture and patient samples was also maintained in the miniaturized libraries.  For 384-well mNGS library preparations, we achieved a savings of over 80% in materials and reagents alone, and reduced preparation time by 90% compared to manual approaches, without compromising quality or representation within the library.\n\nAfter library preparation, the next step before putting samples on the sequencer is to pool samples to be able to multiplex sequencing. Final concentrations of each sample will vary from sample to sample depending on various things like RNA input, library prep, and PCR cycles among other factors. It is difficult to\u00a0manually quantify and pool uniformly 384 samples, so that is why we employ robots. To quickly and accurately pool hundreds of samples at a time, we employed a two-step method.\u00a0 Using the Labcyte Echo, equal volumes of each library are pooled together and sequenced on the Illumina iSeq or MiSeq sequencing platforms to determine the representation of each library in the total pool.\u00a0\u00a0Using this information, libraries were pooled using the Echo into a normalized pool for downstream sequencing on the Illumina NovaSeq.",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.tcdeis6",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "8773BB90B9DA11E99CA40242AC110005",
+  "guidelines": "Remember to always be mindful the dead volumes of Echo plates and maximum and minimum working volumes per source and destination plates when dispensing. These are vital for accurate dispensing. ",
+  "id": 15461,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 353347,
+  "keywords": "library pooling, sequencing, NGS, mNGS, high-thoughput, Labcyte Echo, automation, metagenomic next generation, sequencing library, component of metagenomic next generation, external rna controls consortium, sequencing sample, use of external rna controls consortium, sequencing platform, automate mngs library preparation, rna input, samples on the sequencer, throughput library pooling for ngs preparation, various things like rna input, labcyte echo 525 acoustic liquid handler, well mngs library preparation, miniaturized library, sequencer, rna, manual pipetting volume, fidelity of the miniaturized preparation, miniaturized preparation, throughput library pooling, hundreds of sample, putting sample, consumable pipette tip, patient sample",
+  "link": "",
+  "manuscript_citation": "",
+  "materials": [],
+  "materials_text": "",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 0,
+   "file_name": "avatar.png",
+   "guid": "00000000000000000000000000000001",
+   "height": 400,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 0,
+   "url": "https://www.protocols.io/img/default_protocol.png",
+   "width": 400
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1566342913,
+  "reserved_doi": "",
+  "space_id": 7541,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 2350,
+   "number_of_steps": 9,
+   "number_of_bookmarks": 5,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 105,
+   "number_of_runs": 1,
+   "number_of_votes": 0,
+   "number_of_reagents": 0,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 2,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": "We use this protocol in our group for RNA library prep on the CZ Biohub Echo. Please provide any feedback or comments so we can make it as user-friendly as possible!"
+  },
+  "steps": [
+   {
+    "id": 661851,
+    "guid": "BB4AE9CA9BCA4CCEBA42CC8CB9D03311",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "POOLING PREP",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Transfer the libraries into a new 384 well Echo source plate. Skip if samples already complete. Make sure to dilute samples if needed to contain enough dead volume. Samples should be between 22-25uL to be able to dispense accurately using the Echo.\n\n\n\nWells of the source plate containing samples should have a dead volume of 20uL for the Echo to be able to pool accurately.\n \n",
+    "data": null,
+    "protocol_id": 15461,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 661852,
+    "guid": "E0E44EE6CF854944BFEE3B06F87F5967",
+    "previous_id": 666394,
+    "previous_guid": "C61963C0BD3111E88CE427F34D7B9B60",
+    "section": "EQUAL VOLUME SEQUENCING",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Sequence pool on an Illumina iSeq, or a low-throughput sequencer.",
+    "data": null,
+    "protocol_id": 15461,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 661853,
+    "guid": "EAC03B93CA614ED19FAB522EA38FEED6",
+    "previous_id": 661852,
+    "previous_guid": "E0E44EE6CF854944BFEE3B06F87F5967",
+    "section": "POOLING CALCULATIONS",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Using the output from equal volume pooling, determine the approximate representation of each library in the total pool.\n\n[Screen Shot 2018-08-16 at 10.53.37 AM.png]](https://content.protocols.io/7ng2jk6.png) \n_________________________________\n\nThe sum of the inverse of the percent fraction of each sample from the iSeq run should give a normalization factor. This normalization factor will be used to determine the volume of each sample to be pooled.\u00a0\n\n_** Needed information:**_\n\n1. ratio of reads of each sample to total number of reads (percent of reads) = x \n2. desired total volume of pool necessary for sequencing submission = T (uL)\n\nUse this information to solve for N (or the normalization factor). \n\n\nThe normalization factor is an estimation that can be used to pool evenly. It can be adjusted for various reasons to fit the criteria per batch.\n \n",
+    "data": null,
+    "protocol_id": 15461,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 661855,
+    "guid": "6A034370FBBE4A7AAE7DCA718FA3D5AF",
+    "previous_id": 666692,
+    "previous_guid": "1851BDD0BDC411E88CE427F34D7B9B60",
+    "section": "EQUI-MOLAR POOLING",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Use the Echo to dispense the original sequencing libraries to\u00a0the final pool using the calculated volumes. \n\nUse a new 384 PCR plate, or a 96 well PCR plate, as the destination plate to dispense the appropriate number of samples into the necessary number of wells. Take in account the maximum working volumes. \n\n\n\n\nReminder: For 384, do not dispense more than 11uL into each well total.\u00a0\n \n\n",
+    "data": null,
+    "protocol_id": 15461,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 666393,
+    "guid": "93778190BD3111E88CE427F34D7B9B60",
+    "previous_id": 661851,
+    "previous_guid": "BB4AE9CA9BCA4CCEBA42CC8CB9D03311",
+    "section": "EQUAL VOLUME POOLING",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Using the Labcyte Echo, pool 0.5uL of each library into a 384-well destination plate.\u00a0 \n\nUse a new 384 PCR plate, or a 96 well PCR plate, as the **_destination plate_** to dispense the appropriate number of samples into the necessary number of wells. Be sure to take\u00a0into account of the maximum working volume per destination plate. For example, for a 384 well plate, do not dispense more than 12uL into each well (i.e. 500nL of 22 samples per well).\u00a0",
+    "data": null,
+    "protocol_id": 15461,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 666394,
+    "guid": "C61963C0BD3111E88CE427F34D7B9B60",
+    "previous_id": 666393,
+    "previous_guid": "93778190BD3111E88CE427F34D7B9B60",
+    "section": "EQUAL VOLUME POOLING",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Manually combine the multiple wells of the pool into one single DNA lo-bind tube. Mix.",
+    "data": null,
+    "protocol_id": 15461,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 666692,
+    "guid": "1851BDD0BDC411E88CE427F34D7B9B60",
+    "previous_id": 661853,
+    "previous_guid": "EAC03B93CA614ED19FAB522EA38FEED6",
+    "section": "POOLING CALCULATIONS",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Use the normalization factor to determine the volume to pool for each sample.",
+    "data": null,
+    "protocol_id": 15461,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 666693,
+    "guid": "ADCA0680BDC711E88CE427F34D7B9B60",
+    "previous_id": 661855,
+    "previous_guid": "6A034370FBBE4A7AAE7DCA718FA3D5AF",
+    "section": "EQUI-MOLAR POOLING",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Manually combine the multiple wells of the pool into one single DNA lo-bind tube. Mix.\u00a0",
+    "data": null,
+    "protocol_id": 15461,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 666694,
+    "guid": "B2C756B0BDC711E88CE427F34D7B9B60",
+    "previous_id": 666693,
+    "previous_guid": "ADCA0680BDC711E88CE427F34D7B9B60",
+    "section": "EQUI-MOLAR POOLING",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Equimolar pool\u00a0of libraries are ready to be sequenced on a high throughput sequencer like the Illumina HiSeq or NovaSeq.",
+    "data": null,
+    "protocol_id": 15461,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "POOLING PREP",
+    "color": "",
+    "first_step_guid": "BB4AE9CA9BCA4CCEBA42CC8CB9D03311"
+   },
+   {
+    "title": "EQUAL VOLUME POOLING",
+    "color": "",
+    "first_step_guid": "93778190BD3111E88CE427F34D7B9B60"
+   },
+   {
+    "title": "EQUAL VOLUME SEQUENCING",
+    "color": "",
+    "first_step_guid": "E0E44EE6CF854944BFEE3B06F87F5967"
+   },
+   {
+    "title": "POOLING CALCULATIONS",
+    "color": "",
+    "first_step_guid": "EAC03B93CA614ED19FAB522EA38FEED6"
+   },
+   {
+    "title": "EQUI-MOLAR POOLING",
+    "color": "",
+    "first_step_guid": "6A034370FBBE4A7AAE7DCA718FA3D5AF"
+   }
+  ],
+  "title": "High-Throughput Library Pooling for NGS",
+  "title_html": "High-Throughput Library Pooling for NGS",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775222248
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775222249
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775222249
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775222249
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775222249
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "high-throughput-library-pooling-for-ngs-tcdeis6",
+  "url": "https://www.protocols.io/view/high-throughput-library-pooling-for-ngs-tcdeis6",
+  "version_class": 15461,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "high-throughput-library-pooling-for-ngs-dm6gp8rnjlzp/v1",
+  "versions": [
+   {
+    "id": 15461,
+    "title": "High-Throughput Library Pooling for NGS",
+    "title_html": "High-Throughput Library Pooling for NGS",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.tcdeis6",
+    "uri": "high-throughput-library-pooling-for-ngs-tcdeis6",
+    "published_on": 1538604547,
+    "modified_on": 1566342913,
+    "version_class": 15461,
+    "version_id": 0,
+    "version_code": "tcdeis6",
+    "version_uri": "high-throughput-library-pooling-for-ngs-dm6gp8rnjlzp/v1",
+    "created_on": 1536353735,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Madeline Y Mayday",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "Yale University",
+     "affiliation_url": "",
+     "username": "madeline-mayday",
+     "link": "",
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/default_protocol.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 400,
+     "height": 400,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

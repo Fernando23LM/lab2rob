@@ -1,0 +1,1230 @@
+{
+ "protocol_id": 4566,
+ "uri": "minimal-inhibitory-concentration-mic-gpwbvpe",
+ "doi": "dx.doi.org/10.17504/protocols.io.gpwbvpe",
+ "url": "https://www.protocols.io/view/minimal-inhibitory-concentration-mic-gpwbvpe",
+ "title": "Minimal Inhibitory Concentration (MIC)",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:15:37Z",
+ "query": "dilution",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Brian",
+    "last_name": "Kenn Baltzar",
+    "affiliation": "Department of Biochemistry and Molecular Biology, University of Southern Denmark",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Brian Kenn Baltzar",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "",
+  "created_on": 1481206287,
+  "creator": {
+   "affiliation": "DEPARTMENT OF BIOCHEMISTRY AND MOLECULAR BIOLOGY, UNIVERSITY OF SOUTHERN DENMARK, ODENSE, DENMARK",
+   "affiliation_url": "",
+   "affiliations": [
+    {
+     "affiliation": "DEPARTMENT OF BIOCHEMISTRY AND MOLECULAR BIOLOGY, UNIVERSITY OF SOUTHERN DENMARK, ODENSE, DENMARK",
+     "is_default": true,
+     "job_title": null,
+     "url": ""
+    }
+   ],
+   "badges": [
+    {
+     "id": 3,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/silver.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/silver.svg"
+     },
+     "name": "Power author!"
+    },
+    {
+     "id": 5,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/star.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/star.svg"
+     },
+     "name": "Early adopter"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://files.protocols.io/thumbnails/external/isve7qw-9C4990F65B2A11EFA2EF0A58A9FEAC02.jpg/thumbnail-w100xh100.jpg",
+    "source": "https://files.protocols.io/external/isve7qw-9C4990F65B2A11EFA2EF0A58A9FEAC02.jpg"
+   },
+   "last_name": "",
+   "link": "",
+   "name": "Brian K Baltzar",
+   "username": "brian-baltzar"
+  },
+  "cross_cloud_origin": null,
+  "description": "This protocol is modified from Wiegand and colleagues protocol1 \u00a0to fit the conditions of our experiments.\u00a0\n \n1Wiegand, Irith, Kai Hilpert and Robert E W Hancock (2008). \\Agar and broth dilution methods to determine the minimal inhibitory concentration (MIC) of antimicrobial substances&#34;. I: Nat Protoc 3.2, s. 163{75",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.gpwbvpe",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "8873A7C1B9DA11E99CA40242AC110005",
+  "guidelines": "",
+  "id": 4566,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 234240,
+  "keywords": "MIC, Minimal inhibitory concentration, minimal inhibitory concentration, broth dilution method, antimicrobial substance, concentration, 1wiegand, wiegand",
+  "link": "",
+  "manuscript_citation": "",
+  "materials": [],
+  "materials_text": "",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 1753350433,
+   "file_name": "g48e7qw.png",
+   "guid": "2CC9A780687311F08F960A58A9FEAC02",
+   "height": 0,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 42566,
+   "url": "https://files.protocols.io/external/g48e7qw-2CC9A780687311F08F960A58A9FEAC02.png",
+   "width": 0
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1489485555,
+  "reserved_doi": "",
+  "space_id": 0,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 39039,
+   "number_of_steps": 16,
+   "number_of_bookmarks": 34,
+   "number_of_comments": 2,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 2,
+   "number_of_exports": 302,
+   "number_of_runs": 3,
+   "number_of_votes": 7,
+   "number_of_reagents": 0,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 79,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": ""
+  },
+  "steps": [
+   {
+    "id": 207168,
+    "guid": "8E8A4A238BC546BEA65A0112E1789FA2",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "Prepare medium",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "M\u00fcller-Hinton Agar and Broth\n_Plate the agar on plates.\u00a0_",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 207201,
+    "guid": "C9716701851F46A8A9EBF361E6B8D78C",
+    "previous_id": 207168,
+    "previous_guid": "8E8A4A238BC546BEA65A0112E1789FA2",
+    "section": "Prepare the bacterial isolates",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Streak the bacteria onto agar plates without inhibitor.\u00a0",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 210273,
+    "guid": "E2E6D25B66624ECA992400FDD96AC365",
+    "previous_id": 207201,
+    "previous_guid": "C9716701851F46A8A9EBF361E6B8D78C",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate plates for 18-24h at 37\u00baC",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 210289,
+    "guid": "2455C87703114BD8B02D86C7A1997C8F",
+    "previous_id": 210273,
+    "previous_guid": "E2E6D25B66624ECA992400FDD96AC365",
+    "section": "Prepare the bacterial isolates",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "For each isolate, select three to five morphologically\u00a0similar colonies from the agar plates and transfer them to a glass tube with 5ml MH-Broth.\u00a0\nIncubate for 18-24h at 37\u00baC\u00a0",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 210359,
+    "guid": "2BA16ED040A44E68897D2EDB8C0AC83B",
+    "previous_id": 210289,
+    "previous_guid": "2455C87703114BD8B02D86C7A1997C8F",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Measure OD450 on cultures from step 4, and make dilutions in x mL MHB to OD450 = 0,01",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 210379,
+    "guid": "D99B417D234A43D9985B6504FD171849",
+    "previous_id": 210359,
+    "previous_guid": "2BA16ED040A44E68897D2EDB8C0AC83B",
+    "section": "Prepare the ELISA microplate",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Use the setup shown in the following figure.\u00a0\n\na\n",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 210400,
+    "guid": "0FEC1B5480C7492CAED418F20D794963",
+    "previous_id": 210379,
+    "previous_guid": "D99B417D234A43D9985B6504FD171849",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Pipette 50\u00b5l of MHB into column 2-11",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 210415,
+    "guid": "DD971F8D507C48D7805FE168D218631B",
+    "previous_id": 210400,
+    "previous_guid": "0FEC1B5480C7492CAED418F20D794963",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add 100\u00b5l MBH into column 12",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 210428,
+    "guid": "0914C232E3A5493D805450570F2AFC4A",
+    "previous_id": 210415,
+    "previous_guid": "DD971F8D507C48D7805FE168D218631B",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add 100\u00b5l of the antibiotic into column 1",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 210454,
+    "guid": "BA88E71814204A168B4A2DC7549C38D0",
+    "previous_id": 210428,
+    "previous_guid": "0914C232E3A5493D805450570F2AFC4A",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Withdraw 50\u00b5l from each well in column 1, add this to the corresponding wells in column 2. \u00a0Mix by pipetting up and down 4-6 times.\n_(this makes column 2 a twofold dilution of column 1)_\n ",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 210543,
+    "guid": "1DE4EF535C3440439E5AF84877346ED6",
+    "previous_id": 210454,
+    "previous_guid": "BA88E71814204A168B4A2DC7549C38D0",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Repeat step 10 down to column 10 - discard the withdrawn solution from column 10.\u00a0",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "11",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 210576,
+    "guid": "4873320FD60B44D79D472866E3B618DD",
+    "previous_id": 210543,
+    "previous_guid": "1DE4EF535C3440439E5AF84877346ED6",
+    "section": "Inoculate the ELISA microplate",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Vortex the bacteria suspension from step 5.\u00a0\nAdd 50\u00b5l of the suspension to each well in columns 1-11.\u00a0",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "12",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 210634,
+    "guid": "B8F646B1A5D24CB9AEF2394D66643044",
+    "previous_id": 210576,
+    "previous_guid": "4873320FD60B44D79D472866E3B618DD",
+    "section": "Incubate the plates",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Cover the plates with film, make sure to create a tight seal to prevent any evaporation.\u00a0",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "13",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 210697,
+    "guid": "384CBE9451C04C80B320FE0521023308",
+    "previous_id": 210747,
+    "previous_guid": "F1B4ECB6D9EC4845B5B5977FBDD0CB31",
+    "section": "Incubate the plates",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate the plate at 37\u00baC for 16-24h.\u00a0",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "15",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 210699,
+    "guid": "50FBCE22EFD242B69F29921ED97E521B",
+    "previous_id": 210697,
+    "previous_guid": "384CBE9451C04C80B320FE0521023308",
+    "section": "Results",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Measure the growth by determinating OD450.\u00a0\nCompare the data from the three triplicates, and exclude any deviations\u00a0",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "16",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 210747,
+    "guid": "F1B4ECB6D9EC4845B5B5977FBDD0CB31",
+    "previous_id": 210634,
+    "previous_guid": "B8F646B1A5D24CB9AEF2394D66643044",
+    "section": "Repeat",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "To exclude any errors repeat every plate setup three times (triplicates).\u00a0",
+    "data": null,
+    "protocol_id": 4566,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "14",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "Prepare medium",
+    "color": "",
+    "first_step_guid": "8E8A4A238BC546BEA65A0112E1789FA2"
+   },
+   {
+    "title": "Prepare the bacterial isolates",
+    "color": "",
+    "first_step_guid": "C9716701851F46A8A9EBF361E6B8D78C"
+   },
+   {
+    "title": "Prepare the ELISA microplate",
+    "color": "",
+    "first_step_guid": "D99B417D234A43D9985B6504FD171849"
+   },
+   {
+    "title": "Inoculate the ELISA microplate",
+    "color": "",
+    "first_step_guid": "4873320FD60B44D79D472866E3B618DD"
+   },
+   {
+    "title": "Incubate the plates",
+    "color": "",
+    "first_step_guid": "B8F646B1A5D24CB9AEF2394D66643044"
+   },
+   {
+    "title": "Repeat",
+    "color": "",
+    "first_step_guid": "F1B4ECB6D9EC4845B5B5977FBDD0CB31"
+   },
+   {
+    "title": "Incubate the plates",
+    "color": "",
+    "first_step_guid": "384CBE9451C04C80B320FE0521023308"
+   },
+   {
+    "title": "Results",
+    "color": "",
+    "first_step_guid": "50FBCE22EFD242B69F29921ED97E521B"
+   }
+  ],
+  "title": "Minimal Inhibitory Concentration (MIC)",
+  "title_html": "Minimal Inhibitory Concentration (MIC)",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775221069
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775221068
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775221069
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775221069
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775221068
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "minimal-inhibitory-concentration-mic-gpwbvpe",
+  "url": "https://www.protocols.io/view/minimal-inhibitory-concentration-mic-gpwbvpe",
+  "version_class": 4566,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "minimal-inhibitory-concentration-mic-36wgqnx3gk57/v1",
+  "versions": [
+   {
+    "id": 4566,
+    "title": "Minimal Inhibitory Concentration (MIC)",
+    "title_html": "Minimal Inhibitory Concentration (MIC)",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.gpwbvpe",
+    "uri": "minimal-inhibitory-concentration-mic-gpwbvpe",
+    "published_on": 1489485555,
+    "modified_on": 1521698401,
+    "version_class": 4566,
+    "version_id": 0,
+    "version_code": "gpwbvpe",
+    "version_uri": "minimal-inhibitory-concentration-mic-36wgqnx3gk57/v1",
+    "created_on": 1481206287,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Brian K Baltzar",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "DEPARTMENT OF BIOCHEMISTRY AND MOLECULAR BIOLOGY, UNIVERSITY OF SOUTHERN DENMARK, ODENSE, DENMARK",
+     "affiliation_url": "",
+     "username": "brian-baltzar",
+     "link": "",
+     "user_image_file": {
+      "guid": "9C4990F65B2A11EFA2EF0A58A9FEAC02",
+      "file_name": "isve7qw.jpg",
+      "url": "https://files.protocols.io/external/isve7qw-9C4990F65B2A11EFA2EF0A58A9FEAC02.jpg",
+      "mime": "image/jpeg",
+      "size": 18301,
+      "width": 0,
+      "height": 0,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 1723742404
+     }
+    },
+    "stats": {
+     "number_of_comments": 2,
+     "last_comment_time": 1654777933
+    },
+    "protocol_image_file": {
+     "guid": "2CC9A780687311F08F960A58A9FEAC02",
+     "file_name": "g48e7qw.png",
+     "url": "https://files.protocols.io/external/g48e7qw-2CC9A780687311F08F960A58A9FEAC02.png",
+     "mime": "image/png",
+     "size": 42566,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1753350433
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

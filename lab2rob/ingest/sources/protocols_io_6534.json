@@ -1,0 +1,1175 @@
+{
+ "protocol_id": 6534,
+ "uri": "evaluation-of-the-sensitivity-of-a-mini-barcode-imecc3e",
+ "doi": "dx.doi.org/10.17504/protocols.io.imecc3e",
+ "url": "https://www.protocols.io/view/evaluation-of-the-sensitivity-of-a-mini-barcode-imecc3e",
+ "title": "Evaluation of the sensitivity of a mini-barcode",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T21:59:54Z",
+ "query": "serial dilution",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Elodie",
+    "last_name": "Modave",
+    "affiliation": "Institute for Applied Ecology University of Canberra",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Elodie Modave",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "",
+    "last_name": "Anna J. MacDonald",
+    "affiliation": "Institute for Applied Ecology University of Canberra",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": " Anna J. MacDonald",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "",
+    "last_name": "Stephen D. Sarre",
+    "affiliation": "Institute for Applied Ecology University of Canberra",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": " Stephen D. Sarre",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "",
+  "created_on": 1498527405,
+  "creator": {
+   "affiliation": "",
+   "affiliation_url": null,
+   "affiliations": [
+    {
+     "affiliation": null,
+     "is_default": true,
+     "job_title": null,
+     "url": null
+    }
+   ],
+   "badges": [
+    {
+     "id": 2,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/bronze.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/bronze.svg"
+     },
+     "name": "Author"
+    },
+    {
+     "id": 5,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/star.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/star.svg"
+     },
+     "name": "Early adopter"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": null,
+   "name": "Elodie Modave",
+   "username": "elodie-modave"
+  },
+  "cross_cloud_origin": null,
+  "description": "We developed a mini-barcode based on the 12S rRNA gene to identify predator from scats in Tasmania.\u00a0\nTo test the sensitivity of our primers to detect low template DNA samples, we set up serial dilutions of six DNA extracts originating from museum samples, representing each of the six mammal predators that might be detected in Tasmania (Tasmanian devil, eastern quoll, spotted tail quoll, cat, dog and fox).",
+  "disclaimer": "",
+  "documents": [
+   {
+    "id": 10734,
+    "guid": "",
+    "type_id": 0,
+    "filename": "",
+    "key": "",
+    "color": "",
+    "height": 0,
+    "width": 0,
+    "is_document": null,
+    "original_file_id": null,
+    "thumb_url": "/img/extensions/docx.png",
+    "size": 14066,
+    "is_private": 0,
+    "is_new": 0,
+    "ofn": "protocols.io 2.docx",
+    "url": "https://content.protocols.io/krqgx8e.docx",
+    "bucket_name": null,
+    "s3_webp_url": "",
+    "file_id": "10734"
+   }
+  ],
+  "doi": "dx.doi.org/10.17504/protocols.io.imecc3e",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "8ABE5F78B9DA11E99CA40242AC110005",
+  "guidelines": "",
+  "id": 6534,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": false,
+  "is_subprotocol": null,
+  "item_id": 251157,
+  "keywords": "low template, trace, low template dna sample, rrna gene, template dna, dna extract, dna, mammal predator, tasmanian devil, predator from scat, serial dilution, tasmania, predator",
+  "link": "https://doi.org/10.1093/gigascience/gix052",
+  "manuscript_citation": "",
+  "materials": [
+   {
+    "id": 436,
+    "guid": "41016C2E341F11EE9D4302C0B41BC903",
+    "name": "BSA-Molecular Biology Grade - 12 mg",
+    "mol_weight": 0,
+    "sku": "B9000S",
+    "url": "https://www.neb.com/B9000",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 2,
+     "name": "New England Biolabs",
+     "link": "https://www.neb.com/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/2.png",
+      "placeholder": "/img/vendors/2.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 447,
+    "guid": "41016FA5341F11EE9D4302C0B41BC903",
+    "name": "Magnesium Chloride (MgCl2) Solution - 6.0 ml",
+    "mol_weight": 0,
+    "sku": "B9021S",
+    "url": "https://www.neb.com/B9021",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 2,
+     "name": "New England Biolabs",
+     "link": "https://www.neb.com/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/2.png",
+      "placeholder": "/img/vendors/2.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 3807,
+    "guid": "410639CE341F11EE9D4302C0B41BC903",
+    "name": "dNTPs",
+    "mol_weight": 0,
+    "sku": "",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 1,
+     "name": "Contributed by users",
+     "link": "https://www.protocols.io",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/1.png",
+      "placeholder": "/img/vendors/1.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 4694,
+    "guid": "41078B15341F11EE9D4302C0B41BC903",
+    "name": "Gold buffer",
+    "mol_weight": 0,
+    "sku": "",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 160,
+     "name": "Applied Biosystems (ThermoFisher Scientific)",
+     "link": "http://home.appliedbiosystems.com/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 4695,
+    "guid": "41078B65341F11EE9D4302C0B41BC903",
+    "name": "SYBR Green",
+    "mol_weight": 0,
+    "sku": "",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 11,
+     "name": "Life Technologies",
+     "link": "http://www.lifetechnologies.com",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 4696,
+    "guid": "41078BB6341F11EE9D4302C0B41BC903",
+    "name": "AmpliTaq Gold",
+    "mol_weight": 0,
+    "sku": "",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 160,
+     "name": "Applied Biosystems (ThermoFisher Scientific)",
+     "link": "http://home.appliedbiosystems.com/",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   }
+  ],
+  "materials_text": "MATERIALS\n BSA-Molecular Biology Grade - 12 mg New England Biolabs Catalog #B9000S \n Magnesium Chloride (MgCl2) Solution - 6.0 ml New England Biolabs Catalog #B9021S \n dNTPs Contributed by users \n Gold buffer Applied Biosystems (ThermoFisher Scientific) \n SYBR Green Life Technologies \n AmpliTaq Gold Applied Biosystems (ThermoFisher Scientific) ",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 0,
+   "file_name": "avatar.png",
+   "guid": "00000000000000000000000000000001",
+   "height": 400,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 0,
+   "url": "https://www.protocols.io/img/default_protocol.png",
+   "width": 400
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1519315589,
+  "reserved_doi": "",
+  "space_id": 0,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 89,
+   "number_of_steps": 4,
+   "number_of_bookmarks": 0,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 65,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 12,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 0,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": ""
+  },
+  "steps": [
+   {
+    "id": 575992,
+    "guid": "F1EFF17AF7954F68B1CAF71A8B9B622E",
+    "previous_id": null,
+    "previous_guid": null,
+    "section": "Set up starting dilutions",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "The DNA concentration of each original DNA extraction was determined using a QuBit Fluorometer and the Qubit dsDNA BR Assay Kit (Thermo Fisher) and diluted with ddH2O if necessary to obtain a starting concentration of 90 ng / \u00b5l",
+    "data": null,
+    "protocol_id": 6534,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 575993,
+    "guid": "A03D2E7908354291927BE1625264D947",
+    "previous_id": 575992,
+    "previous_guid": "F1EFF17AF7954F68B1CAF71A8B9B622E",
+    "section": "Set up 10 x dilutions",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "set up a series of six 10 X dilutions from each of these \u201cundiluted\u201d (90 ng / \u00b5l) samples\nfrom\u00a090 ng / \u00b5l to\u00a00.09 pg/\u00b5l",
+    "data": null,
+    "protocol_id": 6534,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 575994,
+    "guid": "2CC6CF86BB8F485585ED392CC5601F0B",
+    "previous_id": 575993,
+    "previous_guid": "A03D2E7908354291927BE1625264D947",
+    "section": "qPCR replicates",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "For each dilution of each sample, perform three qPCR replicates (on a Viia7 Real-Time PCR system (Thermo Fisher Scientific)) : total volume of 25\u00b5l including 1X Gold buffer (Applied Biosystems), 2 mM MgCl2, 0.4 mg / ml BSA, 0.4 \u00b5M of each primer, 0.6 \u00b5l SYBR green (1:2000 Life Technologies nucleic acid gel stain), 0.25 mM of each dNTP, 1 unit of AmpliTaq GoldTM (Applied Biosystems) and 2 \u00b5l of the appropriate DNA dilution.\n \nqPCR protocol:\u00a0initial step of 95 \u00b0C for 5 mins; followed by 40 cycles of 95 \u00b0C for 30 s, 57 \u00b0C for 30 s and 72 \u00b0 for 30 s.",
+    "data": null,
+    "protocol_id": 6534,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 575995,
+    "guid": "D2BDDF6A09844BB49B1AF811D73F6473",
+    "previous_id": 575994,
+    "previous_guid": "2CC6CF86BB8F485585ED392CC5601F0B",
+    "section": "Comparative CT analysis",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Using the ViiA7 software v1.2.4 with a threshold of 5,000 \u2206Rn, conduct a comparative CT analysis by calculating the mean CT value and the standard deviation across qPCR replicates for each dilution of each DNA sample.\nEvaluate to which dilution the mini-barcode is effective.",
+    "data": null,
+    "protocol_id": 6534,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "Set up starting dilutions",
+    "color": "",
+    "first_step_guid": "F1EFF17AF7954F68B1CAF71A8B9B622E"
+   },
+   {
+    "title": "Set up 10 x dilutions",
+    "color": "",
+    "first_step_guid": "A03D2E7908354291927BE1625264D947"
+   },
+   {
+    "title": "qPCR replicates",
+    "color": "",
+    "first_step_guid": "2CC6CF86BB8F485585ED392CC5601F0B"
+   },
+   {
+    "title": "Comparative CT analysis",
+    "color": "",
+    "first_step_guid": "D2BDDF6A09844BB49B1AF811D73F6473"
+   }
+  ],
+  "title": "Evaluation of the sensitivity of a mini-barcode",
+  "title_html": "Evaluation of the sensitivity of a mini-barcode",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775221295
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775221296
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775221296
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775221296
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775221295
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "evaluation-of-the-sensitivity-of-a-mini-barcode-imecc3e",
+  "url": "https://www.protocols.io/view/evaluation-of-the-sensitivity-of-a-mini-barcode-imecc3e",
+  "version_class": 6534,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "evaluation-of-the-sensitivity-of-a-mini-barcode-6qpvrm93gmkn/v1",
+  "versions": [
+   {
+    "id": 6534,
+    "title": "Evaluation of the sensitivity of a mini-barcode",
+    "title_html": "Evaluation of the sensitivity of a mini-barcode",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.imecc3e",
+    "uri": "evaluation-of-the-sensitivity-of-a-mini-barcode-imecc3e",
+    "published_on": 1519315589,
+    "modified_on": 1506678130,
+    "version_class": 6534,
+    "version_id": 0,
+    "version_code": "imecc3e",
+    "version_uri": "evaluation-of-the-sensitivity-of-a-mini-barcode-6qpvrm93gmkn/v1",
+    "created_on": 1498527405,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Elodie Modave",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": null,
+     "affiliation_url": null,
+     "username": "elodie-modave",
+     "link": null,
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/default_protocol.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 400,
+     "height": 400,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

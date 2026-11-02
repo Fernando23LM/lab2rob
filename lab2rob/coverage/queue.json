@@ -1,0 +1,4416 @@
+{
+  "generated_at": "2026-10-30T23:25:41+00:00",
+  "steps_total": 514,
+  "steps_queued": 346,
+  "by_reason": {
+    "missing_skill": [
+      {
+        "capability": "unresolved",
+        "count": 21,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:1495",
+          "protocolsio:21740",
+          "protocolsio:23962",
+          "protocolsio:31557",
+          "protocolsio:32907",
+          "protocolsio:4566",
+          "protocolsio:5087",
+          "protocolsio:58456",
+          "protocolsio:61801",
+          "protocolsio:9549"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:1495",
+            "step_idx": 10,
+            "text": "Empty the tray.",
+            "reason": "missing_skill",
+            "detail": "empty tray undefined"
+          },
+          {
+            "protocol_id": "protocolsio:21740",
+            "step_idx": 20,
+            "text": "Record the data in your notebook",
+            "reason": "missing_skill",
+            "detail": "notebook recording manual"
+          },
+          {
+            "protocol_id": "protocolsio:21740",
+            "step_idx": 21,
+            "text": "Import data into this Excel sheet provided (\u200bfluorescein standard curve tab\u200b): iGEM Data Analysis Template - Fluorescence Standard Curve - v1.xlsx",
+            "reason": "missing_skill",
+            "detail": "Excel import manual"
+          }
+        ]
+      },
+      {
+        "capability": "image",
+        "count": 7,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:5087",
+          "protocolsio:58456"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:5087",
+            "step_idx": 9,
+            "text": "Select and view the 700 nm channel image only. Use Image Studio\u2122 Software (for a free version, download Image Studio Lite) to quantify the fluorescent signals o",
+            "reason": "missing_skill",
+            "detail": "software image analysis step"
+          },
+          {
+            "protocol_id": "protocolsio:5087",
+            "step_idx": 14,
+            "text": "Select and view the 800 nm channel image only.",
+            "reason": "missing_skill",
+            "detail": "software image viewing step"
+          },
+          {
+            "protocol_id": "protocolsio:58456",
+            "step_idx": 3,
+            "text": "Body wall structure Examine the Hydra cross section (transverse section) with the 40X objective. The cross section should already be centered in the field, so d",
+            "reason": "missing_skill",
+            "detail": "Cross section microscopy unavailable"
+          }
+        ]
+      },
+      {
+        "capability": "fix",
+        "count": 3,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:41618",
+          "protocolsio:58456"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:41618",
+            "step_idx": 9,
+            "text": "Note: The fixed-volume transfer pipette is designed to collect an excess of liquid sample and dispense the correct volume of liquid sample into the reaction tub",
+            "reason": "missing_skill",
+            "detail": "discard pipette no skill"
+          },
+          {
+            "protocol_id": "protocolsio:58456",
+            "step_idx": 1,
+            "text": "In this activity you will become familiar with the anatomy of Hydra including areas of the body, cell layers, and nematocysts, while practicing the new vocabula",
+            "reason": "missing_skill",
+            "detail": "Microscope setup no matching skill"
+          },
+          {
+            "protocol_id": "protocolsio:58456",
+            "step_idx": 6,
+            "text": "Anyone who examines a large number of Hydra in a dish can clearly see that they do not all have the same number of tentacles. You may wonder, does each animal h",
+            "reason": "missing_skill",
+            "detail": "Dissection microscopy objectives no skill"
+          }
+        ]
+      },
+      {
+        "capability": "mount",
+        "count": 3,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:20811",
+          "protocolsio:58456",
+          "protocolsio:9264"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20811",
+            "step_idx": 22,
+            "text": "Mount coverslip in each of the slide.",
+            "reason": "missing_skill",
+            "detail": "No coverslip mounting skill"
+          },
+          {
+            "protocol_id": "protocolsio:58456",
+            "step_idx": 2,
+            "text": "Basic Hydra anatomy Examine the whole mount Hydra slides with the 4X objective. Adjust the distance between the oculars and focus on the specimen if necessary. ",
+            "reason": "missing_skill",
+            "detail": "Compound microscopy sketching unavailable"
+          },
+          {
+            "protocol_id": "protocolsio:9264",
+            "step_idx": 4,
+            "text": "Micro-injection process performed using needles mounted in an MPH3 needle-holder (World Precision Instruments, Sarasota, FL) connected to a Picopump (World Prec",
+            "reason": "missing_skill",
+            "detail": "microinjection not supported"
+          }
+        ]
+      },
+      {
+        "capability": "ph_adjust",
+        "count": 3,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:31557",
+          "protocolsio:32907",
+          "protocolsio:35709"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:31557",
+            "step_idx": 4,
+            "text": "Set the volume of the pipette as shown in Step 4.1 to the appropriate volume for the measurement. It is best to &#34;dial down&#34; to the desired volume, so yo",
+            "reason": "missing_skill",
+            "detail": "No pipette volume setting"
+          },
+          {
+            "protocol_id": "protocolsio:32907",
+            "step_idx": 20,
+            "text": "Import data into this Excel sheet provided (\u200bTexas Red standard curve tab\u200b): iGEM 2019 Plate Reader Fluorescence Calibration v3_Texas Red.xlsx",
+            "reason": "missing_skill",
+            "detail": "import data to Excel"
+          },
+          {
+            "protocol_id": "protocolsio:35709",
+            "step_idx": 1,
+            "text": "Calibrate the P-10 pipette to 10 \u03bcL.",
+            "reason": "missing_skill",
+            "detail": "calibration skill not listed"
+          }
+        ]
+      },
+      {
+        "capability": "freeze",
+        "count": 2,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824",
+          "protocolsio:8175"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 8,
+            "text": "Store samples in -80.",
+            "reason": "missing_skill",
+            "detail": "Minus eighty storage unavailable"
+          },
+          {
+            "protocol_id": "protocolsio:8175",
+            "step_idx": 8,
+            "text": "Streak viruses - from the source plate directly into the still-molten top agar (link to demonstration Video 1 is here) such that when the host lawn forms it wil",
+            "reason": "missing_skill",
+            "detail": "Toothpick streaking unavailable"
+          }
+        ]
+      },
+      {
+        "capability": "label_tubes",
+        "count": 2,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:35709"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:35709",
+            "step_idx": 2,
+            "text": "Name 4 microtubes of 1.5 mL with the respective reagents: 1. ACN100% (I) 1. TFA0.1% (I) 1. TFA 0.1% (II) 1. ACN100% (II) Add 1 mL of the respective solutions to",
+            "reason": "missing_skill",
+            "detail": "labeling tubes not supported"
+          },
+          {
+            "protocol_id": "protocolsio:35709",
+            "step_idx": 3,
+            "text": "Name new 0.2 mL microtubes with sample names followed by \u201czt\u201d.",
+            "reason": "missing_skill",
+            "detail": "labeling tubes not supported"
+          }
+        ]
+      },
+      {
+        "capability": "measure_absorbance",
+        "count": 2,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:21173",
+          "protocolsio:3701"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:21173",
+            "step_idx": 6,
+            "text": "Transfer supernatant into a cuvette and measure the extinction at 665 nm. Use 90% methanol as the reference solution.",
+            "reason": "missing_skill",
+            "detail": "absorbance 665nm unavailable"
+          },
+          {
+            "protocol_id": "protocolsio:3701",
+            "step_idx": 6,
+            "text": "Transfer supernatant into a cuvette and measure the extinction at 665 nm. Use 90% methanol as the reference solution.",
+            "reason": "missing_skill",
+            "detail": "absorbance 665nm unavailable"
+          }
+        ]
+      },
+      {
+        "capability": "measure_temperature",
+        "count": 2,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:31557"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:31557",
+            "step_idx": 2,
+            "text": "Measure and record the temperature of the water.",
+            "reason": "missing_skill",
+            "detail": "No temperature measurement skill"
+          },
+          {
+            "protocol_id": "protocolsio:31557",
+            "step_idx": 14,
+            "text": "Measure the temperature of the water to ensure it has not changed significantly during the measurements.",
+            "reason": "missing_skill",
+            "detail": "measure water temperature"
+          }
+        ]
+      },
+      {
+        "capability": "centrifuge",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:41548"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:41548",
+            "step_idx": 11,
+            "text": "At the end of the day run: Clean the instrument with Potassium Hydroxide 20 millimolar (mM) solution in a 1.5 ml centrifuge tube flowing into the instrument for",
+            "reason": "missing_skill",
+            "detail": "KOH clean and shutdown procedure"
+          }
+        ]
+      },
+      {
+        "capability": "control_pipette_plunger",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:31557"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:31557",
+            "step_idx": 6,
+            "text": "Depress the plunger on the micropipette to the first stop. It is worth taking time to familiarize your self with the micropipette plunger positions if you have ",
+            "reason": "missing_skill",
+            "detail": "No plunger position control"
+          }
+        ]
+      },
+      {
+        "capability": "count_tentacles",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:58456"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:58456",
+            "step_idx": 12,
+            "text": "Count the number of tentacles that the Hydra has and record it in your lab notebook. Since you are going to dissect six Hydra you may want to set up a table to ",
+            "reason": "missing_skill",
+            "detail": "count tentacles manual observation"
+          }
+        ]
+      },
+      {
+        "capability": "detect_western_blot",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:5087"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:5087",
+            "step_idx": 7,
+            "text": "Perform near-infrared Western blot detection according to the Near-Infrared Western Blot Detection Protocol LI-COR NIRWesternProtocol with PVDF Membrane LI-COR ",
+            "reason": "missing_skill",
+            "detail": "NIR detection unavailable"
+          }
+        ]
+      },
+      {
+        "capability": "dilute",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:20832"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20832",
+            "step_idx": 19,
+            "text": "Rinse slides in lithium carbonate water diluted 1:5 from saturated solution for 00:01:00 .",
+            "reason": "missing_skill",
+            "detail": "No slide rinsing skill"
+          }
+        ]
+      },
+      {
+        "capability": "disassemble_transfer_case",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:14824"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 17,
+            "text": "Take down transfer case. Ladders should have transferred to membrane. Mark position of ladders with pen. Always keep protein side up.",
+            "reason": "missing_skill",
+            "detail": "No transfer case disassembly skill"
+          }
+        ]
+      },
+      {
+        "capability": "discard",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:41618"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:41618",
+            "step_idx": 10,
+            "text": "Screw the cap back onto the vial of test buffer. Discard this in the biohazardous waste.",
+            "reason": "missing_skill",
+            "detail": "cap vial then discard"
+          }
+        ]
+      },
+      {
+        "capability": "dissect_specimen",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:58456"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:58456",
+            "step_idx": 13,
+            "text": "Use your scalpel to cut the Hydra transversely (horizontally) in two. This is called a mid-gastric bisection. Try to cut it right above the budding zone. In som",
+            "reason": "missing_skill",
+            "detail": "scalpel bisection unmodeled manual"
+          }
+        ]
+      },
+      {
+        "capability": "label_plate",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:58456"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:58456",
+            "step_idx": 9,
+            "text": "Put a piece of labeling tape on the lid of your 24-well plate. Use a permanent marker to label it with your name and date.",
+            "reason": "missing_skill",
+            "detail": "labeling plate needs manual writing"
+          }
+        ]
+      },
+      {
+        "capability": "lyse",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:1495"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:1495",
+            "step_idx": 15,
+            "text": "Mark wells where lysis is observed and continue the incubation with daily inspections until no more lysis occurs.",
+            "reason": "missing_skill",
+            "detail": "marking wells unsupported"
+          }
+        ]
+      },
+      {
+        "capability": "measure_rna_quality",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:9549"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:9549",
+            "step_idx": 2,
+            "text": "RNA quantity was assessed by Nanodrop ND2000 using 1ul RNA (Nanodrop, Wilmington, USA). RNA quality was assessed by RIN values produced by Tapestation 2200 usin",
+            "reason": "missing_skill",
+            "detail": "Nanodrop Tapestation absent"
+          }
+        ]
+      },
+      {
+        "capability": "operate_autostainer",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:20832"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20832",
+            "step_idx": 17,
+            "text": "Transfer slides in the Autostainer XL. Autostainer XL (Leica biosystems, cat# Leica ST5010 Autostainer XL,",
+            "reason": "missing_skill",
+            "detail": "No autostainer slide handling"
+          }
+        ]
+      },
+      {
+        "capability": "passage",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:23962"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:23962",
+            "step_idx": 5,
+            "text": "The TI was considered to have failed when the laryngoscope was removed from the oral cavity before completing the TI or when the procedure took \u2265 120 s. Time fr",
+            "reason": "missing_skill",
+            "detail": "Clinical trial measurement video review"
+          }
+        ]
+      },
+      {
+        "capability": "rinse",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:20832"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20832",
+            "step_idx": 20,
+            "text": "Rinse slides in tap water for 00:05:00 .",
+            "reason": "missing_skill",
+            "detail": "No slide rinsing skill"
+          }
+        ]
+      },
+      {
+        "capability": "run_sds_page",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:5087"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:5087",
+            "step_idx": 5,
+            "text": "Separate protein by SDS-PAGE.",
+            "reason": "missing_skill",
+            "detail": "SDS-PAGE not in registry"
+          }
+        ]
+      },
+      {
+        "capability": "sequence_illumina",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:15461"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:15461",
+            "step_idx": 2,
+            "text": "Sequence pool on an Illumina iSeq, or a low-throughput sequencer.",
+            "reason": "missing_skill",
+            "detail": "Illumina sequencing not listed"
+          }
+        ]
+      },
+      {
+        "capability": "sequence_libraries",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:15461"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:15461",
+            "step_idx": 9,
+            "text": "Equimolar pool of libraries are ready to be sequenced on a high throughput sequencer like the Illumina HiSeq or NovaSeq.",
+            "reason": "missing_skill",
+            "detail": "Sequencing not in skill registry"
+          }
+        ]
+      },
+      {
+        "capability": "stir",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 15,
+            "text": "Prepare transfer sandwich. Place white side down, place sponge, place a blotting paper, membrane, gel, blotting paper, sponge and close sandwich. Try to roll ou",
+            "reason": "missing_skill",
+            "detail": "transfer sandwich assembly unavailable"
+          }
+        ]
+      },
+      {
+        "capability": "streak_plate",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:4566"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:4566",
+            "step_idx": 2,
+            "text": "Streak the bacteria onto agar plates without inhibitor.",
+            "reason": "missing_skill",
+            "detail": "No streaking skill available"
+          }
+        ]
+      },
+      {
+        "capability": "transfer_proteins",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:14824"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 16,
+            "text": "Connect leads. Transfer at 100V for 90 minutes.",
+            "reason": "missing_skill",
+            "detail": "electrotransfer 100V unavailable"
+          }
+        ]
+      },
+      {
+        "capability": "transfer_to_membrane",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:5087"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:5087",
+            "step_idx": 6,
+            "text": "Transfer proteins to immobilizing membrane.",
+            "reason": "missing_skill",
+            "detail": "membrane transfer unavailable"
+          }
+        ]
+      },
+      {
+        "capability": "weigh",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 11,
+            "text": "Load molecular markers and denatured samples. Connect gel box to power pack. Ensure negative is connected to negative supply of pack (black to black &amp; red t",
+            "reason": "missing_skill",
+            "detail": "gel electrophoresis unavailable"
+          }
+        ]
+      }
+    ],
+    "not_implemented": [
+      {
+        "capability": "centrifuge",
+        "count": 19,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824",
+          "protocolsio:1537",
+          "protocolsio:21173",
+          "protocolsio:21740",
+          "protocolsio:27826",
+          "protocolsio:32907",
+          "protocolsio:36027",
+          "protocolsio:3701",
+          "protocolsio:37443",
+          "protocolsio:41548",
+          "protocolsio:61793",
+          "protocolsio:68814"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 5,
+            "text": "Centrifuge M-tube for 1min at 2000_xg_ at 4\u00b0C to collect everything and transfer to eppendorf tube on ice.",
+            "reason": "not_implemented",
+            "detail": "Spin then transfer to tube"
+          },
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 6,
+            "text": "Centrifuge eppendorf tubes for 20min at 12,000 rpm at 4\u00b0C (tabletop centrifuge).",
+            "reason": "not_implemented",
+            "detail": "Spin 20min cold high speed"
+          },
+          {
+            "protocol_id": "protocolsio:1537",
+            "step_idx": 8,
+            "text": "Pellet host for 5 min at ca. 16,000g and 4\u00b0C; note the time. 00:05:00",
+            "reason": "not_implemented",
+            "detail": "5 min 16000g 4C"
+          }
+        ]
+      },
+      {
+        "capability": "dilute",
+        "count": 10,
+        "proposed": false,
+        "protocols": [
+          "bioprot:1778",
+          "bioprot:1779",
+          "bioprot:1780",
+          "protocolsio:1537",
+          "protocolsio:21740",
+          "protocolsio:2343",
+          "protocolsio:32907",
+          "protocolsio:5969",
+          "protocolsio:68814",
+          "protocolsio:9264"
+        ],
+        "examples": [
+          {
+            "protocol_id": "bioprot:1778",
+            "step_idx": 4,
+            "text": "Make up to a final volume of 500 mL with MilliQ water",
+            "reason": "not_implemented",
+            "detail": "bring to final volume"
+          },
+          {
+            "protocol_id": "bioprot:1779",
+            "step_idx": 4,
+            "text": "Make up to a final volume of 50 mL with MilliQ water",
+            "reason": "not_implemented",
+            "detail": "bring to final volume"
+          },
+          {
+            "protocol_id": "bioprot:1780",
+            "step_idx": 3,
+            "text": "Make up to 50 mL with MilliQ water",
+            "reason": "not_implemented",
+            "detail": "bring volume to 50 mL"
+          }
+        ]
+      },
+      {
+        "capability": "aliquot",
+        "count": 5,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:1495",
+          "protocolsio:1537",
+          "protocolsio:21740",
+          "protocolsio:32907",
+          "protocolsio:58456"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:1495",
+            "step_idx": 1,
+            "text": "Prepare 9 tubes (numbered #1\u2013#9) with 4.5 mL medium.",
+            "reason": "not_implemented",
+            "detail": "9 tubes 4.5 mL medium"
+          },
+          {
+            "protocol_id": "protocolsio:1537",
+            "step_idx": 9,
+            "text": "Carefully remove a small aliquot (50 \u00b5L) of the supernatant to a new tube and keep cold for plaque assay; note time.",
+            "reason": "not_implemented",
+            "detail": "aliquot 50uL supernatant cold"
+          },
+          {
+            "protocol_id": "protocolsio:21740",
+            "step_idx": 5,
+            "text": "Add 100 \u03bcl of 1X PBS\u200b into wells A2, B2, C2, D2....A12, B12, C12, D12",
+            "reason": "not_implemented",
+            "detail": "add PBS to wells 2-12"
+          }
+        ]
+      },
+      {
+        "capability": "vortex",
+        "count": 5,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:1537",
+          "protocolsio:21173",
+          "protocolsio:3701",
+          "protocolsio:41548",
+          "protocolsio:4566"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:1537",
+            "step_idx": 7,
+            "text": "Vortex to mix.",
+            "reason": "not_implemented",
+            "detail": "mix tube"
+          },
+          {
+            "protocol_id": "protocolsio:21173",
+            "step_idx": 3,
+            "text": "Add 0.9 ml of 100% methanol to the sample and mix thoroughly by vortexing.",
+            "reason": "not_implemented",
+            "detail": "add methanol vortex mix"
+          },
+          {
+            "protocol_id": "protocolsio:3701",
+            "step_idx": 3,
+            "text": "Add 0.9 ml of 100% methanol to the sample and mix thoroughly by vortexing.",
+            "reason": "not_implemented",
+            "detail": "add methanol vortex mix"
+          }
+        ]
+      },
+      {
+        "capability": "dry",
+        "count": 3,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824",
+          "protocolsio:1495",
+          "protocolsio:4566"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 26,
+            "text": "Let excess ECL solution drip off on Kimwipe.",
+            "reason": "not_implemented",
+            "detail": "Remove excess ECL solution"
+          },
+          {
+            "protocol_id": "protocolsio:1495",
+            "step_idx": 12,
+            "text": "Put on the lid and seal tightly with plastic tape to avoid drying.",
+            "reason": "not_implemented",
+            "detail": "seal lid with tape"
+          },
+          {
+            "protocol_id": "protocolsio:4566",
+            "step_idx": 13,
+            "text": "Cover the plates with film, make sure to create a tight seal to prevent any evaporation.",
+            "reason": "not_implemented",
+            "detail": "Seal plate prevent evaporation"
+          }
+        ]
+      },
+      {
+        "capability": "wash",
+        "count": 3,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824",
+          "protocolsio:36027"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 22,
+            "text": "Wash 5 time for 5 minutes with TBS-T.",
+            "reason": "not_implemented",
+            "detail": "Wash 5x 5 min"
+          },
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 24,
+            "text": "Wash 5 time for 5 minutes with TBS-T.",
+            "reason": "not_implemented",
+            "detail": "Wash 5x 5 min"
+          },
+          {
+            "protocol_id": "protocolsio:36027",
+            "step_idx": 4,
+            "text": "Wash wells with TrypLE (approx 1 mL per well of a 6 well plate) to collect any remaining organoids and add to the collection tube.",
+            "reason": "not_implemented",
+            "detail": "Wash wells TrypLE collect organoids"
+          }
+        ]
+      },
+      {
+        "capability": "dissolve",
+        "count": 2,
+        "proposed": false,
+        "protocols": [
+          "bioprot:1778",
+          "bioprot:1780"
+        ],
+        "examples": [
+          {
+            "protocol_id": "bioprot:1778",
+            "step_idx": 5,
+            "text": "Dissolve SDS in DNA Buffer to a final concentration of 1% (w/v). e.g., 5 g SDS in 500 mL of DNA Buffer.",
+            "reason": "not_implemented",
+            "detail": "weigh SDS for buffer"
+          },
+          {
+            "protocol_id": "bioprot:1780",
+            "step_idx": 1,
+            "text": "Dissolve 12.3 g of Sodium acetate (anhydrous) in ~ 40 mL MilliQ water.",
+            "reason": "not_implemented",
+            "detail": "weigh 12.3 g dissolve"
+          }
+        ]
+      },
+      {
+        "capability": "homogenize",
+        "count": 2,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824",
+          "protocolsio:35709"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 4,
+            "text": "Run program Protein_01 on the gentleMACS Dissociator (Miltenyi).",
+            "reason": "not_implemented",
+            "detail": "Dissociate with Protein_01 program"
+          },
+          {
+            "protocol_id": "protocolsio:35709",
+            "step_idx": 11,
+            "text": "1. Elution: ACN100% (II) Homogenize 20 times in the \u201czt\u201d tube, already with 50 \u03bcL of ACN100%",
+            "reason": "not_implemented",
+            "detail": "elution homogenize in zt"
+          }
+        ]
+      },
+      {
+        "capability": "ph_adjust",
+        "count": 2,
+        "proposed": false,
+        "protocols": [
+          "bioprot:1780",
+          "protocolsio:32907"
+        ],
+        "examples": [
+          {
+            "protocol_id": "bioprot:1780",
+            "step_idx": 2,
+            "text": "Adjust pH to 5.2 with glacial acetic acid",
+            "reason": "not_implemented",
+            "detail": "adjust pH to 5.2"
+          },
+          {
+            "protocol_id": "protocolsio:32907",
+            "step_idx": 18,
+            "text": "Measure the fluorescence of all samples in your plate reader . Ensure that any automatic gain setting is off (if your instrument has one). If you will be using ",
+            "reason": "not_implemented",
+            "detail": "measure red fluorescence plate"
+          }
+        ]
+      },
+      {
+        "capability": "pool_wells",
+        "count": 2,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:15461"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:15461",
+            "step_idx": 6,
+            "text": "Manually combine the multiple wells of the pool into one single DNA lo-bind tube. Mix.",
+            "reason": "not_implemented",
+            "detail": "Combine wells to tube"
+          },
+          {
+            "protocol_id": "protocolsio:15461",
+            "step_idx": 8,
+            "text": "Manually combine the multiple wells of the pool into one single DNA lo-bind tube. Mix.",
+            "reason": "not_implemented",
+            "detail": "Combine wells to tube"
+          }
+        ]
+      },
+      {
+        "capability": "shake",
+        "count": 2,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824",
+          "protocolsio:41548"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 14,
+            "text": "Activate PVDF membrane for 1 minute in 100% methanol, wash 3X with water and then soak in transfer buffer on shaker. Immerse the blotting paper and sponge pads ",
+            "reason": "not_implemented",
+            "detail": "methanol activate wash membrane"
+          },
+          {
+            "protocol_id": "protocolsio:41548",
+            "step_idx": 4,
+            "text": "\u2022Sample is then agitated for 00:00:05 to 00:00:15 to mix. even mix,",
+            "reason": "not_implemented",
+            "detail": "agitate 5 to 15 seconds"
+          }
+        ]
+      },
+      {
+        "capability": "stain",
+        "count": 2,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824",
+          "protocolsio:6534"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 12,
+            "text": "Image stainfree gel(s) with chemidoc system after running.",
+            "reason": "not_implemented",
+            "detail": "image stainfree gel chemidoc"
+          },
+          {
+            "protocol_id": "protocolsio:6534",
+            "step_idx": 3,
+            "text": "For each dilution of each sample, perform three qPCR replicates (on a Viia7 Real-Time PCR system (Thermo Fisher Scientific)) : total volume of 25\u00b5l including 1X",
+            "reason": "not_implemented",
+            "detail": "qPCR triplicates thermocycling run"
+          }
+        ]
+      },
+      {
+        "capability": "unresolved",
+        "count": 2,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:27826",
+          "protocolsio:9549"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:27826",
+            "step_idx": 21,
+            "text": "Mix by flicking.",
+            "reason": "not_implemented",
+            "detail": "Mix by flicking"
+          },
+          {
+            "protocol_id": "protocolsio:9549",
+            "step_idx": 7,
+            "text": "Data were collected and analyzed by Rotor-Gene Q Series Software. Gene target Ct (cycle threshold) values were normalized to a Hypoxanthine-Guanine phosphoribos",
+            "reason": "not_implemented",
+            "detail": "Collect Ct normalize HPRT1"
+          }
+        ]
+      },
+      {
+        "capability": "attach_pipette_tip",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:31557"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:31557",
+            "step_idx": 5,
+            "text": "Put tip onto pipette by taking micropipette, placing the shaft into the desired tip and pushing while twisting slightly. You do not need to hammer or slam the m",
+            "reason": "not_implemented",
+            "detail": "Attach tip to pipette"
+          }
+        ]
+      },
+      {
+        "capability": "autoclave",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:31494"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:31494",
+            "step_idx": 5,
+            "text": "Prepare Agar medium solution. Per 1 L use: 2.2 g Murashi Skoog nutrients 1 g MES buffer adjust pH with KOH to 5.8 After adjusting pH add 10 g of Dashin Agar Aut",
+            "reason": "not_implemented",
+            "detail": "Weigh nutrients buffer agar"
+          }
+        ]
+      },
+      {
+        "capability": "cool",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:61801"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:61801",
+            "step_idx": 2,
+            "text": "Defrost 4uL randomized/normalized sample plate from the &#34;EPMotion - Normalization and Randomization&#34; protocol On ice",
+            "reason": "not_implemented",
+            "detail": "thaw plate on ice"
+          }
+        ]
+      },
+      {
+        "capability": "fit_ziptip",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:35709"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:35709",
+            "step_idx": 7,
+            "text": "Fit the ZipTip with the pipette already attached, so as not to pass air through the &#34;chromatographic column&#34;. Hold down until you start the procedure wi",
+            "reason": "not_implemented",
+            "detail": "fit ZipTip to pipette"
+          }
+        ]
+      },
+      {
+        "capability": "freeze",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:5969"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:5969",
+            "step_idx": 2,
+            "text": "Equal proportions of dNTP volume are mixed to make up the stock solution. The concentration of 100 mM is maintained. I recommend that you use a volume of 50uL e",
+            "reason": "not_implemented",
+            "detail": "Mix equal dNTP volumes"
+          }
+        ]
+      },
+      {
+        "capability": "image",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 18,
+            "text": "Image blot on Chemidoc for total protein image.",
+            "reason": "not_implemented",
+            "detail": "Image membrane total protein"
+          }
+        ]
+      },
+      {
+        "capability": "ligate_dna",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:27826"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:27826",
+            "step_idx": 8,
+            "text": "Mix DNA by flicking and quantify 1 \u00b5L using the Qubit DNA HS kit to confirm DNA recovery and then set up the following Ligation reaction: 1. 33.5 \u00b5L DNA sample ",
+            "reason": "not_implemented",
+            "detail": "ligation reaction setup"
+          }
+        ]
+      },
+      {
+        "capability": "measure_fluorescence",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:21740"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:21740",
+            "step_idx": 19,
+            "text": "Measure fluorescence of all samples in instrument",
+            "reason": "not_implemented",
+            "detail": "measure all samples fluorescence"
+          }
+        ]
+      },
+      {
+        "capability": "mix_cells_agar",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:27969"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:27969",
+            "step_idx": 3,
+            "text": "Mix 200 \u00b5L of cell culture with 3 mL of liquid soft LB agar ( 50 \u00b0C ).",
+            "reason": "not_implemented",
+            "detail": "mix cells with agar"
+          }
+        ]
+      },
+      {
+        "capability": "mix_solutions",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "bioprot:1778"
+        ],
+        "examples": [
+          {
+            "protocol_id": "bioprot:1778",
+            "step_idx": 3,
+            "text": "Mix 50 mL 4 M NaCl and 50 mL 0.5 M EDTA",
+            "reason": "not_implemented",
+            "detail": "mix two stock solutions"
+          }
+        ]
+      },
+      {
+        "capability": "perform_qc_assays",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:61801"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:61801",
+            "step_idx": 8,
+            "text": "Perform on each library and record keep all QC for pooling steps 1. Nanodrop 1. Qubit (HS Assay) 1. Tapestation (D1000)",
+            "reason": "not_implemented",
+            "detail": "QC libraries fluorescence assays"
+          }
+        ]
+      },
+      {
+        "capability": "plate_cells",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:57743"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:57743",
+            "step_idx": 17,
+            "text": "Mix well, distribute 2 ml to each MEFs wells. a. Use of 5 ml pipette to mix cell suspension is preferred as it has the widest bore size, but 10 ml can be used i",
+            "reason": "not_implemented",
+            "detail": "plate 2 ml per well"
+          }
+        ]
+      },
+      {
+        "capability": "pour",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:1495"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:1495",
+            "step_idx": 5,
+            "text": "Pour vigorously growing algal host culture into the reservoir tray, fill the pipetter and add 150 \u03bcL culture to each well in lines 1\u20139 of a 96-well cell culture",
+            "reason": "not_implemented",
+            "detail": "150 uL culture to wells"
+          }
+        ]
+      },
+      {
+        "capability": "quantify_dna",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:27826"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:27826",
+            "step_idx": 15,
+            "text": "Mix DNA by flicking and quantify 1 \u00b5L using the Qubit DNA HS kit to confirm DNA recovery.",
+            "reason": "not_implemented",
+            "detail": "Qubit quantify DNA recovery"
+          }
+        ]
+      },
+      {
+        "capability": "resuspend",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:21740"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:21740",
+            "step_idx": 2,
+            "text": "Prepare 10x fluorescein stock solution (100 \u03bcM) by resuspending fluorescein in 1mL of 1X PBS It is important that the fluorescein is properly dissolved. To chec",
+            "reason": "not_implemented",
+            "detail": "make 100uM stock in PBS"
+          }
+        ]
+      },
+      {
+        "capability": "run_qpcr",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:9549"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:9549",
+            "step_idx": 6,
+            "text": "Multiplex quantitative RT-PCR Real-time PCR was performed using Rotor-Gene Q (Qiagen, Hilden, Germany). Cycling parameters were 2 min at 95\u00b0C, then 45 cycles of",
+            "reason": "not_implemented",
+            "detail": "qPCR cycling Rotor-Gene"
+          }
+        ]
+      },
+      {
+        "capability": "swirl_swab",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:41618"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:41618",
+            "step_idx": 7,
+            "text": "Sample preparation and set-up Remove the reaction tube from the foil pouch labelled \u201creaction tube.\u201d Place it in the smaller well of the sample prep block attac",
+            "reason": "not_implemented",
+            "detail": "Swirl swab five times"
+          }
+        ]
+      },
+      {
+        "capability": "synthesize_cdna",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:9549"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:9549",
+            "step_idx": 3,
+            "text": "Reverse transcriptase reactions were performed using High Capacity cDNA Reverse transcription kit (Applied Biosystems, FosterCity, CA, USA) according to the man",
+            "reason": "not_implemented",
+            "detail": "RT reaction cDNA synthesis"
+          }
+        ]
+      },
+      {
+        "capability": "weigh",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:31557"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:31557",
+            "step_idx": 12,
+            "text": "Record the mass of the water.",
+            "reason": "not_implemented",
+            "detail": "weigh dispensed water mass"
+          }
+        ]
+      }
+    ],
+    "missing_asset": [
+      {
+        "capability": "heat",
+        "count": 5,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:20811",
+          "protocolsio:20832",
+          "protocolsio:8175"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20811",
+            "step_idx": 5,
+            "text": "Heat the slides immersed in retrieval buffer for 00:04:00 at 125 \u00b0C in a pressure boiler.",
+            "reason": "missing_asset",
+            "detail": "needs pressure boiler"
+          },
+          {
+            "protocol_id": "protocolsio:20811",
+            "step_idx": 6,
+            "text": "After completed boiling, leave the slides in the pressure boiler and let them cool down till 90 \u00b0C . Total time 00:45:00",
+            "reason": "missing_asset",
+            "detail": "needs pressure boiler cooling"
+          },
+          {
+            "protocol_id": "protocolsio:20832",
+            "step_idx": 5,
+            "text": "Heat the slides immersed in retrieval buffer for 00:04:00 at 125 \u00b0C in a pressure boiler (Decloaking chamber model DC2008INTL).",
+            "reason": "missing_asset",
+            "detail": "needs pressure boiler chamber"
+          }
+        ]
+      },
+      {
+        "capability": "unresolved",
+        "count": 4,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:20811",
+          "protocolsio:23962"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20811",
+            "step_idx": 7,
+            "text": "Place slides in the Autostainer 480, all the incubations are done at room temperature. Autostainer 480 (ThermoFisher Scientific, cat# A80500007,",
+            "reason": "missing_asset",
+            "detail": "needs Autostainer 480"
+          },
+          {
+            "protocol_id": "protocolsio:20811",
+            "step_idx": 17,
+            "text": "Transfer slides in the Autostainer XL. Autostainer XL (Leica biosystems, cat# Leica ST5010 Autostainer XL,",
+            "reason": "missing_asset",
+            "detail": "Autostainer XL unavailable"
+          },
+          {
+            "protocol_id": "protocolsio:23962",
+            "step_idx": 2,
+            "text": "To reproduce scenarios of presenting of liquids in the airway, vomit and hematemesis mannequin models were created. The Airway Management Trainer (Laerdal\u00ae, Sta",
+            "reason": "missing_asset",
+            "detail": "Mannequin vomit model unavailable"
+          }
+        ]
+      },
+      {
+        "capability": "cool",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:61801"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:61801",
+            "step_idx": 1,
+            "text": "Fill ice pan with ice chips.",
+            "reason": "missing_asset",
+            "detail": "ice pan filling not supported"
+          }
+        ]
+      },
+      {
+        "capability": "cut_blotting_paper",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:14824"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 13,
+            "text": "For each gel to transfer, you need PVDF membrane (0.20um) and 2 pieces of blotting paper cut to the size of the gel (0.5cm bigger on each side).",
+            "reason": "missing_asset",
+            "detail": "PVDF membrane paper unavailable"
+          }
+        ]
+      },
+      {
+        "capability": "image",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:5087"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:5087",
+            "step_idx": 8,
+            "text": "Image membrane with an Odyssey imaging system (Classic, CLx or Fc) in the 700 and 800 nm channels. Adjust settings so that no saturation appears in the bands to",
+            "reason": "missing_asset",
+            "detail": "Odyssey imager unavailable"
+          }
+        ]
+      },
+      {
+        "capability": "prepare_waterbath",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:8175"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:8175",
+            "step_idx": 1,
+            "text": "Prepare a beaker-waterbath: Place bottle of top agar into a glass beaker and add water to the beaker up to the level of the top agar in the bottle; for example,",
+            "reason": "missing_asset",
+            "detail": "Beaker waterbath setup unavailable"
+          }
+        ]
+      },
+      {
+        "capability": "stir",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:8175"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:8175",
+            "step_idx": 3,
+            "text": "Equilibrate the top agar to 50-52\u00b0C: Place the beaker-waterbath with the top agar onto a hot plate with stirring, place a thermometer into the beaker-waterbath ",
+            "reason": "missing_asset",
+            "detail": "Hot plate equilibration unavailable"
+          }
+        ]
+      }
+    ],
+    "unmodeled_physics": [
+      {
+        "capability": "unresolved",
+        "count": 2,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:31494",
+          "protocolsio:35709"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:31494",
+            "step_idx": 4,
+            "text": "Using the large and sturdy scissors - cut the yellow pipette tip so that you only keep the wider stud - as in the picture [pipette.jpg]]( The studed pipette tip",
+            "reason": "unmodeled_physics",
+            "detail": "Scissor cutting tips manual"
+          },
+          {
+            "protocol_id": "protocolsio:35709",
+            "step_idx": 5,
+            "text": "During the entire process, no air should enter through ZipTip. Pipetting should be done slowly to maximize chemical interactions",
+            "reason": "unmodeled_physics",
+            "detail": "general air avoidance constraint"
+          }
+        ]
+      }
+    ],
+    "ambiguous_text": [
+      {
+        "capability": "unresolved",
+        "count": 42,
+        "proposed": false,
+        "protocols": [
+          "bioprot:1778",
+          "protocolsio:117746",
+          "protocolsio:1495",
+          "protocolsio:1537",
+          "protocolsio:15421",
+          "protocolsio:15461",
+          "protocolsio:19184",
+          "protocolsio:20446",
+          "protocolsio:20811",
+          "protocolsio:20832",
+          "protocolsio:27826",
+          "protocolsio:31557",
+          "protocolsio:36027",
+          "protocolsio:41548",
+          "protocolsio:41618",
+          "protocolsio:45473",
+          "protocolsio:4566",
+          "protocolsio:57743",
+          "protocolsio:58456",
+          "protocolsio:61801",
+          "protocolsio:8175"
+        ],
+        "examples": [
+          {
+            "protocol_id": "bioprot:1778",
+            "step_idx": 1,
+            "text": "Prepare stock solution of 4 M Sodium chloride in MilliQ water",
+            "reason": "ambiguous_text",
+            "detail": "no mass volume given"
+          },
+          {
+            "protocol_id": "bioprot:1778",
+            "step_idx": 2,
+            "text": "Prepare stock solution of 0.5 M EDTA in MilliQ water",
+            "reason": "ambiguous_text",
+            "detail": "no mass volume given"
+          },
+          {
+            "protocol_id": "protocolsio:117746",
+            "step_idx": 1,
+            "text": "To draw up liquid Set volume using the volume adjustment wheel Press a new tip onto the shaft Press plunger TO the FIRST STOP Dip tip into liquid Slowly release",
+            "reason": "ambiguous_text",
+            "detail": "no volume specified for aspiration"
+          }
+        ]
+      },
+      {
+        "capability": "dilute",
+        "count": 17,
+        "proposed": false,
+        "protocols": [
+          "bioprot:1780",
+          "protocolsio:1495",
+          "protocolsio:19184",
+          "protocolsio:20811",
+          "protocolsio:20832",
+          "protocolsio:21740",
+          "protocolsio:27826",
+          "protocolsio:32907",
+          "protocolsio:4566",
+          "protocolsio:5087",
+          "protocolsio:6534",
+          "protocolsio:857"
+        ],
+        "examples": [
+          {
+            "protocol_id": "bioprot:1780",
+            "step_idx": 4,
+            "text": "Dilute an aliquot of the 3 M stock solution to 0.3 M for use in the DNA extraction protocol.",
+            "reason": "ambiguous_text",
+            "detail": "volumes not specified"
+          },
+          {
+            "protocol_id": "protocolsio:1495",
+            "step_idx": 11,
+            "text": "Repeat steps 7 and 8 for dilution tube #8\u2013#1 and fill the respective well lines in the culture plate.",
+            "reason": "ambiguous_text",
+            "detail": "steps 7 8 undefined"
+          },
+          {
+            "protocol_id": "protocolsio:1495",
+            "step_idx": 17,
+            "text": "Propagate virus clone from the most diluted well in a larger volume and store appropriately.",
+            "reason": "ambiguous_text",
+            "detail": "No propagate or store skill"
+          }
+        ]
+      },
+      {
+        "capability": "rinse",
+        "count": 12,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:20811",
+          "protocolsio:20832",
+          "protocolsio:31557"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20811",
+            "step_idx": 8,
+            "text": "Rinse slides in wash buffer.",
+            "reason": "ambiguous_text",
+            "detail": "no buffer volume time"
+          },
+          {
+            "protocol_id": "protocolsio:20811",
+            "step_idx": 10,
+            "text": "Rinse slides in wash buffergo to step #10 .",
+            "reason": "ambiguous_text",
+            "detail": "Missing wash buffer volume"
+          },
+          {
+            "protocol_id": "protocolsio:20811",
+            "step_idx": 12,
+            "text": "Rinse slides in wash buffer go to step #12 .",
+            "reason": "ambiguous_text",
+            "detail": "Missing wash buffer volume"
+          }
+        ]
+      },
+      {
+        "capability": "passage",
+        "count": 9,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:36027",
+          "protocolsio:37443",
+          "protocolsio:45473",
+          "protocolsio:57743",
+          "protocolsio:61793",
+          "protocolsio:68814"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:36027",
+            "step_idx": 13,
+            "text": "Return to incubator. Media change twice a week until ready to passage.",
+            "reason": "ambiguous_text",
+            "detail": "recurring changes timing undefined"
+          },
+          {
+            "protocol_id": "protocolsio:37443",
+            "step_idx": 9,
+            "text": "Add fresh media and an appropriate volume of cell suspension to a new flask, to achieve the desired split ratio or cell number (where possible, aim for the tota",
+            "reason": "ambiguous_text",
+            "detail": "split ratio volume unspecified"
+          },
+          {
+            "protocol_id": "protocolsio:45473",
+            "step_idx": 5,
+            "text": "Add appropriate aliquots of the cell suspension to new culture vessels. Incubate cultures at 37\u00b0C for at least an hour. Cells will adhere but not grow well unti",
+            "reason": "ambiguous_text",
+            "detail": "aliquot volume unspecified vague"
+          }
+        ]
+      },
+      {
+        "capability": "wash",
+        "count": 8,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824",
+          "protocolsio:15421",
+          "protocolsio:20446",
+          "protocolsio:35709",
+          "protocolsio:37443",
+          "protocolsio:57743",
+          "protocolsio:61793"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 20,
+            "text": "Wash with TBST to remove milk.",
+            "reason": "ambiguous_text",
+            "detail": "Wash volume time unspecified"
+          },
+          {
+            "protocol_id": "protocolsio:15421",
+            "step_idx": 10,
+            "text": "Slowly aspirate supernatant and discard. Repeat the wash step for a total of 2 washes.",
+            "reason": "ambiguous_text",
+            "detail": "no volumes wash buffer specified"
+          },
+          {
+            "protocol_id": "protocolsio:20446",
+            "step_idx": 3,
+            "text": "Wash with 1 mL - 2 mL PBS per well.",
+            "reason": "ambiguous_text",
+            "detail": "PBS volume range given"
+          }
+        ]
+      },
+      {
+        "capability": "image",
+        "count": 7,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824",
+          "protocolsio:1537",
+          "protocolsio:36027",
+          "protocolsio:41618",
+          "protocolsio:45473",
+          "protocolsio:61801",
+          "protocolsio:9264"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 27,
+            "text": "Expose to film/develop blots in dark room and on ChemiDoc System.",
+            "reason": "ambiguous_text",
+            "detail": "Film versus ChemiDoc unclear"
+          },
+          {
+            "protocol_id": "protocolsio:1537",
+            "step_idx": 3,
+            "text": "Set up adsorption cultures (e.g., 250 mL polycarbonate Erlenmeyer flasks with screw cap). Cyanobacteria should be in exponential growth, e.g., for BBC1, about 1",
+            "reason": "ambiguous_text",
+            "detail": "flask type example only"
+          },
+          {
+            "protocol_id": "protocolsio:36027",
+            "step_idx": 1,
+            "text": "[Passaging.png]](",
+            "reason": "ambiguous_text",
+            "detail": "Image reference no action"
+          }
+        ]
+      },
+      {
+        "capability": "resuspend",
+        "count": 7,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:15421",
+          "protocolsio:20446",
+          "protocolsio:27826",
+          "protocolsio:32907",
+          "protocolsio:68814"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:15421",
+            "step_idx": 5,
+            "text": "Remove plate from magnetic stand, and resuspend beads in desired elution buffer and volume. Mix well. Volume and type of eluent are specified in the High-Throug",
+            "reason": "ambiguous_text",
+            "detail": "volume type in external protocol"
+          },
+          {
+            "protocol_id": "protocolsio:20446",
+            "step_idx": 9,
+            "text": "Resuspend cells in mTesR1 supplemented with 5 uM Rock Inhibitor.",
+            "reason": "ambiguous_text",
+            "detail": "mTeSR1 volume not specified"
+          },
+          {
+            "protocol_id": "protocolsio:27826",
+            "step_idx": 7,
+            "text": "Leave DNA in fridge to resuspend overnight. Depending on DNA fragment size time can be shortened.",
+            "reason": "ambiguous_text",
+            "detail": "overnight time variable"
+          }
+        ]
+      },
+      {
+        "capability": "seed_cells",
+        "count": 7,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:1495",
+          "protocolsio:31494"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:1495",
+            "step_idx": 6,
+            "text": "Fill the pipetter and add 150 \u03bcL culture to each well in lines 1\u20139 of a 96-well cell culture plate.",
+            "reason": "ambiguous_text",
+            "detail": "duplicate of step 5"
+          },
+          {
+            "protocol_id": "protocolsio:31494",
+            "step_idx": 1,
+            "text": "Sterilize the Arabidopsis seeds (no more than +/- 400 seeds) in 2ml Eppendorf tube with 1 ml of 50% household bleach (diluted with MQ water) - keep for 10-20 mi",
+            "reason": "ambiguous_text",
+            "detail": "No bleach sterilization skill exists"
+          },
+          {
+            "protocol_id": "protocolsio:31494",
+            "step_idx": 2,
+            "text": "Wash the seeds with 2 ml of sterile MQ water - 5 to 8 times - preferably in the laminar hood",
+            "reason": "ambiguous_text",
+            "detail": "Wash count range five-eight"
+          }
+        ]
+      },
+      {
+        "capability": "centrifuge",
+        "count": 6,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:20446",
+          "protocolsio:36027",
+          "protocolsio:41548",
+          "protocolsio:68814"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20446",
+            "step_idx": 7,
+            "text": "Spin at 750-800 rpm for 00:03:00 .",
+            "reason": "ambiguous_text",
+            "detail": "Speed range given rpm"
+          },
+          {
+            "protocol_id": "protocolsio:36027",
+            "step_idx": 14,
+            "text": "Aspirate media from wells and add 1 mL or 2 mL TrypLE to each well. If any of the following are true collect organoids and media in a tube and centrifuge to pel",
+            "reason": "ambiguous_text",
+            "detail": "conditional branch volumes unclear"
+          },
+          {
+            "protocol_id": "protocolsio:41548",
+            "step_idx": 2,
+            "text": "Sample processing: \u2022~ 1.5 \u00b5L of this sample is moved from the pipet into a 1.5 ml centrifuge tube.",
+            "reason": "ambiguous_text",
+            "detail": "approx volume pipet to tube"
+          }
+        ]
+      },
+      {
+        "capability": "dry",
+        "count": 6,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:20811",
+          "protocolsio:20832",
+          "protocolsio:27826",
+          "protocolsio:27969",
+          "protocolsio:41618",
+          "protocolsio:9264"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20811",
+            "step_idx": 1,
+            "text": "Dry paraffin sections at room temperature overnight.",
+            "reason": "ambiguous_text",
+            "detail": "overnight duration vague"
+          },
+          {
+            "protocol_id": "protocolsio:20832",
+            "step_idx": 1,
+            "text": "Dry paraffin sections at room temperature overnight.",
+            "reason": "ambiguous_text",
+            "detail": "overnight duration unspecified"
+          },
+          {
+            "protocol_id": "protocolsio:27826",
+            "step_idx": 6,
+            "text": "Allow DNA to air dry for a couple of mins.",
+            "reason": "ambiguous_text",
+            "detail": "couple mins undefined"
+          }
+        ]
+      },
+      {
+        "capability": "heat",
+        "count": 6,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:20811",
+          "protocolsio:36027",
+          "protocolsio:41618",
+          "protocolsio:61793",
+          "protocolsio:68814"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20811",
+            "step_idx": 2,
+            "text": "Bake the paraffin sections from 12:00:00 to 24:00:00 at 50 \u00b0C .",
+            "reason": "ambiguous_text",
+            "detail": "time range 12 to 24h"
+          },
+          {
+            "protocol_id": "protocolsio:36027",
+            "step_idx": 11,
+            "text": "Place in a 37 \u00b0C incubator (5% CO2) for 15-30 minutes to allow BME2 to set.",
+            "reason": "ambiguous_text",
+            "detail": "time range 15-30 minutes"
+          },
+          {
+            "protocol_id": "protocolsio:41618",
+            "step_idx": 6,
+            "text": "Check expiration date on each individual test package or outer box before using. Do not use any test past the expiration date on the label. Handle all materials",
+            "reason": "ambiguous_text",
+            "detail": "Heat instrument seven minutes"
+          }
+        ]
+      },
+      {
+        "capability": "feed_medium",
+        "count": 5,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:20446",
+          "protocolsio:37443",
+          "protocolsio:45473",
+          "protocolsio:57743",
+          "protocolsio:68814"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20446",
+            "step_idx": 13,
+            "text": "Change mTesR1 the following day.",
+            "reason": "ambiguous_text",
+            "detail": "no media change skill"
+          },
+          {
+            "protocol_id": "protocolsio:37443",
+            "step_idx": 7,
+            "text": "Aspirate the supernatant, taking care to avoid disturbing the cell pellet. Resuspend the pellet in an appropriate volume of fresh media (around 5 mL - 20 mL ) a",
+            "reason": "ambiguous_text",
+            "detail": "resuspend volume range vague"
+          },
+          {
+            "protocol_id": "protocolsio:45473",
+            "step_idx": 6,
+            "text": "After cells have adhered to plate carefully aspirate away the media and feed cells new media",
+            "reason": "ambiguous_text",
+            "detail": "feed volume not specified"
+          }
+        ]
+      },
+      {
+        "capability": "stain",
+        "count": 5,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824",
+          "protocolsio:20811",
+          "protocolsio:20832"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 10,
+            "text": "To run gel, assemble gel so that wells face the gasket. Fill the gel with running buffer and make sure apparatus is not leaking. Remove combs and flush the well",
+            "reason": "ambiguous_text",
+            "detail": "gel assembly leaks flushing vague"
+          },
+          {
+            "protocol_id": "protocolsio:20811",
+            "step_idx": 15,
+            "text": "Incubate slides with DAB solution for 00:05:00 .",
+            "reason": "ambiguous_text",
+            "detail": "Missing DAB solution volume"
+          },
+          {
+            "protocol_id": "protocolsio:20811",
+            "step_idx": 18,
+            "text": "Counterstain slides with hematoxylin for 00:07:50 .",
+            "reason": "ambiguous_text",
+            "detail": "Missing hematoxylin volume"
+          }
+        ]
+      },
+      {
+        "capability": "lyse",
+        "count": 4,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824",
+          "protocolsio:1495",
+          "protocolsio:41618",
+          "protocolsio:8175"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 1,
+            "text": "Flash freeze tissues in small chunks on dry ice immediately as dissected store in -80 until ready to use. Prepare RIPA buffer: 0.876g NaCl 1ml 1M Tris 1ml 10% S",
+            "reason": "ambiguous_text",
+            "detail": "Freeze plus buffer prep combined"
+          },
+          {
+            "protocol_id": "protocolsio:1495",
+            "step_idx": 14,
+            "text": "Use an inverted microscope and inspect the culture plates for signs of cell lysis at regular intervals.",
+            "reason": "ambiguous_text",
+            "detail": "intervals unspecified"
+          },
+          {
+            "protocol_id": "protocolsio:41618",
+            "step_idx": 2,
+            "text": "The Harmony assay uses loop-mediated isothermal amplification (LAMP) to detect viral RNA from the SARS-CoV-2 virus. The Harmony instrument consists of a touch s",
+            "reason": "ambiguous_text",
+            "detail": "LAMP principle background description only"
+          }
+        ]
+      },
+      {
+        "capability": "ph_adjust",
+        "count": 4,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:14824",
+          "protocolsio:21740",
+          "protocolsio:31557",
+          "protocolsio:32907"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:14824",
+            "step_idx": 9,
+            "text": "Prepare samples: Add 20ug of protein Reducing agent (b-mercaptoethanol) Loading dye (one fourth volume for 4X dye) Ripa Total volume (Max) = 20ul for 12-15 well",
+            "reason": "ambiguous_text",
+            "detail": "multiple reagents heating unclear amounts"
+          },
+          {
+            "protocol_id": "protocolsio:21740",
+            "step_idx": 22,
+            "text": "You have now completed this calibration protocol",
+            "reason": "ambiguous_text",
+            "detail": "protocol complete no action"
+          },
+          {
+            "protocol_id": "protocolsio:31557",
+            "step_idx": 15,
+            "text": "Transfer your data into the calibration worksheet. micropipette_calibration_worksheet.xlsx Put the date, the name of your group, and the balance identity in the",
+            "reason": "ambiguous_text",
+            "detail": "enter data in worksheet"
+          }
+        ]
+      },
+      {
+        "capability": "aliquot",
+        "count": 3,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:35709",
+          "protocolsio:5087",
+          "protocolsio:5969"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:35709",
+            "step_idx": 4,
+            "text": "Aliquot 50 \u03bcL of ACN 100% in each \u201czt\u201d tube.",
+            "reason": "ambiguous_text",
+            "detail": "source tube not specified"
+          },
+          {
+            "protocol_id": "protocolsio:5087",
+            "step_idx": 4,
+            "text": "Load a uniform amount of sample protein in each lane.",
+            "reason": "ambiguous_text",
+            "detail": "load amount unspecified"
+          },
+          {
+            "protocol_id": "protocolsio:5969",
+            "step_idx": 1,
+            "text": "Oligonucleotides used for molecular biology will be called dNTP (deoxyribonucleotide triphosphate) set. Most commonly companies distribute the aliquotted 100mM ",
+            "reason": "ambiguous_text",
+            "detail": "Info only, no action"
+          }
+        ]
+      },
+      {
+        "capability": "incubate_slides",
+        "count": 3,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:20811",
+          "protocolsio:20832"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20811",
+            "step_idx": 13,
+            "text": "Incubate slides with labeled HRP polymer for 00:30:00 .",
+            "reason": "ambiguous_text",
+            "detail": "Missing HRP polymer volume"
+          },
+          {
+            "protocol_id": "protocolsio:20832",
+            "step_idx": 9,
+            "text": "Incubate slides with Ultra V Block for 00:05:00 .",
+            "reason": "ambiguous_text",
+            "detail": "Missing Ultra V Block volume"
+          },
+          {
+            "protocol_id": "protocolsio:20832",
+            "step_idx": 13,
+            "text": "Incubate slides with labeled HRP polymer for 00:30:00 .",
+            "reason": "ambiguous_text",
+            "detail": "Missing HRP polymer volume"
+          }
+        ]
+      },
+      {
+        "capability": "plate_cells",
+        "count": 3,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:1537",
+          "protocolsio:36027",
+          "protocolsio:61793"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:1537",
+            "step_idx": 1,
+            "text": "Have everything ready to perform plaque assay: a. Plating cells, aliquoted, and set aside. b. Bottom plates labeled (24 + plates). c. Top agar aliquoted and tem",
+            "reason": "ambiguous_text",
+            "detail": "multi-prep vague no volumes"
+          },
+          {
+            "protocol_id": "protocolsio:36027",
+            "step_idx": 9,
+            "text": "Re-suspend pellet in appropriate amount of 80% BME2 ( 200 \u00b5L per well of a 6 well plate). Start by re-suspending pellet in a small volume to break down, then ad",
+            "reason": "ambiguous_text",
+            "detail": "total BME2 volume not specified"
+          },
+          {
+            "protocol_id": "protocolsio:61793",
+            "step_idx": 9,
+            "text": "Plate cells",
+            "reason": "ambiguous_text",
+            "detail": "No volume density specified"
+          }
+        ]
+      },
+      {
+        "capability": "coat",
+        "count": 2,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:41618",
+          "protocolsio:68814"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:41618",
+            "step_idx": 3,
+            "text": "- All patient specimens and positive controls should be considered potentially infectious and handled with appropriate caution. Refer to Interim Laboratory Bios",
+            "reason": "ambiguous_text",
+            "detail": "General biosafety precautions no amounts"
+          },
+          {
+            "protocol_id": "protocolsio:68814",
+            "step_idx": 4,
+            "text": "Pre-coat a wide orifice 1 ml pipette tip (Finntip 1000, Thermo Fisher, 9405160) using FBS-containing basal media media and use this tip to gently scrape off the",
+            "reason": "ambiguous_text",
+            "detail": "scrape domes no skill"
+          }
+        ]
+      },
+      {
+        "capability": "count_cells",
+        "count": 2,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:37443",
+          "protocolsio:61793"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:37443",
+            "step_idx": 8,
+            "text": "If a cell count is not required, proceed to Step 9. To take a cell count, aliquot 100 \u00b5L of cell suspension and count using your preferred method.",
+            "reason": "ambiguous_text",
+            "detail": "count method unspecified"
+          },
+          {
+            "protocol_id": "protocolsio:61793",
+            "step_idx": 8,
+            "text": "Count cells and adjust media volume for required cell density",
+            "reason": "ambiguous_text",
+            "detail": "no counting skill target density"
+          }
+        ]
+      },
+      {
+        "capability": "digest",
+        "count": 2,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:20446",
+          "protocolsio:37443"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20446",
+            "step_idx": 5,
+            "text": "Incubate at 37 \u00b0C for 00:10:00 to achieve single cells. Individual donor lines exhibit variable sensitivity to accutase-mediated dissociation. Monitor cells reg",
+            "reason": "ambiguous_text",
+            "detail": "Variable endpoint monitoring required"
+          },
+          {
+            "protocol_id": "protocolsio:37443",
+            "step_idx": 3,
+            "text": "Add sufficient TrypLE Express Enzyme to cover the bottom of the flask (see Table 1, column C for recommended volume). Rock the flask to allow the TrypLE to cove",
+            "reason": "ambiguous_text",
+            "detail": "TrypLE volume in table"
+          }
+        ]
+      },
+      {
+        "capability": "discard",
+        "count": 2,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:35709",
+          "protocolsio:68814"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:35709",
+            "step_idx": 12,
+            "text": "Shutdown: ACN100% (II) Pipette the acetonitrile from the ACN100% (II) 10 times, discarding in the \u201czt\u201d tube.",
+            "reason": "ambiguous_text",
+            "detail": "no transfer volume specified"
+          },
+          {
+            "protocol_id": "protocolsio:68814",
+            "step_idx": 7,
+            "text": "Carefully remove supernatant as much as possible using a 1 ml pipette and then remove remaining media using a 200uL tip if necessary; do not use glass Pasteur p",
+            "reason": "ambiguous_text",
+            "detail": "as much as possible"
+          }
+        ]
+      },
+      {
+        "capability": "fix",
+        "count": 2,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:58456",
+          "protocolsio:9264"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:58456",
+            "step_idx": 16,
+            "text": "Repeat steps 11 through 15 for five more Hydra. When you are done, place the lid on your 24-well plate and give it to your instructor. Turn your microscope off ",
+            "reason": "ambiguous_text",
+            "detail": "repeat plus discussion questions"
+          },
+          {
+            "protocol_id": "protocolsio:9264",
+            "step_idx": 1,
+            "text": "Collect eggs in the preblastoderm stage of development and mounte to a glass microscope slide by placing them on a small strip of Tegaderm\u00ae transparent film, wh",
+            "reason": "ambiguous_text",
+            "detail": "egg mount lacks skill"
+          }
+        ]
+      },
+      {
+        "capability": "freeze",
+        "count": 2,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:20446",
+          "protocolsio:9549"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20446",
+            "step_idx": 11,
+            "text": "Freeze down the remaining cells by adding an equal volume of 2x iPSC Freezing Media (20% DMSO in FBS).",
+            "reason": "ambiguous_text",
+            "detail": "remaining volume unknown"
+          },
+          {
+            "protocol_id": "protocolsio:9549",
+            "step_idx": 1,
+            "text": "Blood samples were collected from the radiotherapy treated cancer patients in PAXGene tubes according to the manufacturer&#39;s protocol (Qiagen, PreAnalytiX Gm",
+            "reason": "ambiguous_text",
+            "detail": "Blood collection RNA extraction unmodeled"
+          }
+        ]
+      },
+      {
+        "capability": "autoclave",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:857"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:857",
+            "step_idx": 1,
+            "text": "Poke the plaque in the agarose with the tip of an autoclaved Pasteur pipette to core it out drawing agarose chunks into the pipette I would pick a few (2-4?) pl",
+            "reason": "ambiguous_text",
+            "detail": "coring agarose unavailable in vocabulary"
+          }
+        ]
+      },
+      {
+        "capability": "dehydrate_slides",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:20811"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20811",
+            "step_idx": 21,
+            "text": "Dehydrate slides in graded ethanol and Neo-Clear.",
+            "reason": "ambiguous_text",
+            "detail": "No dehydration skill"
+          }
+        ]
+      },
+      {
+        "capability": "dissolve",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "bioprot:1779"
+        ],
+        "examples": [
+          {
+            "protocol_id": "bioprot:1779",
+            "step_idx": 1,
+            "text": "Dissolve 0.75 g CTAB in ~ 20 mL MilliQ water",
+            "reason": "ambiguous_text",
+            "detail": "approx water volume vague"
+          }
+        ]
+      },
+      {
+        "capability": "flush_instrument",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:41548"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:41548",
+            "step_idx": 10,
+            "text": "After each sample processing: \u2022After a positive test a 1.5 \u00b5L of blank buffer is placed into the instrument tube holder and is run as a blank test with the same",
+            "reason": "ambiguous_text",
+            "detail": "Blank flush requires virus detector"
+          }
+        ]
+      },
+      {
+        "capability": "harvest",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:57743"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:57743",
+            "step_idx": 5,
+            "text": "Pipette repeatedly with 5 ml pipette to lift colonies, careful not to carry over too many MEFs.",
+            "reason": "ambiguous_text",
+            "detail": "pipette repeatedly, avoid MEFs"
+          }
+        ]
+      },
+      {
+        "capability": "homogenize",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:35709"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:35709",
+            "step_idx": 9,
+            "text": "1. Binding of pepitides (analyte): sample tube Homogenize the sample with ZipTip 20 times",
+            "reason": "ambiguous_text",
+            "detail": "no sample volume specified"
+          }
+        ]
+      },
+      {
+        "capability": "inoculate_cells",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:857"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:857",
+            "step_idx": 2,
+            "text": "Inoculate 2-5 ml dense cells (whatever is available) with the cyanophage plaque by pipetting up and down a few times",
+            "reason": "ambiguous_text",
+            "detail": "volume range 2-5 ml"
+          }
+        ]
+      },
+      {
+        "capability": "measure_absorbance",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:4566"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:4566",
+            "step_idx": 15,
+            "text": "Measure the growth by determinating OD450. Compare the data from the three triplicates, and exclude any deviations",
+            "reason": "ambiguous_text",
+            "detail": "Measure OD450 exclude deviations"
+          }
+        ]
+      },
+      {
+        "capability": "mount",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:20832"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20832",
+            "step_idx": 22,
+            "text": "Mount coverslip in each of the slide using Pertex as a mounting media.",
+            "reason": "ambiguous_text",
+            "detail": "Missing Pertex volume coverslip"
+          }
+        ]
+      },
+      {
+        "capability": "pick_colony",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:27969"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:27969",
+            "step_idx": 2,
+            "text": "Pick a colony from this plate and use it to inoculate 10 mL of LB. Incubate this culture at 37 \u00b0C until OD reaches 2-3. Overnight culture is recommended.",
+            "reason": "ambiguous_text",
+            "detail": "colony pick lacks method"
+          }
+        ]
+      },
+      {
+        "capability": "pour",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:8175"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:8175",
+            "step_idx": 7,
+            "text": "Make overlay - Swirl vigorously but briefly to mix the bacteria and molten top agar and spread it across the plate.",
+            "reason": "ambiguous_text",
+            "detail": "Swirl time undefined"
+          }
+        ]
+      },
+      {
+        "capability": "run_ivds_scan",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:41548"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:41548",
+            "step_idx": 7,
+            "text": "\u2022Instrument saturates for 00:00:30 to 00:01:00 and then initiated for instrument scan (testing).Test is 1 scan of 1.5 minutes and sample is processed at 40nl pe",
+            "reason": "ambiguous_text",
+            "detail": "IVDS saturate and scan operation"
+          }
+        ]
+      },
+      {
+        "capability": "settle_cells",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:57743"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:57743",
+            "step_idx": 8,
+            "text": "Gravity precipitate cells 5- 10 min.",
+            "reason": "ambiguous_text",
+            "detail": "gravity settle 5-10 min"
+          }
+        ]
+      },
+      {
+        "capability": "setup_esi_detector",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:41548"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:41548",
+            "step_idx": 9,
+            "text": "Instrument setup: \u2022Air is set to 4psi \u2022CO2and Air flow are set to 2.5 and 1.5 lpm respectively. \u2022nA is typically set to -300nA and the kV is typically set to 2.",
+            "reason": "ambiguous_text",
+            "detail": "ESI DMA CPC setup unmodeled"
+          }
+        ]
+      },
+      {
+        "capability": "shake",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:117746"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:117746",
+            "step_idx": 3,
+            "text": "Read the volumes specified on the Micropipetting Practice Card and use your micropipette to add the correct amount of liquid to each circle. 1. Try to be precis",
+            "reason": "ambiguous_text",
+            "detail": "card volumes not specified here"
+          }
+        ]
+      },
+      {
+        "capability": "soak",
+        "count": 1,
+        "proposed": false,
+        "protocols": [
+          "protocolsio:20832"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:20832",
+            "step_idx": 26,
+            "text": "Distilled water: : incubate slides in distilled water or until antigen retrieval step.",
+            "reason": "ambiguous_text",
+            "detail": "no time specified"
+          }
+        ]
+      },
+      {
+        "capability": "streak_plate",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:27969"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:27969",
+            "step_idx": 1,
+            "text": "Streak LB plate with E. coli (strain should susceptible to phage lambda. Strains that include a prophage lambda are likely to be resistant. Strains LE392 and DH",
+            "reason": "ambiguous_text",
+            "detail": "streaking not in vocabulary"
+          }
+        ]
+      },
+      {
+        "capability": "transfer_specimen",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:58456"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:58456",
+            "step_idx": 15,
+            "text": "You should not have a head-end and a foot-end. Transfer both into separate wells of your 24-well plate. Record which well the head and foot ends were placed in.",
+            "reason": "ambiguous_text",
+            "detail": "wells unspecified for ends"
+          }
+        ]
+      },
+      {
+        "capability": "upload_data",
+        "count": 1,
+        "proposed": true,
+        "protocols": [
+          "protocolsio:31557"
+        ],
+        "examples": [
+          {
+            "protocol_id": "protocolsio:31557",
+            "step_idx": 17,
+            "text": "Upload data to the appropriate space on the Open Science Framework and move onto the next pipette.",
+            "reason": "ambiguous_text",
+            "detail": "No OSF upload skill"
+          }
+        ]
+      }
+    ]
+  },
+  "evolve_candidates": [
+    {
+      "capability": "centrifuge",
+      "count": 20,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:14824",
+        "protocolsio:1537",
+        "protocolsio:21173",
+        "protocolsio:21740",
+        "protocolsio:27826",
+        "protocolsio:32907",
+        "protocolsio:36027",
+        "protocolsio:3701",
+        "protocolsio:37443",
+        "protocolsio:41548",
+        "protocolsio:61793",
+        "protocolsio:68814"
+      ],
+      "reasons": [
+        "missing_skill",
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 5,
+          "text": "Centrifuge M-tube for 1min at 2000_xg_ at 4\u00b0C to collect everything and transfer to eppendorf tube on ice.",
+          "reason": "not_implemented",
+          "detail": "Spin then transfer to tube"
+        },
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 6,
+          "text": "Centrifuge eppendorf tubes for 20min at 12,000 rpm at 4\u00b0C (tabletop centrifuge).",
+          "reason": "not_implemented",
+          "detail": "Spin 20min cold high speed"
+        },
+        {
+          "protocol_id": "protocolsio:1537",
+          "step_idx": 8,
+          "text": "Pellet host for 5 min at ca. 16,000g and 4\u00b0C; note the time. 00:05:00",
+          "reason": "not_implemented",
+          "detail": "5 min 16000g 4C"
+        }
+      ]
+    },
+    {
+      "capability": "dilute",
+      "count": 11,
+      "proposed": false,
+      "protocols": [
+        "bioprot:1778",
+        "bioprot:1779",
+        "bioprot:1780",
+        "protocolsio:1537",
+        "protocolsio:20832",
+        "protocolsio:21740",
+        "protocolsio:2343",
+        "protocolsio:32907",
+        "protocolsio:5969",
+        "protocolsio:68814",
+        "protocolsio:9264"
+      ],
+      "reasons": [
+        "missing_skill",
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "bioprot:1778",
+          "step_idx": 4,
+          "text": "Make up to a final volume of 500 mL with MilliQ water",
+          "reason": "not_implemented",
+          "detail": "bring to final volume"
+        },
+        {
+          "protocol_id": "bioprot:1779",
+          "step_idx": 4,
+          "text": "Make up to a final volume of 50 mL with MilliQ water",
+          "reason": "not_implemented",
+          "detail": "bring to final volume"
+        },
+        {
+          "protocol_id": "bioprot:1780",
+          "step_idx": 3,
+          "text": "Make up to 50 mL with MilliQ water",
+          "reason": "not_implemented",
+          "detail": "bring volume to 50 mL"
+        }
+      ]
+    },
+    {
+      "capability": "image",
+      "count": 9,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:14824",
+        "protocolsio:5087",
+        "protocolsio:58456"
+      ],
+      "reasons": [
+        "missing_asset",
+        "missing_skill",
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 18,
+          "text": "Image blot on Chemidoc for total protein image.",
+          "reason": "not_implemented",
+          "detail": "Image membrane total protein"
+        },
+        {
+          "protocol_id": "protocolsio:5087",
+          "step_idx": 8,
+          "text": "Image membrane with an Odyssey imaging system (Classic, CLx or Fc) in the 700 and 800 nm channels. Adjust settings so that no saturation appears in the bands to",
+          "reason": "missing_asset",
+          "detail": "Odyssey imager unavailable"
+        },
+        {
+          "protocol_id": "protocolsio:5087",
+          "step_idx": 9,
+          "text": "Select and view the 700 nm channel image only. Use Image Studio\u2122 Software (for a free version, download Image Studio Lite) to quantify the fluorescent signals o",
+          "reason": "missing_skill",
+          "detail": "software image analysis step"
+        }
+      ]
+    },
+    {
+      "capability": "aliquot",
+      "count": 5,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:1495",
+        "protocolsio:1537",
+        "protocolsio:21740",
+        "protocolsio:32907",
+        "protocolsio:58456"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:1495",
+          "step_idx": 1,
+          "text": "Prepare 9 tubes (numbered #1\u2013#9) with 4.5 mL medium.",
+          "reason": "not_implemented",
+          "detail": "9 tubes 4.5 mL medium"
+        },
+        {
+          "protocol_id": "protocolsio:1537",
+          "step_idx": 9,
+          "text": "Carefully remove a small aliquot (50 \u00b5L) of the supernatant to a new tube and keep cold for plaque assay; note time.",
+          "reason": "not_implemented",
+          "detail": "aliquot 50uL supernatant cold"
+        },
+        {
+          "protocol_id": "protocolsio:21740",
+          "step_idx": 5,
+          "text": "Add 100 \u03bcl of 1X PBS\u200b into wells A2, B2, C2, D2....A12, B12, C12, D12",
+          "reason": "not_implemented",
+          "detail": "add PBS to wells 2-12"
+        }
+      ]
+    },
+    {
+      "capability": "heat",
+      "count": 5,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:20811",
+        "protocolsio:20832",
+        "protocolsio:8175"
+      ],
+      "reasons": [
+        "missing_asset"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:20811",
+          "step_idx": 5,
+          "text": "Heat the slides immersed in retrieval buffer for 00:04:00 at 125 \u00b0C in a pressure boiler.",
+          "reason": "missing_asset",
+          "detail": "needs pressure boiler"
+        },
+        {
+          "protocol_id": "protocolsio:20811",
+          "step_idx": 6,
+          "text": "After completed boiling, leave the slides in the pressure boiler and let them cool down till 90 \u00b0C . Total time 00:45:00",
+          "reason": "missing_asset",
+          "detail": "needs pressure boiler cooling"
+        },
+        {
+          "protocol_id": "protocolsio:20832",
+          "step_idx": 5,
+          "text": "Heat the slides immersed in retrieval buffer for 00:04:00 at 125 \u00b0C in a pressure boiler (Decloaking chamber model DC2008INTL).",
+          "reason": "missing_asset",
+          "detail": "needs pressure boiler chamber"
+        }
+      ]
+    },
+    {
+      "capability": "ph_adjust",
+      "count": 5,
+      "proposed": false,
+      "protocols": [
+        "bioprot:1780",
+        "protocolsio:31557",
+        "protocolsio:32907",
+        "protocolsio:35709"
+      ],
+      "reasons": [
+        "missing_skill",
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "bioprot:1780",
+          "step_idx": 2,
+          "text": "Adjust pH to 5.2 with glacial acetic acid",
+          "reason": "not_implemented",
+          "detail": "adjust pH to 5.2"
+        },
+        {
+          "protocol_id": "protocolsio:32907",
+          "step_idx": 18,
+          "text": "Measure the fluorescence of all samples in your plate reader . Ensure that any automatic gain setting is off (if your instrument has one). If you will be using ",
+          "reason": "not_implemented",
+          "detail": "measure red fluorescence plate"
+        },
+        {
+          "protocol_id": "protocolsio:31557",
+          "step_idx": 4,
+          "text": "Set the volume of the pipette as shown in Step 4.1 to the appropriate volume for the measurement. It is best to &#34;dial down&#34; to the desired volume, so yo",
+          "reason": "missing_skill",
+          "detail": "No pipette volume setting"
+        }
+      ]
+    },
+    {
+      "capability": "vortex",
+      "count": 5,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:1537",
+        "protocolsio:21173",
+        "protocolsio:3701",
+        "protocolsio:41548",
+        "protocolsio:4566"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:1537",
+          "step_idx": 7,
+          "text": "Vortex to mix.",
+          "reason": "not_implemented",
+          "detail": "mix tube"
+        },
+        {
+          "protocol_id": "protocolsio:21173",
+          "step_idx": 3,
+          "text": "Add 0.9 ml of 100% methanol to the sample and mix thoroughly by vortexing.",
+          "reason": "not_implemented",
+          "detail": "add methanol vortex mix"
+        },
+        {
+          "protocol_id": "protocolsio:3701",
+          "step_idx": 3,
+          "text": "Add 0.9 ml of 100% methanol to the sample and mix thoroughly by vortexing.",
+          "reason": "not_implemented",
+          "detail": "add methanol vortex mix"
+        }
+      ]
+    },
+    {
+      "capability": "dry",
+      "count": 3,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:14824",
+        "protocolsio:1495",
+        "protocolsio:4566"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 26,
+          "text": "Let excess ECL solution drip off on Kimwipe.",
+          "reason": "not_implemented",
+          "detail": "Remove excess ECL solution"
+        },
+        {
+          "protocol_id": "protocolsio:1495",
+          "step_idx": 12,
+          "text": "Put on the lid and seal tightly with plastic tape to avoid drying.",
+          "reason": "not_implemented",
+          "detail": "seal lid with tape"
+        },
+        {
+          "protocol_id": "protocolsio:4566",
+          "step_idx": 13,
+          "text": "Cover the plates with film, make sure to create a tight seal to prevent any evaporation.",
+          "reason": "not_implemented",
+          "detail": "Seal plate prevent evaporation"
+        }
+      ]
+    },
+    {
+      "capability": "fix",
+      "count": 3,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:41618",
+        "protocolsio:58456"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:41618",
+          "step_idx": 9,
+          "text": "Note: The fixed-volume transfer pipette is designed to collect an excess of liquid sample and dispense the correct volume of liquid sample into the reaction tub",
+          "reason": "missing_skill",
+          "detail": "discard pipette no skill"
+        },
+        {
+          "protocol_id": "protocolsio:58456",
+          "step_idx": 1,
+          "text": "In this activity you will become familiar with the anatomy of Hydra including areas of the body, cell layers, and nematocysts, while practicing the new vocabula",
+          "reason": "missing_skill",
+          "detail": "Microscope setup no matching skill"
+        },
+        {
+          "protocol_id": "protocolsio:58456",
+          "step_idx": 6,
+          "text": "Anyone who examines a large number of Hydra in a dish can clearly see that they do not all have the same number of tentacles. You may wonder, does each animal h",
+          "reason": "missing_skill",
+          "detail": "Dissection microscopy objectives no skill"
+        }
+      ]
+    },
+    {
+      "capability": "freeze",
+      "count": 3,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:14824",
+        "protocolsio:5969",
+        "protocolsio:8175"
+      ],
+      "reasons": [
+        "missing_skill",
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 8,
+          "text": "Store samples in -80.",
+          "reason": "missing_skill",
+          "detail": "Minus eighty storage unavailable"
+        },
+        {
+          "protocol_id": "protocolsio:8175",
+          "step_idx": 8,
+          "text": "Streak viruses - from the source plate directly into the still-molten top agar (link to demonstration Video 1 is here) such that when the host lawn forms it wil",
+          "reason": "missing_skill",
+          "detail": "Toothpick streaking unavailable"
+        },
+        {
+          "protocol_id": "protocolsio:5969",
+          "step_idx": 2,
+          "text": "Equal proportions of dNTP volume are mixed to make up the stock solution. The concentration of 100 mM is maintained. I recommend that you use a volume of 50uL e",
+          "reason": "not_implemented",
+          "detail": "Mix equal dNTP volumes"
+        }
+      ]
+    },
+    {
+      "capability": "mount",
+      "count": 3,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:20811",
+        "protocolsio:58456",
+        "protocolsio:9264"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:20811",
+          "step_idx": 22,
+          "text": "Mount coverslip in each of the slide.",
+          "reason": "missing_skill",
+          "detail": "No coverslip mounting skill"
+        },
+        {
+          "protocol_id": "protocolsio:58456",
+          "step_idx": 2,
+          "text": "Basic Hydra anatomy Examine the whole mount Hydra slides with the 4X objective. Adjust the distance between the oculars and focus on the specimen if necessary. ",
+          "reason": "missing_skill",
+          "detail": "Compound microscopy sketching unavailable"
+        },
+        {
+          "protocol_id": "protocolsio:9264",
+          "step_idx": 4,
+          "text": "Micro-injection process performed using needles mounted in an MPH3 needle-holder (World Precision Instruments, Sarasota, FL) connected to a Picopump (World Prec",
+          "reason": "missing_skill",
+          "detail": "microinjection not supported"
+        }
+      ]
+    },
+    {
+      "capability": "wash",
+      "count": 3,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:14824",
+        "protocolsio:36027"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 22,
+          "text": "Wash 5 time for 5 minutes with TBS-T.",
+          "reason": "not_implemented",
+          "detail": "Wash 5x 5 min"
+        },
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 24,
+          "text": "Wash 5 time for 5 minutes with TBS-T.",
+          "reason": "not_implemented",
+          "detail": "Wash 5x 5 min"
+        },
+        {
+          "protocol_id": "protocolsio:36027",
+          "step_idx": 4,
+          "text": "Wash wells with TrypLE (approx 1 mL per well of a 6 well plate) to collect any remaining organoids and add to the collection tube.",
+          "reason": "not_implemented",
+          "detail": "Wash wells TrypLE collect organoids"
+        }
+      ]
+    },
+    {
+      "capability": "cool",
+      "count": 2,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:61801"
+      ],
+      "reasons": [
+        "missing_asset",
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:61801",
+          "step_idx": 1,
+          "text": "Fill ice pan with ice chips.",
+          "reason": "missing_asset",
+          "detail": "ice pan filling not supported"
+        },
+        {
+          "protocol_id": "protocolsio:61801",
+          "step_idx": 2,
+          "text": "Defrost 4uL randomized/normalized sample plate from the &#34;EPMotion - Normalization and Randomization&#34; protocol On ice",
+          "reason": "not_implemented",
+          "detail": "thaw plate on ice"
+        }
+      ]
+    },
+    {
+      "capability": "dissolve",
+      "count": 2,
+      "proposed": false,
+      "protocols": [
+        "bioprot:1778",
+        "bioprot:1780"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "bioprot:1778",
+          "step_idx": 5,
+          "text": "Dissolve SDS in DNA Buffer to a final concentration of 1% (w/v). e.g., 5 g SDS in 500 mL of DNA Buffer.",
+          "reason": "not_implemented",
+          "detail": "weigh SDS for buffer"
+        },
+        {
+          "protocol_id": "bioprot:1780",
+          "step_idx": 1,
+          "text": "Dissolve 12.3 g of Sodium acetate (anhydrous) in ~ 40 mL MilliQ water.",
+          "reason": "not_implemented",
+          "detail": "weigh 12.3 g dissolve"
+        }
+      ]
+    },
+    {
+      "capability": "homogenize",
+      "count": 2,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:14824",
+        "protocolsio:35709"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 4,
+          "text": "Run program Protein_01 on the gentleMACS Dissociator (Miltenyi).",
+          "reason": "not_implemented",
+          "detail": "Dissociate with Protein_01 program"
+        },
+        {
+          "protocol_id": "protocolsio:35709",
+          "step_idx": 11,
+          "text": "1. Elution: ACN100% (II) Homogenize 20 times in the \u201czt\u201d tube, already with 50 \u03bcL of ACN100%",
+          "reason": "not_implemented",
+          "detail": "elution homogenize in zt"
+        }
+      ]
+    },
+    {
+      "capability": "label_tubes",
+      "count": 2,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:35709"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:35709",
+          "step_idx": 2,
+          "text": "Name 4 microtubes of 1.5 mL with the respective reagents: 1. ACN100% (I) 1. TFA0.1% (I) 1. TFA 0.1% (II) 1. ACN100% (II) Add 1 mL of the respective solutions to",
+          "reason": "missing_skill",
+          "detail": "labeling tubes not supported"
+        },
+        {
+          "protocol_id": "protocolsio:35709",
+          "step_idx": 3,
+          "text": "Name new 0.2 mL microtubes with sample names followed by \u201czt\u201d.",
+          "reason": "missing_skill",
+          "detail": "labeling tubes not supported"
+        }
+      ]
+    },
+    {
+      "capability": "measure_absorbance",
+      "count": 2,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:21173",
+        "protocolsio:3701"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:21173",
+          "step_idx": 6,
+          "text": "Transfer supernatant into a cuvette and measure the extinction at 665 nm. Use 90% methanol as the reference solution.",
+          "reason": "missing_skill",
+          "detail": "absorbance 665nm unavailable"
+        },
+        {
+          "protocol_id": "protocolsio:3701",
+          "step_idx": 6,
+          "text": "Transfer supernatant into a cuvette and measure the extinction at 665 nm. Use 90% methanol as the reference solution.",
+          "reason": "missing_skill",
+          "detail": "absorbance 665nm unavailable"
+        }
+      ]
+    },
+    {
+      "capability": "measure_temperature",
+      "count": 2,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:31557"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:31557",
+          "step_idx": 2,
+          "text": "Measure and record the temperature of the water.",
+          "reason": "missing_skill",
+          "detail": "No temperature measurement skill"
+        },
+        {
+          "protocol_id": "protocolsio:31557",
+          "step_idx": 14,
+          "text": "Measure the temperature of the water to ensure it has not changed significantly during the measurements.",
+          "reason": "missing_skill",
+          "detail": "measure water temperature"
+        }
+      ]
+    },
+    {
+      "capability": "pool_wells",
+      "count": 2,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:15461"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:15461",
+          "step_idx": 6,
+          "text": "Manually combine the multiple wells of the pool into one single DNA lo-bind tube. Mix.",
+          "reason": "not_implemented",
+          "detail": "Combine wells to tube"
+        },
+        {
+          "protocol_id": "protocolsio:15461",
+          "step_idx": 8,
+          "text": "Manually combine the multiple wells of the pool into one single DNA lo-bind tube. Mix.",
+          "reason": "not_implemented",
+          "detail": "Combine wells to tube"
+        }
+      ]
+    },
+    {
+      "capability": "shake",
+      "count": 2,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:14824",
+        "protocolsio:41548"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 14,
+          "text": "Activate PVDF membrane for 1 minute in 100% methanol, wash 3X with water and then soak in transfer buffer on shaker. Immerse the blotting paper and sponge pads ",
+          "reason": "not_implemented",
+          "detail": "methanol activate wash membrane"
+        },
+        {
+          "protocol_id": "protocolsio:41548",
+          "step_idx": 4,
+          "text": "\u2022Sample is then agitated for 00:00:05 to 00:00:15 to mix. even mix,",
+          "reason": "not_implemented",
+          "detail": "agitate 5 to 15 seconds"
+        }
+      ]
+    },
+    {
+      "capability": "stain",
+      "count": 2,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:14824",
+        "protocolsio:6534"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 12,
+          "text": "Image stainfree gel(s) with chemidoc system after running.",
+          "reason": "not_implemented",
+          "detail": "image stainfree gel chemidoc"
+        },
+        {
+          "protocol_id": "protocolsio:6534",
+          "step_idx": 3,
+          "text": "For each dilution of each sample, perform three qPCR replicates (on a Viia7 Real-Time PCR system (Thermo Fisher Scientific)) : total volume of 25\u00b5l including 1X",
+          "reason": "not_implemented",
+          "detail": "qPCR triplicates thermocycling run"
+        }
+      ]
+    },
+    {
+      "capability": "stir",
+      "count": 2,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:14824",
+        "protocolsio:8175"
+      ],
+      "reasons": [
+        "missing_asset",
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 15,
+          "text": "Prepare transfer sandwich. Place white side down, place sponge, place a blotting paper, membrane, gel, blotting paper, sponge and close sandwich. Try to roll ou",
+          "reason": "missing_skill",
+          "detail": "transfer sandwich assembly unavailable"
+        },
+        {
+          "protocol_id": "protocolsio:8175",
+          "step_idx": 3,
+          "text": "Equilibrate the top agar to 50-52\u00b0C: Place the beaker-waterbath with the top agar onto a hot plate with stirring, place a thermometer into the beaker-waterbath ",
+          "reason": "missing_asset",
+          "detail": "Hot plate equilibration unavailable"
+        }
+      ]
+    },
+    {
+      "capability": "weigh",
+      "count": 2,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:14824",
+        "protocolsio:31557"
+      ],
+      "reasons": [
+        "missing_skill",
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 11,
+          "text": "Load molecular markers and denatured samples. Connect gel box to power pack. Ensure negative is connected to negative supply of pack (black to black &amp; red t",
+          "reason": "missing_skill",
+          "detail": "gel electrophoresis unavailable"
+        },
+        {
+          "protocol_id": "protocolsio:31557",
+          "step_idx": 12,
+          "text": "Record the mass of the water.",
+          "reason": "not_implemented",
+          "detail": "weigh dispensed water mass"
+        }
+      ]
+    },
+    {
+      "capability": "attach_pipette_tip",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:31557"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:31557",
+          "step_idx": 5,
+          "text": "Put tip onto pipette by taking micropipette, placing the shaft into the desired tip and pushing while twisting slightly. You do not need to hammer or slam the m",
+          "reason": "not_implemented",
+          "detail": "Attach tip to pipette"
+        }
+      ]
+    },
+    {
+      "capability": "autoclave",
+      "count": 1,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:31494"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:31494",
+          "step_idx": 5,
+          "text": "Prepare Agar medium solution. Per 1 L use: 2.2 g Murashi Skoog nutrients 1 g MES buffer adjust pH with KOH to 5.8 After adjusting pH add 10 g of Dashin Agar Aut",
+          "reason": "not_implemented",
+          "detail": "Weigh nutrients buffer agar"
+        }
+      ]
+    },
+    {
+      "capability": "control_pipette_plunger",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:31557"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:31557",
+          "step_idx": 6,
+          "text": "Depress the plunger on the micropipette to the first stop. It is worth taking time to familiarize your self with the micropipette plunger positions if you have ",
+          "reason": "missing_skill",
+          "detail": "No plunger position control"
+        }
+      ]
+    },
+    {
+      "capability": "count_tentacles",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:58456"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:58456",
+          "step_idx": 12,
+          "text": "Count the number of tentacles that the Hydra has and record it in your lab notebook. Since you are going to dissect six Hydra you may want to set up a table to ",
+          "reason": "missing_skill",
+          "detail": "count tentacles manual observation"
+        }
+      ]
+    },
+    {
+      "capability": "cut_blotting_paper",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:14824"
+      ],
+      "reasons": [
+        "missing_asset"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 13,
+          "text": "For each gel to transfer, you need PVDF membrane (0.20um) and 2 pieces of blotting paper cut to the size of the gel (0.5cm bigger on each side).",
+          "reason": "missing_asset",
+          "detail": "PVDF membrane paper unavailable"
+        }
+      ]
+    },
+    {
+      "capability": "detect_western_blot",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:5087"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:5087",
+          "step_idx": 7,
+          "text": "Perform near-infrared Western blot detection according to the Near-Infrared Western Blot Detection Protocol LI-COR NIRWesternProtocol with PVDF Membrane LI-COR ",
+          "reason": "missing_skill",
+          "detail": "NIR detection unavailable"
+        }
+      ]
+    },
+    {
+      "capability": "disassemble_transfer_case",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:14824"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 17,
+          "text": "Take down transfer case. Ladders should have transferred to membrane. Mark position of ladders with pen. Always keep protein side up.",
+          "reason": "missing_skill",
+          "detail": "No transfer case disassembly skill"
+        }
+      ]
+    },
+    {
+      "capability": "discard",
+      "count": 1,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:41618"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:41618",
+          "step_idx": 10,
+          "text": "Screw the cap back onto the vial of test buffer. Discard this in the biohazardous waste.",
+          "reason": "missing_skill",
+          "detail": "cap vial then discard"
+        }
+      ]
+    },
+    {
+      "capability": "dissect_specimen",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:58456"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:58456",
+          "step_idx": 13,
+          "text": "Use your scalpel to cut the Hydra transversely (horizontally) in two. This is called a mid-gastric bisection. Try to cut it right above the budding zone. In som",
+          "reason": "missing_skill",
+          "detail": "scalpel bisection unmodeled manual"
+        }
+      ]
+    },
+    {
+      "capability": "fit_ziptip",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:35709"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:35709",
+          "step_idx": 7,
+          "text": "Fit the ZipTip with the pipette already attached, so as not to pass air through the &#34;chromatographic column&#34;. Hold down until you start the procedure wi",
+          "reason": "not_implemented",
+          "detail": "fit ZipTip to pipette"
+        }
+      ]
+    },
+    {
+      "capability": "label_plate",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:58456"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:58456",
+          "step_idx": 9,
+          "text": "Put a piece of labeling tape on the lid of your 24-well plate. Use a permanent marker to label it with your name and date.",
+          "reason": "missing_skill",
+          "detail": "labeling plate needs manual writing"
+        }
+      ]
+    },
+    {
+      "capability": "ligate_dna",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:27826"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:27826",
+          "step_idx": 8,
+          "text": "Mix DNA by flicking and quantify 1 \u00b5L using the Qubit DNA HS kit to confirm DNA recovery and then set up the following Ligation reaction: 1. 33.5 \u00b5L DNA sample ",
+          "reason": "not_implemented",
+          "detail": "ligation reaction setup"
+        }
+      ]
+    },
+    {
+      "capability": "lyse",
+      "count": 1,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:1495"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:1495",
+          "step_idx": 15,
+          "text": "Mark wells where lysis is observed and continue the incubation with daily inspections until no more lysis occurs.",
+          "reason": "missing_skill",
+          "detail": "marking wells unsupported"
+        }
+      ]
+    },
+    {
+      "capability": "measure_fluorescence",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:21740"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:21740",
+          "step_idx": 19,
+          "text": "Measure fluorescence of all samples in instrument",
+          "reason": "not_implemented",
+          "detail": "measure all samples fluorescence"
+        }
+      ]
+    },
+    {
+      "capability": "measure_rna_quality",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:9549"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:9549",
+          "step_idx": 2,
+          "text": "RNA quantity was assessed by Nanodrop ND2000 using 1ul RNA (Nanodrop, Wilmington, USA). RNA quality was assessed by RIN values produced by Tapestation 2200 usin",
+          "reason": "missing_skill",
+          "detail": "Nanodrop Tapestation absent"
+        }
+      ]
+    },
+    {
+      "capability": "mix_cells_agar",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:27969"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:27969",
+          "step_idx": 3,
+          "text": "Mix 200 \u00b5L of cell culture with 3 mL of liquid soft LB agar ( 50 \u00b0C ).",
+          "reason": "not_implemented",
+          "detail": "mix cells with agar"
+        }
+      ]
+    },
+    {
+      "capability": "mix_solutions",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "bioprot:1778"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "bioprot:1778",
+          "step_idx": 3,
+          "text": "Mix 50 mL 4 M NaCl and 50 mL 0.5 M EDTA",
+          "reason": "not_implemented",
+          "detail": "mix two stock solutions"
+        }
+      ]
+    },
+    {
+      "capability": "operate_autostainer",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:20832"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:20832",
+          "step_idx": 17,
+          "text": "Transfer slides in the Autostainer XL. Autostainer XL (Leica biosystems, cat# Leica ST5010 Autostainer XL,",
+          "reason": "missing_skill",
+          "detail": "No autostainer slide handling"
+        }
+      ]
+    },
+    {
+      "capability": "passage",
+      "count": 1,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:23962"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:23962",
+          "step_idx": 5,
+          "text": "The TI was considered to have failed when the laryngoscope was removed from the oral cavity before completing the TI or when the procedure took \u2265 120 s. Time fr",
+          "reason": "missing_skill",
+          "detail": "Clinical trial measurement video review"
+        }
+      ]
+    },
+    {
+      "capability": "perform_qc_assays",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:61801"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:61801",
+          "step_idx": 8,
+          "text": "Perform on each library and record keep all QC for pooling steps 1. Nanodrop 1. Qubit (HS Assay) 1. Tapestation (D1000)",
+          "reason": "not_implemented",
+          "detail": "QC libraries fluorescence assays"
+        }
+      ]
+    },
+    {
+      "capability": "plate_cells",
+      "count": 1,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:57743"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:57743",
+          "step_idx": 17,
+          "text": "Mix well, distribute 2 ml to each MEFs wells. a. Use of 5 ml pipette to mix cell suspension is preferred as it has the widest bore size, but 10 ml can be used i",
+          "reason": "not_implemented",
+          "detail": "plate 2 ml per well"
+        }
+      ]
+    },
+    {
+      "capability": "pour",
+      "count": 1,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:1495"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:1495",
+          "step_idx": 5,
+          "text": "Pour vigorously growing algal host culture into the reservoir tray, fill the pipetter and add 150 \u03bcL culture to each well in lines 1\u20139 of a 96-well cell culture",
+          "reason": "not_implemented",
+          "detail": "150 uL culture to wells"
+        }
+      ]
+    },
+    {
+      "capability": "prepare_waterbath",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:8175"
+      ],
+      "reasons": [
+        "missing_asset"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:8175",
+          "step_idx": 1,
+          "text": "Prepare a beaker-waterbath: Place bottle of top agar into a glass beaker and add water to the beaker up to the level of the top agar in the bottle; for example,",
+          "reason": "missing_asset",
+          "detail": "Beaker waterbath setup unavailable"
+        }
+      ]
+    },
+    {
+      "capability": "quantify_dna",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:27826"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:27826",
+          "step_idx": 15,
+          "text": "Mix DNA by flicking and quantify 1 \u00b5L using the Qubit DNA HS kit to confirm DNA recovery.",
+          "reason": "not_implemented",
+          "detail": "Qubit quantify DNA recovery"
+        }
+      ]
+    },
+    {
+      "capability": "resuspend",
+      "count": 1,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:21740"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:21740",
+          "step_idx": 2,
+          "text": "Prepare 10x fluorescein stock solution (100 \u03bcM) by resuspending fluorescein in 1mL of 1X PBS It is important that the fluorescein is properly dissolved. To chec",
+          "reason": "not_implemented",
+          "detail": "make 100uM stock in PBS"
+        }
+      ]
+    },
+    {
+      "capability": "rinse",
+      "count": 1,
+      "proposed": false,
+      "protocols": [
+        "protocolsio:20832"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:20832",
+          "step_idx": 20,
+          "text": "Rinse slides in tap water for 00:05:00 .",
+          "reason": "missing_skill",
+          "detail": "No slide rinsing skill"
+        }
+      ]
+    },
+    {
+      "capability": "run_qpcr",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:9549"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:9549",
+          "step_idx": 6,
+          "text": "Multiplex quantitative RT-PCR Real-time PCR was performed using Rotor-Gene Q (Qiagen, Hilden, Germany). Cycling parameters were 2 min at 95\u00b0C, then 45 cycles of",
+          "reason": "not_implemented",
+          "detail": "qPCR cycling Rotor-Gene"
+        }
+      ]
+    },
+    {
+      "capability": "run_sds_page",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:5087"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:5087",
+          "step_idx": 5,
+          "text": "Separate protein by SDS-PAGE.",
+          "reason": "missing_skill",
+          "detail": "SDS-PAGE not in registry"
+        }
+      ]
+    },
+    {
+      "capability": "sequence_illumina",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:15461"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:15461",
+          "step_idx": 2,
+          "text": "Sequence pool on an Illumina iSeq, or a low-throughput sequencer.",
+          "reason": "missing_skill",
+          "detail": "Illumina sequencing not listed"
+        }
+      ]
+    },
+    {
+      "capability": "sequence_libraries",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:15461"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:15461",
+          "step_idx": 9,
+          "text": "Equimolar pool of libraries are ready to be sequenced on a high throughput sequencer like the Illumina HiSeq or NovaSeq.",
+          "reason": "missing_skill",
+          "detail": "Sequencing not in skill registry"
+        }
+      ]
+    },
+    {
+      "capability": "streak_plate",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:4566"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:4566",
+          "step_idx": 2,
+          "text": "Streak the bacteria onto agar plates without inhibitor.",
+          "reason": "missing_skill",
+          "detail": "No streaking skill available"
+        }
+      ]
+    },
+    {
+      "capability": "swirl_swab",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:41618"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:41618",
+          "step_idx": 7,
+          "text": "Sample preparation and set-up Remove the reaction tube from the foil pouch labelled \u201creaction tube.\u201d Place it in the smaller well of the sample prep block attac",
+          "reason": "not_implemented",
+          "detail": "Swirl swab five times"
+        }
+      ]
+    },
+    {
+      "capability": "synthesize_cdna",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:9549"
+      ],
+      "reasons": [
+        "not_implemented"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:9549",
+          "step_idx": 3,
+          "text": "Reverse transcriptase reactions were performed using High Capacity cDNA Reverse transcription kit (Applied Biosystems, FosterCity, CA, USA) according to the man",
+          "reason": "not_implemented",
+          "detail": "RT reaction cDNA synthesis"
+        }
+      ]
+    },
+    {
+      "capability": "transfer_proteins",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:14824"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 16,
+          "text": "Connect leads. Transfer at 100V for 90 minutes.",
+          "reason": "missing_skill",
+          "detail": "electrotransfer 100V unavailable"
+        }
+      ]
+    },
+    {
+      "capability": "transfer_to_membrane",
+      "count": 1,
+      "proposed": true,
+      "protocols": [
+        "protocolsio:5087"
+      ],
+      "reasons": [
+        "missing_skill"
+      ],
+      "examples": [
+        {
+          "protocol_id": "protocolsio:5087",
+          "step_idx": 6,
+          "text": "Transfer proteins to immobilizing membrane.",
+          "reason": "missing_skill",
+          "detail": "membrane transfer unavailable"
+        }
+      ]
+    }
+  ],
+  "suggested_keyword_fixes": [
+    {
+      "capability": "aliquot",
+      "remapped_steps": 5,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:1495",
+          "step_idx": 1,
+          "text": "Prepare 9 tubes (numbered #1\u2013#9) with 4.5 mL medium.",
+          "reason": "not_implemented",
+          "detail": "9 tubes 4.5 mL medium"
+        },
+        {
+          "protocol_id": "protocolsio:21740",
+          "step_idx": 5,
+          "text": "Add 100 \u03bcl of 1X PBS\u200b into wells A2, B2, C2, D2....A12, B12, C12, D12",
+          "reason": "not_implemented",
+          "detail": "add PBS to wells 2-12"
+        },
+        {
+          "protocol_id": "protocolsio:32907",
+          "step_idx": 4,
+          "text": "Add 100 \u03bcL of 1X PBS\u200b into wells A2, B2, C2, D2....A12, B12, C12, D12",
+          "reason": "not_implemented",
+          "detail": "add PBS to wells"
+        }
+      ]
+    },
+    {
+      "capability": "dilute",
+      "remapped_steps": 4,
+      "examples": [
+        {
+          "protocol_id": "bioprot:1778",
+          "step_idx": 4,
+          "text": "Make up to a final volume of 500 mL with MilliQ water",
+          "reason": "not_implemented",
+          "detail": "bring to final volume"
+        },
+        {
+          "protocol_id": "bioprot:1779",
+          "step_idx": 4,
+          "text": "Make up to a final volume of 50 mL with MilliQ water",
+          "reason": "not_implemented",
+          "detail": "bring to final volume"
+        },
+        {
+          "protocol_id": "bioprot:1780",
+          "step_idx": 3,
+          "text": "Make up to 50 mL with MilliQ water",
+          "reason": "not_implemented",
+          "detail": "bring volume to 50 mL"
+        }
+      ]
+    },
+    {
+      "capability": "heat",
+      "remapped_steps": 4,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:20811",
+          "step_idx": 2,
+          "text": "Bake the paraffin sections from 12:00:00 to 24:00:00 at 50 \u00b0C .",
+          "reason": "ambiguous_text",
+          "detail": "time range 12 to 24h"
+        },
+        {
+          "protocol_id": "protocolsio:36027",
+          "step_idx": 11,
+          "text": "Place in a 37 \u00b0C incubator (5% CO2) for 15-30 minutes to allow BME2 to set.",
+          "reason": "ambiguous_text",
+          "detail": "time range 15-30 minutes"
+        },
+        {
+          "protocol_id": "protocolsio:61793",
+          "step_idx": 4,
+          "text": "Incubate for 00:05:00 at 37 \u00b0C Lightly tap the culture vessel and check for cell detachement. If cells are still attached prolong incubation",
+          "reason": "ambiguous_text",
+          "detail": "conditional prolongation vague tapping"
+        }
+      ]
+    },
+    {
+      "capability": "stain",
+      "remapped_steps": 4,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:20811",
+          "step_idx": 15,
+          "text": "Incubate slides with DAB solution for 00:05:00 .",
+          "reason": "ambiguous_text",
+          "detail": "Missing DAB solution volume"
+        },
+        {
+          "protocol_id": "protocolsio:20811",
+          "step_idx": 18,
+          "text": "Counterstain slides with hematoxylin for 00:07:50 .",
+          "reason": "ambiguous_text",
+          "detail": "Missing hematoxylin volume"
+        },
+        {
+          "protocol_id": "protocolsio:20832",
+          "step_idx": 15,
+          "text": "Incubate slides with DAB solution for 00:05:00 .",
+          "reason": "ambiguous_text",
+          "detail": "Missing DAB solution volume"
+        }
+      ]
+    },
+    {
+      "capability": "digest",
+      "remapped_steps": 2,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:20446",
+          "step_idx": 5,
+          "text": "Incubate at 37 \u00b0C for 00:10:00 to achieve single cells. Individual donor lines exhibit variable sensitivity to accutase-mediated dissociation. Monitor cells reg",
+          "reason": "ambiguous_text",
+          "detail": "Variable endpoint monitoring required"
+        },
+        {
+          "protocol_id": "protocolsio:37443",
+          "step_idx": 3,
+          "text": "Add sufficient TrypLE Express Enzyme to cover the bottom of the flask (see Table 1, column C for recommended volume). Rock the flask to allow the TrypLE to cove",
+          "reason": "ambiguous_text",
+          "detail": "TrypLE volume in table"
+        }
+      ]
+    },
+    {
+      "capability": "discard",
+      "remapped_steps": 1,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:68814",
+          "step_idx": 7,
+          "text": "Carefully remove supernatant as much as possible using a 1 ml pipette and then remove remaining media using a 200uL tip if necessary; do not use glass Pasteur p",
+          "reason": "ambiguous_text",
+          "detail": "as much as possible"
+        }
+      ]
+    },
+    {
+      "capability": "dry",
+      "remapped_steps": 1,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 26,
+          "text": "Let excess ECL solution drip off on Kimwipe.",
+          "reason": "not_implemented",
+          "detail": "Remove excess ECL solution"
+        }
+      ]
+    },
+    {
+      "capability": "feed_medium",
+      "remapped_steps": 1,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:68814",
+          "step_idx": 22,
+          "text": "Observe daily and renew the TOM every 48-72 hrs. 0",
+          "reason": "ambiguous_text",
+          "detail": "Observe daily renew medium"
+        }
+      ]
+    },
+    {
+      "capability": "freeze",
+      "remapped_steps": 1,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 8,
+          "text": "Store samples in -80.",
+          "reason": "missing_skill",
+          "detail": "Minus eighty storage unavailable"
+        }
+      ]
+    },
+    {
+      "capability": "harvest",
+      "remapped_steps": 1,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:57743",
+          "step_idx": 5,
+          "text": "Pipette repeatedly with 5 ml pipette to lift colonies, careful not to carry over too many MEFs.",
+          "reason": "ambiguous_text",
+          "detail": "pipette repeatedly, avoid MEFs"
+        }
+      ]
+    },
+    {
+      "capability": "homogenize",
+      "remapped_steps": 1,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 4,
+          "text": "Run program Protein_01 on the gentleMACS Dissociator (Miltenyi).",
+          "reason": "not_implemented",
+          "detail": "Dissociate with Protein_01 program"
+        }
+      ]
+    },
+    {
+      "capability": "image",
+      "remapped_steps": 1,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:14824",
+          "step_idx": 27,
+          "text": "Expose to film/develop blots in dark room and on ChemiDoc System.",
+          "reason": "ambiguous_text",
+          "detail": "Film versus ChemiDoc unclear"
+        }
+      ]
+    },
+    {
+      "capability": "plate_cells",
+      "remapped_steps": 1,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:57743",
+          "step_idx": 17,
+          "text": "Mix well, distribute 2 ml to each MEFs wells. a. Use of 5 ml pipette to mix cell suspension is preferred as it has the widest bore size, but 10 ml can be used i",
+          "reason": "not_implemented",
+          "detail": "plate 2 ml per well"
+        }
+      ]
+    },
+    {
+      "capability": "pour",
+      "remapped_steps": 1,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:8175",
+          "step_idx": 7,
+          "text": "Make overlay - Swirl vigorously but briefly to mix the bacteria and molten top agar and spread it across the plate.",
+          "reason": "ambiguous_text",
+          "detail": "Swirl time undefined"
+        }
+      ]
+    },
+    {
+      "capability": "seed_cells",
+      "remapped_steps": 1,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:1495",
+          "step_idx": 6,
+          "text": "Fill the pipetter and add 150 \u03bcL culture to each well in lines 1\u20139 of a 96-well cell culture plate.",
+          "reason": "ambiguous_text",
+          "detail": "duplicate of step 5"
+        }
+      ]
+    },
+    {
+      "capability": "shake",
+      "remapped_steps": 1,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:41548",
+          "step_idx": 4,
+          "text": "\u2022Sample is then agitated for 00:00:05 to 00:00:15 to mix. even mix,",
+          "reason": "not_implemented",
+          "detail": "agitate 5 to 15 seconds"
+        }
+      ]
+    },
+    {
+      "capability": "soak",
+      "remapped_steps": 1,
+      "examples": [
+        {
+          "protocol_id": "protocolsio:20832",
+          "step_idx": 26,
+          "text": "Distilled water: : incubate slides in distilled water or until antigen retrieval step.",
+          "reason": "ambiguous_text",
+          "detail": "no time specified"
+        }
+      ]
+    }
+  ]
+}

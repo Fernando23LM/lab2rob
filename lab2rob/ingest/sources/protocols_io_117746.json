@@ -1,0 +1,1642 @@
+{
+ "protocol_id": 117746,
+ "uri": "pipetting-dw8s7hwe",
+ "doi": "dx.doi.org/10.17504/protocols.io.n2bvj8x35gk5/v4",
+ "url": "https://www.protocols.io/view/pipetting-dw8s7hwe",
+ "title": "Pipetting ",
+ "version_id": 3,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:14:55Z",
+ "query": "pipette",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "We appreciate the support from the NC State Biotechnology Program and students who have helped improve this and other protocols. ",
+  "authors": [
+   {
+    "first_name": "Carly",
+    "last_name": "Sjogren",
+    "affiliation": "North Carolina State University",
+    "note": "",
+    "guid": "051D62E2F8CC11ED9D4302C0B41BC903",
+    "username": "n4rle1z1r1w4xle1",
+    "name": "Carly Sjogren",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "E3AA98935B2B11EFA2EF0A58A9FEAC02",
+     "file_name": "ALm5wu3141TEaDZxgDqxOCSSFb0OUIEoqpJYMiq3c6lcjg=s96-c.png",
+     "url": "https://files.protocols.io/external/ALm5wu3141TEaDZxgDqxOCSSFb0OUIEoqpJYMiq3c6lcjgs96c-E3AA98935B2B11EFA2EF0A58A9FEAC02.png",
+     "mime": "image/png",
+     "size": 800,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1723742953
+    }
+   },
+   {
+    "first_name": "Carlos",
+    "last_name": "Goller",
+    "affiliation": "Biotechnology Teaching Program (BIT), North Carolina State University",
+    "note": "",
+    "guid": "038E76EBF8CC11ED9D4302C0B41BC903",
+    "username": "carlos-carlos-goller",
+    "name": "Carlos Carlos Goller",
+    "affiliation_url": "",
+    "link": "http://ccgoller.com",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "100416EAD32B11F184AC0A58A9FEAC02",
+     "file_name": "IMG_1169.jpeg",
+     "url": "https://files.protocols.io/external/IMG1169-100416EAD32B11F184AC0A58A9FEAC02.jpeg",
+     "mime": "image/jpeg",
+     "size": 5256604,
+     "width": 2646,
+     "height": 2646,
+     "avg_color": "#734f55",
+     "scan_status": 0,
+     "created_at": 1793231734
+    }
+   }
+  ],
+  "before_start": "How to use a micropipette - We will practice pipetting small volumes of colorful liquids using micropipettes. We will work together to practice this new skill to improve our technique. Before coming to the lab, watch this 5-minute video, [How to Micropipette](https://www.youtube.com/watch?v=FJuceccl9Ns), that demonstrates three key pipetting skills: \n- How to hold a micropipette\n- How to set a micropipette to a desired volume\n- How to use the plunger and ejector of the micropipette to measure the desired volume of a reagent\n\n[]](https://lh4.googleusercontent.com/FcNW2KBTVgJa-e23rPHmJm7g-e7kaRJeeU1nnzYvi8rZYVRPstEU9_2fWDy9uCvohJmXUon_6OZ4tS9WgKqLx7p2fyufiNr72MNYTWPTJqz2BNOrVeP_vdQ5jzIi9REf3sjOC2_GHgXHVhSyqtM48kPXOQnYyrlD5axPOZEwPYQhJg9qr_IMyHf_yw)\nPipettor with labeled parts: plunger, tip ejector, volume adjustment wheel, body, shaft ",
+  "created_on": 1736185461,
+  "creator": {
+   "affiliation": "North Carolina State University",
+   "affiliation_url": null,
+   "affiliations": [
+    {
+     "affiliation": "North Carolina State University",
+     "is_default": true,
+     "job_title": null,
+     "url": null
+    }
+   ],
+   "badges": [
+    {
+     "id": 4,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg"
+     },
+     "name": "Gold power author!"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": null,
+   "name": "Nidhi Grover",
+   "username": "nidhi-grover"
+  },
+  "cross_cloud_origin": null,
+  "description": "**Overview and Goals**\nLab micropipettes allow us to transfer small volumes of liquids accurately. Units to measure small volumes with micropipettes are microliter (\u00b5L) and milliliter (mL). There are 1000 \u00b5L in 1 mL). Effectively using lab micropipettes is a valuable skill that takes practice! We will work together to learn and improve our pipetting to improve accuracy. \n\n**Learning Objectives**\nAfter completing this lab, you will gain the following lab skills:\n1. Lab safety and proper personal protective equipment (**PPE**)\n1. Pipetting with **micropipettes**\n\n",
+  "disclaimer": "This protocol is used in teaching labs.",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.n2bvj8x35gk5/v4",
+  "ethics_statement": "This protocol does not involve animals. ",
+  "fork_id": null,
+  "funders": [
+   {
+    "funder_name": "Biotechnology Program",
+    "grant_id": ""
+   }
+  ],
+  "guid": "DCBB905FCC5511EFA8120A58A9FEAC02",
+  "guidelines": "\n**Reducing waste - micropipette tips -** Pipetting best practices dictate that a new micropipette tip should be used every time you pipette a new volume of liquid. This can be very important in avoiding contamination in molecular biology. Unfortunately, this also creates a considerable amount of plastic waste. To reduce unnecessary waste, we will reuse tips for this activity when only pipetting water. \n\n**Gloves will still go into the biohazard bins.**",
+  "id": 117746,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 1344610,
+  "keywords": "Pipetting,lab safety,volumes, using lab micropipette, goals lab micropipette, lab micropipette, small volumes with micropipette, micropipette, pipetting, lab skill, milliliter, following lab skill, small volumes of liquid, \u00b5l, lab safety, small volume, ml, lab, liquid",
+  "link": "http://go.ncsu.edu/bits",
+  "manuscript_citation": "",
+  "materials": [],
+  "materials_text": "1. One 2-20 \u03bcl micropipette (p20)\n1. Micropipette tips for p20\n1. One Pipette Practice Card from miniPCR bio\n1. Wipes\n1. 200 \u03bcl water (tap water is fine) \n1. 80 \u03bcl blue micropipetting practice fluid\n1. 80 \u03bcl yellow micropipetting practice fluid\n1. 80 \u03bcl red micropipetting practice fluid \n1. tip disposal container\n\n\n**Reference Resources**\nWe will use [Micropipetting Practice Cards](https://www.minipcr.com/product/micropipetting-practice-cards) from the company miniPCR bio in the lab. Our procedure has been adapted from the following [Micropipette Mastery Activity](https://www.minipcr.com/wp-content/uploads/miniPCR-Learning-Labs-Micropipetting-101-240919-Micropipetting-Mastery.pdf).\n\n\n",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 1753351552,
+   "file_name": "sjef9c2n.jpg",
+   "guid": "C7C1D361687511F08F960A58A9FEAC02",
+   "height": 0,
+   "mime": "binary/octet-stream",
+   "scan_status": 0,
+   "size": 54597,
+   "url": "https://files.protocols.io/external/sjef9c2n-C7C1D361687511F08F960A58A9FEAC02.jpg",
+   "width": 0
+  },
+  "protocol_references": "Our procedure has been adapted from the MiniPCR [Micropipette Mastery Activity](https://www.minipcr.com/wp-content/uploads/miniPCR-Learning-Labs-Micropipetting-101-240919-Micropipetting-Mastery.pdf).",
+  "public": true,
+  "published_on": 1736244539,
+  "reserved_doi": "",
+  "space_id": 76087,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 1669,
+   "number_of_steps": 27,
+   "number_of_bookmarks": 0,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 0,
+   "number_of_runs": 0,
+   "number_of_votes": 1,
+   "number_of_reagents": 0,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 3,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": "We use this protocol and it's working"
+  },
+  "steps": [
+   {
+    "id": 2463165,
+    "guid": "DCF1C8EACC5511EFA8120A58A9FEAC02",
+    "previous_id": null,
+    "previous_guid": null,
+    "section": "<p>Using a pipette</p>",
+    "section_color": "#A492FF",
+    "section_duration": 600,
+    "is_substep": false,
+    "step": "To draw up liquid\n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "3",
+    "duration": 600,
+    "original_id": 2460663,
+    "number": "1",
+    "cases": [],
+    "critical": [
+     {
+      "id": 3,
+      "title": "Pipetting",
+      "icon": "PipettingIcon"
+     }
+    ]
+   },
+   {
+    "id": 2463166,
+    "guid": "DCF2651BCC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463165,
+    "previous_guid": "DCF1C8EACC5511EFA8120A58A9FEAC02",
+    "section": "<p>Using a pipette</p>",
+    "section_color": "#A492FF",
+    "section_duration": 600,
+    "is_substep": true,
+    "step": "Set volume using the volume adjustment wheel\n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460664,
+    "number": "1.1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463167,
+    "guid": "DCF31589CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463166,
+    "previous_guid": "DCF2651BCC5511EFA8120A58A9FEAC02",
+    "section": "<p>Using a pipette</p>",
+    "section_color": "#A492FF",
+    "section_duration": 600,
+    "is_substep": true,
+    "step": "Press a new tip onto the shaft",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460665,
+    "number": "1.2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463168,
+    "guid": "DCF3C724CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463167,
+    "previous_guid": "DCF31589CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Using a pipette</p>",
+    "section_color": "#A492FF",
+    "section_duration": 600,
+    "is_substep": true,
+    "step": "Press plunger **TO** the FIRST STOP",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "12",
+    "duration": 0,
+    "original_id": 2460666,
+    "number": "1.3",
+    "cases": [],
+    "critical": [
+     {
+      "id": 12,
+      "title": "Critical step",
+      "icon": "CriticalIcon"
+     }
+    ]
+   },
+   {
+    "id": 2463169,
+    "guid": "DCF47869CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463168,
+    "previous_guid": "DCF3C724CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Using a pipette</p>",
+    "section_color": "#A492FF",
+    "section_duration": 600,
+    "is_substep": true,
+    "step": "Dip tip into liquid ",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460667,
+    "number": "1.4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463170,
+    "guid": "DCF52512CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463169,
+    "previous_guid": "DCF47869CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Using a pipette</p>",
+    "section_color": "#A492FF",
+    "section_duration": 600,
+    "is_substep": true,
+    "step": "Slowly release the plunger to collect liquid into the tip. ",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460668,
+    "number": "1.5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463171,
+    "guid": "DCF5CF51CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463170,
+    "previous_guid": "DCF52512CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Using a pipette</p>",
+    "section_color": "#A492FF",
+    "section_duration": 600,
+    "is_substep": false,
+    "step": "To dispense sample",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460669,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463172,
+    "guid": "DCF6781DCC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463171,
+    "previous_guid": "DCF5CF51CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Using a pipette</p>",
+    "section_color": "#A492FF",
+    "section_duration": 600,
+    "is_substep": true,
+    "step": "Touch tip to dispensing container",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460670,
+    "number": "2.1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463173,
+    "guid": "DCF7238BCC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463172,
+    "previous_guid": "DCF6781DCC5511EFA8120A58A9FEAC02",
+    "section": "<p>Using a pipette</p>",
+    "section_color": "#A492FF",
+    "section_duration": 600,
+    "is_substep": true,
+    "step": "Press plunger **THROUGH** to the SECOND STOP",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "12",
+    "duration": 0,
+    "original_id": 2460671,
+    "number": "2.2",
+    "cases": [],
+    "critical": [
+     {
+      "id": 12,
+      "title": "Critical step",
+      "icon": "CriticalIcon"
+     }
+    ]
+   },
+   {
+    "id": 2463174,
+    "guid": "DCF7C828CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463173,
+    "previous_guid": "DCF7238BCC5511EFA8120A58A9FEAC02",
+    "section": "<p>Using a pipette</p>",
+    "section_color": "#A492FF",
+    "section_duration": 600,
+    "is_substep": true,
+    "step": "Remove tip from liquid then release plunger",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460672,
+    "number": "2.3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463175,
+    "guid": "DCF88599CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463174,
+    "previous_guid": "DCF7C828CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Using a pipette</p>",
+    "section_color": "#A492FF",
+    "section_duration": 600,
+    "is_substep": true,
+    "step": "Dispose of tip using the tip ejector",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460673,
+    "number": "2.4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463176,
+    "guid": "DCF9301ACC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463175,
+    "previous_guid": "DCF88599CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 1</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 360,
+    "is_substep": false,
+    "step": "Read the volumes specified on the Micropipetting Practice Card and use your micropipette to add the correct amount of liquid to each circle. \n\n\n1. Try to be precise so that the liquid stays in the circle. \n1. If you have trouble, dry the spot with a paper towel and try again.\n1. If you have trouble, try using both hands. Dr. Sjogren has shaky hands and uses her non-dominant hand to stabilize the micropipette being held in her dominant hand.\n \n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460674,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463177,
+    "guid": "DCFA1C57CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463176,
+    "previous_guid": "DCF9301ACC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 1</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 360,
+    "is_substep": false,
+    "step": "Try to pick up all of the liquid without leaving any behind. \n\n\n1. Set your micropipette to the same volume of liquid that is specified for each of your drops. \n1. Check to see if you can pick up all of the liquid without leaving any behind. There should be no space at the end of your pipette tip. \n \n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 120,
+    "original_id": 2460675,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463178,
+    "guid": "DCFB01ABCC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463177,
+    "previous_guid": "DCFA1C57CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 1</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 360,
+    "is_substep": false,
+    "step": "In the blank space at the bottom of the card, pipette  5 \u00b5L   of water three times.\n\n\n1. How similar do the drops look in size? \n1. If they do not look exactly the same what could be some sources of error?\n \n\n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 120,
+    "original_id": 2460676,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463179,
+    "guid": "DCFBE853CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463178,
+    "previous_guid": "DCFB01ABCC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 1</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 360,
+    "is_substep": false,
+    "step": "On a dry place on your card place  4 \u00b5L   water. Add  4 \u00b5L   to the same place three more times. \n\nThis is what your card should look like:\n[image.png]](https://protocols-files.s3.amazonaws.com/files/kmnubyngp.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWFTFYUBUZ2U2JGOS%2F20261029%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261029T221451Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=60b6b3bf3ecc16abf14ff3791803849ec682507e14cc2a974436f3ddbeeeee5d)\nMicropipetting practice card from MiniPCR. Liquid spots on the 2, 5, 10, 15, and 20 ul circles with yellow, green, blue, red, and yellow food coloring, respectively. Photo taken by BIT 295 Staff.  \n\n\n1. How much volume should you now have? ____________ \n1. Set your pipette to the calculated volume and try to pick up the entire drop. \n1. Was there any liquid left on the card or space left in the tip of your pipette? ___________\n \n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 120,
+    "original_id": 2460677,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463180,
+    "guid": "DCFD1174CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463179,
+    "previous_guid": "DCFBE853CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 2</p>",
+    "section_color": "#84CE84",
+    "section_duration": 300,
+    "is_substep": false,
+    "step": "Preparation of cards and dyes\n\n\n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460678,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463181,
+    "guid": "DCFDB5E9CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463180,
+    "previous_guid": "DCFD1174CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 2</p>",
+    "section_color": "#84CE84",
+    "section_duration": 300,
+    "is_substep": true,
+    "step": "Add  13.5 \u00b5L  of blue dye to dot A \n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460679,
+    "number": "7.1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463182,
+    "guid": "DCFE6133CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463181,
+    "previous_guid": "DCFDB5E9CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 2</p>",
+    "section_color": "#84CE84",
+    "section_duration": 300,
+    "is_substep": true,
+    "step": "Add  17.5 \u00b5L  of yellow dye to dot C \n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460680,
+    "number": "7.2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463183,
+    "guid": "DCFF0813CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463182,
+    "previous_guid": "DCFE6133CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 2</p>",
+    "section_color": "#84CE84",
+    "section_duration": 300,
+    "is_substep": true,
+    "step": "Add  17.5 \u00b5L   of red dye to dot E \n\nAfter this step, this is what your card should look like:\n[image.png]](https://protocols-files.s3.amazonaws.com/files/kmnwbyngp.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWFTFYUBUZ2U2JGOS%2F20261029%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261029T221451Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=9bc8fd080d726cbeb68296a4fe34afa588f479681e430cb924a95aa60a7ee94b)\nMicropipetting practice card from MiniPCR. Liquid spots on the A, C, and E circles with blue, yellow,  and red food coloring, respectively. Photo taken by BIT 295 Staff.  \n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460681,
+    "number": "7.3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463184,
+    "guid": "DD0004D4CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463183,
+    "previous_guid": "DCFF0813CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 2</p>",
+    "section_color": "#84CE84",
+    "section_duration": 300,
+    "is_substep": true,
+    "step": "From dot A, pick up  2 \u00b5L   and place it on dot F \n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460682,
+    "number": "7.4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463185,
+    "guid": "DD00AC8FCC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463184,
+    "previous_guid": "DD0004D4CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 2</p>",
+    "section_color": "#84CE84",
+    "section_duration": 300,
+    "is_substep": true,
+    "step": "From dot C, pick up  4.5 \u00b5L   and place it on dot B \n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460683,
+    "number": "7.5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463186,
+    "guid": "DD01571ACC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463185,
+    "previous_guid": "DD00AC8FCC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 2</p>",
+    "section_color": "#84CE84",
+    "section_duration": 300,
+    "is_substep": true,
+    "step": "From dot E, pick up  3 \u00b5L   and place it on dot D \n\nAfter this step, this is what your card should look like:\n[image.png]](https://protocols-files.s3.amazonaws.com/files/kmnybyngp.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWFTFYUBUZ2U2JGOS%2F20261029%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261029T221451Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=d225c1b1fec3b21801ff19bb99bec67653e9f98711dcf894f518bf3f39e84d83)\nMicropipetting practice card from MiniPCR. Liquid spots on the A, B, C, D, E, and F circles with blue, yellow, yellow,  red, red, and blue food coloring, respectively. Photo taken by BIT 295 Staff.  \n\nNow that you have set up your card, your goal is to mix these dyes with great care and precision. To mix, you will gently pipette up and down to the micropipette&#39;s first stop 2-3 times. Only pipette through to your micropipette&#39;s second stop at the end to remove all liquid from your tip to avoid making any air bubbles. Follow the guidance below. \n\n \n\n\n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460684,
+    "number": "7.6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463187,
+    "guid": "DD027E96CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463186,
+    "previous_guid": "DD01571ACC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 2</p>",
+    "section_color": "#84CE84",
+    "section_duration": 300,
+    "is_substep": false,
+    "step": "From dot E, pick up  6 \u00b5L   and mix it with the volume already present on dot F \n  ",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460685,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463188,
+    "guid": "DD032B71CC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463187,
+    "previous_guid": "DD027E96CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 2</p>",
+    "section_color": "#84CE84",
+    "section_duration": 300,
+    "is_substep": false,
+    "step": "From dot A, pick up 3.5 \u00b5L  and mix this volume onto dot B \n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460686,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463189,
+    "guid": "DD03D6CBCC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463188,
+    "previous_guid": "DD032B71CC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 2</p>",
+    "section_color": "#84CE84",
+    "section_duration": 300,
+    "is_substep": false,
+    "step": "From dot C, pick up  5 \u00b5L   and mix this volume onto dot D \nAfter this step, this is how your card should look like:\n[image.png]](https://protocols-files.s3.amazonaws.com/files/kmn3byngp.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWFTFYUBUZ2U2JGOS%2F20261029%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261029T221451Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=d98736b6a422693d8a37ae21bdc754403926d1eb6eea0c3b9dc49d2d41825545)\n \n\n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460687,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463190,
+    "guid": "DD04C29BCC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463189,
+    "previous_guid": "DD03D6CBCC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 2</p>",
+    "section_color": "#84CE84",
+    "section_duration": 300,
+    "is_substep": false,
+    "step": "Calculate how much volume (in units of microliters) should now be on each dot: \n\n\n\n<table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n \n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 2460688,
+    "number": "11",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 2463191,
+    "guid": "DD05A77ACC5511EFA8120A58A9FEAC02",
+    "previous_id": 2463190,
+    "previous_guid": "DD04C29BCC5511EFA8120A58A9FEAC02",
+    "section": "<p>Activity 2</p>",
+    "section_color": "#84CE84",
+    "section_duration": 300,
+    "is_substep": false,
+    "step": "Set your micropipette to that volume and pick up each drop one by one and move to the open space at the bottom of your card. Each time you pick up a drop, note if liquid was left behind (code: LB), or if there is any space at the end of your pipette tip (code: S).\n\n**Critical thinking Questions**\n1.When using a micropipette, what are some benefits to checking liquid levels in your pipet tip?\n\n2.When using a micropipette, did drops repeatedly get measured accurately (was liquid left over on the card, or was there space in the bottom of the pipette tip)? What could be some sources of error?\n\n3. Based on your experience today, how would you rate your pipetting skill? \n-Total Amateur \n-Intermediate \n-Pro \n-Pipette Master!\n \n\n",
+    "data": null,
+    "protocol_id": 117746,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 300,
+    "original_id": 2460689,
+    "number": "12",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "<p>Using a pipette</p>",
+    "color": "#A492FF",
+    "first_step_guid": "DCF1C8EACC5511EFA8120A58A9FEAC02"
+   },
+   {
+    "title": "<p>Activity 1</p>",
+    "color": "#94EBFF",
+    "first_step_guid": "DCF9301ACC5511EFA8120A58A9FEAC02"
+   },
+   {
+    "title": "<p>Activity 2</p>",
+    "color": "#84CE84",
+    "first_step_guid": "DCFD1174CC5511EFA8120A58A9FEAC02"
+   }
+  ],
+  "title": "Pipetting ",
+  "title_html": "Pipetting ",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775233492
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775233492
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775233493
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775233493
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775233492
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "pipetting-dw8s7hwe",
+  "url": "https://www.protocols.io/view/pipetting-dw8s7hwe",
+  "version_class": 71015,
+  "version_data": null,
+  "version_id": 3,
+  "version_uri": "pipetting-n2bvj8x35gk5/v4",
+  "versions": [
+   {
+    "id": 71015,
+    "title": "Pipetting ",
+    "title_html": "Pipetting ",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": null,
+    "uri": "pipetting-chkft4tn",
+    "published_on": 1673107499,
+    "modified_on": 1709142138,
+    "version_class": 71015,
+    "version_id": 0,
+    "version_code": "chkft4tn",
+    "version_uri": "pipetting-n2bvj8x35gk5/v1",
+    "created_on": 1665158031,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Nidhi Grover",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "North Carolina State University",
+     "affiliation_url": null,
+     "username": "nidhi-grover",
+     "link": null,
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "A26BE629687411F08F960A58A9FEAC02",
+     "file_name": "kasbbyngp.jpg",
+     "url": "https://files.protocols.io/external/kasbbyngp-A26BE629687411F08F960A58A9FEAC02.jpg",
+     "mime": "binary/octet-stream",
+     "size": 6903,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1753351059
+    }
+   },
+   {
+    "id": 76858,
+    "title": "Pipetting ",
+    "title_html": "Pipetting ",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.n2bvj8x35gk5/v2",
+    "uri": "pipetting-cpa2vige",
+    "published_on": 1709053724,
+    "modified_on": 1709142141,
+    "version_class": 71015,
+    "version_id": 1,
+    "version_code": "cpa2vige",
+    "version_uri": "pipetting-n2bvj8x35gk5/v2",
+    "created_on": 1676169040,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Nidhi Grover",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "North Carolina State University",
+     "affiliation_url": null,
+     "username": "nidhi-grover",
+     "link": null,
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "CD151096687411F08F960A58A9FEAC02",
+     "file_name": "kasbbyngp.jpg",
+     "url": "https://files.protocols.io/external/kasbbyngp-CD151096687411F08F960A58A9FEAC02.jpg",
+     "mime": "binary/octet-stream",
+     "size": 6903,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1753351131
+    }
+   },
+   {
+    "id": 117631,
+    "title": "Pipetting ",
+    "title_html": "Pipetting ",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.n2bvj8x35gk5/v3",
+    "uri": "pipetting-dw477gzn",
+    "published_on": 1735933524,
+    "modified_on": 1735933524,
+    "version_class": 71015,
+    "version_id": 2,
+    "version_code": "dw477gzn",
+    "version_uri": "pipetting-n2bvj8x35gk5/v3",
+    "created_on": 1735923571,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Nidhi Grover",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "North Carolina State University",
+     "affiliation_url": null,
+     "username": "nidhi-grover",
+     "link": null,
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "C75F5A3F687511F08F960A58A9FEAC02",
+     "file_name": "siut9c2n.jpg",
+     "url": "https://files.protocols.io/external/siut9c2n-C75F5A3F687511F08F960A58A9FEAC02.jpg",
+     "mime": "binary/octet-stream",
+     "size": 54701,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1753351551
+    }
+   },
+   {
+    "id": 117746,
+    "title": "Pipetting ",
+    "title_html": "Pipetting ",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.n2bvj8x35gk5/v4",
+    "uri": "pipetting-dw8s7hwe",
+    "published_on": 1736244539,
+    "modified_on": 1736244539,
+    "version_class": 71015,
+    "version_id": 3,
+    "version_code": "dw8s7hwe",
+    "version_uri": "pipetting-n2bvj8x35gk5/v4",
+    "created_on": 1736185461,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Nidhi Grover",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "North Carolina State University",
+     "affiliation_url": null,
+     "username": "nidhi-grover",
+     "link": null,
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "C7C1D361687511F08F960A58A9FEAC02",
+     "file_name": "sjef9c2n.jpg",
+     "url": "https://files.protocols.io/external/sjef9c2n-C7C1D361687511F08F960A58A9FEAC02.jpg",
+     "mime": "binary/octet-stream",
+     "size": 54597,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1753351552
+    }
+   }
+  ],
+  "warning": "Please be careful when handling micropipettes.  We want to ensure that they are calibrated and working correctly. "
+ }
+}

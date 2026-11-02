@@ -1,0 +1,279 @@
+{
+  "name": "WLP-style sample v1",
+  "note": "Step texts are verbatim from cached protocols.io sources (whitespace collapsed only). Gold annotations are human-written in WLP style (actions, reagents/equipment, amounts); they are test expectations, NOT parser inputs. Gold actions use lexicon canonical names; [] means no canonical covers the true action (see note). Quantity units: ml/ul/nl/l (volume), g/mg/ug/ng/kg (mass), min/s/h (time), % (percent), um (micromolar), c (celsius), rpm, x (concentration fold). Bare counts ('3 wells', '20 times') are not quantities. Provenance of every gold record: human.",
+  "records": [
+    {
+      "id": "15421:s1",
+      "protocol_id": 15421,
+      "step_idx": 1,
+      "text": "Aspirate desired volume of Ampure beads from reservoir and mix well into sample plate by mixing total volume minus one microliter less -- 20 times. Bead volumes for each bead clean are available in the High-Throughput Echo Library Prep Protocol.",
+      "gold": {
+        "action": ["aspirate", "mix"],
+        "entities": ["Ampure beads", "reservoir", "sample plate"],
+        "quantities": [{"value": 1, "unit": "ul"}]
+      },
+      "gold_note": "'one microliter' is spelled out; the second sentence is a cross-reference, not an action.",
+      "provenance": "human"
+    },
+    {
+      "id": "15421:s2",
+      "protocol_id": 15421,
+      "step_idx": 2,
+      "text": "Transfer plate onto Alpaqua 384 Post Magnet Plate with 3D-printed adaptor and incubate at room temperature for another 5 minutes to allow for the formation of a magnetic pellet. [alpaquamag384platform.stl](https://content.protocols.io/6ym2hhn.stl) It is imperative that the magnet used can elute, at the very minimum, 6uL of your chosen elution buffer. It is important to elute cDNA in as little volume as possible for a miniaturized protocol.",
+      "gold": {
+        "action": ["transfer", "incubate"],
+        "entities": ["plate", "Alpaqua 384 Post Magnet Plate", "adaptor", "magnet", "elution buffer", "cDNA"],
+        "quantities": [{"value": 5, "unit": "min"}, {"value": 6, "unit": "ul"}]
+      },
+      "gold_note": "",
+      "provenance": "human"
+    },
+    {
+      "id": "15421:s3",
+      "protocol_id": 15421,
+      "step_idx": 3,
+      "text": "Remove and discard the supernatent for the second wash step. Allow the magnetic pellet to air dry while on the magnetic rack for a maximum of 90 seconds. Do not overdry the beads. This could cause undesired loss of cDNA.",
+      "gold": {
+        "action": [],
+        "entities": ["supernatant", "magnetic pellet", "magnetic rack", "beads", "cDNA"],
+        "quantities": [{"value": 90, "unit": "s"}]
+      },
+      "gold_note": "True actions (discard, air-dry) have no lexicon canonical; 'wash' here is a noun (step label). 'supernatent' sic.",
+      "provenance": "human"
+    },
+    {
+      "id": "15421:s4",
+      "protocol_id": 15421,
+      "step_idx": 4,
+      "text": "Aspirate 25uL freshly prepared 80% ethanol from reservoir and add to samples while on the magnetic rack. Incubate at room temperature for 30 seconds.",
+      "gold": {
+        "action": ["aspirate", "transfer", "incubate"],
+        "entities": ["ethanol", "reservoir", "samples", "magnetic rack"],
+        "quantities": [{"value": 25, "unit": "ul"}, {"value": 80, "unit": "%"}, {"value": 30, "unit": "s"}]
+      },
+      "gold_note": "",
+      "provenance": "human"
+    },
+    {
+      "id": "15421:s5",
+      "protocol_id": 15421,
+      "step_idx": 5,
+      "text": "Remove plate from magnetic stand, and resuspend beads in desired elution buffer and volume. Mix well. Volume and type of eluent are specified in the High-Throughput Echo Library Prep Protocol. Reminder: Regular elution buffer is used for Post-Second Strand Synthesis, Post- End Prep, and Post- USER/PCR bead cleans. Barcodes suspended in nuclease-free water will be used to elute in Post-Adaptor Ligation bead clean.",
+      "gold": {
+        "action": ["mix"],
+        "entities": ["plate", "magnetic stand", "beads", "elution buffer", "barcodes", "nuclease-free water"],
+        "quantities": []
+      },
+      "gold_note": "'resuspend' and 'remove' have no canonical; elution-volume sentences are cross-references.",
+      "provenance": "human"
+    },
+    {
+      "id": "15421:s6",
+      "protocol_id": 15421,
+      "step_idx": 6,
+      "text": "Incubate at room temperature for 5 minutes. Transfer plate onto Alpaqua 384 Post Magnet Plate with adaptor with 3D-printed adaptor and incubate at room temperature for another 5 minutes.",
+      "gold": {
+        "action": ["incubate", "transfer"],
+        "entities": ["plate", "Alpaqua 384 Post Magnet Plate", "adaptor"],
+        "quantities": [{"value": 5, "unit": "min"}, {"value": 5, "unit": "min"}]
+      },
+      "gold_note": "The 5-minute incubation is stated twice; both mentions are annotated.",
+      "provenance": "human"
+    },
+    {
+      "id": "15421:s7",
+      "protocol_id": 15421,
+      "step_idx": 7,
+      "text": "Slowly aspirate supernatant, now containing cDNA, and transfer to final PCR plate.",
+      "gold": {
+        "action": ["aspirate", "transfer"],
+        "entities": ["supernatant", "cDNA", "PCR plate"],
+        "quantities": []
+      },
+      "gold_note": "",
+      "provenance": "human"
+    },
+    {
+      "id": "20446:s1",
+      "protocol_id": 20446,
+      "step_idx": 1,
+      "text": "Coat 3 wells of a 6 well plate with 1 mL Matrigel (supplemented with RGD fragment)",
+      "gold": {
+        "action": [],
+        "entities": ["6 well plate", "Matrigel"],
+        "quantities": [{"value": 1, "unit": "ml"}]
+      },
+      "gold_note": "'coat' has no canonical (nearest: distribute). '3 wells' is a bare count, not a quantity.",
+      "provenance": "human"
+    },
+    {
+      "id": "20446:s2",
+      "protocol_id": 20446,
+      "step_idx": 2,
+      "text": "Aspirate media from cells in culture.",
+      "gold": {
+        "action": ["aspirate"],
+        "entities": ["media", "cells"],
+        "quantities": []
+      },
+      "gold_note": "",
+      "provenance": "human"
+    },
+    {
+      "id": "20446:s3",
+      "protocol_id": 20446,
+      "step_idx": 3,
+      "text": "Wash with 1 mL - 2 mL PBS per well.",
+      "gold": {
+        "action": ["wash_plate"],
+        "entities": ["PBS"],
+        "quantities": [{"value": 1, "unit": "ml"}, {"value": 2, "unit": "ml"}]
+      },
+      "gold_note": "",
+      "provenance": "human"
+    },
+    {
+      "id": "20446:s4",
+      "protocol_id": 20446,
+      "step_idx": 4,
+      "text": "Add 1 mL Accutase per well.",
+      "gold": {
+        "action": ["transfer"],
+        "entities": ["Accutase"],
+        "quantities": [{"value": 1, "unit": "ml"}]
+      },
+      "gold_note": "",
+      "provenance": "human"
+    },
+    {
+      "id": "20446:s5",
+      "protocol_id": 20446,
+      "step_idx": 5,
+      "text": "Incubate at 37 °C for 00:10:00 to achieve single cells. Individual donor lines exhibit variable sensitivity to accutase-mediated dissociation. Monitor cells regularly to identify when cells achieve single cells.",
+      "gold": {
+        "action": ["incubate"],
+        "entities": ["cells"],
+        "quantities": [{"value": 37, "unit": "c"}, {"value": 10, "unit": "min"}]
+      },
+      "gold_note": "00:10:00 is a 10-minute duration; the last two sentences are guidance, not actions.",
+      "provenance": "human"
+    },
+    {
+      "id": "20446:s6",
+      "protocol_id": 20446,
+      "step_idx": 6,
+      "text": "Collect cells in 5 mL DMEM/F12 and transfer to a 15mL conical tube.",
+      "gold": {
+        "action": ["transfer"],
+        "entities": ["cells", "DMEM/F12", "15mL conical tube"],
+        "quantities": [{"value": 5, "unit": "ml"}, {"value": 15, "unit": "ml"}]
+      },
+      "gold_note": "'collect' has no canonical; the transfer is the annotated action.",
+      "provenance": "human"
+    },
+    {
+      "id": "20446:s7",
+      "protocol_id": 20446,
+      "step_idx": 7,
+      "text": "Spin at 750-800 rpm for 00:03:00.",
+      "gold": {
+        "action": ["centrifuge"],
+        "entities": [],
+        "quantities": [{"value": 750, "unit": "rpm"}, {"value": 800, "unit": "rpm"}, {"value": 3, "unit": "min"}]
+      },
+      "gold_note": "00:03:00 is a 3-minute duration.",
+      "provenance": "human"
+    },
+    {
+      "id": "20446:s9",
+      "protocol_id": 20446,
+      "step_idx": 9,
+      "text": "Resuspend cells in mTesR1 supplemented with 5 uM Rock Inhibitor.",
+      "gold": {
+        "action": [],
+        "entities": ["cells", "mTesR1", "Rock Inhibitor"],
+        "quantities": [{"value": 5, "unit": "um"}]
+      },
+      "gold_note": "'resuspend' has no canonical.",
+      "provenance": "human"
+    },
+    {
+      "id": "20446:s10",
+      "protocol_id": 20446,
+      "step_idx": 10,
+      "text": "Plate several dilutions of cells over the three wells (typically 25 µl, 50 µl and 75 µl in 2 mL of mTesR1).",
+      "gold": {
+        "action": [],
+        "entities": ["cells", "mTesR1"],
+        "quantities": [{"value": 25, "unit": "ul"}, {"value": 50, "unit": "ul"}, {"value": 75, "unit": "ul"}, {"value": 2, "unit": "ml"}]
+      },
+      "gold_note": "True action (plate cells) has no canonical; 'dilutions' is a noun, not a dilute action.",
+      "provenance": "human"
+    },
+    {
+      "id": "20446:s11",
+      "protocol_id": 20446,
+      "step_idx": 11,
+      "text": "Freeze down the remaining cells by adding an equal volume of 2x iPSC Freezing Media (20% DMSO in FBS).",
+      "gold": {
+        "action": [],
+        "entities": ["cells", "iPSC Freezing Media", "DMSO", "FBS"],
+        "quantities": [{"value": 2, "unit": "x"}, {"value": 20, "unit": "%"}]
+      },
+      "gold_note": "Freeze/preserve has no canonical ('freeze down' is not 'flash freeze'); 2x is a concentration fold.",
+      "provenance": "human"
+    },
+    {
+      "id": "20446:s13",
+      "protocol_id": 20446,
+      "step_idx": 13,
+      "text": "Change mTesR1 the following day.",
+      "gold": {
+        "action": [],
+        "entities": ["mTesR1"],
+        "quantities": []
+      },
+      "gold_note": "Medium change has no canonical.",
+      "provenance": "human"
+    },
+    {
+      "id": "15461:s4",
+      "protocol_id": 15461,
+      "step_idx": 4,
+      "text": "Use the Echo to dispense the original sequencing libraries to the final pool using the calculated volumes. Use a new 384 PCR plate, or a 96 well PCR plate, as the destination plate to dispense the appropriate number of samples into the necessary number of wells. Take in account the maximum working volumes. Reminder: For 384, do not dispense more than 11uL into each well total.",
+      "gold": {
+        "action": ["dispense"],
+        "entities": ["Echo", "sequencing libraries", "384 PCR plate", "96 well PCR plate", "destination plate"],
+        "quantities": [{"value": 11, "unit": "ul"}]
+      },
+      "gold_note": "",
+      "provenance": "human"
+    },
+    {
+      "id": "15461:s5",
+      "protocol_id": 15461,
+      "step_idx": 5,
+      "text": "Using the Labcyte Echo, pool 0.5uL of each library into a 384-well destination plate. Use a new 384 PCR plate, or a 96 well PCR plate, as the destination plate to dispense the appropriate number of samples into the necessary number of wells. Be sure to take into account of the maximum working volume per destination plate. For example, for a 384 well plate, do not dispense more than 12uL into each well (i.e. 500nL of 22 samples per well).",
+      "gold": {
+        "action": ["pool_samples", "dispense"],
+        "entities": ["Labcyte Echo", "library", "384-well destination plate", "384 PCR plate", "96 well PCR plate"],
+        "quantities": [{"value": 0.5, "unit": "ul"}, {"value": 12, "unit": "ul"}, {"value": 500, "unit": "nl"}]
+      },
+      "gold_note": "'22 samples' is a bare count, not a quantity.",
+      "provenance": "human"
+    },
+    {
+      "id": "15461:s6",
+      "protocol_id": 15461,
+      "step_idx": 6,
+      "text": "Manually combine the multiple wells of the pool into one single DNA lo-bind tube. Mix.",
+      "gold": {
+        "action": ["pool_samples", "mix"],
+        "entities": ["DNA lo-bind tube"],
+        "quantities": []
+      },
+      "gold_note": "'Combine wells into one tube' is judged as pool_samples.",
+      "provenance": "human"
+    }
+  ]
+}

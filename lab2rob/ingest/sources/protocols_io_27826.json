@@ -1,0 +1,1351 @@
+{
+ "protocol_id": 27826,
+ "uri": "bead-free-long-fragment-lsk109-library-preparation-7eshjee",
+ "doi": "dx.doi.org/10.17504/protocols.io.7eshjee",
+ "url": "https://www.protocols.io/view/bead-free-long-fragment-lsk109-library-preparation-7eshjee",
+ "title": "Bead-free long fragment LSK109 library preparation",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:15:20Z",
+ "query": "dilution",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "John",
+    "last_name": "Tyson",
+    "affiliation": "Snutch Lab, UBC, Vancouver, BC, Canada",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "John Tyson",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "",
+  "created_on": 1568741188,
+  "creator": {
+   "affiliation": "UBC",
+   "affiliation_url": null,
+   "affiliations": [
+    {
+     "affiliation": "UBC",
+     "is_default": true,
+     "job_title": null,
+     "url": null
+    }
+   ],
+   "badges": [
+    {
+     "id": 3,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/silver.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/silver.svg"
+     },
+     "name": "Power author!"
+    },
+    {
+     "id": 5,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/star.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/star.svg"
+     },
+     "name": "Early adopter"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": null,
+   "name": "John Tyson",
+   "username": "john-tyson"
+  },
+  "cross_cloud_origin": null,
+  "description": "**Bead-Free LSK109 ligation prep for ultra-long DNA**\n\nThe use of AMPureXP beads for reaction cleanup when targeting Ultra-long DNA reads is not optimal as inter-bead binding results in bead clumping and potential fragmentation as individual beads move around freely in suspension. This is why the [original Ultra-read method](https://www.protocols.io/view/ultra-long-read-sequencing-protocol-for-rad004-mrxc57n) developed by Josh Quick and Nick Loman used dilution of the Rapid MuA kit and high concentrations of HMW genomic DNA. Saturating the MuA insertion reaction with HMW DNA results in less individual strand fragmentation and produces previously unattainable read lengths. It does not require cleanup or binding and elution on and off magnetic beads and minimized \u201chandling\u201d of the DNA. This therefore mitigates the fragmentation and DNA recovery issue with very long DNA molecules and has allowed the production of individual reads in excess of 1 million bases to be produced. The yield from individual flowcells using this approach is around an order of magnitude less however as there appears to be flowcell surface damage and rapid pore \u201cblockage\u201d. While 1Mb+ reads are amazing to see, they are a very small fraction of the total and it is the read N50 that is important. Targeting 100kb+ reads in volume goes a long way to producing substantial improvements in large genome assemblies particularly when trying to span large repeats or low complexity regions refractory to other sequencing technologies. We have been experimenting with DNA size fractionation / precipitation using PEG/NaCl as mentioned above. This provides a means to remove the requirement for magnetic beads with their associated issues, and allows a higher yield of ultra-long reads to be produced. We have found that the DNA produced from the Phenol/Chloroform prep above provides DNA of a size that requires shearing down into a range to provide a mix of length and yield. Shown below is data from a single flowcell that I ran multiple libraries on looking at the effects of sequential shearing to gradually shorter lengths using a single DNA sample and where aliquots were removed before the next smaller shear was performed. Using a P1000 pipette tip or simple needle shear and PEG/NaCl precipitations, you are able to produce up to 21 % of total sequenced data in 100kb+ reads. Combined with DNaseI flowcell clears, high yields are looking obtainable. It is early days for this protocol so expect changes to come quickly as we try and dial in better size selection and an even higher proportion of 100kb+ reads. At present we are not really seeing much short read depletion and I think this is to do with suboptimal conditions used for the DNA precipitation. Unknown buffer components in the End-Prep and Ligation buffers appear to be throwing off the PEG/NaCl parameters we have identified for size selection so there is still work to be done to tune this and something we are working on. For the 21G and 29G examples below we did do a final PEG/NaCl precipitation of the finished library but didn\u2019t see consistent depletion comparing the two, so still things to be worked out for consistency and to understanding what is happening.\n\n\n[Bead Free Long Fragment LSK109 Library Prep.JPG]](https://content.protocols.io/public/4fcabc74c3c0f3855bba3ed7dc75c39f9eee97a697f90c3c05fc8261af91febe/brad7vcw.jpg)\n \n\nAs a fall back, assuming little size selection can be implemented during the prep for now, we looked again at the size selection step at the end of the library preparation when eluted into EB buffer (no other salts or other components to throw size selective precipitation off). This is shown below comparing the Circulomics SRE buffer and 9 % PEG8000 (w/v) 1 M NaCl on precipitation and recovery using an equal volume addition to a P1000/26G needle sheared Bead-free LSK109 prep. Take this with a grain of salt at the moment as one used an old MinION flowcell (for Circulomics) and the others (library before selection (control), and PEG/NaCl size selection) were run on flongles so data volume is a little low with long frag blockage. We are seeing the SRE buffer performing better at short fragment removal, but want to investigate what is going on with the upper end and read N50.\n\n[Size selection.JPG]](https://content.protocols.io/public/4fcabc74c3c0f3855bba3ed7dc75c39f9eee97a697f90c3c05fc8261af91febe/brae7vcw.jpg)\n \n",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.7eshjee",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "461497B0D97011E980254724E297D82E",
+  "guidelines": "",
+  "id": 27826,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 517794,
+  "keywords": "mua insertion reaction with hmw dna result, high concentrations of hmw genomic dna, hmw dna result, hmw genomic dna, hmw dna, free long fragment lsk109 library preparation bead, long dna molecule, less individual strand fragmentation, dna recovery issue, substantial improvements in large genome assembly, results in bead clumping, production of individual read, dilution of the rapid mua kit, dna precipitation, free lsk109 ligation prep, sequencing technology, single dna sample, dna sample, large genome assembly, bead clumping, dna size fractionation, seeing much short read depletion, use of ampurexp bead, genomic dna, mua insertion reaction, much short read depletion, unattainable read length, dna, long frag blockage, potential fragmentation as individual bead, long read, ampurexp bead, sheared bead, old minion flowcell, rapid mua kit, ligation buffer, individual read, little low with long frag blockage",
+  "link": "https://www.longreadclub.org/mountain-protocol/",
+  "manuscript_citation": "",
+  "materials": [],
+  "materials_text": "1. HMW genomic DNA  \n1. Buffer EB\n1. Qubit DNA HS kit \n1. Ethanol \n1. Ultra II End-Prep Buffer (NEB)\n1. Ultra II End-Prep Enzyme mix (NEB)\n1. LNB Buffer\n1. AMX adapter\n1. Quick T4 DNA Ligase (NEB)\n1. NaCl\n1. PEG/NaCl precipitation buffer** **[9 % PEG8000 (w/v), 1 M NaCl, 10 M Tris-Cl (pH8.0)]",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 1753350552,
+   "file_name": "bras7vcw.jpg",
+   "guid": "741B72CF687311F08F960A58A9FEAC02",
+   "height": 0,
+   "mime": "image/jpeg",
+   "scan_status": 0,
+   "size": 21770,
+   "url": "https://files.protocols.io/external/bras7vcw-741B72CF687311F08F960A58A9FEAC02.jpg",
+   "width": 0
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1580336721,
+  "reserved_doi": "",
+  "space_id": 4757,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 3942,
+   "number_of_steps": 22,
+   "number_of_bookmarks": 21,
+   "number_of_comments": 6,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 6,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 494,
+   "number_of_runs": 0,
+   "number_of_votes": 4,
+   "number_of_reagents": 0,
+   "number_of_equipments": 0,
+   "number_of_collections": 1,
+   "number_of_forks": {
+    "private": 5,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": "We use this protocol and it's working"
+  },
+  "steps": [
+   {
+    "id": 814167,
+    "guid": "1C9ACE30D97111E980254724E297D82E",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": " 10 \u00b5g  of** HMW genomic DNA** in  51 \u00b5L  of **EB **was either used unsheared or sheared (see previous protocols).",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814168,
+    "guid": "1FF088E0D97111E980254724E297D82E",
+    "previous_id": 814167,
+    "previous_guid": "1C9ACE30D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Quantify  1 \u00b5L  of the DNA sample using the **Qubit DNA HS kit** to confirm DNA recovery and then set up the following End-Prep reaction:\n1.  50 \u00b5L  DNA sample\n1.  7 \u00b5L  **Ultra II End-Prep Buffer** (NEB)\n1.  3 \u00b5L  **Ultra II End-Prep Enzyme mix** (NEB)\n\n",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814169,
+    "guid": "27045D00D97111E980254724E297D82E",
+    "previous_id": 814168,
+    "previous_guid": "1FF088E0D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate at  20 \u00b0C  for  00:30:00  followed by  65 \u00b0C  for  00:30:00 .",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "1",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": [
+     {
+      "id": 1,
+      "title": "Incubation",
+      "icon": "IncubationIcon"
+     }
+    ]
+   },
+   {
+    "id": 814170,
+    "guid": "27056E70D97111E980254724E297D82E",
+    "previous_id": 814169,
+    "previous_guid": "27045D00D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add  60 \u00b5L  of a **PEG/NaCl precipitation buffer **[9 % PEG8000 (w/v),  1 Molarity (M)  NaCl,  10 Molarity (M)  Tris-Cl (pH8.0)] and mixed by flicking tube. \n",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814171,
+    "guid": "27067FE0D97111E980254724E297D82E",
+    "previous_id": 814185,
+    "previous_guid": "148991D0D97211E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Remove supernatant and wash 2x with  200 \u00b5L  of **70 % ethanol** by simple addition to the inside of the tube wall and centrifuging for  00:05:00  followed by removal. \n\nBe careful to avoid pelleted DNA when doing this (you may not see DNA so keep away from appropriate area of tube).\n \n",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "5",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": [
+     {
+      "id": 5,
+      "title": "Wash",
+      "icon": "WashIcon"
+     }
+    ]
+   },
+   {
+    "id": 814172,
+    "guid": "2707DF70D97111E980254724E297D82E",
+    "previous_id": 814171,
+    "previous_guid": "27067FE0D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Allow DNA to air dry for a couple of mins.",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814173,
+    "guid": "27093F00D97111E980254724E297D82E",
+    "previous_id": 814186,
+    "previous_guid": "7C8C9D40D97211E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Leave DNA in fridge to resuspend overnight. \n\nDepending on DNA fragment size time can be shortened.\n \n",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814174,
+    "guid": "31B52E00D97111E980254724E297D82E",
+    "previous_id": 814173,
+    "previous_guid": "27093F00D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix DNA by flicking and quantify  1 \u00b5L  using the **Qubit DNA HS kit **to confirm DNA recovery and then set up the following Ligation reaction:\n1.  33.5 \u00b5L  DNA sample\n1.  12.5 \u00b5L  **LNB buffer**\n1.  2 \u00b5L  **AMX adapter**\n1.  2 \u00b5L **Quick T4 DNA Ligase** (NEB)",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "11",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814175,
+    "guid": "33598F30D97111E980254724E297D82E",
+    "previous_id": 814174,
+    "previous_guid": "31B52E00D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate at  20 \u00b0C  /  Room temperature  for  01:00:00 .",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "12",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814176,
+    "guid": "3C9B8DF0D97111E980254724E297D82E",
+    "previous_id": 814175,
+    "previous_guid": "33598F30D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add  4.4 \u00b5L   5 Molarity (M)  **NaCl.**",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "13",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814177,
+    "guid": "3C9DB0D0D97111E980254724E297D82E",
+    "previous_id": 814188,
+    "previous_guid": "E004A250D97211E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Centrifuged at {\"centrifuge\":\"13500\",\"guid\":\"F3B09FA0DC9411E98570115B44472C19\",\"id\":0,\"label\":\"\",\"unit\":33}  for  00:30:00  at  Room temperature .\n",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "2",
+    "duration": 0,
+    "original_id": 0,
+    "number": "16",
+    "cases": [],
+    "critical": [
+     {
+      "id": 2,
+      "title": "Centrifugation",
+      "icon": "CentrifugationIcon"
+     }
+    ]
+   },
+   {
+    "id": 814178,
+    "guid": "3C9FD3B0D97111E980254724E297D82E",
+    "previous_id": 814177,
+    "previous_guid": "3C9DB0D0D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Remove supernatant and wash 2x with  200 \u00b5L  of a 2 fold dilution of the previously used **PEG/NaCl precipitation buffer** above. \nDo not disturb the pellet and centrifuge for  00:05:00  between each addition before removing wash solution.",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "5",
+    "duration": 0,
+    "original_id": 0,
+    "number": "17",
+    "cases": [],
+    "critical": [
+     {
+      "id": 5,
+      "title": "Wash",
+      "icon": "WashIcon"
+     }
+    ]
+   },
+   {
+    "id": 814179,
+    "guid": "3CA21DA0D97111E980254724E297D82E",
+    "previous_id": 814178,
+    "previous_guid": "3C9FD3B0D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add  26 \u00b5L  **EB buffer** (10 mM Tris-Cl pH 8.0).",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "18",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814180,
+    "guid": "3CA48EA0D97111E980254724E297D82E",
+    "previous_id": 814179,
+    "previous_guid": "3CA21DA0D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Leave adapted DNA in fridge to resuspend overnight. \n\nDepending on DNA fragment size time can be shortened.\n \n",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "19",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814181,
+    "guid": "3CA74DC0D97111E980254724E297D82E",
+    "previous_id": 814180,
+    "previous_guid": "3CA48EA0D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix DNA by flicking and quantify  1 \u00b5L  using the **Qubit DNA HS kit** to confirm DNA recovery.",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "20",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814182,
+    "guid": "412D2400D97111E980254724E297D82E",
+    "previous_id": 814181,
+    "previous_guid": "3CA74DC0D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "[Possible round of size selection with Circulomics / PEG-NaCl buffer (see figure above).]",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "21",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814183,
+    "guid": "43A7C0F0D97111E980254724E297D82E",
+    "previous_id": 814182,
+    "previous_guid": "412D2400D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Library ready to be combined with SQB for loading onto flowcell ( 400 ng  \u2013  1.3 \u00b5g  depending on size and recovery).",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "22",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814184,
+    "guid": "E329A580D97111E980254724E297D82E",
+    "previous_id": 814170,
+    "previous_guid": "27056E70D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate at  Room temperature  for  00:30:00 .",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "1",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": [
+     {
+      "id": 1,
+      "title": "Incubation",
+      "icon": "IncubationIcon"
+     }
+    ]
+   },
+   {
+    "id": 814185,
+    "guid": "148991D0D97211E980254724E297D82E",
+    "previous_id": 814184,
+    "previous_guid": "E329A580D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Centrifuge at {\"centrifuge\":\"13500\",\"guid\":\"6BA27430DC9411E98570115B44472C19\",\"id\":0,\"label\":\"\",\"unit\":33}    for  00:30:00  at  Room temperature .\n",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "2",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": [
+     {
+      "id": 2,
+      "title": "Centrifugation",
+      "icon": "CentrifugationIcon"
+     }
+    ]
+   },
+   {
+    "id": 814186,
+    "guid": "7C8C9D40D97211E980254724E297D82E",
+    "previous_id": 814172,
+    "previous_guid": "2707DF70D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add  41 \u00b5L  **EB buffer** (10 mM Tris-Cl pH 8.0).",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814187,
+    "guid": "CF5DC940D97211E980254724E297D82E",
+    "previous_id": 814176,
+    "previous_guid": "3C9B8DF0D97111E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix by flicking. ",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "14",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 814188,
+    "guid": "E004A250D97211E980254724E297D82E",
+    "previous_id": 814187,
+    "previous_guid": "CF5DC940D97211E980254724E297D82E",
+    "section": "",
+    "section_color": "",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate for  00:30:00  at  Room temperature  to precipitate the DNA.",
+    "data": null,
+    "protocol_id": 27826,
+    "case_id": 0,
+    "critical_ids": "1",
+    "duration": 0,
+    "original_id": 0,
+    "number": "15",
+    "cases": [],
+    "critical": [
+     {
+      "id": 1,
+      "title": "Incubation",
+      "icon": "IncubationIcon"
+     }
+    ]
+   }
+  ],
+  "table_of_contents": [],
+  "title": "Bead-free long fragment LSK109 library preparation",
+  "title_html": "<p>Bead-free long fragment LSK109 library preparation</p>",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775224502
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775224502
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775224502
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775224502
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775224502
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "bead-free-long-fragment-lsk109-library-preparation-7eshjee",
+  "url": "https://www.protocols.io/view/bead-free-long-fragment-lsk109-library-preparation-7eshjee",
+  "version_class": 27826,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "bead-free-long-fragment-lsk109-library-preparation-rm7vz8mj5vx1/v1",
+  "versions": [
+   {
+    "id": 27826,
+    "title": "Bead-free long fragment LSK109 library preparation",
+    "title_html": "<p>Bead-free long fragment LSK109 library preparation</p>",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.7eshjee",
+    "uri": "bead-free-long-fragment-lsk109-library-preparation-7eshjee",
+    "published_on": 1580336721,
+    "modified_on": 1580336721,
+    "version_class": 27826,
+    "version_id": 0,
+    "version_code": "7eshjee",
+    "version_uri": "bead-free-long-fragment-lsk109-library-preparation-rm7vz8mj5vx1/v1",
+    "created_on": 1568741188,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "John Tyson",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "UBC",
+     "affiliation_url": null,
+     "username": "john-tyson",
+     "link": null,
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 6,
+     "last_comment_time": 1614867976
+    },
+    "protocol_image_file": {
+     "guid": "741B72CF687311F08F960A58A9FEAC02",
+     "file_name": "bras7vcw.jpg",
+     "url": "https://files.protocols.io/external/bras7vcw-741B72CF687311F08F960A58A9FEAC02.jpg",
+     "mime": "image/jpeg",
+     "size": 21770,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1753350552
+    }
+   }
+  ],
+  "warning": "Please see SDS (Safety Data Sheet) for hazards and safety warnings."
+ }
+}

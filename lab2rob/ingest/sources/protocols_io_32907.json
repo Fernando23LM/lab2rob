@@ -1,0 +1,1729 @@
+{
+ "protocol_id": 32907,
+ "uri": "igem-calibration-protocol-red-fluorescent-proteins-bcdjis4n",
+ "doi": "dx.doi.org/10.17504/protocols.io.bcdjis4n",
+ "url": "https://www.protocols.io/view/igem-calibration-protocol-red-fluorescent-proteins-bcdjis4n",
+ "title": "iGEM Calibration Protocol - Red Fluorescent Proteins in Plate Readers",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:15:25Z",
+ "query": "dilution",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Paul",
+    "last_name": "Rutten",
+    "affiliation": "iGEM Measurement Committee",
+    "note": "",
+    "guid": "0340B749F8CC11ED9D4302C0B41BC903",
+    "username": "paul-rutten1",
+    "name": "Paul Rutten",
+    "affiliation_url": "",
+    "link": "http://linkedin.com/in/pauljrutten",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "BF0C389D5B2A11EFA2EF0A58A9FEAC02",
+     "file_name": "byjk4df6.jpg",
+     "url": "https://files.protocols.io/external/byjk4df6-BF0C389D5B2A11EFA2EF0A58A9FEAC02.jpg",
+     "mime": "image/jpeg",
+     "size": 34335,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1723742462
+    }
+   },
+   {
+    "first_name": "Cheryl",
+    "last_name": "Telmer",
+    "affiliation": "iGEM Measurement Committee",
+    "note": "",
+    "guid": "03578E53F8CC11ED9D4302C0B41BC903",
+    "username": "cheryl-telmer",
+    "name": "Cheryl Telmer",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Geoff",
+    "last_name": "Baldwin",
+    "affiliation": "Imperial College London",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Geoff Baldwin",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Dennis",
+    "last_name": "Mishler",
+    "affiliation": "iGEM Measurement Committee",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Dennis Mishler",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Traci",
+    "last_name": "Haddock-Angelli",
+    "affiliation": "iGEM",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Traci Haddock-Angelli",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Jacob",
+    "last_name": "Beal",
+    "affiliation": "iGEM Measurement Committee",
+    "note": "",
+    "guid": "02F54F30F8CC11ED9D4302C0B41BC903",
+    "username": "jacob-beal",
+    "name": "Jacob Beal",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Ari",
+    "last_name": "Dwijayanti",
+    "affiliation": "Imperial College London",
+    "note": "",
+    "guid": "037E5EE6F8CC11ED9D4302C0B41BC903",
+    "username": "ari-dwijayanti",
+    "name": "Ari Dwijayanti",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Marko",
+    "last_name": "Storch",
+    "affiliation": "Imperial College London",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Marko Storch",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Natalie",
+    "last_name": "Farny",
+    "affiliation": "iGEM Measurement Committee",
+    "note": "",
+    "guid": "02F596B8F8CC11ED9D4302C0B41BC903",
+    "username": "natalie-farny",
+    "name": "Natalie Farny",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Alejandro",
+    "last_name": "Vignoni",
+    "affiliation": "Universitat Politecnica de Valencia",
+    "note": "",
+    "guid": "034C6F68F8CC11ED9D4302C0B41BC903",
+    "username": "alejandro--vignoni",
+    "name": "Alejandro Vignoni",
+    "affiliation_url": "sb2cl.ai2.upv.es",
+    "link": "http://sb2cl.ai2.upv.es/content/alejandro-vignoni",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "C1E643AB5B2A11EFA2EF0A58A9FEAC02",
+     "file_name": "byyt46uw.png",
+     "url": "https://files.protocols.io/external/byyt46uw-C1E643AB5B2A11EFA2EF0A58A9FEAC02.png",
+     "mime": "image/png",
+     "size": 86011,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1723742467
+    }
+   },
+   {
+    "first_name": "Richard",
+    "last_name": "Tennant",
+    "affiliation": "iGEM Measurement Committee",
+    "note": "",
+    "guid": "034E864BF8CC11ED9D4302C0B41BC903",
+    "username": "richard-tennant",
+    "name": "Richard Tennant",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "Read through this entire protocol carefully before you start your experiment and prepare any materials you may need.\n\n**Note: **The iGEM Abs600 (OD) calibration protocol with microspheres calibration method is a pre-requisite for carrying out this protocol. You will need data from that calibration to analyse the results of this protocol.",
+  "created_on": 1581367488,
+  "creator": {
+   "affiliation": "The University of Oxford",
+   "affiliation_url": "",
+   "affiliations": [
+    {
+     "affiliation": "The University of Oxford",
+     "is_default": true,
+     "job_title": null,
+     "url": ""
+    }
+   ],
+   "badges": [
+    {
+     "id": 4,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg"
+     },
+     "name": "Gold power author!"
+    },
+    {
+     "id": 6,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/accelerator.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/accelerator.svg"
+     },
+     "name": "Science accelerator"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://files.protocols.io/thumbnails/external/byjk4df6-BF0C389D5B2A11EFA2EF0A58A9FEAC02.jpg/thumbnail-w100xh100.jpg",
+    "source": "https://files.protocols.io/external/byjk4df6-BF0C389D5B2A11EFA2EF0A58A9FEAC02.jpg"
+   },
+   "last_name": "",
+   "link": "http://linkedin.com/in/pauljrutten",
+   "name": "Paul Rutten",
+   "username": "paul-rutten1"
+  },
+  "cross_cloud_origin": null,
+  "description": "Plate readers report fluorescence values in arbitrary units that vary widely from instrument to instrument. Therefore absolute fluorescence values cannot be directly compared from one instrument to another. In order to compare fluorescence output of test devices between teams, it is necessary for each team to create a standard fluorescence curve. Although distribution of a known concentration of fluorescent protein would be an ideal way to standardize the amount of fluorescence in our \u200bE. coli\u200b cells, the stability of these proteins and the high cost of their purification are problematic. We therefore use the dye Texas Red, which has similar excitation and emission properties to many red fluorescent proteins, but is cost-effective and easy to prepare.\n\nYou will prepare a dilution series of Texas Red in four replicates and measure the fluorescence in a 96 well plate in your plate reader. By measuring these in your plate reader, you will generate a standard curve of fluorescence for Texas Red concentration. You will be able to use this to convert your cell based readings to an equivalent Texas Red concentration. Before beginning this protocol, ensure that you are familiar with the flourescence settings and measurement modes of your instrument. You will need to know what filters your instrument has for measuring red fluorescence, making sure it can adequately excite and record emmission. Recommended spectra for Texas Red are excitation at 596 nm and emmission at 620 nm.\n\n**Note: **The iGEM Abs600 (OD) calibration protocol with microspheres calibration method is a pre-requisite for carrying out this protocol. You will need data from that calibration to analyse the results of this protocol.",
+  "disclaimer": "",
+  "documents": [
+   {
+    "id": 39227,
+    "guid": "",
+    "type_id": 0,
+    "filename": "",
+    "key": "",
+    "color": "",
+    "height": 0,
+    "width": 0,
+    "is_document": null,
+    "original_file_id": null,
+    "thumb_url": "https://www.protocols.io/img/extensions/xlsx.png",
+    "size": 38149,
+    "is_private": 0,
+    "is_new": 0,
+    "ofn": "iGEM Data Analysis Template - Fluorescence Standard Curve - v1.xlsx",
+    "url": "https://content.protocols.io/bgj54df6.xlsx",
+    "bucket_name": null,
+    "s3_webp_url": "",
+    "file_id": "39227"
+   }
+  ],
+  "doi": "dx.doi.org/10.17504/protocols.io.bcdjis4n",
+  "ethics_statement": "",
+  "fork_id": 27409,
+  "funders": [],
+  "guid": "326B7D6B6767413A8A4D9FF5E07BC607",
+  "guidelines": "For a full set of calibrations, you should run two protocols: this fluorescence calibration curve with Texas Red, and the Abs600 (OD) calibration with microspheres. \n\nBefore beginning these protocols, please ensure that you are familiar with the measurement modes and settings of your instrument. For all of these calibration measurements, you must use the same plates and volumes that you will use in your cell-based assays. You must also use the same settings (e.g., filters or excitation and emission wavelengths) that you will use in your cell-based assays. If you do not use the same plates, volumes, and settings, the calibration will not be valid.\n\nMake sure to record all information about your instrument to document your experiment. If your instrument has variable temperature settings, the instrument temperature should be set to room temperature (approximately 20-25 C) for all measurements.",
+  "id": 32907,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 580502,
+  "keywords": "measuring red fluorescence, many red fluorescent protein, emission properties to many red fluorescent protein, red fluorescent protein, red fluorescence, red fluorescent proteins in plate readers plate reader, concentration of fluorescent protein, fluorescence value, fluorescent protein, amount of fluorescence, fluorescence output, fluorescence output of test device, fluorescence, readings to an equivalent texas red concentration, absolute fluorescence value, fluorescence values in arbitrary unit, standard fluorescence curve, standard curve of fluorescence, equivalent texas red concentration, dilution series of texas red, spectra for texas red, igem calibration protocol, dye texas red, texas red concentration, texas red, microspheres calibration method, calibration protocol, calibration protocol with microspheres calibration method, recommended spectra, data from that calibration, protein, calibration, flourescence setting, stability of these protein",
+  "link": "https://2019.igem.org/Measurement",
+  "manuscript_citation": "",
+  "materials": [
+   {
+    "id": 42134,
+    "guid": "412EE0BE341F11EE9D4302C0B41BC903",
+    "name": "96 well plate",
+    "mol_weight": 0,
+    "sku": "",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 1,
+     "name": "Contributed by users",
+     "link": "https://www.protocols.io",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/1.png",
+      "placeholder": "/img/vendors/1.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 120540,
+    "guid": "4199C7CB341F11EE9D4302C0B41BC903",
+    "name": "PBS",
+    "mol_weight": 0,
+    "sku": "",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 1,
+     "name": "Contributed by users",
+     "link": "https://www.protocols.io",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/1.png",
+      "placeholder": "/img/vendors/1.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 349532,
+    "guid": "425017B2341F11EE9D4302C0B41BC903",
+    "name": "Texas Red",
+    "mol_weight": 0,
+    "sku": "",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 1,
+     "name": "Contributed by users",
+     "link": "https://www.protocols.io",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/1.png",
+      "placeholder": "/img/vendors/1.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   }
+  ],
+  "materials_text": "MATERIALS\n 96 well plate Contributed by users \n PBS Contributed by users \n Texas Red Contributed by users \nSTEP MATERIALS\n PBS Contributed by users \n PBS Contributed by users \n PBS Contributed by users \n Texas Red Contributed by users \nTexas Red is provided in the iGEM Measurement Kit. The 96-well plate should preferably be black with a clear flat bottom.",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 1753350595,
+   "file_name": "bfvi5af6.png",
+   "guid": "8DBEAF08687311F08F960A58A9FEAC02",
+   "height": 0,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 327436,
+   "url": "https://files.protocols.io/external/bfvi5af6-8DBEAF08687311F08F960A58A9FEAC02.png",
+   "width": 0
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1582547971,
+  "reserved_doi": "",
+  "space_id": 1147,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 1135,
+   "number_of_steps": 25,
+   "number_of_bookmarks": 4,
+   "number_of_comments": 1,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 1,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 228,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 12,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 0,
+    "public": 1
+   },
+   "number_of_accessible_forks": 1
+  },
+  "status": {
+   "id": 1,
+   "info": "We use this protocol and it's working"
+  },
+  "steps": [
+   {
+    "id": 880976,
+    "guid": "0FB0CB12A6E14225904A632289EA9EAF",
+    "previous_id": null,
+    "previous_guid": null,
+    "section": "<p><strong>Prepare the Texas Red stock solution</strong></p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Spin down Texas Red kit tube to make sure pellet is at the bottom of tube\n Texas Red Contributed by users \n",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807961,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880980,
+    "guid": "B42699F845D64FC28537BF930A18FC0B",
+    "previous_id": 881051,
+    "previous_guid": "E58398104C5111EAB627952009BF2FA3",
+    "section": "<p><strong>Prepare the Texas Red stock solution</strong></p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Dilute the 10X reference stock solution with 1X PBS to make a 1X reference working solution with a concentration of 10 \u03bcM. E.g. dilute 100 \u03bcL of 10X Texas Red reference stock into 900 \u03bcL of 1X PBS.",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807963,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880981,
+    "guid": "02EFD2A812F34A368DD295E6EBB1229D",
+    "previous_id": 880980,
+    "previous_guid": "B42699F845D64FC28537BF930A18FC0B",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Accurate pipetting is essential. Serial dilutions will be performed across columns 1-11. **Column 12 must contain PBS buffer only. **Initially you will setup the plate with the reference working solution in column 1 and an equal volume of 1X PBS in columns 2 to 12. \n\nYou will perform a serial dilution by consecutively transferring 100 \u03bcL from column to column with good mixing.\n\n  \n[Fluorescein dilution v3.png]](https://protocols-files.s3.amazonaws.com/private/6cfc619a485609de65b4782b7b27da9700cb0620755b63d80b234c43cca4fc7e/bqnz4df6.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWFTFYUBUZ2U2JGOS%2F20261029%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261029T221521Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=9c22ef03830e4b1a1a3190e6c15070355d7c4b3340d2da10c5d7b4efd6daaad5)\n \n\n",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807964,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880982,
+    "guid": "CD2938BC0D394AD89A91EA1D816A53FC",
+    "previous_id": 880981,
+    "previous_guid": "02EFD2A812F34A368DD295E6EBB1229D",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add 100 \u03bcL of 1X PBS\u200b into wells A2, B2, C2, D2....A12, B12, C12, D12",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807965,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880983,
+    "guid": "F2A0C252E75B4EF882A4430B0E2B3B3A",
+    "previous_id": 880982,
+    "previous_guid": "CD2938BC0D394AD89A91EA1D816A53FC",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add 200 \u03bcL \u200bof Texas Red reference working solution (1X) into A1, B1, C1, D1",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807966,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880984,
+    "guid": "7FF736DE5A2E4DA2B6F50CD62BFC5D5F",
+    "previous_id": 880983,
+    "previous_guid": "F2A0C252E75B4EF882A4430B0E2B3B3A",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Transfer 100 \u03bcL of Texas Red reference working solution from A1 into A2",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807967,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880985,
+    "guid": "AA5B790CF58E49CEB17E7AE7FFE40337",
+    "previous_id": 880984,
+    "previous_guid": "7FF736DE5A2E4DA2B6F50CD62BFC5D5F",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix A2 by pipetting up and down 3x and transfer 100 \u03bcL into A3",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807968,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880986,
+    "guid": "E3DCF9FD4AE948D2BFBF4ACDD54CE951",
+    "previous_id": 880985,
+    "previous_guid": "AA5B790CF58E49CEB17E7AE7FFE40337",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix A3 by pipetting up and down 3x and transfer 100 \u03bcL into A4",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807969,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880987,
+    "guid": "7E9C744C5B3E45C5B8C52F11D3673C43",
+    "previous_id": 880986,
+    "previous_guid": "E3DCF9FD4AE948D2BFBF4ACDD54CE951",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix A4 by pipetting up and down 3x and transfer 100 \u03bcL into A5",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807970,
+    "number": "11",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880988,
+    "guid": "168AF8C3591C4496AC69704FB1206269",
+    "previous_id": 880987,
+    "previous_guid": "7E9C744C5B3E45C5B8C52F11D3673C43",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix A5 by pipetting up and down 3x and transfer 100 \u03bcL into A6",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807971,
+    "number": "12",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880989,
+    "guid": "A04488BE8DD946ECA93E7FE64D503295",
+    "previous_id": 880988,
+    "previous_guid": "168AF8C3591C4496AC69704FB1206269",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix A6 by pipetting up and down 3x and transfer 100 \u03bcL into A7",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807972,
+    "number": "13",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880990,
+    "guid": "C984758327AE456B9E93F2E6571457E1",
+    "previous_id": 880989,
+    "previous_guid": "A04488BE8DD946ECA93E7FE64D503295",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix A7 by pipetting up and down 3x and transfer 100 \u03bcL into A8",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807973,
+    "number": "14",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880991,
+    "guid": "90D1F077954D45D1AACAEC1D98938C48",
+    "previous_id": 880990,
+    "previous_guid": "C984758327AE456B9E93F2E6571457E1",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix A8 by pipetting up and down 3x and transfer 100 \u03bcL into A9",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807974,
+    "number": "15",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880992,
+    "guid": "0EA717A6E3874AD59513942E5A6FF540",
+    "previous_id": 880991,
+    "previous_guid": "90D1F077954D45D1AACAEC1D98938C48",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix A9 by pipetting up and down 3x and transfer 100 \u03bcL into A10",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807975,
+    "number": "16",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880993,
+    "guid": "5901F84F8CFE4270802F552D1B43847A",
+    "previous_id": 880992,
+    "previous_guid": "0EA717A6E3874AD59513942E5A6FF540",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix A10 by pipetting up and down 3x and transfer 100 \u03bcL into A11",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807976,
+    "number": "17",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880994,
+    "guid": "252C0634AE39489BB4D90773D503A791",
+    "previous_id": 880993,
+    "previous_guid": "5901F84F8CFE4270802F552D1B43847A",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mix A11 by pipetting up and down 3x and transfer 100 \u03bcLl into \u200bliquid waste\n\n**Take care not to continue serial dilution into column 12**\n \n",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807977,
+    "number": "18",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880995,
+    "guid": "8C26628395654CF6B652021F3DC80D86",
+    "previous_id": 880994,
+    "previous_guid": "252C0634AE39489BB4D90773D503A791",
+    "section": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Repeat dilution series for rows B, C, D",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807978,
+    "number": "19",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880996,
+    "guid": "26BC2AC256DF4BFD9B1E3F22FAB400EC",
+    "previous_id": 880995,
+    "previous_guid": "8C26628395654CF6B652021F3DC80D86",
+    "section": "<strong>Measure fluorescence</strong>",
+    "section_color": "#84CE84",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Measure the fluorescence of all samples in your plate reader . Ensure that any automatic gain setting is off (if your instrument has one).\n\nIf you will be using your data in conjuction with measurements from the Plate Reader Abs600 (OD) Calibration protocol, make sure you use the same instrument settings for both protocols.\n\nPlease also be aware you may need to change the wavelength at which you are taking your OD reading when using red fluorescence. If your red fluorescent protein is absorbing at 600 nm, this will interfere with your Abs600 reading. We recommend measuring your OD at 660 nm instead, if this is beyond the excitation spectrum of your protein. You can check the excitation of many commonly use fluorescent proteins at [fpbase.org](http://fpbase.org). Please note OD readings at 600 and 660 nm cannot be directly compared.\n<img src=\"https://files.protocols.io/external/bfvk5af6-6DE459A5687311F08F960A58A9FEAC02.png\" width=\"30\" height=\"30\"/> [Calibration Protocol - Plate Reader Abs600 (OD) Calibration with Microsphere Particles](https://www.protocols.io/view/calibration-protocol-plate-reader-abs600-od-calibr-549g8z6) by [Paul Rutten](https://www.protocols.io/researchers/paul-rutten1) \n\n\nRemember to set your plate reader&#39;s excitation and emission settings correctly for red fluorescence.\n \n\n",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807979,
+    "number": "20",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880997,
+    "guid": "2AA2085E32ED4373A0F3A4BD76DCA492",
+    "previous_id": 880996,
+    "previous_guid": "26BC2AC256DF4BFD9B1E3F22FAB400EC",
+    "section": "<strong>Measure fluorescence</strong>",
+    "section_color": "#84CE84",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Record the data in your notebook. Also record the gain setting that you used in your instrument, if available. Please note your standard curve should still work well even if a few of your measurements are saturing the instrument",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807980,
+    "number": "21",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880998,
+    "guid": "144172A594804976A1A5ED5BADE648C6",
+    "previous_id": 880997,
+    "previous_guid": "2AA2085E32ED4373A0F3A4BD76DCA492",
+    "section": "<strong>Measure fluorescence</strong>",
+    "section_color": "#84CE84",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Import data into this Excel sheet provided (\u200bTexas Red standard curve tab\u200b):  [iGEM 2019 Plate Reader Fluorescence Calibration v3_Texas Red.xlsx](https://protocols-files.s3.amazonaws.com/private/6cfc619a485609de65b4782b7b27da9700cb0620755b63d80b234c43cca4fc7e/bzed4df6.xlsx?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWFTFYUBUZ2U2JGOS%2F20261029%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261029T221521Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=c7fb1e23a34ee3430d6bf218d9b0c0c17df87292b74c3e30b773ce5f62e60035) \n",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807981,
+    "number": "22",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 880999,
+    "guid": "28753B1C01AB493CA13788BFB03FB1E8",
+    "previous_id": 880998,
+    "previous_guid": "144172A594804976A1A5ED5BADE648C6",
+    "section": "<strong>Congratulations!</strong>",
+    "section_color": "#FFED92",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "You have now completed this calibration protocol",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 807982,
+    "number": "23",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 881047,
+    "guid": "73CDC431846B4EA8908BAB1C2C1B3BB3",
+    "previous_id": 880976,
+    "previous_guid": "0FB0CB12A6E14225904A632289EA9EAF",
+    "section": "<p><strong>Prepare the Texas Red stock solution</strong></p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Make a Texas Red 10X reference stock solution (20 \u03bcM) by resuspending the dye powder in 1mL of 1X PBS.\n\n**It is important that the Texas Red is properly dissolved.** To check this, after the resuspension you should pipette up and down and examine the solution in the pipette tip \u2013 if any particulates are visible in the pipette tip continue to mix the solution until they disappear.\n \n\n PBS Contributed by users \n",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 881049,
+    "guid": "C7CCEF604C5111EAB627952009BF2FA3",
+    "previous_id": 881047,
+    "previous_guid": "73CDC431846B4EA8908BAB1C2C1B3BB3",
+    "section": "<p><strong>Prepare the Texas Red stock solution</strong></p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "**[OPTIONAL]** If you have access to a spectrophotometer, you can calculate the concentration of your Texas Red reference stock solution even more accurately using the Beer-Lambert law.",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 881050,
+    "guid": "DBC3DDD04C5111EAB627952009BF2FA3",
+    "previous_id": 881049,
+    "previous_guid": "C7CCEF604C5111EAB627952009BF2FA3",
+    "section": "<p><strong>Prepare the Texas Red stock solution</strong></p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "Measure the stock solution&#39;s absorbance at 586 nm and calculate concentration using an extinction coefficient of 82.786 mM-1 cm-1.",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3.1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 881051,
+    "guid": "E58398104C5111EAB627952009BF2FA3",
+    "previous_id": 881050,
+    "previous_guid": "DBC3DDD04C5111EAB627952009BF2FA3",
+    "section": "<p><strong>Prepare the Texas Red stock solution</strong></p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": true,
+    "step": "Change the starting concentration value in the spreadsheet in step 21 to reflect your more accurate measurement when doing this. This value is defined in cell B1 in the &#34;Texas Red Std curve&#34; sheet. The rest of the document will update automatically after you make this change.",
+    "data": null,
+    "protocol_id": 32907,
+    "case_id": 0,
+    "critical_ids": "0",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3.2",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "<p><strong>Prepare the Texas Red stock solution</strong></p>",
+    "color": "#A492FF",
+    "first_step_guid": "0FB0CB12A6E14225904A632289EA9EAF"
+   },
+   {
+    "title": "<p><strong>Prepare the serial dilutions of Texas Red in a 96-well plate</strong></p>",
+    "color": "#94EBFF",
+    "first_step_guid": "02EFD2A812F34A368DD295E6EBB1229D"
+   },
+   {
+    "title": "<strong>Measure fluorescence</strong>",
+    "color": "#84CE84",
+    "first_step_guid": "26BC2AC256DF4BFD9B1E3F22FAB400EC"
+   },
+   {
+    "title": "<strong>Congratulations!</strong>",
+    "color": "#FFED92",
+    "first_step_guid": "28753B1C01AB493CA13788BFB03FB1E8"
+   }
+  ],
+  "title": "iGEM Calibration Protocol - Red Fluorescent Proteins in Plate Readers",
+  "title_html": "<p>iGEM Calibration Protocol - Red Fluorescent Proteins in Plate Readers</p>",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775224901
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775224901
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775224901
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775224901
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775224901
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "igem-calibration-protocol-red-fluorescent-proteins-bcdjis4n",
+  "url": "https://www.protocols.io/view/igem-calibration-protocol-red-fluorescent-proteins-bcdjis4n",
+  "version_class": 32907,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "igem-calibration-protocol-red-fluorescent-proteins-q26g7b588lwz/v1",
+  "versions": [
+   {
+    "id": 32907,
+    "title": "iGEM Calibration Protocol - Red Fluorescent Proteins in Plate Readers",
+    "title_html": "<p>iGEM Calibration Protocol - Red Fluorescent Proteins in Plate Readers</p>",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.bcdjis4n",
+    "uri": "igem-calibration-protocol-red-fluorescent-proteins-bcdjis4n",
+    "published_on": 1582547971,
+    "modified_on": 1582547971,
+    "version_class": 32907,
+    "version_id": 0,
+    "version_code": "bcdjis4n",
+    "version_uri": "igem-calibration-protocol-red-fluorescent-proteins-q26g7b588lwz/v1",
+    "created_on": 1581367488,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Paul Rutten",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "The University of Oxford",
+     "affiliation_url": "",
+     "username": "paul-rutten1",
+     "link": "http://linkedin.com/in/pauljrutten",
+     "user_image_file": {
+      "guid": "BF0C389D5B2A11EFA2EF0A58A9FEAC02",
+      "file_name": "byjk4df6.jpg",
+      "url": "https://files.protocols.io/external/byjk4df6-BF0C389D5B2A11EFA2EF0A58A9FEAC02.jpg",
+      "mime": "image/jpeg",
+      "size": 34335,
+      "width": 0,
+      "height": 0,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 1723742462
+     }
+    },
+    "stats": {
+     "number_of_comments": 1,
+     "last_comment_time": 1590845699
+    },
+    "protocol_image_file": {
+     "guid": "8DBEAF08687311F08F960A58A9FEAC02",
+     "file_name": "bfvi5af6.png",
+     "url": "https://files.protocols.io/external/bfvi5af6-8DBEAF08687311F08F960A58A9FEAC02.png",
+     "mime": "image/png",
+     "size": 327436,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1753350595
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

@@ -1,0 +1,1271 @@
+{
+ "protocol_id": 5087,
+ "uri": "determining-the-linear-range-for-a-target-protein-g77bzrn",
+ "doi": "dx.doi.org/10.17504/protocols.io.g77bzrn",
+ "url": "https://www.protocols.io/view/determining-the-linear-range-for-a-target-protein-g77bzrn",
+ "title": "Determining the Linear Range for a Target Protein and HKP",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T21:59:56Z",
+ "query": "serial dilution",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "LI-COR",
+    "last_name": "Biosciences",
+    "affiliation": "",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "LI-COR Biosciences",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "",
+  "created_on": 1487185223,
+  "creator": {
+   "affiliation": "LICORbio",
+   "affiliation_url": null,
+   "affiliations": [
+    {
+     "affiliation": "LICORbio",
+     "is_default": true,
+     "job_title": null,
+     "url": null
+    }
+   ],
+   "badges": [
+    {
+     "id": 4,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg"
+     },
+     "name": "Gold power author!"
+    },
+    {
+     "id": 5,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/star.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/star.svg"
+     },
+     "name": "Early adopter"
+    },
+    {
+     "id": 6,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/accelerator.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/accelerator.svg"
+     },
+     "name": "Science accelerator"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": "",
+   "name": "Bandana Maharjan",
+   "username": "bandana-maharjan"
+  },
+  "cross_cloud_origin": null,
+  "description": "  This protocol explains how to use serial dilutions of sample protein to determine the linear ranges of detection for a target and internal loading control, and choose an appropriate amount of sample to load for QWB analysis.\n  \n Follow the instructions in this section if a housekeeping protein will be used as the internal loading control for QWB normalization. This section also applies to normalization with a pan- specific antibody for analysis of phosphorylation or other post-translational modifications. If you plan to use a total protein stain for normalization, see [https://www.protocols.io/view/determining-the-linear-range-for-a-target-protein-g76bzre](https://www.protocols.io/view/determining-the-linear-range-for-a-target-protein-g76bzre).\n \n ",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.g77bzrn",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "8A46E539B9DA11E99CA40242AC110005",
+  "guidelines": "**I.\u00a0Introduction**\n \n In quantitative Western blotting (QWB), normalization mathematically corrects for unavoidable sample-to-sample and lane-to-lane variation by comparing the target protein to an internal loading control. The internal loading control is used as an indicator of sample protein loading, to correct for loading variation and confirm that changes observed in target protein bands represent actual differences between samples.\n  \n QWB analysis is accurate only if the target protein and internal loading control can both be detected within the same linear range \u2013 a range that must be determined experimentally for each target and loading control. The combined linear range is then used to determine how much sample should be loaded to produce a linear signal response for both the target protein and the internal loading control (Figure 1).\n  \n **II. Linear Range, Saturation, and Proportional Signals**\n  \n  In QWB analysis, the **linear range of detection** is the range of sample loading that produces a linear relationship between the amount of target on the membrane and the band intensity recorded by the detector (Figure 1). Outside this range, signal intensity is not dependent on sample loading and does not accurately reflect the amount of target.\n  \n Within the linear range of detection, **band intensity should be proportional to the amount of target.** A change in target abundance should produce an equivalent change in signal response. For example, a two-fold increase in sample loading is expected to produce a two- fold increase in band intensity. At the upper and lower ends of the linear range, this proportional relationship is lost. Band intensity no longer reflects the abundance of target, and quantification is not possible.\n  \n \n \n\n  **Figure 1. In the linear range of detection, the target and internal loading control both display a linear relationship between sample loading and band intensity.** Determine the linear range separately for the target and internal loading control. Combine these ranges to identify a level of sample loading that will produce a linear response for both. Dotted lines indicate loss of proportionality on the upper and lower ends of the linear range.\n  \n  Saturation occurs when increasing amounts of target fail to produce the expected increase in band intensity. Saturated bands yield similar intensity values, regardless of the actual amount of target present, and cannot be accurately quantified. Intensity of strong bands is underestimated, interfering with comparison of relative protein levels across the blot. Error introduced by saturation may alter data analysis and interpretation.\n  \n   **Membrane saturation** is the result of sample overloading. It frequently interferes with accurate detection of abundant proteins, including HKP loading controls. When samples are overloaded, abundant proteins can bind in layers on the membrane surface that limit antibody access during detection. Highly abundant proteins may also exceed the local binding capacity of the membrane and be washed away.\n **Signal saturation** occurs when the signal intensity of a band is too bright for the detection system to record. Increasing amounts of target do not produce a proportional increase in the recorded signal.\n    \n This protocol explains how to use serial dilutions of sample protein to determine the linear ranges of detection for a target and internal loading control, and choose an appropriate amount of sample to load for QWB analysis.\n  \n  **Note:** This protocol is intended for use with near-infrared fluorescent Western blots.\n  \n **III. Key Factors**\n  \n  **Linear range of sample loading.** This range must be determined individually for the target protein and internal loading control. Compare the linear ranges to determine the amount of sample you should load to produce a linear response for both target and control.\n  \n **Housekeeping proteins.** With two proteins of very different abundance, such as a target protein and highly expressed HKP loading control, it is absolutely critical to detect both proteins within the linear range. If the HKP is not detected in the linear range of sample loading, these strong bands will be underestimated and normalization will not be accurate.\n  \n **Quantification of faint bands.** Faint bands that are near the lower limit of detection generally have much larger coefficients of variation. They are difficult to discriminate from membrane background and may not be statistically significant. The high variability of faint bands introduces error that may affect data analysis and interpretation.\n  \n **Antibody validation.** Two-color Western blot detection requires careful selection of primary and secondary antibodies to prevent cross-reactivity. Always perform single-color controls blots first to verify antibody specificity, to and identify possible interference from background bands.\n  \n **IV. Required Reagents**\n  \n  **1. Treated and untreated samples**\n Samples should represent the specific range of treatments or conditions you will use in your experiment (drug treatment, time course, dose response, etc.). Protein concentration must be determined for all samples.\n \n  \n **2. REVERT\u2122 Total Protein Stain Kit (LI-COR, P/N 926-11010) **\n\n REVERT\u2122 Total Protein Stain is used to assess sample protein loading in each lane as an internal loading control. After transfer and prior to immunodetection, the membrane is treated with this near-infrared fluorescent protein stain and imaged at 700 nm. Membrane staining can verify that sample protein was uniformly loaded across the gel, and assess the quality and consistency of protein transfer.\n  \n **3. Electrophoresis reagents**\n  \n **4. Transfer reagents**\n  \n **5. Western blot detection reagents (near-infrared fluorescence)**\n   Perform near-infrared Western blot detection according to the Near-Infrared Western Blot Detection Protocol\n \n  [LI-COR NIRWesternProtocol with PVDF Membrane](https://www.protocols.io/view/near-infrared-nir-western-blot-detection-pvdf-memb-g7rbzm6)\n [LI-COR NIRWestern Protocol with Nitrocellulose Membrane](https://www.protocols.io/view/near-infrared-nir-western-blot-detection-nitrocell-g7nbzme)\n  \n **V. Protocol: Determining the Linear Range for a Target Protein and REVERT\u2122 Total Protein Stain**\n  \n See [https://www.protocols.io/view/determining-the-linear-range-for-a-target-protein-g76bzre](https://www.protocols.io/view/determining-the-linear-range-for-a-target-protein-g76bzre)\n  \n **VI. Protocol: Determining the Linear Range for a Target Protein and HKP**\n  \n See\u00a0&#39;STEPS&#39;\n  \n  Use Image Studio\u2122 Software (for a free version, [download Image Studio Lite](https://www.licor.com/bio/products/software/image_studio_lite/download.html)) to quantify the fluorescent signals of the HKP (700 nm) and target protein (800 nm).\n  \n **Estimate Combined Linear Range for Target and HKP**\n  \n 1.\u00a0Plot signal intensity vs. sample loading for the target and HKP (as shown in Figure 4).\n  \n 2.\u00a0Estimate the boundaries of the linear range of sample loading for the target and HKP (shaded regions, Figure 4).\n  \n \u00a0 \u00a0 \u00a0a. Estimate the low end of the linear range by selecting a level of sample loading that is above the level of membrane background (black dashed lines, Figure 4).\n  \n \u00a0 \u00a0 \u00a0b. Estimate the upper end of the linear range by selecting a level of sample loading that is below the region where band intensity begins to plateau due to saturation (red dashed lines, Figure 4).\n  \n \n \n\n   **Figure 4. Estimate the boundaries for the linear range of sample loading.** The estimated lower end (black dashed lines) and upper end (red dashed lines) are indicated for the target protein (A) and abundant HKP (B). Shaded regions indicate the range of sample loading that produces a linear signal response on each graph. Linear range boundaries may be very different for the target and HKP.\n  \n 3.\u00a0Combine the linear ranges of sample loading to identify the available range where the target and HKP can both be detected with a linear signal response (Figure 5). Use a secondary y-axis to plot the 700 nm and 800 nm signals on the same graph.\n  \n 4. For your experiments, choose a level of sample loading that falls in the middle of the combined linear range for the target protein and HKP (X, Figure 5). Avoid working near the boundaries of the combined range.\n  \n \n \n\n  **Figure 5. Determine the appropriate amount of sample to load.** This combined graph indicates the appropriate range of sample loading for accurate detection of the target and HKP loading control in a QWB experiment (X, center).\n  \n 5. If the target is low in abundance and the HKP is highly expressed, it may not be possible to identify a level of sample loading that is appropriate for both proteins. Consider using a total protein stain as an internal loading control for QWB normalization.\n  \n     **Note:** If the target protein is strongly upregulated or downregulated, you should examine the linear range of sample loading for both untreated and treated samples.\n \n \n \n \n \n \n \n \n  \n **VII. Further Reading**\n  \n Please see the following for more information about normalization.\n  \n  **Western Blot Normalization Handbook**\n [licor.com/handbook](https://www.licor.com/documents/gtk1a4mrphretj1gvmzld0f920g7h8sh)\n The Normalization Handbook describes how to choose and validate an appropriate internal loading control for normalization.\n  \n **Good Normalization Gone Bad**\n  [licor.com/GNGB](https://www.licor.com/documents/r8b0v1iuo2lkvdonha1toxx778aap3tr)\n Good Normalization Gone Bad presents examples of normalization that have been adversely affected by common pitfalls and offers potential solutions.\n  \n  **Western Blot Normalization White Paper**\n [licor.com/normalizationreview](https://www.licor.com/documents/fwf274p9k35hwym6p2keq397p4edho5o)\n This white paper comprehensively reviews the literature of Western blot normalization.\n  \n  **Determining the Linear Range for a Target Protein and REVERT Total Protein Stain**\n [licor.com/LinearRange-REVERT](https://www.protocols.io/view/determining-the-linear-range-for-a-target-protein-g76bzre)\n This protocol explains how to choose an appropriate amount of sample to load for QWB analysis.\n  \n  **REVERT\u2122 Total Protein Stain Normalization Protocol**\n [licor.com/RevertNormalization](https://www.protocols.io/view/%20licor.com/RevertNormalization)\n  This protocol describes how to use REVERT\u2122 Total Protein Stain for Western blot normalization and analysis.\n  \n  **Pan/Phospho Analysis For Western Blot Normalization**\n [licor.com/PanProteinNormalization](https://www.protocols.io/view/licor.com/PanProteinNormalization)\n This protocol describes how to use pan-specific antibodies as an internal loading control for normalization.\n  \n  **Housekeeping Protein Validation Protocol**\n [licor.com/HKP-Validation](https://www.protocols.io/view/licor.com/HKP-Validation)\n This protocol explains how to validate an HKP for use as an internal loading control, by demonstrating that HKP expression is stable in the relevant experimental samples.\n  \n  **Housekeeping Protein Normalization Protocol**\n [licor.com/HKP-Normalization](https://www.protocols.io/view/licor.com/HKP-Normalization)\n This protocol describes how to use a housekeeping protein for Western blot normalization and quantitative analysis.\n  \n **References**\n  \n 1. Robasky, K, Lewis NE, and Church GM. Nat. Rev. Genet. 15: 56\u201362 (2014). [http://www.nature.com/nmeth/journal/v11/n9/pdf/nmeth.3091.pdf](http://www.nature.com/nmeth/journal/v11/n9/pdf/nmeth.3091.pdf)\n  \n 2. Naegle K, Gough NR, and Yaffe MB. Sci Signal. 8:fs7 (2015).\n [https://www.ncbi.nlm.nih.gov/pubmed/25852186](https://www.ncbi.nlm.nih.gov/pubmed/25852186)\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n ",
+  "id": 5087,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 233653,
+  "keywords": "licor, total protein stain for normalization, internal loading control for qwb normalization, qwb normalization, target protein, serial dilutions of sample protein, total protein stain, sample protein, qwb analysis, specific antibody, total protein, housekeeping protein, linear ranges of detection, qwb, protein, analysis of phosphorylation, normalization",
+  "link": "https://www.licor.com/documents/dxrkfkwdd2ypgrcrnpx8z8l4hhia22p2",
+  "manuscript_citation": "",
+  "materials": [
+   {
+    "id": 3864,
+    "guid": "41064C55341F11EE9D4302C0B41BC903",
+    "name": "REVERT Total Protein Stain Kit",
+    "mol_weight": 0,
+    "sku": "926-11010",
+    "url": "https://www.licor.com/bio/products/reagents/revert_total_protein_stain/index.html",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 130,
+     "name": "LI-COR",
+     "link": "https://www.licor.com/bio",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   }
+  ],
+  "materials_text": "MATERIALS\n REVERT Total Protein Stain Kit LI-COR Catalog #926-11010 ",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 1753350438,
+   "file_name": "iivcz36.png",
+   "guid": "2FDD7066687311F08F960A58A9FEAC02",
+   "height": 0,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 9541,
+   "url": "https://files.protocols.io/external/iivcz36-2FDD7066687311F08F960A58A9FEAC02.png",
+   "width": 0
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1489611931,
+  "reserved_doi": "",
+  "space_id": 685,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 210,
+   "number_of_steps": 18,
+   "number_of_bookmarks": 1,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 26,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 2,
+   "number_of_equipments": 0,
+   "number_of_collections": 1,
+   "number_of_forks": {
+    "private": 0,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": ""
+  },
+  "steps": [
+   {
+    "id": 334527,
+    "guid": "F9457B1B39A84629B4A4493E553D2116",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "    Perform a Western blot with a serial dilution of sample (an 8-12 point, two-fold serial dilution is a good place to start).\n \n \n \n \n\n    **Note:** Make sure the dilution series includes sample loading amounts above and below the amount of sample you expect to load in each lane.\n \n \n \n \n ",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 334526,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334682,
+    "guid": "CE97A94BD4D5471D92A5A18D72FC3C2D",
+    "previous_id": 334527,
+    "previous_guid": "F9457B1B39A84629B4A4493E553D2116",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Prepare samples to be loaded on the gel with sample loading buffer.",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334686,
+    "guid": "94C3458A5979430896FD5EA4535C97B3",
+    "previous_id": 334682,
+    "previous_guid": "CE97A94BD4D5471D92A5A18D72FC3C2D",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Denature sample by heating at 95 \u00b0C for 3 min (or 70 \u00b0C for 10 min).\n 00:03:00 ",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334689,
+    "guid": "F7131806B74D4D3B9DFE58FD75982C57",
+    "previous_id": 334686,
+    "previous_guid": "94C3458A5979430896FD5EA4535C97B3",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Load a uniform amount of sample protein in each lane.",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334692,
+    "guid": "2B044FE6148C4561A27272F68FD91B50",
+    "previous_id": 334689,
+    "previous_guid": "F7131806B74D4D3B9DFE58FD75982C57",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Separate protein by SDS-PAGE.",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334694,
+    "guid": "C0EF935EE36042FCB3354A506FA13073",
+    "previous_id": 334692,
+    "previous_guid": "2B044FE6148C4561A27272F68FD91B50",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Transfer proteins to immobilizing membrane.",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334696,
+    "guid": "72DD28E4CA0D4D939C4FEFF0C0CFA9A4",
+    "previous_id": 334694,
+    "previous_guid": "C0EF935EE36042FCB3354A506FA13073",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": " Perform near-infrared Western blot detection according to the Near-Infrared Western Blot Detection Protocol\n \n [LI-COR NIRWesternProtocol with PVDF Membrane](https://www.protocols.io/view/near-infrared-nir-western-blot-detection-pvdf-memb-g7rbzm6)\n [LI-COR NIRWestern Protocol with Nitrocellulose Membrane](https://www.protocols.io/view/near-infrared-nir-western-blot-detection-nitrocell-g7nbzme)\n \n\n    **Note:** Use the 800 nm channel to detect the target protein. This channel provides the lowest membrane background and will maximize the sensitivity of detection.\n \n \n \n \n ",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334699,
+    "guid": "0283CBB6020144D6A4D2752382121433",
+    "previous_id": 334696,
+    "previous_guid": "72DD28E4CA0D4D939C4FEFF0C0CFA9A4",
+    "section": null,
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": " Image membrane with an Odyssey imaging system (Classic, CLx or Fc) in the 700 and 800 nm channels.\n  \n  \n Adjust settings so that no saturation appears in the bands to be quantified.\n ",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334702,
+    "guid": "BFB32E2C2A0648E294C5910FDB34771D",
+    "previous_id": 334699,
+    "previous_guid": "0283CBB6020144D6A4D2752382121433",
+    "section": "HKP Quantification (700 nm)",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Select and view the 700 nm channel image only.\n\nUse Image Studio\u2122 Software (for a free version, [download Image Studio Lite](https://www.licor.com/bio/products/software/image_studio_lite/download.html?var=0)) to quantify the fluorescent signals of the HKP (700 nm) and target protein (800 nm).\n ",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334708,
+    "guid": "F2B80FE834E14457BAB84212EBDF698A",
+    "previous_id": 334702,
+    "previous_guid": "BFB32E2C2A0648E294C5910FDB34771D",
+    "section": "HKP Quantification (700 nm)",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add shapes to bands. In the Shape group on the Analysis tab, click Add Rectangle.\n\na\n",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334718,
+    "guid": "DD44EB9AD99B44A5B723A2CEF4F8787E",
+    "previous_id": 334708,
+    "previous_guid": "F2B80FE834E14457BAB84212EBDF698A",
+    "section": "HKP Quantification (700 nm)",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Click each band to be analyzed, and an appropriately sized shape will be added around the band.\n \n   \n \n \n\n**More Info:** For help choosing the right background subtraction method, see [licor.com/BgSubtractHelp](https://www.licor.com/BgSubtractHelp).\n ",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "11",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334724,
+    "guid": "1D5FF1C6544143A181E833C05DE103DA",
+    "previous_id": 334718,
+    "previous_guid": "DD44EB9AD99B44A5B723A2CEF4F8787E",
+    "section": "HKP Quantification (700 nm)",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": " Export the quantification data for your HKP.\u00a0Click Shapes to open the Shapes data table.\n  \n \na\n\n ",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "12",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334731,
+    "guid": "1890AA99261447B38C862959EA25A88E",
+    "previous_id": 334724,
+    "previous_guid": "1D5FF1C6544143A181E833C05DE103DA",
+    "section": "HKP Quantification (700 nm)",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Select shape data, then copy and paste data into a spreadsheet.\n \n \n  \n \n\nNote: All data fields will be exported, but \u201cSignal\u201d is the field of interest for analysis.\n ",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "13",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334738,
+    "guid": "C1982FA1C0B242BBACF6E3B4723A1ABF",
+    "previous_id": 334731,
+    "previous_guid": "1890AA99261447B38C862959EA25A88E",
+    "section": "Target Protein Quantification (800 nm)",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Select and view the 800 nm channel image only.",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "14",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334741,
+    "guid": "3CE26B2337824507BE4533EF9B0D49D2",
+    "previous_id": 334738,
+    "previous_guid": "C1982FA1C0B242BBACF6E3B4723A1ABF",
+    "section": "Target Protein Quantification (800 nm)",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add shapes to bands. In the Shape group on the Analysis tab, click Add Rectangle.\n \n\na\n",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "15",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334748,
+    "guid": "2E5B5BD3E41C46B6A946A67D12BCD9D1",
+    "previous_id": 334741,
+    "previous_guid": "3CE26B2337824507BE4533EF9B0D49D2",
+    "section": "Target Protein Quantification (800 nm)",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Click each band to be analyzed, and an appropriately sized shape will be added around the band\n \n \n\n**More Info:** For help choosing the right background subtraction method, see [licor.com/BgSubtractHelp](https://www.licor.com/BgSubtractHelp).\n ",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "16",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334757,
+    "guid": "490BA690E027481CA8D5AAF28B98A8C3",
+    "previous_id": 334748,
+    "previous_guid": "2E5B5BD3E41C46B6A946A67D12BCD9D1",
+    "section": "Target Protein Quantification (800 nm)",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Export the quantification data for your target. Click Shapes to open the Shapes data table.\n \n\na\n",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "17",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 334765,
+    "guid": "46F5313C87604572AF897190F3197F37",
+    "previous_id": 334757,
+    "previous_guid": "490BA690E027481CA8D5AAF28B98A8C3",
+    "section": "Target Protein Quantification (800 nm)",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Select shape data, then copy and paste data into a spreadsheet.\n \nFor information on how to perform normalization calculations and how to interpret the data, see [Sections VI - VII in the Guidelines.](https://www.protocols.io/edit/determining-the-linear-range-for-a-target-protein-g77bzrn?guidelines)\n \n\n**Note:** All data fields will be exported, but \u201cSignal\u201d is the field of interest for analysis.\n ",
+    "data": null,
+    "protocol_id": 5087,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "18",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "HKP Quantification (700 nm)",
+    "color": "",
+    "first_step_guid": "BFB32E2C2A0648E294C5910FDB34771D"
+   },
+   {
+    "title": "Target Protein Quantification (800 nm)",
+    "color": "",
+    "first_step_guid": "C1982FA1C0B242BBACF6E3B4723A1ABF"
+   }
+  ],
+  "title": "Determining the Linear Range for a Target Protein and HKP",
+  "title_html": "Determining the Linear Range for a Target Protein and HKP",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775221139
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775221138
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775221139
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775221139
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775221139
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "determining-the-linear-range-for-a-target-protein-g77bzrn",
+  "url": "https://www.protocols.io/view/determining-the-linear-range-for-a-target-protein-g77bzrn",
+  "version_class": 5087,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "determining-the-linear-range-for-a-target-protein-n2bvj9w5lk5w/v1",
+  "versions": [
+   {
+    "id": 5087,
+    "title": "Determining the Linear Range for a Target Protein and HKP",
+    "title_html": "Determining the Linear Range for a Target Protein and HKP",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.g77bzrn",
+    "uri": "determining-the-linear-range-for-a-target-protein-g77bzrn",
+    "published_on": 1489611931,
+    "modified_on": 1517464803,
+    "version_class": 5087,
+    "version_id": 0,
+    "version_code": "g77bzrn",
+    "version_uri": "determining-the-linear-range-for-a-target-protein-n2bvj9w5lk5w/v1",
+    "created_on": 1487185223,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Bandana Maharjan",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "LICORbio",
+     "affiliation_url": null,
+     "username": "bandana-maharjan",
+     "link": "",
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "2FDD7066687311F08F960A58A9FEAC02",
+     "file_name": "iivcz36.png",
+     "url": "https://files.protocols.io/external/iivcz36-2FDD7066687311F08F960A58A9FEAC02.png",
+     "mime": "image/png",
+     "size": 9541,
+     "width": 0,
+     "height": 0,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 1753350438
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

@@ -1,0 +1,55 @@
+name: corpus sweep (ST-04)
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Sweep only the first N protocols (pilot runs; empty = all)"
+        required: false
+        default: ""
+      corpora:
+        description: "Corpora to sweep"
+        required: false
+        default: "both"
+        type: choice
+        options: [both, protocolsio, bioprot]
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install sweep deps
+        run: pip install -r requirements-sweep.txt
+      - name: Offline gate (sweep tests, no API)
+        run: pip install pytest && python -m pytest lab2rob/tests/test_ground_sweep.py -q
+      - name: Check API secret
+        env:
+          MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
+        run: |
+          if [ -z "$MODEL_API_KEY" ]; then
+            echo "::error::MODEL_API_KEY secret is not set (repo Settings -> Secrets -> Actions)."
+            exit 1
+          fi
+      - name: Restore LLM response cache
+        uses: actions/cache@v4
+        with:
+          path: runs/llm_cache
+          key: sweep-llm-cache-v1
+      - name: Run sweep
+        env:
+          MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
+        run: |
+          args="--out runs/sweep_ci --corpora ${{ inputs.corpora }}"
+          if [ -n "${{ inputs.limit }}" ]; then args="$args --limit ${{ inputs.limit }}"; fi
+          python -m lab2rob.ground.sweep $args
+      - name: Upload candidates
+        uses: actions/upload-artifact@v4
+        with:
+          name: sweep-${{ github.run_number }}
+          path: runs/sweep_ci/

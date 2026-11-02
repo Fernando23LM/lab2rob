@@ -1,0 +1,97 @@
+# Declared skills: known wet-lab vocabulary with NO simulator support yet.
+# Names follow Autoprotocol ops / LabOP primitives where they exist. Steps
+# matching these are out_of_scope: not_implemented (never silently compiled).
+declared_skills:
+  - name: aliquot
+    kind: action
+    description: Split a volume into smaller equal portions (Autoprotocol op distribute).
+  - name: attach_tip
+    kind: action
+    description: Fit a fresh tip on the pipette (no tip model in the sim yet).
+  - name: autoclave
+    kind: action
+    description: Sterilize by steam autoclave.
+  - name: blot_dry
+    kind: action
+    description: Remove residual liquid by blotting.
+  - name: centrifuge
+    kind: action
+    description: Spin samples to separate phases or pellet (Autoprotocol op spin).
+  - name: change_tip
+    kind: action
+    description: Eject the used tip and fit a fresh one (no tip model in the sim yet).
+  - name: concentrate_sample
+    kind: action
+    description: Reduce volume to raise concentration (e.g. speed-vac).
+  - name: consolidate
+    kind: action
+    description: Pool liquid from multiple wells into one (Autoprotocol op consolidate).
+  - name: cover_plate
+    kind: action
+    description: Put a lid on a plate (Autoprotocol op cover).
+  - name: distribute
+    kind: action
+    description: Dispense one source across many wells (Autoprotocol op dispense).
+  - name: eject_tip
+    kind: action
+    description: Eject the pipette tip into waste (no tip model in the sim yet).
+  - name: filter_sterilize
+    kind: action
+    description: Pass liquid through a sterilizing filter.
+  - name: flash_freeze
+    kind: action
+    description: Snap-freeze in liquid nitrogen (Autoprotocol op flash_freeze).
+  - name: homogenize
+    kind: action
+    description: Homogenize tissue or cells (Autoprotocol op homogenize).
+  - name: image_plate
+    kind: query
+    description: Photograph plate wells (Autoprotocol op image_plate).
+  - name: measure_fluorescence
+    kind: query
+    description: Read fluorescence per well (Autoprotocol op fluorescence).
+  - name: measure_luminescence
+    kind: query
+    description: Read luminescence per well (Autoprotocol op luminescence).
+  - name: measure_ph
+    kind: query
+    description: Read pH with a meter or strip.
+  - name: mix
+    kind: action
+    description: Generic mix (see mix_by_pipetting macro, vortex, shake).
+  - name: pool_samples
+    kind: action
+    description: Combine samples into one container.
+  - name: seal_plate
+    kind: action
+    description: Seal a plate with film (Autoprotocol op seal).
+  - name: sonicate
+    kind: action
+    description: Disrupt by ultrasound bath or probe.
+  - name: stamp_transfer
+    kind: action
+    description: Replicate many wells at once with a pin tool.
+  - name: thaw
+    kind: action
+    description: Thaw frozen reagents or cells.
+  - name: thermocycle
+    kind: action
+    description: Run PCR temperature cycles (Autoprotocol op thermocycle).
+  - name: uncover_plate
+    kind: action
+    description: Remove a plate lid (Autoprotocol op uncover).
+  - name: unseal_plate
+    kind: action
+    description: Remove plate seal film (Autoprotocol op unseal).
+  - name: uv_sterilize
+    kind: action
+    description: Sterilize surfaces with UV light.
+  - name: vortex
+    kind: action
+    description: Mix a tube on a vortexer.
+  - name: wash_plate
+    kind: action
+    description: Wash plate wells with buffer, one or more cycles.
+  - name: weigh_sample
+    kind: action
+    description: Weigh loose material on an analytical balance (Autoprotocol op weigh).

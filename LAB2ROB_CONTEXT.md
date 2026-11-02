@@ -264,18 +264,22 @@ datasets/                # released, versioned training datasets (see section 6b
 
 Endpoint `https://api.meta.ai/v1`, OpenAI-compatible, key in env var `MODEL_API_KEY`.
 
-| Job | Model |
-|---|---|
-| Coding (Muse Code) | `muse-spark-1.3-contributor` |
-| Grounding public protocols (fallback only) | `muse-spark-1.3-contributor` |
-| Anything private (partner protocols, unpublished data) | `muse-spark-1.3` (standard; not used for training) |
-| Program planner, independent judge planner | `muse-spark-1.3` |
-| Visual certification | `sam-3.1` + Muse Spark image input |
-| Evolve loop | `muse-spark-1.3-contributor` |
-| Hard cases only (final audit, tricky safety twins) | `muse-wonder-1.0`, capped at ~$15 |
+| Job | Model | Reasoning effort |
+|---|---|---|
+| Coding (Muse Code) | `muse-spark-1.3-contributor` | — |
+| Grounding public protocols (fallback only) | `muse-spark-1.3-contributor` | `minimal` |
+| Anything private (partner protocols, unpublished data) | `muse-spark-1.3` (standard; not used for training) | — |
+| Program planner, independent judge planner | `muse-spark-1.3` | `low` |
+| Visual certification | `muse-spark-1.3-contributor` (vision input) | `minimal` |
+| Evolve loop | `muse-spark-1.3-contributor` | `low` |
+| Hard cases only (final audit, tricky safety twins) | `muse-wonder-1.0`, capped at ~$15 | `medium` |
 
 Rules:
 - Every call goes through `llm/client.py` → cached and cost-logged. **Hard cap: $12/day.**
+- Reasoning effort is set per job in the routing layer (`minimal` for grounding, `low` for
+  planners, `medium` for escalation only). Budgets are expected visible output + headroom
+  (1500/3000/6000). A reply cut off at finish `length` is retried once at the next effort
+  up, then the step is marked `failed`/`llm_truncated`; truncated JSON is never parsed.
 - Keep long, stable prompt prefixes (API docs, registry, schema) at the start so they hit the prompt cache.
 - Contributor tier = Meta may train on prompts/completions. **Never send private or partner data there.**
 - Rate limits are per team (contributor tier: 100 requests/min).

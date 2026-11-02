@@ -1,0 +1,373 @@
+# Objects lab2rob scenes may contain. All dimensions in metres. Status:
+# implemented = buildable by the biolab scene code or lab2rob/build/labware.py;
+# declared = known wet-lab object with no simulator support (out_of_scope:
+# not_implemented).
+# Affordances: graspable, movable, insertable (fits a rack cell), openable,
+# pourable, containable (holds liquid), weighable (mass is readable), fixed
+# (cannot be moved), support (things rest on it). Licenses per rule 7;
+# scene-built labware inherits the source repo, which has no LICENSE file;
+# labware.py labware takes its dimensions from Apache-2.0 Opentrons definitions.
+assets:
+  - name: yam_arm
+    status: implemented
+    description: One I2RT YAM 6-dof arm with a parallel gripper; scenes always have two (left/right).
+    dimensions:
+      straight_down_reach_min_m: 0.10
+      straight_down_reach_max_m: 0.35
+      straight_down_height_max_m: 0.16
+      gripper_opening_min_m: 0.0
+      gripper_opening_max_m: 0.082
+      fingertip_below_pinch_m: 0.017
+      finger_plate_width_m: 0.012
+    affordances: []
+    license: MIT (Copyright (c) 2025 i2rt robotics)
+    source: third_party/mujoco_menagerie/i2rt_yam/yam.xml via scene.py build_spec
+  - name: rack
+    status: implemented
+    description: Fixed bench rack, grid of square cells sized for 28 mm vials.
+    dimensions:
+      height_m: 0.035
+      base_thickness_m: 0.006
+      cell_opening_m: 0.032
+      cell_pitch_m: 0.037
+      wall_m: 0.005
+      grids: ["4x2 standard", "2x1 handover"]
+    affordances: [fixed]
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: scene.py Rack dataclass and _add_rack
+  - name: tube_vial
+    status: implemented
+    description: Capped sample vial, free to grasp and move between rack cells.
+    dimensions:
+      diameter_m: 0.028
+      height_m: 0.075
+      mass_kg: 0.03
+    affordances: [graspable, movable, insertable]
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: scene.py _add_tube
+  - name: snap_tube
+    status: implemented
+    description: Tube clamped upright in its rack cell with a hinged flat lid; only the lid moves.
+    dimensions:
+      body_diameter_m: 0.022
+      height_m: 0.075
+      lid_length_m: 0.030
+      lid_width_m: 0.028
+      lid_thickness_m: 0.010
+      lid_max_angle_rad: 2.2
+      latch_release_angle_rad: 0.12
+      latch_force_at_edge_N: 3.0
+    affordances: [openable, fixed]
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: scene.py _add_snap_tube
+  - name: salt_vial
+    status: implemented
+    description: Open 28 mm vial with a cup of ~2.4 g coarse salt in its top; spills when leaned.
+    dimensions:
+      diameter_m: 0.028
+      height_m: 0.075
+      cup_depth_m: 0.015
+      cup_floor_radius_m: 0.0072
+      salt_mass_g: 2.4
+    affordances: [graspable, movable, insertable, pourable]
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: scene.py _add_salt_vial
+  - name: salt_grain
+    status: implemented
+    description: One loose salt grain; simulated individually, 68 per salt vial.
+    dimensions:
+      diameter_min_m: 0.0028
+      diameter_max_m: 0.0036
+      mass_min_g: 0.02
+      mass_max_g: 0.05
+    affordances: [pourable]
+    part_of: salt_vial
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: scene.py _add_salt_vial
+  - name: balance
+    status: implemented
+    description: Balance with a tared square weigh boat fixed on its pan; reading in grams.
+    dimensions:
+      pan_top_height_m: 0.028
+      boat_inner_size_m: 0.064
+      boat_rim_m: 0.012
+    affordances: [weighable, fixed]
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: scene.py _add_balance
+  - name: table
+    status: implemented
+    description: Bench top at z = 0; everything stands on it.
+    dimensions:
+      size_x_m: 0.90
+      size_y_m: 1.20
+      top_z_m: 0.0
+    affordances: [fixed, support]
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: scene.py build_spec
+  - name: floor
+    status: implemented
+    description: Ground plane below the bench; catches anything that falls off.
+    dimensions: {}
+    affordances: [fixed]
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: scene.py build_spec
+  - name: pipette
+    status: implemented
+    description: Handheld micropipette held by the right gripper; 200 uL (protein/drug) or 1000 uL (culture). No tip model.
+    dimensions:
+      shaft_length_m: 0.045
+      shaft_width_m: 0.004
+      body_width_m: 0.016
+      pads_above_tip_m: 0.080
+      capacities_ul: [200, 1000]
+    affordances: [graspable, movable]
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: protein.py _add_pipette
+  - name: plate_8
+    status: implemented
+    description: Protein plate, 8 square wells A1-A4/B1-B4.
+    dimensions:
+      well_width_m: 0.007
+      well_depth_m: 0.011
+      well_pitch_m: 0.014
+      well_count: 8
+    affordances: [containable, fixed]
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: protein.py ProteinLayout via add_liquids_and_pipette
+  - name: plate_assay_12
+    status: implemented
+    description: Drug assay plate, 12 square wells A1-C4 (the only plate the reader reads).
+    dimensions:
+      well_width_m: 0.007
+      well_depth_m: 0.011
+      well_pitch_m: 0.014
+      well_count: 12
+      well_max_volume_ul: 530
+    affordances: [containable, fixed]
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: drug.py DrugLayout via add_liquids_and_pipette
+  - name: plate_dilution_8
+    status: implemented
+    description: Drug dilution plate, 8 square wells D1-D8.
+    dimensions:
+      well_width_m: 0.007
+      well_depth_m: 0.011
+      well_pitch_m: 0.014
+      well_count: 8
+    affordances: [containable, fixed]
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: drug.py DrugLayout via add_liquids_and_pipette
+  - name: reservoir_block
+    status: implemented
+    description: Protein reservoir block, 4 square troughs (stock/buffer/sample/waste).
+    dimensions:
+      trough_width_m: 0.016
+      trough_depth_m: 0.018
+      trough_count: 4
+    affordances: [containable, fixed]
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: protein.py _add_block
+  - name: reservoir_culture
+    status: implemented
+    description: Culture reservoirs, 3 square troughs (medium 34 mL / trypsin 3 mL / waste 36 mL).
+    dimensions:
+      trough_width_m: 0.030
+      trough_depth_m: 0.040
+      trough_count: 3
+    affordances: [containable, fixed]
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: culture.py CultureLayout via _add_block
+  - name: culture_dish
+    status: implemented
+    description: Culture dish A/B/C, square, confluent at ~1M cells.
+    dimensions:
+      width_m: 0.024
+      depth_m: 0.012
+      confluence_cells: 1000000.0
+    affordances: [containable, fixed]
+    license: UNKNOWN (no LICENSE file in source repo)
+    source: culture.py CultureLayout
+  - name: microcentrifuge_tube_1_5ml
+    status: implemented
+    description: Standard 1.5 mL snap-cap microcentrifuge tube (Eppendorf style), held upright in a 2x2 bench tube rack; pipette into it, not graspable.
+    dimensions:
+      footprint_x_m: 0.0398
+      footprint_y_m: 0.0392
+      height_m: 0.0408
+      well_pitch_m: 0.0199
+      well_count: 4
+      well_diameter_m: 0.01
+      well_volume_ul: 1500
+      rim_height_m: 0.0408
+    affordances:
+    - containable
+    - fixed
+    license: Apache-2.0 (Opentrons labware definition opentrons_24_tuberack_eppendorf_1.5ml_safelock_snapcap); geometry built by lab2rob
+    source: lab2rob/build/labware.py from labware_defs/opentrons/opentrons_24_tuberack_eppendorf_1.5ml_safelock_snapcap.json
+  - name: pipette_tip_200ul
+    status: implemented
+    description: 'Disposable 200 uL filter tip, standing in a 4x3 tip rack (visual only: no tip model or attach_tip skill yet).'
+    dimensions:
+      footprint_x_m: 0.036
+      footprint_y_m: 0.027
+      height_m: 0.0623
+      well_pitch_m: 0.009
+      well_count: 12
+      well_diameter_m: 0.00523
+      well_volume_ul: 200
+      rim_height_m: 0.0623
+    affordances: []
+    license: Apache-2.0 (Opentrons labware definition opentrons_96_filtertiprack_200ul); geometry built by lab2rob
+    source: lab2rob/build/labware.py from labware_defs/opentrons/opentrons_96_filtertiprack_200ul.json
+  - name: pipette_tip_1000ul
+    status: implemented
+    description: 'Disposable 1000 uL tip, standing in a 4x2 tip rack (visual only: no tip model or attach_tip skill yet).'
+    dimensions:
+      footprint_x_m: 0.036
+      footprint_y_m: 0.018
+      height_m: 0.091
+      well_pitch_m: 0.009
+      well_count: 8
+      well_diameter_m: 0.00723
+      well_volume_ul: 1000
+      rim_height_m: 0.091
+    affordances: []
+    license: Apache-2.0 (Opentrons labware definition opentrons_96_tiprack_1000ul); geometry built by lab2rob
+    source: lab2rob/build/labware.py from labware_defs/opentrons/opentrons_96_tiprack_1000ul.json
+  - name: tip_rack
+    status: implemented
+    description: Rack of 200 uL filter tips, a 4x3 cut at Opentrons pitch (fixed prop; tips are not picked up yet).
+    dimensions:
+      footprint_x_m: 0.036
+      footprint_y_m: 0.027
+      height_m: 0.0623
+      well_pitch_m: 0.009
+      well_count: 12
+      well_diameter_m: 0.00523
+      well_volume_ul: 200
+      rim_height_m: 0.0623
+    affordances:
+    - fixed
+    license: Apache-2.0 (Opentrons labware definition opentrons_96_filtertiprack_200ul); geometry built by lab2rob
+    source: lab2rob/build/labware.py from labware_defs/opentrons/opentrons_96_filtertiprack_200ul.json
+  - name: reagent_reservoir_50ml
+    status: declared
+    description: Open 50 mL reagent reservoir for multichannel work.
+    dimensions:
+      volume_ml: 50
+    affordances: [containable, fixed]
+    license: UNKNOWN (generic labware shape)
+    source: declared (no simulator support)
+  - name: plate_96_well
+    status: implemented
+    description: Standard 96-well flat-bottom microplate (Corning 360 uL; Autoprotocol 96-flat), full SBS footprint.
+    dimensions:
+      footprint_x_m: 0.1278
+      footprint_y_m: 0.0855
+      height_m: 0.0142
+      well_pitch_m: 0.009
+      well_count: 96
+      well_diameter_m: 0.00686
+      well_volume_ul: 360
+      rim_height_m: 0.0142
+    affordances:
+    - containable
+    - fixed
+    license: Apache-2.0 (Opentrons labware definition corning_96_wellplate_360ul_flat); geometry built by lab2rob
+    source: lab2rob/build/labware.py from labware_defs/opentrons/corning_96_wellplate_360ul_flat.json
+  - name: plate_384_well
+    status: implemented
+    description: Standard 384-well flat-bottom microplate (Corning 112 uL; Autoprotocol 384-flat), full SBS footprint.
+    dimensions:
+      footprint_x_m: 0.1278
+      footprint_y_m: 0.0855
+      height_m: 0.0142
+      well_pitch_m: 0.0045
+      well_count: 384
+      well_side_m: 0.00363
+      well_volume_ul: 112
+      rim_height_m: 0.0142
+    affordances:
+    - containable
+    - fixed
+    license: Apache-2.0 (Opentrons labware definition corning_384_wellplate_112ul_flat); geometry built by lab2rob
+    source: lab2rob/build/labware.py from labware_defs/opentrons/corning_384_wellplate_112ul_flat.json
+  - name: petri_dish_90mm
+    status: declared
+    description: 90 mm round petri dish.
+    dimensions:
+      diameter_m: 0.090
+    affordances: [containable, fixed]
+    license: UNKNOWN (generic labware shape)
+    source: declared (no simulator support)
+  - name: centrifuge_tube_15ml
+    status: implemented
+    description: Conical 15 mL centrifuge tube (Falcon style), upright in a 2x1 bench rack. Its rim is too high for straight-down pipetting with the held pipette, so pipetting steps are rejected as unreachable.
+    dimensions:
+      footprint_x_m: 0.05
+      footprint_y_m: 0.025
+      height_m: 0.1205
+      well_pitch_m: 0.025
+      well_count: 2
+      well_diameter_m: 0.0147
+      well_volume_ul: 15000
+      rim_height_m: 0.1205
+    affordances:
+    - containable
+    - fixed
+    license: Apache-2.0 (Opentrons labware definition opentrons_15_tuberack_falcon_15ml_conical); geometry built by lab2rob
+    source: lab2rob/build/labware.py from labware_defs/opentrons/opentrons_15_tuberack_falcon_15ml_conical.json
+  - name: centrifuge_tube_50ml
+    status: implemented
+    description: Conical 50 mL centrifuge tube (Falcon style), upright in a 1x1 bench rack. Its rim is too high for straight-down pipetting with the held pipette, so pipetting steps are rejected as unreachable.
+    dimensions:
+      footprint_x_m: 0.0318
+      footprint_y_m: 0.0318
+      height_m: 0.116
+      well_pitch_m: 0.0318
+      well_count: 1
+      well_diameter_m: 0.02781
+      well_volume_ul: 50000
+      rim_height_m: 0.116
+    affordances:
+    - containable
+    - fixed
+    license: Apache-2.0 (Opentrons labware definition opentrons_6_tuberack_falcon_50ml_conical); geometry built by lab2rob
+    source: lab2rob/build/labware.py from labware_defs/opentrons/opentrons_6_tuberack_falcon_50ml_conical.json
+  - name: centrifuge_mini
+    status: declared
+    description: Benchtop mini centrifuge for tubes and plates.
+    dimensions: {}
+    affordances: [fixed]
+    license: UNKNOWN (vendor instrument)
+    source: declared (no simulator support)
+    demo_model: 'lab2rob/build/autobio/model/instrument/centrifuge_tiangen_tgear_mini.xml (AutoBio, UNLICENSED: demo only, build_scene(demo_props=True); skill stays declared)'
+  - name: incubator_co2
+    status: declared
+    description: CO2 cell-culture incubator unit (incubate() exists as a time skip; no physical unit).
+    dimensions: {}
+    affordances: [fixed]
+    license: UNKNOWN (vendor instrument)
+    source: declared (no simulator support)
+  - name: plate_reader
+    status: declared
+    description: Plate reader unit (read_plate() exists; no physical unit modeled).
+    dimensions: {}
+    affordances: [fixed]
+    license: UNKNOWN (vendor instrument)
+    source: declared (no simulator support)
+  - name: vortexer
+    status: declared
+    description: Benchtop vortex mixer.
+    dimensions: {}
+    affordances: [fixed]
+    license: UNKNOWN (vendor instrument)
+    source: declared (no simulator support)
+    demo_model: 'lab2rob/build/autobio/model/instrument/vortex_mixer_genie_2.xml (AutoBio, UNLICENSED: demo only, build_scene(demo_props=True); skill stays declared)'
+  - name: ph_meter
+    status: declared
+    description: Benchtop pH meter with probe.
+    dimensions: {}
+    affordances: [fixed]
+    license: UNKNOWN (vendor instrument)
+    source: declared (no simulator support)

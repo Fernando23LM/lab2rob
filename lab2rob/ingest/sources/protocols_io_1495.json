@@ -1,0 +1,1233 @@
+{
+ "protocol_id": 1495,
+ "uri": "Extinction-dilution-cloning-for-isolation-of-virus-dpx5pm",
+ "doi": "dx.doi.org/10.17504/protocols.io.dpx5pm",
+ "url": "https://www.protocols.io/view/Extinction-dilution-cloning-for-isolation-of-virus-dpx5pm",
+ "title": "Extinction dilution cloning for isolation of viruses infecting protists",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:15:26Z",
+ "query": "dilution",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Keizo",
+    "last_name": "Nagasaki and Gunnar Bratbak",
+    "affiliation": "Manual of Aquatic Viral Ecology",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Keizo Nagasaki and Gunnar Bratbak",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "",
+  "created_on": 1441056554,
+  "creator": {
+   "affiliation": "University of Arizona",
+   "affiliation_url": "",
+   "affiliations": [
+    {
+     "affiliation": "University of Arizona",
+     "is_default": true,
+     "job_title": null,
+     "url": ""
+    }
+   ],
+   "badges": [
+    {
+     "id": 4,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/gold.svg"
+     },
+     "name": "Gold power author!"
+    },
+    {
+     "id": 5,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/star.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/star.svg"
+     },
+     "name": "Early adopter"
+    },
+    {
+     "id": 6,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/accelerator.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/accelerator.svg"
+     },
+     "name": "Science accelerator"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://files.protocols.io/thumbnails/external/bvfdk3e-95EDCFBC5B2A11EFA2EF0A58A9FEAC02.jpg/thumbnail-w100xh100.jpg",
+    "source": "https://files.protocols.io/external/bvfdk3e-95EDCFBC5B2A11EFA2EF0A58A9FEAC02.jpg"
+   },
+   "last_name": "",
+   "link": "https://www.protocols.io/g/verve-net",
+   "name": "Verve Team",
+   "username": "verve-team"
+  },
+  "cross_cloud_origin": null,
+  "description": "This is a detailed outline of the extinction dilution method from:\u00a0\n\nNagasaki, K., and G. Bratbak. 2010. Isolation of viruses infecting photosynthetic and nonphotosynthetic protists, p. 92\u2013101. In S. W. Wilhelm, M. G. Weinbauer, and C. A. Suttle [eds.], Manual of Aquatic Viral Ecology. ASLO.\n\nPlease see the [published manuscript](http://www.aslo.org/books/mave/MAVE_092.pdf) for additional information.",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.dpx5pm",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "8A95BFFEB9DA11E99CA40242AC110005",
+  "guidelines": "**List of materials and reagents:**\n \u2022 Bucket or water sampler (e.g., Van Dorn water sampler)\n \u2022 Sediment sampler (e.g., Ekman bottom grab sampler) \n\u2022 Centrifuge and centrifuge tubes (e.g., 15- or 50-mL Falcon tubes) \n\u2022 Sterilized filter holder and membrane filters (0.2, 0.22, 0.45 or 0.8\u00b5m) \n\u2022 Vacuum pump\n \u2022 Sterile medium for algal culture (e.g., SWM-III, f/2) \n\u2022 Sterile test tubes, pipette with tips and vortexer (for serial dilution) \n\u2022 24-well and 96-well cell culture plates (e.g., Falcon) \n\u2022 8-channel pipette and sterile reservoir tray for filling (for extinction dilution procedure) \n\u2022 Plastic tape (for sealing the culture plates to avoid drying)\n \u2022 Incubator (with light and temperature control) \n\u2022 Inverted microscope\n \u2022 Refrigerator, freezer, deep freezer, or liquid nitrogen container\n\n**Cloning and maintenance of microalgal viruses**\n\n\u00a0 \u00a0 \u00a0When decay (i.e., bleaching, decrease in chlorophyll _a_ fluorescence, clearing, etc.) of the tested host algal culture is detected in the screening procedure, the lytic factor should be cloned as soon as possible. In many cases clones have been obtained by using an extinction dilution procedure (e.g., Suttle 1993; Tomaru et al. 2004a,b). Briefly, the culture lysate is\u00a0diluted with an adequate liquid medium in a series of 10-fold dilution steps. Aliquots (100 \u00b5L) of each dilution are added to 8 wells in cell-culture plates with 96 round-bottom wells, mixed with 150 \u00b5L of exponentially growing host culture, and incubated under the conditions suitable for the host\u2019s growth. Lysed cultures are removed from the most diluted wells in which lysis occurred, and the entire procedure is repeated. The lysate in the most diluted wells of the second assay is sterilized by filtration through 0.1-\u00b5m (for ssRNA, ssDNA, or dsRNA viruses) or 0.2-\u00b5m pore size polycarbonate membrane filters (phycodnaviruses or large dsDNA viruses) and transferred into an exponentially growing host culture; certification of the lytic activity of the lysate is essential. After cell debris is removed by low-speed centrifugation, the supernatant is used as the clonal pathogen suspension. \n\u00a0 \u00a0 \u00a0Microalgal viruses are diverse in terms of stability, and a suitable protocol for maintaining infective viruses must be set up in each case. _Chlorella_ viruses (PBCV-1) are so durable that significant decreases in titer are rarely seen as long as the viruses are kept refrigerated. In contrast, the titers of HaV, HcV, and PpV gradually decrease even when stored at 4\u00b0C in the dark. Isolated viruses may also be maintained in culture by routine transfer of the viral lysate to fresh host cultures. Loss of infectivity, however, caused for example by defective interfering particles (Bratbak et al. 1996), is a possible risk that should be taken seriously. Cryopreservation may, at least in some cases, be an alternative, and HaV and PpV have for example been stored at \u2013196\u00b0\u009aC in 10\u201320% dimethyl sulfoxide and at \u201370\u00b0C in 10\u201320 % sucrose, respectively (Nagasaki and Yamaguchi 1999; Nagasaki 2001). \n\n**Comments**\n\n\u00a0 \u00a0 \u00a0Filtration of the inoculum used for isolating viruses through 0.2\u20130.45-\u00b5m filters and later of the obtained lysates through 0.1\u20130.2-\u00b5m filters is a common procedure (see Table 1). Several workers have noted that some viruses do not pass or lose infectivity when filtered through certain types of filters and through filers with small pore size (i.e., 0.2 \u00b5m) (Van Etten et al. 1981; 1983; Suttle et al. 1991; Bratbak unpubl. data). Exceptionally large viruses such as the Mimivirus (~750 nm; La Scora et al. 2003; Xiao et al. 2005) will also be lost during filtration. \n\u00a0 \u00a0 \u00a0With use of the [extinction dilution method](https://www.protocols.io/view/Extinction-dilution-method-dpx5pm) for cloning, it should be noted that only the most abundant virus showing lytic activity to the host culture will be isolated. In other words, the less dominant viruses (if there are any) will be lost. \n\u00a0 \u00a0 \u00a0In most cases, lysis of the host culture will be a key criterion for detection of virus infection. Recovery and regrowth of the host in lysed cultures appears to be a common occurrence, however, and if this phenomenon occurs lysis may pass unnoticed if cultures are infected with a too high virus dose that results in weak lysis and rapid regrowth, or if cultures are left for too long before being inspected for lysis (Thyrhaug et al. 2003). Moreover, Mizumoto et al. (2008) have recently demonstrated that microscopic observation alone may be inadequate for detecting viral lysis, and infected cultures may be erroneously disposed of if the symptoms of lysis are weak. \n\u00a0 \u00a0 \u00a0Another issue that should be considered when preparing host cultures for isolation of virus is that viral susceptibility may change between life cycle stages with different ploidy levels in unicellular eukaryotes. Frada et al. (2008) has recently demonstrated that the haploid phase of _E. huxleyi_ is resistant to EhVs that kill the diploid phase and that exposure of diploid _E. huxleyi_ to EhVs induces transition to the haploid phase. The ensuing hypothesis, that the ploidy level of the host cultures may explain earlier unsuccessful attempts to isolate viruses and that viral induced transition between host ploidy levels may result in an apparent loss of infectivity during isolation, should be tested. \n\u00a0 \u00a0 \u00a0The lytic activity differs between various host\u2013virus systems on the species level and also between various clonal combinations of host and virus within the same species (Nagasaki and Yamaguchi 1998; Mizumoto et al. 2008). The isolation procedures used so far may have selected for viruses having strong lytic activity because researchers inadvertently may prefer host\u2013virus systems showing massive cell lysis. Viruses that are slow, latent, cause chronic infections, or are produced and released without killing or lysing the host may be hard to isolate but have an important ecological impact. The conception of viruses in natural ecosystems may thus be miscalculated if based only on the properties of the possibly \u201cextreme\u201d host\u2013virus systems available in culture. \n\u00a0 \u00a0 \u00a0Brown algal phaeoviruses infect only the host spores or gametes and are reproduced in the sporangia. Virus particles are not present in vegetative cells, but the genome of the FsV virus infecting _Feldmannia_ sp. has recently been found integrated into the host genome in vegetative cells (Meints et al. 2008). Protocols for isolation and culturing of viruses infecting these macroalgae are described by Lanka et al. (1992) and M\u00fcller (1996).",
+  "id": 1495,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 224066,
+  "keywords": "extinction dilution cloning for isolation, extinction dilution cloning, detailed outline of the extinction dilution method, isolation of virus, manual of aquatic viral ecology, aquatic viral ecology, extinction dilution method, infecting protist, dilution method, dilution, nonphotosynthetic protist, virus",
+  "link": "http://www.aslo.org/books/mave/MAVE_092.pdf",
+  "manuscript_citation": "",
+  "materials": [],
+  "materials_text": "",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 0,
+   "file_name": "avatar.png",
+   "guid": "00000000000000000000000000000001",
+   "height": 400,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 0,
+   "url": "https://www.protocols.io/img/default_protocol.png",
+   "width": 400
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1450284676,
+  "reserved_doi": "",
+  "space_id": 0,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 423,
+   "number_of_steps": 17,
+   "number_of_bookmarks": 1,
+   "number_of_comments": 2,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 2,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 29,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 0,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 0,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": ""
+  },
+  "steps": [
+   {
+    "id": 131263,
+    "guid": "A8D4D3B1428848BD874A7A7866243D5A",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "Preparation of dilution series",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Prepare 9 tubes (numbered #1\u2013#9) with 4.5 mL medium.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131264,
+    "guid": "CD30663D7F8D4395999660D2BAFB321A",
+    "previous_id": 131263,
+    "previous_guid": "A8D4D3B1428848BD874A7A7866243D5A",
+    "section": "Preparation of dilution series",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Add 500 \u03bcL of the virus filtrate (virus size fraction) to tube #1 and vortex.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131265,
+    "guid": "E30F78D362E8491383F5A06D32AC2DFD",
+    "previous_id": 131264,
+    "previous_guid": "CD30663D7F8D4395999660D2BAFB321A",
+    "section": "Preparation of dilution series",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Change the pipette tip and transfer 500 \u03bcL of suspension #1 to tube #2 and vortex.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131266,
+    "guid": "A0FFFAC04D5545D4BE74474AFB31B54F",
+    "previous_id": 131265,
+    "previous_guid": "E30F78D362E8491383F5A06D32AC2DFD",
+    "section": "Preparation of dilution series",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Repeat the procedure to tube #8.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131267,
+    "guid": "8A1A5244BB4643A3846F9377170ADE7F",
+    "previous_id": 131266,
+    "previous_guid": "A0FFFAC04D5545D4BE74474AFB31B54F",
+    "section": "Preparation of cell culture plates",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Pour vigorously growing algal host culture into the reservoir tray, fill the pipetter and add 150 \u03bcL culture to each well in lines 1\u20139 of a 96-well cell culture plate.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131268,
+    "guid": "6304A84F731B482098EDD260362E3060",
+    "previous_id": 131267,
+    "previous_guid": "8A1A5244BB4643A3846F9377170ADE7F",
+    "section": "Preparation of cell culture plates",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Fill the pipetter and add 150 \u03bcL culture to each well in lines 1\u20139 of a 96-well cell culture plate.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131269,
+    "guid": "FC75F3998C474C22A23B6EF79EC1C6D1",
+    "previous_id": 131268,
+    "previous_guid": "6304A84F731B482098EDD260362E3060",
+    "section": "Preparation of cell culture plates",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Empty the tray.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131270,
+    "guid": "5580C2646DC040B3B4F72C844F2592CE",
+    "previous_id": 131269,
+    "previous_guid": "FC75F3998C474C22A23B6EF79EC1C6D1",
+    "section": "Preparation of cell culture plates",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Pour dilution tube #9 (control medium, no virus) into the reservoir tray.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131271,
+    "guid": "C8C486C2C3844D73A45FBDFEFE0F1DA1",
+    "previous_id": 131270,
+    "previous_guid": "5580C2646DC040B3B4F72C844F2592CE",
+    "section": "Preparation of cell culture plates",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Fill the pipetter and add 100 \u03bcL of to each well in line 9.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131272,
+    "guid": "CEA220BBC58C42DFB735DEAEC2F38535",
+    "previous_id": 131271,
+    "previous_guid": "C8C486C2C3844D73A45FBDFEFE0F1DA1",
+    "section": "Preparation of cell culture plates",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Empty the tray.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131273,
+    "guid": "0EED52F317C6422AA605A2959C5A95D2",
+    "previous_id": 131272,
+    "previous_guid": "CEA220BBC58C42DFB735DEAEC2F38535",
+    "section": "Preparation of cell culture plates",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Repeat steps 7 and 8 for dilution tube #8\u2013#1 and fill the respective well lines in the culture plate.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "11",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131274,
+    "guid": "CE7879DF71FB4C099CA02769BAC53850",
+    "previous_id": 131273,
+    "previous_guid": "0EED52F317C6422AA605A2959C5A95D2",
+    "section": "Preparation of cell culture plates",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Put on the lid and seal tightly with plastic tape to avoid drying.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "12",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131275,
+    "guid": "553D88E9CD0649AE9C45A414A122D418",
+    "previous_id": 131274,
+    "previous_guid": "CE7879DF71FB4C099CA02769BAC53850",
+    "section": "Preparation of cell culture plates",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate under appropriate conditions.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "13",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131276,
+    "guid": "BDAEFD6A40CA4B77AAECB8A009C506E1",
+    "previous_id": 131275,
+    "previous_guid": "553D88E9CD0649AE9C45A414A122D418",
+    "section": "Inspection",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Use an inverted microscope and inspect the culture plates for signs of cell lysis at regular intervals.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "14",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131277,
+    "guid": "A8AA544F7EB142BD89F5DF0D5D47FF4D",
+    "previous_id": 131276,
+    "previous_guid": "BDAEFD6A40CA4B77AAECB8A009C506E1",
+    "section": "Inspection",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Mark wells where lysis is observed and continue the incubation with daily inspections until no more lysis occurs.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "15",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131278,
+    "guid": "91578876A66F4387B3F9D3BEF782E834",
+    "previous_id": 131277,
+    "previous_guid": "A8AA544F7EB142BD89F5DF0D5D47FF4D",
+    "section": "Inspection",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Prepare a second extinction dilution with virus from the most-diluted well.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "16",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 131279,
+    "guid": "235774F009A54CB5A0825C3511009836",
+    "previous_id": 131278,
+    "previous_guid": "91578876A66F4387B3F9D3BEF782E834",
+    "section": "Inspection",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Propagate virus clone from the most diluted well in a larger volume and store appropriately.",
+    "data": null,
+    "protocol_id": 1495,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "17",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "Preparation of dilution series",
+    "color": "",
+    "first_step_guid": "A8D4D3B1428848BD874A7A7866243D5A"
+   },
+   {
+    "title": "Preparation of cell culture plates",
+    "color": "",
+    "first_step_guid": "8A1A5244BB4643A3846F9377170ADE7F"
+   },
+   {
+    "title": "Inspection",
+    "color": "",
+    "first_step_guid": "BDAEFD6A40CA4B77AAECB8A009C506E1"
+   }
+  ],
+  "title": "Extinction dilution cloning for isolation of viruses infecting protists",
+  "title_html": "Extinction dilution cloning for isolation of viruses infecting protists",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775220773
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775220773
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775220773
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775220773
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775220773
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "Extinction-dilution-cloning-for-isolation-of-virus-dpx5pm",
+  "url": "https://www.protocols.io/view/Extinction-dilution-cloning-for-isolation-of-virus-dpx5pm",
+  "version_class": 1495,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "Extinction-dilution-cloning-for-isolation-of-virus-eq2ly32wgx9k/v1",
+  "versions": [
+   {
+    "id": 1495,
+    "title": "Extinction dilution cloning for isolation of viruses infecting protists",
+    "title_html": "Extinction dilution cloning for isolation of viruses infecting protists",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.dpx5pm",
+    "uri": "Extinction-dilution-cloning-for-isolation-of-virus-dpx5pm",
+    "published_on": 1450284676,
+    "modified_on": 1521007201,
+    "version_class": 1495,
+    "version_id": 0,
+    "version_code": "dpx5pm",
+    "version_uri": "Extinction-dilution-cloning-for-isolation-of-virus-eq2ly32wgx9k/v1",
+    "created_on": 1441056554,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Verve Team",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "University of Arizona",
+     "affiliation_url": "",
+     "username": "verve-team",
+     "link": "https://www.protocols.io/g/verve-net",
+     "user_image_file": {
+      "guid": "95EDCFBC5B2A11EFA2EF0A58A9FEAC02",
+      "file_name": "bvfdk3e.jpg",
+      "url": "https://files.protocols.io/external/bvfdk3e-95EDCFBC5B2A11EFA2EF0A58A9FEAC02.jpg",
+      "mime": "image/jpeg",
+      "size": 11894,
+      "width": 0,
+      "height": 0,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 1723742393
+     }
+    },
+    "stats": {
+     "number_of_comments": 2,
+     "last_comment_time": 1643670549
+    },
+    "protocol_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/default_protocol.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 400,
+     "height": 400,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "warning": "All work should be done in a clean bench."
+ }
+}

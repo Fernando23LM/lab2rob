@@ -1,0 +1,24 @@
+{
+  "protocol_id": 999,
+  "uri": "demo-pour-xyz",
+  "doi": "dx.doi.org/10.17504/protocols.io.xyz",
+  "url": "https://www.protocols.io/view/demo-pour-xyz",
+  "title": "Demo Pour",
+  "version_id": 3,
+  "license": "CC-BY 4.0",
+  "retrieved_at": "2026-10-29T00:00:00Z",
+  "query": "pipetting",
+  "raw": {
+    "description": "A demo protocol.",
+    "before_start": "Bring reagents to room temperature.",
+    "steps": [
+      {"id": 1, "section": "Setup", "is_substep": false, "number": "1",
+       "step": "Aspirate 25 uL dye from well A1.\nSee [the manual](https://example.com/manual) first."},
+      {"id": 2, "is_substep": true, "number": "1",
+       "step": "Work slowly near the well bottom."},
+      {"id": 3, "is_substep": false, "number": "2", "step": ""},
+      {"id": 4, "is_substep": false, "number": "3",
+       "step": "Dispense into well A1. Full notes: https://example.com/notes"}
+    ]
+  }
+}

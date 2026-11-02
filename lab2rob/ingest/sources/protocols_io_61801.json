@@ -1,0 +1,1125 @@
+{
+ "protocol_id": 61801,
+ "uri": "twist-96-plex-riptide-library-prep-b8khrut6",
+ "doi": "dx.doi.org/10.17504/protocols.io.j8nlkkm85l5r/v1",
+ "url": "https://www.protocols.io/view/twist-96-plex-riptide-library-prep-b8khrut6",
+ "title": "Twist 96-Plex (Riptide) Library Prep ",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T22:14:51Z",
+ "query": "pipette",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Katarina",
+    "last_name": "A Cohen",
+    "affiliation": "UC San Diego; Palmer Lab",
+    "note": "",
+    "guid": "049EEC13F8CC11ED9D4302C0B41BC903",
+    "username": "katarina-cohen",
+    "name": "Katarina A Cohen",
+    "affiliation_url": null,
+    "link": "",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Khai-Minh",
+    "last_name": "H Nguyen",
+    "affiliation": "UC San Diego; Palmer Lab",
+    "note": "",
+    "guid": "049EE524F8CC11ED9D4302C0B41BC903",
+    "username": "khaiminh-nguyen1",
+    "name": "Khai-Minh H Nguyen",
+    "affiliation_url": null,
+    "link": "",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Oksana",
+    "last_name": "Polesskaya",
+    "affiliation": "UC San Diego; Palmer Lab",
+    "note": "",
+    "guid": "046F07FAF8CC11ED9D4302C0B41BC903",
+    "username": "oksana-polesskaya2",
+    "name": "Oksana Polesskaya",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Abraham",
+    "last_name": "Palmer",
+    "affiliation": "UC San Diego; Palmer Lab",
+    "note": "",
+    "guid": "04689AD3F8CC11ED9D4302C0B41BC903",
+    "username": "m4xle1x1z1x4tle1",
+    "name": "Abraham Palmer",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "",
+  "created_on": 1651508354,
+  "creator": {
+   "affiliation": "",
+   "affiliation_url": null,
+   "affiliations": [],
+   "badges": [
+    {
+     "id": 3,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/silver.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/silver.svg"
+     },
+     "name": "Power author!"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": "",
+   "name": "Khai-Minh H Nguyen",
+   "username": "khaiminh-nguyen1"
+  },
+  "cross_cloud_origin": null,
+  "description": "This protocol is designed for Twist 96-PLex Library Prep. We use the EPmotion 5075 to add sample barcodes (can also easily be done manually with a multichannel pipette). This is a continuation of the &#34;EPMotion - Normalization and Randomization&#34; protocol. ",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.j8nlkkm85l5r/v1",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "9913FE90CA3311ECB6C193F8FA0477A0",
+  "guidelines": "It is optional to use the EPmotion in this protocol. Visit Twist Bioscience site for updated protocols. ",
+  "id": 61801,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": true,
+  "is_subprotocol": null,
+  "item_id": 916676,
+  "keywords": "sample barcode, plex library prep, plex, multichannel pipette, randomization, protocol, riptide",
+  "link": "",
+  "manuscript_citation": "",
+  "materials": [],
+  "materials_text": "Please see Twist 96 Plex Protocol on Twist Bioscience Site for full list of materials needed\n\n\nEquipment\n1. epMotion 5075\n1. 8 Channel Dispensing Tool (50uL) **Catalog No.\u00a0960001044**\n1. Qubit Flourometer\n1. Bioanalyzer\n1. Nanodrop\n1. Pipettes \n1. Multichannel pipette (10ul) if EPmotion is not available. \n\n\n\nConsumables\n1. 1-50uL epT.I.P.S. Motion **Catalog No.\u00a00030014413**\n1. Qubit HS Assay\n1. Tapestation D1000\n1. Reagent Wells\n1. Ultrapure DI Water\n1. Pipette Tips: 10ul, 200ul, 1000ul \n\n",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 0,
+   "file_name": "avatar.png",
+   "guid": "00000000000000000000000000000001",
+   "height": 400,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 0,
+   "url": "https://www.protocols.io/img/default_protocol.png",
+   "width": 400
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1662999705,
+  "reserved_doi": "",
+  "space_id": 45354,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 681,
+   "number_of_steps": 9,
+   "number_of_bookmarks": 1,
+   "number_of_comments": 2,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 2,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 1,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 0,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 2,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": "We use this protocol and it's working"
+  },
+  "steps": [
+   {
+    "id": 1393174,
+    "guid": "D83E09D0CA3311ECB6C193F8FA0477A0",
+    "previous_id": 1393543,
+    "previous_guid": "DF016010CA4B11EC851EA99E15DE2150",
+    "section": "<p>Adding Primer A with EPmotion </p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Fill ice pan with ice chips. ",
+    "data": null,
+    "protocol_id": 61801,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1393175,
+    "guid": "26B0BDB0CA3411ECB6C193F8FA0477A0",
+    "previous_id": 1393174,
+    "previous_guid": "D83E09D0CA3311ECB6C193F8FA0477A0",
+    "section": "<p>Adding Primer A with EPmotion </p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Defrost 4uL randomized/normalized sample plate from the &#34;EPMotion - Normalization and Randomization&#34; protocol  On ice  \n",
+    "data": null,
+    "protocol_id": 61801,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1393297,
+    "guid": "7C54AA00CA3A11EC851EA99E15DE2150",
+    "previous_id": 1393298,
+    "previous_guid": "35AB9040CA3B11EC851EA99E15DE2150",
+    "section": "<p>Adding Primer A with EPmotion </p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Download and import  [50% GC Content Adapters.export7](https://content.protocols.io/files/hgdabrntx.export7) and  [Low GC Content Adapters.export7](https://content.protocols.io/files/hgdbbrntx.export7) \n1. Depending on the GC content of the species you are working with, choose the protocol accordingly. \n1. Use 50% GC Content Adapters if samples have GC content between 40% - 60% \n1. Use Low GC Primers if samples have GC content below 40%\n1. Use High GC Primers if samples have GC content above 60% \n\n",
+    "data": null,
+    "protocol_id": 61801,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1393298,
+    "guid": "35AB9040CA3B11EC851EA99E15DE2150",
+    "previous_id": 1393175,
+    "previous_guid": "26B0BDB0CA3411ECB6C193F8FA0477A0",
+    "section": "<p>Adding Primer A with EPmotion </p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Open epBlue application",
+    "data": null,
+    "protocol_id": 61801,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1393543,
+    "guid": "DF016010CA4B11EC851EA99E15DE2150",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "<p>Adding Primer A with EPmotion </p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Review the Twist 96-Plex Protocol \nNote: Protocol was created for Document Version (DOC-001284 REV 2.0)\n[Twist Bioscience Protocol](https://www.twistbioscience.com/resources/protocol/twist-96-plex-library-preparation-protocol)\n",
+    "data": null,
+    "protocol_id": 61801,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1393546,
+    "guid": "0D96E1C0CA4C11EC851EA99E15DE2150",
+    "previous_id": 1393297,
+    "previous_guid": "7C54AA00CA3A11EC851EA99E15DE2150",
+    "section": "<p>Adding Primer A with EPmotion </p>",
+    "section_color": "#A492FF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Set up the EPmotion as shown on the worktable below \n[primers.png]](https://content.protocols.io/files/i7gkbrnwf.jpg)\nWorktable for High and Low GC Content Primers - 50%  \n[low primers.png]](https://content.protocols.io/files/i7gqbrnwf.jpg)\nWorktable for Only Low GC Content Primers  \n",
+    "data": null,
+    "protocol_id": 61801,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1393551,
+    "guid": "D477A9A0CA4C11EC851EA99E15DE2150",
+    "previous_id": 1393546,
+    "previous_guid": "0D96E1C0CA4C11EC851EA99E15DE2150",
+    "section": "<p>Library Prep</p>",
+    "section_color": "#94EBFF",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Follow the Twist 96-Plex Protocol \nNote: Protocol was created for Document Version (DOC-001284 REV 2.0)\n1. **IMPORTANT: **Size selection Bead Volumes used: **50ul:20ul (Option 3)** worked best for us. \n1. Make sure to record which pool barcode index for each library\n1. PRO TIP: We try to match the last digit of the library number (Ex. Riptide 53) with the pool barcode index used. \n1. In the case of Riptide 5**3. **We would use the pool barcode #3 for this particular library. \n\n\n",
+    "data": null,
+    "protocol_id": 61801,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1394263,
+    "guid": "502CDCA0CAED11EC851EA99E15DE2150",
+    "previous_id": 1393551,
+    "previous_guid": "D477A9A0CA4C11EC851EA99E15DE2150",
+    "section": "<p>QC</p>",
+    "section_color": "#84CE84",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Perform on each library and record keep all QC for pooling steps \n1. Nanodrop \n1. Qubit (HS Assay)\n1. Tapestation (D1000) \n\n",
+    "data": null,
+    "protocol_id": 61801,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 1415523,
+    "guid": "A0273230E36811EC94DE590F8146EC96",
+    "previous_id": 1394263,
+    "previous_guid": "502CDCA0CAED11EC851EA99E15DE2150",
+    "section": "<p>QC</p>",
+    "section_color": "#84CE84",
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "1. Libraries should have an average fragment size between 420bp - 650bp.\n1. 260/280 should be around 1.80 - 2 \n1. 260/230  should be around 2-2.2.\n1. **We have been able to get good data from libraries with relatively poor nanodrop purities**.\n1. Qubit concentrations can widely range. We get a range from 10ng/ul - 60ng/ul \n\n",
+    "data": null,
+    "protocol_id": 61801,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "<p>Adding Primer A with EPmotion </p>",
+    "color": "#A492FF",
+    "first_step_guid": "DF016010CA4B11EC851EA99E15DE2150"
+   },
+   {
+    "title": "<p>Library Prep</p>",
+    "color": "#94EBFF",
+    "first_step_guid": "D477A9A0CA4C11EC851EA99E15DE2150"
+   },
+   {
+    "title": "<p>QC</p>",
+    "color": "#84CE84",
+    "first_step_guid": "502CDCA0CAED11EC851EA99E15DE2150"
+   }
+  ],
+  "title": "Twist 96-Plex (Riptide) Library Prep ",
+  "title_html": "Twist 96-Plex (Riptide) Library Prep\u00a0",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775227811
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775227811
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775227812
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775227811
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775227811
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "twist-96-plex-riptide-library-prep-b8khrut6",
+  "url": "https://www.protocols.io/view/twist-96-plex-riptide-library-prep-b8khrut6",
+  "version_class": 61801,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "twist-96-plex-riptide-library-prep-j8nlkkm85l5r/v1",
+  "versions": [
+   {
+    "id": 61801,
+    "title": "Twist 96-Plex (Riptide) Library Prep ",
+    "title_html": "Twist 96-Plex (Riptide) Library Prep\u00a0",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.j8nlkkm85l5r/v1",
+    "uri": "twist-96-plex-riptide-library-prep-b8khrut6",
+    "published_on": 1662999705,
+    "modified_on": 1662999705,
+    "version_class": 61801,
+    "version_id": 0,
+    "version_code": "b8khrut6",
+    "version_uri": "twist-96-plex-riptide-library-prep-j8nlkkm85l5r/v1",
+    "created_on": 1651508354,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Khai-Minh H Nguyen",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": null,
+     "affiliation_url": null,
+     "username": "khaiminh-nguyen1",
+     "link": "",
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 2,
+     "last_comment_time": 1656016836
+    },
+    "protocol_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/default_protocol.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 400,
+     "height": 400,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

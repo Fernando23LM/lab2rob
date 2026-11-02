@@ -1,0 +1,1261 @@
+{
+ "protocol_id": 15421,
+ "uri": "nucleic-acid-purification-bead-clean-ta5eig6",
+ "doi": "dx.doi.org/10.17504/protocols.io.ta5eig6",
+ "url": "https://www.protocols.io/view/nucleic-acid-purification-bead-clean-ta5eig6",
+ "title": "Nucleic Acid Purification: Bead Clean",
+ "version_id": 0,
+ "license": "CC-BY (protocols.io public-content default)",
+ "retrieved_at": "2026-10-29T21:59:42Z",
+ "query": "pipetting",
+ "raw": {
+  "access": {
+   "can_preview": true,
+   "can_view": true,
+   "can_edit": false,
+   "can_remove": false,
+   "can_add": false,
+   "can_publish": false,
+   "can_get_doi": false,
+   "can_share": false,
+   "can_share_organization": false,
+   "can_move": false,
+   "can_move_outside": false,
+   "can_transfer": false,
+   "can_download": true,
+   "limited_run": false,
+   "limited_private_links": false,
+   "limited_blind_links": false,
+   "is_locked": false
+  },
+  "acknowledgements": "",
+  "authors": [
+   {
+    "first_name": "Madeline",
+    "last_name": "Mayday",
+    "affiliation": "Yale University",
+    "note": "",
+    "guid": "03247B16F8CC11ED9D4302C0B41BC903",
+    "username": "madeline-mayday",
+    "name": "Madeline Y Mayday",
+    "affiliation_url": "",
+    "link": "",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Lillian",
+    "last_name": "Khan",
+    "affiliation": "UCSF School of Medicine, Department of Biochemistry & Biophysics",
+    "note": "",
+    "guid": "0327E440F8CC11ED9D4302C0B41BC903",
+    "username": "lillian-khan",
+    "name": "Lillian M Khan",
+    "affiliation_url": "",
+    "link": "",
+    "is_private_profile": false,
+    "is_verified_user": true,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Eric",
+    "last_name": "D. Chow",
+    "affiliation": "UCSF School of Medicine, Department of Biochemistry & Biophysics",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Eric D. Chow",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Matt",
+    "last_name": "S. Zinter",
+    "affiliation": "UCSF School of Medicine, Benioff Children\u2019s Hospital, Department of Pediatrics, Division of Critical Care",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Matt S. Zinter",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   },
+   {
+    "first_name": "Joseph",
+    "last_name": "L. DeRisi",
+    "affiliation": "UCSF School of Medicine, Department of Biochemistry & Biophysics",
+    "note": "",
+    "guid": "",
+    "username": "",
+    "name": "Joseph L. DeRisi",
+    "affiliation_url": null,
+    "link": null,
+    "is_private_profile": false,
+    "is_verified_user": false,
+    "user_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/avatars/001.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 100,
+     "height": 100,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "before_start": "Calibrate and test protocol to ensure it runs smoothly for all calibrations before using it to clean up real samples.\n\nDecide which ratio of AMPure XP beads to use with sample and ensure all volumes for beads and elution are correct in the robot&#39;s methods. Refer to High-Throughput Echo Library Prep Protocol for the ratios recommend at each step.\n \nBring AMPure XP beads to room temperature before using in the protocol.\u00a0\n \nPrepare fresh 80% Ethanol for the washes.\u00a0",
+  "created_on": 1536271697,
+  "creator": {
+   "affiliation": "Yale University",
+   "affiliation_url": "",
+   "affiliations": [
+    {
+     "affiliation": "Yale University",
+     "is_default": true,
+     "job_title": null,
+     "url": ""
+    },
+    {
+     "affiliation": "University of California, San Francisco",
+     "is_default": false,
+     "job_title": null,
+     "url": ""
+    }
+   ],
+   "badges": [
+    {
+     "id": 2,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/bronze.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/bronze.svg"
+     },
+     "name": "Author"
+    },
+    {
+     "id": 6,
+     "image": {
+      "placeholder": "https://files.protocols.io/webapp/images/q2ckeg/badges/accelerator.svg",
+      "source": "https://files.protocols.io/webapp/images/q2ckeg/badges/accelerator.svg"
+     },
+     "name": "Science accelerator"
+    }
+   ],
+   "first_name": "",
+   "image": {
+    "placeholder": "https://www.protocols.io/img/avatars/001.png",
+    "source": "https://www.protocols.io/img/avatars/001.png"
+   },
+   "last_name": "",
+   "link": "",
+   "name": "Madeline Y Mayday",
+   "username": "madeline-mayday"
+  },
+  "cross_cloud_origin": null,
+  "description": "Preparation of high-quality sequencing libraries is a costly and time-consuming component of metagenomic next generation sequencing (mNGS).  While the overall cost of sequencing has dropped significantly over recent years, the reagents needed to prepare sequencing samples are likely to become the dominant expense in the process.  Furthermore, libraries prepared by hand are subject to human variability and needless waste due to limitations of manual pipetting volumes. Reduction of reaction volumes, combined with sub-microliter automated dispensing of reagents without consumable pipette tips, has the potential to provide significant advantages.  Here, we describe the integration of several instruments, including the Labcyte Echo 525 acoustic liquid handler and the iSeq and NovaSeq Illumina sequencing platforms, to miniaturize and automate mNGS library preparation, significantly reducing the cost and the time required to prepare samples. Through the use of External RNA Controls Consortium (ERCC) spike-in RNAs, we demonstrated the fidelity of the miniaturized preparation to be equivalent to full volume reactions. Furthermore, detection of viral and microbial species from cell culture and patient samples was also maintained in the miniaturized libraries.  For 384-well mNGS library preparations, we achieved a savings of over 80% in materials and reagents alone, and reduced preparation time by 90% compared to manual approaches, without compromising quality or representation within the library.\n\nThis automated, miniaturized protocol for bead cleaning can be used with the\u00a0High-Throughput Echo Library Prep Protocol for processing up to 384 samples simultaneously.\u00a0 To facilitate the miniaturized columes required by this protocol, we have included the .STL file for our 3D-printed adaptor, which, when placed on the magnet, raises the height of the PCR plate, thereby lowering the beads inside of the well and allowing for elutions in as low as 6uL.",
+  "disclaimer": "",
+  "documents": null,
+  "doi": "dx.doi.org/10.17504/protocols.io.ta5eig6",
+  "ethics_statement": "",
+  "fork_id": null,
+  "funders": [],
+  "guid": "87485646B9DA11E99CA40242AC110005",
+  "guidelines": "Different SPRI beads for DNA could be used, but the ratios should be tested to obtain desired fragment size and recovery before use in protocol.\u00a0\n\n**Robot guidelines: **\nFor this protocol, we used the Beckman Coulter Biomek NXP\u00a0with a 384-multichannel head and 384 barrier pipet tips.\u00a0 It would be possible to use a 96-multichannel head if samples are arranged in each quadrant of a 384-well plate, but\u00a0a single 384-well bead clean expedites the process.\n \nAny liquid handler used should be calibrated appropriately for each piece of labware, including plates, magnets, and reservoirs.\u00a0 Prior to beginning a library preparation, extensive testing should be\u00a0performed using water to confirm\u00a0each portion of the protocol runs smoothly prior to loading actual experimental samples. \n\nIn this protocol we use the Alpaqua&#39;s 384-Post Magnet designed for PCR plates, but the elution volume needed for the miniaturized library prep protocol is 6uL-- which is less than the advertised volume of 15uL.  To compensate for this, be sure to obtain an adaptor to raise the PCR plate from the stand and therefore decrease elution volume. Adaptor design:  [alpaquamag384platform.stl](https://content.protocols.io/7pe2jk6.stl)\n\n**Robotic calibrations: **\nBe sure to set the aspiration speed on the liquid handler used for bead cleans to have a slow aspiration speed for all steps to reduce bead loss.\u00a0 (**Recommended aspiration speed: 0.1uL/sec if possible**)\n\nAll mixing steps should be programed to be total volume to be mixed minus one microliter, and to pipette 20 times slowly. (i.e. Total volume is 20uL in each well; mix 19uL of the sample 20uL)\n",
+  "id": 15421,
+  "image": {
+   "placeholder": null,
+   "source": "https://www.protocols.io/img/default_protocol.png",
+   "webp_placeholder": null,
+   "webp_source": null
+  },
+  "is_content_confidential": false,
+  "is_content_warning": false,
+  "is_doi_reserved": false,
+  "is_in_pending_publishing": false,
+  "is_in_transfer": null,
+  "is_owner": false,
+  "is_research": false,
+  "is_subprotocol": null,
+  "item_id": 352936,
+  "keywords": "automated, miniaturized, protocol, NGS, nMGS, library prep, library preparation, Labcyte Echo, sequencing, Illumina, bead clean, size selection, Ampure, Biomek, external rna controls consortium, use of external rna controls consortium, metagenomic next generation, sequencing library, component of metagenomic next generation, sequencing sample, nucleic acid purification, sequencing platform, rna, automate mngs library preparation, miniaturized protocol for bead cleaning, labcyte echo 525 acoustic liquid handler, fidelity of the miniaturized preparation, miniaturized preparation, miniaturized library, well mngs library preparation, manual pipetting volume, bead clean preparation, dispensing of reagent, reduced preparation time, patient sample, acoustic liquid handler",
+  "link": "",
+  "manuscript_citation": "",
+  "materials": [
+   {
+    "id": 119349,
+    "guid": "41982F94341F11EE9D4302C0B41BC903",
+    "name": " Ampure XP beads ",
+    "mol_weight": 0,
+    "sku": "A63881",
+    "url": "",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 32,
+     "name": "Beckman Coulter",
+     "link": "https://www.beckmancoulter.com",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/placeholder.png",
+      "placeholder": "/img/vendors/placeholder.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   },
+   {
+    "id": 128634,
+    "guid": "41A396D3341F11EE9D4302C0B41BC903",
+    "name": "384 Post Magnet Plate",
+    "mol_weight": 0,
+    "sku": "SKU A001222",
+    "url": "https://www.alpaqua.com/How-to-Order/Product-Viewer/384-Post-Magnet-Plate",
+    "cas_number": "",
+    "rrid": "",
+    "vendor": {
+     "id": 1,
+     "name": "Contributed by users",
+     "link": "https://www.protocols.io",
+     "is_requested": false,
+     "image": {
+      "source": "/img/vendors/1.png",
+      "placeholder": "/img/vendors/1.png"
+     }
+    },
+    "is_public": true,
+    "can_edit": false
+   }
+  ],
+  "materials_text": "MATERIALS\n  Ampure XP beads  Beckman Coulter Catalog #A63881 \n 384 Post Magnet Plate Contributed by users Catalog #SKU A001222 ",
+  "protocol_image_file": {
+   "avg_color": "",
+   "created_at": 0,
+   "file_name": "avatar.png",
+   "guid": "00000000000000000000000000000001",
+   "height": 400,
+   "mime": "image/png",
+   "scan_status": 0,
+   "size": 0,
+   "url": "https://www.protocols.io/img/default_protocol.png",
+   "width": 400
+  },
+  "protocol_references": "",
+  "public": true,
+  "published_on": 1624988845,
+  "reserved_doi": "",
+  "space_id": 7541,
+  "stats": {
+   "is_voted": false,
+   "number_of_views": 323,
+   "number_of_steps": 10,
+   "number_of_bookmarks": 1,
+   "number_of_comments": 0,
+   "number_of_bookmarked_comments": 0,
+   "number_of_steps_comments": 0,
+   "number_of_protocol_comments": 0,
+   "number_of_exports": 6,
+   "number_of_runs": 0,
+   "number_of_votes": 0,
+   "number_of_reagents": 4,
+   "number_of_equipments": 0,
+   "number_of_collections": 0,
+   "number_of_forks": {
+    "private": 1,
+    "public": 0
+   },
+   "number_of_accessible_forks": 0
+  },
+  "status": {
+   "id": 1,
+   "info": "We use this protocol and it\u2019s working"
+  },
+  "steps": [
+   {
+    "id": 661537,
+    "guid": "D6849A84C1244DD184FCEEABAD51E4FB",
+    "previous_id": 666390,
+    "previous_guid": "E21FC560BD2611E8B8EABF5F8B560C99",
+    "section": "Add Beads",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Aspirate\u00a0desired\u00a0volume of Ampure beads from reservoir and mix well into sample plate by mixing total volume minus  one microliter less -- 20 times.\u00a0 \n\nBead volumes for each bead clean are available in the High-Throughput Echo Library Prep Protocol.\n \n",
+    "data": null,
+    "protocol_id": 15421,
+    "case_id": 748,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "2",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 661538,
+    "guid": "445355DFBA13470DBA25772E2AC0D87D",
+    "previous_id": 666391,
+    "previous_guid": "70E98B70BD2A11E89003735BCE3B6760",
+    "section": "Incubate",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Transfer\u00a0plate onto Alpaqua 384 Post Magnet Plate with 3D-printed adaptor and incubate at room temperature for another 5 minutes to allow for the formation of a magnetic pellet.\n  [alpaquamag384platform.stl](https://content.protocols.io/6ym2hhn.stl) \n\nIt is imperative that the magnet used can elute, at the very minimum, 6uL of your chosen elution buffer. It is important to elute cDNA in as little volume as possible for a miniaturized protocol.\n \n",
+    "data": null,
+    "protocol_id": 15421,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "4",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 661540,
+    "guid": "5893C5A7F63A442BB9552E0798BD6A90",
+    "previous_id": 666392,
+    "previous_guid": "B06D6490BD2C11E89003735BCE3B6760",
+    "section": "Air dry pellet",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Remove and discard the supernatent for the second wash step. Allow the magnetic pellet to air dry while on the magnetic rack for a maximum of 90 seconds.\u00a0\n\nDo not overdry the beads. This could cause undesired loss of cDNA. \n ",
+    "data": null,
+    "protocol_id": 15421,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "7",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 661541,
+    "guid": "2CA26CD423AB46D4AAF2308C8D7776A6",
+    "previous_id": 661538,
+    "previous_guid": "445355DFBA13470DBA25772E2AC0D87D",
+    "section": "Ethanol washes",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Aspirate\u00a025uL freshly prepared 80% ethanol from reservoir and add to samples while on the magnetic rack.\u00a0 Incubate at room temperature for 30 seconds. ",
+    "data": null,
+    "protocol_id": 15421,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "5",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 661543,
+    "guid": "860D2F9E76DD4F3794B15E6615296DDC",
+    "previous_id": 661540,
+    "previous_guid": "5893C5A7F63A442BB9552E0798BD6A90",
+    "section": "Resuspend",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Remove plate from magnetic stand, and resuspend beads in desired elution buffer and volume. Mix well. \n\nVolume and type of eluent are specified in the High-Throughput Echo Library Prep Protocol.\n\nReminder: Regular elution buffer is used for Post-Second Strand Synthesis, Post- End Prep, and Post- USER/PCR bead cleans. **Barcodes suspended in nuclease-free water will be used to elute in Post-Adaptor Ligation bead clean. **\n ",
+    "data": null,
+    "protocol_id": 15421,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "8",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 661545,
+    "guid": "7122EFFCC81F41ADA8E79F5A3FCE031B",
+    "previous_id": 661543,
+    "previous_guid": "860D2F9E76DD4F3794B15E6615296DDC",
+    "section": "Incubate",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate at room temperature for 5 minutes.\u00a0\u00a0Transfer\u00a0plate onto Alpaqua 384 Post Magnet Plate with adaptor with 3D-printed adaptor and incubate at room temperature for another 5 minutes.",
+    "data": null,
+    "protocol_id": 15421,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "9",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 661546,
+    "guid": "F9E5CA10B3A8439AA2EDAB60143F5060",
+    "previous_id": 661545,
+    "previous_guid": "7122EFFCC81F41ADA8E79F5A3FCE031B",
+    "section": "Recovery of Purified cDNA",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Slowly aspirate supernatant, now containing cDNA, and transfer to final\u00a0PCR plate.",
+    "data": null,
+    "protocol_id": 15421,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "10",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 666390,
+    "guid": "E21FC560BD2611E8B8EABF5F8B560C99",
+    "previous_id": 0,
+    "previous_guid": null,
+    "section": "Prep Reagents",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Prepare all necessary reagents and bring to room temperature:\n<table class=\"component-table\">\n<thead>\n<tr>\n%s</tr>\n</thead>\n<tbody>\n%s\n</tbody>\n</table>\r\n \n",
+    "data": null,
+    "protocol_id": 15421,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "1",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 666391,
+    "guid": "70E98B70BD2A11E89003735BCE3B6760",
+    "previous_id": 661537,
+    "previous_guid": "D6849A84C1244DD184FCEEABAD51E4FB",
+    "section": "Incubate",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Incubate samples and beads at room temperature for 5 minutes.",
+    "data": null,
+    "protocol_id": 15421,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "3",
+    "cases": [],
+    "critical": null
+   },
+   {
+    "id": 666392,
+    "guid": "B06D6490BD2C11E89003735BCE3B6760",
+    "previous_id": 661541,
+    "previous_guid": "2CA26CD423AB46D4AAF2308C8D7776A6",
+    "section": "Ethanol washes",
+    "section_color": null,
+    "section_duration": 0,
+    "is_substep": false,
+    "step": "Slowly aspirate supernatant and discard.\u00a0 Repeat the wash step for a total of 2 washes.\u00a0",
+    "data": null,
+    "protocol_id": 15421,
+    "case_id": 0,
+    "critical_ids": "",
+    "duration": 0,
+    "original_id": 0,
+    "number": "6",
+    "cases": [],
+    "critical": null
+   }
+  ],
+  "table_of_contents": [
+   {
+    "title": "Prep Reagents",
+    "color": "",
+    "first_step_guid": "E21FC560BD2611E8B8EABF5F8B560C99"
+   },
+   {
+    "title": "Add Beads",
+    "color": "",
+    "first_step_guid": "D6849A84C1244DD184FCEEABAD51E4FB"
+   },
+   {
+    "title": "Incubate",
+    "color": "",
+    "first_step_guid": "70E98B70BD2A11E89003735BCE3B6760"
+   },
+   {
+    "title": "Ethanol washes",
+    "color": "",
+    "first_step_guid": "2CA26CD423AB46D4AAF2308C8D7776A6"
+   },
+   {
+    "title": "Air dry pellet",
+    "color": "",
+    "first_step_guid": "5893C5A7F63A442BB9552E0798BD6A90"
+   },
+   {
+    "title": "Resuspend",
+    "color": "",
+    "first_step_guid": "860D2F9E76DD4F3794B15E6615296DDC"
+   },
+   {
+    "title": "Incubate",
+    "color": "",
+    "first_step_guid": "7122EFFCC81F41ADA8E79F5A3FCE031B"
+   },
+   {
+    "title": "Recovery of Purified cDNA",
+    "color": "",
+    "first_step_guid": "F9E5CA10B3A8439AA2EDAB60143F5060"
+   }
+  ],
+  "title": "Nucleic Acid Purification: Bead Clean",
+  "title_html": "Nucleic Acid Purification: Bead Clean",
+  "translations": [
+   {
+    "lang": "de",
+    "title": "German",
+    "created_on": 1775222240
+   },
+   {
+    "lang": "es",
+    "title": "Spanish",
+    "created_on": 1775222240
+   },
+   {
+    "lang": "fr",
+    "title": "French",
+    "created_on": 1775222240
+   },
+   {
+    "lang": "ja",
+    "title": "Japanese",
+    "created_on": 1775222240
+   },
+   {
+    "lang": "zh",
+    "title": "Chinese - Simp/Trad",
+    "created_on": 1775222240
+   }
+  ],
+  "troubleshooting_items": null,
+  "type_id": 1,
+  "units": [
+   {
+    "id": 1,
+    "type_id": 3,
+    "name": "\u00b5L",
+    "aliases": [
+     "\u00b5l",
+     "uL",
+     "ul",
+     "microlitre",
+     "microliter",
+     "microliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 2,
+    "type_id": 3,
+    "name": "mL",
+    "aliases": [
+     "ml",
+     "millilitre",
+     "milliliter",
+     "milliliters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 3,
+    "type_id": 3,
+    "name": "L",
+    "aliases": [
+     "L",
+     "litre",
+     "liter",
+     "liters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 4,
+    "type_id": 3,
+    "name": "\u00b5g",
+    "aliases": [
+     "\u00b5g",
+     "microgramme",
+     "microgram",
+     "micrograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 5,
+    "type_id": 3,
+    "name": "mg",
+    "aliases": [
+     "mg",
+     "milligramme",
+     "milligram",
+     "milligrams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 6,
+    "type_id": 3,
+    "name": "g",
+    "aliases": [
+     "g",
+     "gramme",
+     "gram",
+     "grams"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 7,
+    "type_id": 3,
+    "name": "kg",
+    "aliases": [
+     "kg",
+     "kilogramme",
+     "kilogram",
+     "kilograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 8,
+    "type_id": 3,
+    "name": "ng",
+    "aliases": [
+     "ng",
+     "nanogramme",
+     "nanogram",
+     "nanograms"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 9,
+    "type_id": 3,
+    "name": "Hz",
+    "aliases": [
+     "Hz",
+     "hertz"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 10,
+    "type_id": 24,
+    "name": "\u00b0C",
+    "aliases": [
+     "\u00b0C",
+     "Celsius",
+     "\u00baC",
+     "C"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 11,
+    "type_id": 24,
+    "name": "\u00b0\u041a",
+    "aliases": [
+     "\u00b0K",
+     "Kelvin",
+     "\u00baK",
+     "K"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 12,
+    "type_id": 24,
+    "name": "\u00b0F",
+    "aliases": [
+     "\u00b0F",
+     "Fahrenheit",
+     "\u00baF",
+     "F"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 13,
+    "type_id": 25,
+    "name": "Mass Percent",
+    "aliases": [
+     "Mass Percent",
+     " MassPercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 14,
+    "type_id": 25,
+    "name": "% volume",
+    "aliases": [
+     "% volume",
+     "VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 15,
+    "type_id": 25,
+    "name": "Mass / % volume",
+    "aliases": [
+     "Mass/VolumePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 16,
+    "type_id": 25,
+    "name": "Parts per Million (PPM)",
+    "aliases": [
+     "PartsperMillion(PPM)",
+     "PartsperMillion",
+     "ppm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 17,
+    "type_id": 25,
+    "name": "Parts per Billion (PPB)",
+    "aliases": [
+     "PartsperBillion(PPB)",
+     "PartsperBillion",
+     "ppb"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 18,
+    "type_id": 25,
+    "name": "Parts per Trillion (PPT)",
+    "aliases": [
+     "PartsperTrillion(PPT)",
+     "PartsperTrillion",
+     "ppt"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 19,
+    "type_id": 25,
+    "name": "Mole Fraction",
+    "aliases": [
+     "Mole Fraction",
+     " MoleFraction"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 20,
+    "type_id": 25,
+    "name": "Mole Percent",
+    "aliases": [
+     "Mole Percent",
+     " MolePercent"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 22,
+    "type_id": 25,
+    "name": "Molarity (M)",
+    "aliases": [
+     "Molarity(m)",
+     "molarity(m)",
+     "m"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 23,
+    "type_id": 25,
+    "name": "Genome copies per ml",
+    "aliases": [
+     "Genome copies per ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 24,
+    "type_id": 3,
+    "name": "\u03bcV",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 25,
+    "type_id": 3,
+    "name": "ms",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 26,
+    "type_id": 3,
+    "name": "pg",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 27,
+    "type_id": 25,
+    "name": "Molarity dilutions",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 28,
+    "type_id": 25,
+    "name": "millimolar (mM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 29,
+    "type_id": 25,
+    "name": "micromolar (\u00b5M)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 30,
+    "type_id": 25,
+    "name": "nanomolar (nM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 31,
+    "type_id": 25,
+    "name": "picomolar (pM)",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 32,
+    "type_id": 24,
+    "name": "Room temperature",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 33,
+    "type_id": 30,
+    "name": "rpm",
+    "aliases": [
+     "rpm"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 34,
+    "type_id": 30,
+    "name": "x g",
+    "aliases": [
+     "x g",
+     "xg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 165,
+    "type_id": 24,
+    "name": "On ice",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 200,
+    "type_id": 32,
+    "name": "cm",
+    "aliases": [
+     "cm",
+     "centimetre",
+     "centimeter",
+     "centimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 201,
+    "type_id": 32,
+    "name": "mm",
+    "aliases": [
+     "mm",
+     "millimetre",
+     "millimeter",
+     "millimeters"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 202,
+    "type_id": 32,
+    "name": "\u00b5m",
+    "aliases": [
+     "\u00b5m",
+     "micrometre",
+     "micrometer",
+     "micrometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 203,
+    "type_id": 32,
+    "name": "nm",
+    "aliases": [
+     "nm",
+     "nanometre",
+     "nanometer",
+     "nanometers"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 204,
+    "type_id": 25,
+    "name": "mg/mL",
+    "aliases": [
+     "mg/ml"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 205,
+    "type_id": 25,
+    "name": "\u00b5g/\u00b5L",
+    "aliases": [
+     "\u00b5g/\u00b5l"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 206,
+    "type_id": 25,
+    "name": "% (v/v)",
+    "aliases": [
+     "% (v/v)",
+     "%(v/v)",
+     " v/v"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 207,
+    "type_id": 3,
+    "name": "V",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 208,
+    "type_id": 0,
+    "name": "Undetermined",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 209,
+    "type_id": 36,
+    "name": "%",
+    "aliases": [
+     "%",
+     "percent",
+     "percentage",
+     "relative humidity",
+     "relativehumidity",
+     "rel humidity",
+     "RH",
+     "%RH",
+     "percent RH"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 210,
+    "type_id": 36,
+    "name": "g/m\u00b3",
+    "aliases": [
+     "g/m\u00b3",
+     "g/m3",
+     "gram per cubic meter",
+     "grams per cubic meter",
+     "gram/m^3",
+     "grams/m^3"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 211,
+    "type_id": 36,
+    "name": "g/kg",
+    "aliases": [
+     "g/kg",
+     "gram per kilogram",
+     "grams per kilogram",
+     "gram/kg",
+     "grams/kg"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1324,
+    "type_id": 30,
+    "name": "rcf",
+    "aliases": [
+     "rcf"
+    ],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1359,
+    "type_id": 35,
+    "name": "Bar",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   },
+   {
+    "id": 1360,
+    "type_id": 35,
+    "name": "Pa",
+    "aliases": [],
+    "can_manage": 0,
+    "read_only": 0,
+    "deleted": false
+   }
+  ],
+  "uri": "nucleic-acid-purification-bead-clean-ta5eig6",
+  "url": "https://www.protocols.io/view/nucleic-acid-purification-bead-clean-ta5eig6",
+  "version_class": 15421,
+  "version_data": null,
+  "version_id": 0,
+  "version_uri": "nucleic-acid-purification-bead-clean-ewov1y8b7vr2/v1",
+  "versions": [
+   {
+    "id": 15421,
+    "title": "Nucleic Acid Purification: Bead Clean",
+    "title_html": "Nucleic Acid Purification: Bead Clean",
+    "image": {
+     "placeholder": null,
+     "source": "https://www.protocols.io/img/default_protocol.png",
+     "webp_placeholder": null,
+     "webp_source": null
+    },
+    "doi": "dx.doi.org/10.17504/protocols.io.ta5eig6",
+    "uri": "nucleic-acid-purification-bead-clean-ta5eig6",
+    "published_on": 1538604547,
+    "modified_on": 1624988845,
+    "version_class": 15421,
+    "version_id": 0,
+    "version_code": "ta5eig6",
+    "version_uri": "nucleic-acid-purification-bead-clean-ewov1y8b7vr2/v1",
+    "created_on": 1536271697,
+    "categories": null,
+    "type_id": 1,
+    "creator": {
+     "name": "Madeline Y Mayday",
+     "first_name": "",
+     "last_name": "",
+     "affiliation": "Yale University",
+     "affiliation_url": "",
+     "username": "madeline-mayday",
+     "link": "",
+     "user_image_file": {
+      "guid": "00000000000000000000000000000001",
+      "file_name": "avatar.png",
+      "url": "https://www.protocols.io/img/avatars/001.png",
+      "mime": "image/png",
+      "size": 0,
+      "width": 100,
+      "height": 100,
+      "avg_color": "",
+      "scan_status": 0,
+      "created_at": 0
+     }
+    },
+    "stats": {
+     "number_of_comments": 0,
+     "last_comment_time": 0
+    },
+    "protocol_image_file": {
+     "guid": "00000000000000000000000000000001",
+     "file_name": "avatar.png",
+     "url": "https://www.protocols.io/img/default_protocol.png",
+     "mime": "image/png",
+     "size": 0,
+     "width": 400,
+     "height": 400,
+     "avg_color": "",
+     "scan_status": 0,
+     "created_at": 0
+    }
+   }
+  ],
+  "warning": ""
+ }
+}

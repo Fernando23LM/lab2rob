@@ -1,0 +1,28 @@
+# Skill macros: named expansions into implemented primitives (validated by
+# gen_skills.py: every step must be implemented or another macro, with no
+# cycles, so everything bottoms out in real simulator calls). Argument binding
+# is the program planner's job (SC-01); steps are ordered skill names.
+# NOTE: change_tip is deliberately NOT a macro — the simulated pipette has no
+# tip state (see liquid.py Pipette), so it is a declared skill instead.
+macros:
+  - name: transfer
+    kind: action
+    description: Move liquid from one well to another with the held pipette.
+    params: [source, target, volume_ul]
+    steps: [aspirate, dispense]
+  - name: mix_by_pipetting
+    kind: action
+    description: Mix a well by repeated aspirate/dispense cycles in place.
+    params: [well, volume_ul, cycles]
+    steps: [aspirate, dispense]
+  - name: serial_dilution
+    kind: action
+    description: Build a dilution series across target wells from a source well.
+    params: [source, targets, volume_ul, dilution_factor]
+    steps: [transfer]
+  - name: dilute
+    kind: action
+    description: Add MilliQ water diluent to reach target volume
+    params: [diluent_volume_ml]
+    steps: [aspirate, dispense]
+    learned: true
