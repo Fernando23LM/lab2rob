@@ -70,9 +70,43 @@ Review and ground protocols in a browser (stdlib only, no install):
 python -m lab2rob.review.app --port 8000
 ```
 
-Run the suite: `python -m pytest lab2rob/tests/ -q` (257 tests).
+Run the suite: `python -m pytest lab2rob/tests/ -q` (271 tests).
 All tests run offline with fake transports; live LLM calls need the key and
 stay under a $12/day cap with per-call cost logging.
+
+## Frozen scenes and trajectories (`lab2rob/sim/`)
+
+A certified program can be frozen into a graded task in the style of
+Embodied First Exam's privileged mode: a frozen scene (`instance.json`, with
+model and initial-state hashes), a reference trajectory (`oracle.npz`), and
+a grader that replays a trajectory in fresh processes and checks the end
+state against the independent judge.
+
+```bash
+python -m lab2rob.sim freeze --bioprot 1779 --out runs/frozen/1779_s0
+python -m lab2rob.sim grade --instance runs/frozen/1779_s0/instance.json \
+  --traj runs/frozen/1779_s0/oracle.npz --repeat 2 --out runs/frozen/1779_s0/verdict
+```
+
+`freeze` only writes a task whose oracle passes every check, replays to the
+same final state in two fresh processes, and whose empty trajectory fails.
+
+An agent drives the scene through `Session(instance, level=...)`. Whatever
+it calls, the session records rows of 15 targets per 20 ms control step
+(6 joints + gripper per arm, then the pipette plunger in uL) plus
+instrument events, so every level is graded by the same replay:
+
+| level | the agent uses |
+|---|---|
+| `joints` | `step(row, n)` only: joint and gripper targets and the plunger, with `ik`/`fk` helpers |
+| `skills` | `move_to`, `move_joints`, `set_gripper`, `aspirate`/`dispense(volume, slot=...)`, `move_tip_into`, `withdraw`, `wait` |
+| `mixed` | both, in one program: skills for the easy parts, raw rows for the rest |
+
+Instruments (`read_plate`, `report_concentration`, `incubate`, `inspect`)
+work at every level. The plunger moves liquid through biolab's own model:
+liquid only when the tip is in a well below its surface, air otherwise, and
+what is pushed out over no well is spilled. The sandboxed skill harness in
+`eval/` is unchanged and still runs model + skill agents.
 
 ## Metrics
 
@@ -142,7 +176,7 @@ list and narration script for the full ~3-minute narrated cut.
 
 - `lab2rob/` — the compiler: `ingest/`, `ground/`, `specify/`, `build/`,
   `certify/`, `safety/`, `coverage/`, `eval/`, `export/`, `review/`, `llm/`,
-  `registry/`, `perception/`, `report/`, `cli.py`
+  `registry/`, `perception/`, `report/`, `sim/`, `cli.py`
 - `Code-as-a-Policy-Evolving-Skill/biolab/` — the MuJoCo simulator, tasks,
   reference policies, and evolve loop (pre-existing)
 - `runs/` — per-run inputs, traces, costs (never committed)
