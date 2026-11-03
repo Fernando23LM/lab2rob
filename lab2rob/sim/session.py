@@ -36,7 +36,8 @@ from pathlib import Path
 import mujoco
 import numpy as np
 
-from lab2rob.certify.run import _biolab
+from lab2rob.certify.run import (RunAborted, _biolab, _grip_offset, _move_tip,
+                                 _tip_target)
 from lab2rob.registry.predicates import PREDICATES
 from lab2rob.sim.instance import (ACTION_NAMES, N_ACTION, PLUNGER, InstanceMismatch,
                                   build_env, close_env, load_instance, model_sha,
@@ -52,8 +53,6 @@ INSTRUMENT_HOLD_S = {"read_plate": 2.0, "incubate": 0.5, "inspect": 1.0,
 PLUNGER_HOLD_S = 0.4  # the plunger takes a moment (biolab's aspirate/dispense)
 #: Well approach used by aspirate/dispense(slot=...), as in certification.
 APPROACH_M = 0.03
-SUBMERGE_M = 0.001
-FLOOR_MARGIN_M = 0.0004
 TRAVEL_SPEED = 0.15
 WELL_SPEED = 0.04
 TRAJECTORY_FORMAT = "lab2rob-trajectory/1"
@@ -215,14 +214,14 @@ class Session:
     def move_tip_into(self, slot: str) -> bool:
         """Bring the held pipette's tip just under the surface of a well."""
         well = self._well(slot)
-        grip_above = self._grip_above()
-        x, y = float(well.center[0]), float(well.center[1])
-        top = well.floor + well.depth + APPROACH_M
-        tip_z = max(well.floor + FLOOR_MARGIN_M, well.surface - SUBMERGE_M)
-        tip_z = max(well.floor + 0.0002, tip_z)
-        return (self.move_to("right", [x, y, top + grip_above], 0.0, 0.0, TRAVEL_SPEED)
-                and self.move_to("right", [x, y, tip_z + grip_above], 0.0, 0.0,
-                                 WELL_SPEED))
+        # The certifier's approach: aim with the measured pinch-to-tip offset (the
+        # pipette drifts in the grip) and correct the tip's height in the well.
+        try:
+            _move_tip(self, well, _tip_target(well), self._grip_above(), slot,
+                      APPROACH_M, WELL_SPEED, env=self.env)
+        except RunAborted:
+            return False
+        return True
 
     @_allowed("skills", "mixed")
     def withdraw(self, slot: str) -> bool:
@@ -230,8 +229,11 @@ class Session:
         well = self._well(slot)
         x, y = float(well.center[0]), float(well.center[1])
         top = well.floor + well.depth + APPROACH_M
-        return self.move_to("right", [x, y, top + self._grip_above()], 0.0, 0.0,
+        return self.move_to("right", np.array([x, y, top]) + self._offset(), 0.0, 0.0,
                             TRAVEL_SPEED)
+
+    def _offset(self) -> np.ndarray:
+        return _grip_offset(self.env, self._grip_above())
 
     def _well(self, slot: str):
         if slot not in self.env.wells:

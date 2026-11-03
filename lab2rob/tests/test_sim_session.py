@@ -255,3 +255,23 @@ def test_freeze_writes_a_validated_task_and_the_grader_scores_it(tmp_path):
     empty = save_trajectory({"rows": np.zeros((0, 15)), "events": []}, tmp_path / "nop.npz")
     result, reward = grade(empty, tmp_path / "v2")
     assert reward == "0\n" and result["grader_error"] == 0
+
+
+def test_model_hash_ignores_where_the_simulator_is_installed(tmp_path):
+    """A copy of biolab elsewhere stores other mesh paths in the model; same hash."""
+    import shutil
+    src = REPO_ROOT / "Code-as-a-Policy-Evolving-Skill"
+    copy = tmp_path / "elsewhere" / "sim"
+    shutil.copytree(src / "biolab", copy / "biolab",
+                    ignore=shutil.ignore_patterns("__pycache__"))
+    shutil.copytree(src / "third_party" / "mujoco_menagerie" / "i2rt_yam",
+                    copy / "third_party" / "mujoco_menagerie" / "i2rt_yam")
+    code = ("import sys; sys.path.insert(0, sys.argv[1]); import biolab.protein as p\n"
+            "from lab2rob.sim.instance import model_sha\n"
+            "e = p.ProteinEnv(seed=0, randomize=False)\n"
+            "print(p.__file__); print(bytes(e.model.paths)[:80]); print(model_sha(e.model))")
+    outs = [subprocess.run([sys.executable, "-c", code, str(root)], capture_output=True,
+                           text=True, cwd=REPO_ROOT, check=True).stdout.splitlines()
+            for root in (src, copy)]
+    assert str(copy) in outs[1][0] and outs[0][1] != outs[1][1]  # the paths differ
+    assert outs[0][2] == outs[1][2]

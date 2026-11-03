@@ -95,10 +95,54 @@ def build_env(instance: dict):
     return env_cls(layout, instance.get("prefill", {}), seed=instance["seed"])
 
 
+#: Model fields left out of model_sha: where the asset files were installed
+#: (the path strings, their offsets, and the buffer size they change).
+_PATH_FIELDS = {"paths", "npaths", "nbuffer"}
+
+
+def _is_path_field(name: str) -> bool:
+    return name in _PATH_FIELDS or name.endswith("_pathadr")
+
+
+def _struct_bytes(obj) -> bytes:
+    out = []
+    for name in sorted(dir(obj)):
+        if name.startswith("_"):
+            continue
+        try:
+            value = getattr(obj, name)
+        except Exception:  # noqa: BLE001 - a property that cannot be read is skipped
+            continue
+        if isinstance(value, np.ndarray):
+            out.append(name.encode() + np.ascontiguousarray(value).tobytes())
+        elif isinstance(value, (int, float, bool)):
+            out.append(name.encode() + repr(value).encode())
+    return b"".join(out)
+
+
 def model_sha(model) -> str:
-    buf = np.zeros(mujoco.mj_sizeModel(model), dtype=np.uint8)
-    mujoco.mj_saveModel(model, None, buf)
-    return hashlib.sha256(buf.tobytes()).hexdigest()[:16]
+    """Hash of every array and option of the compiled model, install path excluded.
+
+    The model keeps the absolute path of every mesh file (``paths``), so a
+    hash of the whole binary changes when the simulator is checked out
+    somewhere else; geometry, physics, names and options are all kept.
+    """
+    h = hashlib.sha256()
+    for name in sorted(dir(model)):
+        if name.startswith("_") or _is_path_field(name):
+            continue
+        try:
+            value = getattr(model, name)
+        except Exception:  # noqa: BLE001
+            continue
+        if isinstance(value, np.ndarray):
+            h.update(name.encode())
+            h.update(np.ascontiguousarray(value).tobytes())
+        elif isinstance(value, (int, float, bool)):
+            h.update(name.encode() + repr(value).encode())
+    for struct in ("opt", "stat", "vis"):
+        h.update(struct.encode() + _struct_bytes(getattr(model, struct)))
+    return h.hexdigest()[:16]
 
 
 def _sim_state(env, extra: dict | None = None) -> dict:
