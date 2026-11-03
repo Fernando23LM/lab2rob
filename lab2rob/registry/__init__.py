@@ -6,32 +6,35 @@ anything else becomes out_of_scope with a reason.
 
 from pathlib import Path
 
-import yaml
-
-from .resolve import NOT_IMPLEMENTED, resolve_asset, resolve_skill
+from .resolve import NOT_IMPLEMENTED, load_yaml, resolve_asset, resolve_skill, shared_yaml
 
 DIR = Path(__file__).parent
 
 
 def load_skills():
     """Skill entries from skills.yaml (generated: implemented + macro + declared)."""
-    return yaml.safe_load((DIR / "skills.yaml").read_text(encoding="utf-8"))["skills"]
+    return load_yaml(DIR / "skills.yaml")["skills"]
 
 
 def load_assets():
     """Asset entries from assets.yaml (implemented + declared)."""
-    return yaml.safe_load((DIR / "assets.yaml").read_text(encoding="utf-8"))["assets"]
+    return load_yaml(DIR / "assets.yaml")["assets"]
 
 
 def load_lexicon():
     """Lexicon entries: canonical name -> kind, synonyms, ontology id."""
-    return yaml.safe_load((DIR / "lexicon.yaml").read_text(encoding="utf-8"))["lexicon"]
+    return load_yaml(DIR / "lexicon.yaml")["lexicon"]
+
+
+def shared_lexicon():
+    """The lexicon entries without a copy: read only (for hot loops)."""
+    return shared_yaml(DIR / "lexicon.yaml")["lexicon"]
 
 
 def lexicon_index():
     """Lowercased synonym -> canonical name. Duplicate synonyms are an error."""
     index = {}
-    for entry in load_lexicon():
+    for entry in shared_yaml(DIR / "lexicon.yaml")["lexicon"]:  # read only
         for synonym in entry.get("synonyms", []):
             key = synonym.lower()
             if key in index and index[key] != entry["canonical"]:
@@ -53,4 +56,4 @@ def asset_names(status=None):
 
 __all__ = ["NOT_IMPLEMENTED", "asset_names", "lexicon_index", "load_assets",
            "load_lexicon", "load_skills", "resolve_asset", "resolve_skill",
-           "skill_names"]
+           "shared_lexicon", "skill_names"]

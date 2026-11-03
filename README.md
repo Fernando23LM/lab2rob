@@ -108,6 +108,27 @@ liquid only when the tip is in a well below its surface, air otherwise, and
 what is pushed out over no well is spilled. The sandboxed skill harness in
 `eval/` is unchanged and still runs model + skill agents.
 
+## Corpus sweep (BioProBench, offline)
+
+`ingest/bioprobench.py` loads the BioProBench protocol corpus (about 9.6k
+protocols.io and 0.9k Protocol Exchange protocols with sectioned steps) at a
+pinned revision into `runs/corpora/` (never committed: the compilation is
+CC BY-NC 4.0, and every record carries that license plus its source's and a
+non-commercial flag). Only steps, title, URL and abstract are used; the
+corpus's `description`/`classification` fields are misaligned with their
+protocols for a sizeable share of records.
+
+`coverage/corpus_sweep.py` compiles every protocol with the rules only (no
+LLM, about 5 minutes for the whole corpus on 4 cores), builds the scene, and
+reports the funnel, what blocks each step, a greedy unlock order (which
+capability gives the most further protocols a task segment of 3+ consecutive
+executable steps), the size of a targeted LLM pass, and the result of
+freezing the top candidates into validated tasks.
+
+```bash
+python -m lab2rob.coverage.corpus_sweep --out runs/corpus_sweep --workers 4 --freeze-top 40
+```
+
 ## Metrics
 
 | metric | value |
