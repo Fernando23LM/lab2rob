@@ -126,7 +126,7 @@ def test_sweep_compiles_reports_and_ranks(tmp_path):
 
 
 def test_compile_never_raises_on_a_broken_protocol(monkeypatch):
-    def boom(raw):
+    def boom(raw, client=None):
         raise ValueError("bad")
     monkeypatch.setattr(corpus_sweep, "ground_protocol", boom)
     record = corpus_sweep.compile_protocol(_protocol("x", ["Add 1 uL."]))
@@ -153,3 +153,50 @@ def test_corpus_protocol_defaults_to_noncommercial():
 @pytest.mark.parametrize("corpus", sorted(bioprobench.FILES))
 def test_every_corpus_has_a_source_license(corpus):
     assert bioprobench.SOURCE_LICENSE[corpus]
+
+
+class _FakeReply:
+    def __init__(self, text):
+        self.text, self.completion_tokens, self.reasoning_tokens = text, 10, 0
+        self.finish_reason = None
+
+
+class _FakeClient:
+    """Answers every fallback call with 'transfer' (offline, no spend)."""
+
+    def __init__(self):
+        self.calls = 0
+
+    def complete(self, job, messages, **kwargs):
+        self.calls += 1
+        return _FakeReply('{"skill": "transfer", "out_of_scope_reason": null, '
+                          '"ambiguous": false, "detail": "move liquid"}')
+
+
+def test_llm_pass_regrounds_only_near_complete_protocols(tmp_path):
+    protocols = [
+        _protocol("near", ["Add 75 uL of stock to well A1.",
+                           "Bring 30 uL of the buffer over to well A2."]),
+        _protocol("far", ["Gently tap the tube.",
+                          "Bring 30 uL of the buffer over to well A2."]),
+    ]
+    client = _FakeClient()
+    summary = corpus_sweep.run(protocols, {"name": "t"}, tmp_path, workers=1,
+                               client=client, llm_budget_usd=1.0)
+    ran = summary["llm_pass"]["run"]
+    assert client.calls == 1  # "far" has no executable liquid step: no spend on it
+    assert ran["protocols"] == 1 and ran["llm_steps"] == 1 and ran["planned_gain"] == 1
+    assert ran["stopped"] == "done" and not ran["spend_measured"]
+    rows = {json.loads(line)["protocol_id"]: json.loads(line)
+            for line in (tmp_path / "protocols.jsonl").open()}
+    assert rows["near"]["n_planned"] == 2 and rows["near"]["n_needs_llm"] == 0
+    assert "LLM pass run" in (tmp_path / "report.md").read_text()
+
+
+def test_llm_pass_stops_before_the_budget(tmp_path):
+    protocols = [_protocol("near", ["Add 75 uL of stock to well A1.",
+                                    "Bring 30 uL of the buffer over to well A2."])]
+    client = _FakeClient()
+    summary = corpus_sweep.run(protocols, {"name": "t"}, tmp_path, workers=1,
+                               client=client, llm_budget_usd=0.001)
+    assert client.calls == 0 and summary["llm_pass"]["run"]["stopped"] == "budget"

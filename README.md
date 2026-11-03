@@ -129,6 +129,13 @@ freezing the top candidates into validated tasks.
 python -m lab2rob.coverage.corpus_sweep --out runs/corpus_sweep --workers 4 --freeze-top 40
 ```
 
+With `MODEL_API_KEY` set, `--llm-budget-usd 10` adds a targeted LLM pass:
+only protocols that already have an executable liquid step and whose other
+non-executable steps are at most 3 the rules could not ground are
+re-grounded with the LLM fallback, cheapest first, stopping before the
+budget (and at the client's daily cap). The latest sweep's report is
+`lab2rob/coverage/bioprobench_sweep.md`.
+
 ## Metrics
 
 | metric | value |

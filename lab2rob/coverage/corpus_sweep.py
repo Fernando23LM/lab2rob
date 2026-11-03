@@ -34,6 +34,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from lab2rob.ground.rules import ground_protocol
+from lab2rob.llm.cost_log import DailyCapExceeded, JobBudgetExceeded
 from lab2rob.ground.sweep import _capability_key
 from lab2rob.specify.judge import LIQUID_ACTIONS, plan_judge
 from lab2rob.specify.program import plan_protocol
@@ -47,13 +48,19 @@ UNLOCK_ROUNDS = 15
 SEGMENT_MIN_STEPS = 3
 
 
-def compile_protocol(protocol) -> dict:
-    """Rules-ground + plan + judge one protocol; a compact, JSON-safe record."""
+def compile_protocol(protocol, client=None) -> dict:
+    """Ground + plan + judge one protocol; a compact, JSON-safe record.
+
+    Rules only by default; with client, steps the rules leave as needs_llm
+    go to the LLM fallback (ground_protocol's own routing).
+    """
     raw = protocol.raw
     try:
-        grounding = ground_protocol(raw)
+        grounding = ground_protocol(raw, client=client)
         program = plan_protocol(grounding)
         judge = plan_judge(grounding)
+    except (DailyCapExceeded, JobBudgetExceeded):
+        raise  # a spending cap stops the LLM pass, never silently
     except Exception as e:  # noqa: BLE001 - one bad protocol never stops a sweep
         return {"protocol_id": raw.protocol_id, "error": f"{type(e).__name__}: {e}"[:300]}
     planned = {s.idx: s for s in program.steps}
@@ -163,6 +170,52 @@ def _greedy_unlock(records: list, rounds: int = UNLOCK_ROUNDS) -> list:
     return out
 
 
+def _near_complete(records: list) -> list:
+    """Protocols with an executable liquid step whose only non-executable
+    steps are a few needs_llm ones (the LLM pass's targets)."""
+    return [r for r in records if "error" not in r and r["n_needs_llm"] and r["n_liquid"]
+            and r["n_needs_llm"] <= NEAR_COMPLETE_MAX_LLM_STEPS
+            and all(s["planned"] or s["status"] == "needs_llm" for s in r["steps"])]
+
+
+def llm_pass(records: list, protocols_by_id: dict, client, budget_usd: float) -> dict:
+    """Re-ground near-complete protocols with the LLM fallback, cheapest first.
+
+    Replaces their records in place and returns what was spent and gained.
+    Stops before the budget (measured on the client's cost log when it has
+    one, else estimated per call) and on the client's own spending caps.
+    """
+    near = sorted(_near_complete(records), key=lambda r: (r["n_needs_llm"], r["protocol_id"]))
+    index = {r["protocol_id"]: i for i, r in enumerate(records)}
+    log = getattr(client, "cost_log", None)
+    start = log.spend_total() if log is not None else 0.0
+    calls, rows, stopped = 0, [], ""
+    for r in near:
+        spent = (log.spend_total() - start) if log is not None else calls * EST_USD_PER_LLM_CALL
+        if spent + r["n_needs_llm"] * EST_USD_PER_LLM_CALL > budget_usd:
+            stopped = "budget"
+            break
+        try:
+            new = compile_protocol(protocols_by_id[r["protocol_id"]], client=client)
+        except (DailyCapExceeded, JobBudgetExceeded) as e:
+            stopped = type(e).__name__
+            break
+        calls += r["n_needs_llm"]
+        if "error" not in new:
+            records[index[r["protocol_id"]]] = new
+        rows.append({"protocol_id": r["protocol_id"], "llm_steps": r["n_needs_llm"],
+                     "planned_before": r["n_planned"], "planned_after": new.get("n_planned"),
+                     "segments_before": r["segments"], "segments_after": new.get("segments"),
+                     "error": new.get("error")})
+    spent = (log.spend_total() - start) if log is not None else calls * EST_USD_PER_LLM_CALL
+    return {"protocols": len(rows), "of_near_complete": len(near), "llm_steps": calls,
+            "spent_usd": round(spent, 4), "spend_measured": log is not None,
+            "stopped": stopped or "done",
+            "planned_gain": sum((x["planned_after"] or 0) - x["planned_before"] for x in rows),
+            "segment_gain": sum((x["segments_after"] or 0) - x["segments_before"] for x in rows),
+            "rows": rows}
+
+
 def summarize(records: list, corpus_stats: dict) -> dict:
     ok = [r for r in records if "error" not in r]
     steps = [s for r in ok for s in r["steps"]]
@@ -176,9 +229,7 @@ def summarize(records: list, corpus_stats: dict) -> dict:
     candidates = sorted((r for r in ok if r["n_liquid"] and r["judged_volume_checks"]
                          and (r.get("scene") or {}).get("ok")),
                         key=lambda r: (-r["n_liquid"], -r["longest_run"], r["protocol_id"]))
-    near = [r for r in ok if r["n_needs_llm"] and
-            r["n_needs_llm"] <= NEAR_COMPLETE_MAX_LLM_STEPS and
-            all(s["planned"] or s["status"] == "needs_llm" for s in r["steps"])]
+    near = _near_complete(ok)
     near_calls = sum(r["n_needs_llm"] for r in near)
     all_llm = sum(r["n_needs_llm"] for r in ok)
     runs = Counter(min(r["longest_run"], 10) for r in ok)
@@ -310,6 +361,13 @@ def write_report(out_dir: Path, summary: dict) -> Path:
         f"{s['llm_pass']['near_complete_calls']} calls "
         f"(about ${s['llm_pass']['est_usd_near_complete']})",
     ]
+    ran = s["llm_pass"].get("run")
+    if ran:
+        lines += [f"- LLM pass run: {ran['protocols']} of {ran['of_near_complete']} "
+                  f"near-complete protocols, {ran['llm_steps']} steps, "
+                  f"${ran['spent_usd']} ({'measured' if ran['spend_measured'] else 'estimated'}), "
+                  f"stopped: {ran['stopped']}; +{ran['planned_gain']} planned steps, "
+                  f"+{ran['segment_gain']} task segments"]
     if s.get("freeze"):
         frozen = [f for f in s["freeze"] if f.get("frozen")]
         reasons = Counter(f.get("reason") for f in s["freeze"] if not f.get("frozen"))
@@ -330,7 +388,7 @@ def write_report(out_dir: Path, summary: dict) -> Path:
 
 
 def run(protocols: list, corpus_stats: dict, out_dir: Path, workers: int = 4,
-        freeze_top: int = 0) -> dict:
+        freeze_top: int = 0, client=None, llm_budget_usd: float = 0.0) -> dict:
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
@@ -339,6 +397,11 @@ def run(protocols: list, corpus_stats: dict, out_dir: Path, workers: int = 4,
             records = pool.map(compile_protocol, protocols, chunksize=20)
     else:
         records = [compile_protocol(p) for p in protocols]
+    llm = None
+    if client is not None and llm_budget_usd > 0:
+        llm = llm_pass(records, {p.raw.protocol_id: p for p in protocols}, client,
+                       llm_budget_usd)
+        (out_dir / "llm_pass.json").write_text(json.dumps(llm, indent=2), encoding="utf-8")
     with open(out_dir / "steps.jsonl", "w", encoding="utf-8") as steps_f, \
             open(out_dir / "protocols.jsonl", "w", encoding="utf-8") as prot_f:
         for r in records:
@@ -347,6 +410,8 @@ def run(protocols: list, corpus_stats: dict, out_dir: Path, workers: int = 4,
             prot_f.write(json.dumps({k: v for k, v in r.items() if k != "steps"}) + "\n")
     summary = summarize(records, corpus_stats)
     summary["compile_seconds"] = round(time.time() - t0, 1)
+    if llm is not None:
+        summary["llm_pass"]["run"] = {k: v for k, v in llm.items() if k != "rows"}
     if freeze_top:
         summary["freeze"] = freeze_candidates({p.raw.protocol_id: p for p in protocols},
                                               summary, out_dir, freeze_top)
@@ -362,11 +427,23 @@ def main(argv=None) -> int:
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--freeze-top", type=int, default=0)
+    parser.add_argument("--llm-budget-usd", type=float, default=0.0,
+                        help="re-ground near-complete protocols with the LLM fallback "
+                             "(needs MODEL_API_KEY); 0 = rules only")
     args = parser.parse_args(argv)
     from lab2rob.ingest.bioprobench import download, load_corpus
     protocols, stats = load_corpus(download(), limit=args.limit)
     stats["name"] = "BioProBench (protocols.io + Protocol Exchange)"
-    summary = run(protocols, stats, Path(args.out), args.workers, args.freeze_top)
+    client = None
+    if args.llm_budget_usd > 0:
+        import os
+        from lab2rob.llm.client import API_KEY_ENV, default_client
+        if not os.environ.get(API_KEY_ENV):
+            print(f"error: --llm-budget-usd needs {API_KEY_ENV}")
+            return 1
+        client = default_client()
+    summary = run(protocols, stats, Path(args.out), args.workers, args.freeze_top,
+                  client=client, llm_budget_usd=args.llm_budget_usd)
     print(f"{summary['protocols']} protocols, {summary['steps']} steps, "
           f"{summary['planned_steps']} planned, {summary['n_candidates']} candidates, "
           f"{summary['fully_planned_protocols']} fully planned "
