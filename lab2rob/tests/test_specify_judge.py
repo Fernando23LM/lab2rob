@@ -129,3 +129,18 @@ def test_tier1_end_to_end():
     volume = next(p for s in judge.steps for p in s.predicates if p.pred == "volume")
     assert (volume.target, volume.tol) == (75.0, 3.75)
     assert judge.outcomes == []
+
+
+def test_judge_never_checks_volume_in_the_pipette():
+    from lab2rob.ground.rules import Grounding, Quantity
+    from types import SimpleNamespace
+    step = Grounding(idx=1, source_text="Add 8 uL to the plate. Pipette to mix.",
+                     quantities=[Quantity(raw="8 ul", value=8.0, unit="ul",
+                                          approximate=False, pint="8 ul")],
+                     entities=[{"name": "pipette", "scope": "in_scope"},
+                               {"name": "plate_96_well", "scope": "in_scope"}],
+                     action="transfer", status="grounded", by="rules")
+    judge = plan_judge(SimpleNamespace(protocol_id="t", title="t", description="",
+                                       steps=[step]))
+    volume = [p for p in judge.steps[0].predicates if p.pred == "volume"]
+    assert volume[0].args == ["plate_96_well"]

@@ -136,3 +136,45 @@ def test_tier1_end_to_end_and_pairs_roundtrip(tmp_path):
     assert len(pairs) == 4
     assert pairs[2]["skills"] == ["aspirate", "dispense"]
     assert pairs[0]["reason"] == "missing_skill"
+
+
+def _program(*groundings):
+    from types import SimpleNamespace
+    return plan_protocol(SimpleNamespace(protocol_id="t", title="t", steps=list(groundings)))
+
+
+def test_tools_never_take_a_vessel_role():
+    """'... pipette to mix' names the tool; binding a role to it left ops unassigned."""
+    out = plan_step(make_step(text="Add 8 uL of glutaraldehyde to each sample. Pipette to mix.",
+                              action="transfer", quantities=[qty(8, "ul")],
+                              entities=[ent("pipette")]))
+    assert out.status == "planned"
+    assert [op["at"] for op in out.ops] == [None, None]
+    assert out.entities  # still recorded for traceability
+
+
+def test_one_named_vessel_is_the_destination():
+    out = plan_step(make_step(text="Add 50 uL of stop solution to each well of the plate.",
+                              action="transfer", quantities=[qty(50, "ul")],
+                              entities=[ent("plate_96_well")]))
+    source, target = out.ops
+    assert source["at"] is None and target["at"] == out.entities[0]
+    assert "source" in source["assumed"]
+
+
+def test_dispense_with_an_empty_pipette_draws_first():
+    program = _program(
+        make_step(idx=1, text="Dispense 25 uL into each spot.", action="dispense",
+                  quantities=[qty(25, "ul")]),
+        make_step(idx=2, text="Aspirate 40 uL of buffer.", action="aspirate",
+                  quantities=[qty(40, "ul")]),
+        make_step(idx=3, text="Dispense 30 uL into the well.", action="dispense",
+                  quantities=[qty(30, "ul")]),
+        make_step(idx=4, text="Dispense 15 uL into the next well.", action="dispense",
+                  quantities=[qty(15, "ul")]))
+    ops = {s.idx: [(o["skill"], o["args"]["volume_ul"]) for o in s.ops] for s in program.steps}
+    assert ops[1] == [("aspirate", 25.0), ("dispense", 25.0)]
+    assert ops[2] == [("aspirate", 40.0)]
+    assert ops[3] == [("dispense", 30.0)]  # covered by step 2's draw
+    assert ops[4] == [("aspirate", 5.0), ("dispense", 15.0)]  # only the shortfall
+    assert "empty pipette" in program.steps[0].ops[0]["assumed"]["source"]

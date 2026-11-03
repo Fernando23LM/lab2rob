@@ -95,7 +95,9 @@ def test_equipment_needs_no_placement():
         prog([[op("aspirate", {"volume_ul": 25.0}, at="e1")]],
              entities=[("e1", "incubator_co2")]))
     assert built.unplaced == ["incubator_co2: no physical model needed"]
-    assert built.assignments == {}
+    # Equipment is not a vessel: the op falls back to a scene stock instead of
+    # being left without a well (which certification then aborted on).
+    assert built.assignments == {"1:0": "stock"}
 
 
 def test_over_capacity_rejected():
@@ -127,3 +129,11 @@ def test_to_mujoco_compiles():
     assert model.nbody > 5
     liquid = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_GEOM, "liquid_A1")
     assert liquid >= 0
+
+
+def test_every_pipetting_op_gets_a_well_or_the_scene_is_rejected():
+    """A tool or equipment ref degrades to an unbound role, never a skipped op."""
+    built = build_scene(prog([[op("aspirate", {"volume_ul": 8.0}, at="e1"),
+                               op("dispense", {"volume_ul": 8.0}, at="e1")]],
+                             entities=[("e1", "pipette")]))
+    assert set(built.assignments) == {"1:0", "1:1"}

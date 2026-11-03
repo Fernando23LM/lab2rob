@@ -95,8 +95,9 @@ def _tol_ul(volume_ul: float) -> float:
 
 
 def _well_ref(grounding) -> str:
+    from .program import NON_VESSELS  # shared vocabulary, not the program
     for entity in grounding.entities:
-        if entity.get("scope") == "in_scope":
+        if entity.get("scope") == "in_scope" and entity["name"] not in NON_VESSELS:
             return entity["name"]
     return UNBOUND
 

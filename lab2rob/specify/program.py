@@ -171,9 +171,22 @@ def _time_s(quantities: list) -> float | None:
     return None
 
 
+#: In-scope entities that are tools or fixtures, never a liquid's source or
+#: target: "pipette to mix" or "use a multichannel pipette" names the tool,
+#: and binding a vessel role to it left the op without a well.
+NON_VESSELS = frozenset({"pipette", "pipette_tip_200ul", "pipette_tip_1000ul",
+                         "tip_rack", "yam_arm", "table", "floor"})
+
+
 def _in_scope_uids(grounding, table: _Entities) -> list:
     return [table.uid(e["name"]) for e in grounding.entities
             if e.get("scope") == "in_scope"]
+
+
+def _vessel_uids(grounding, table: _Entities) -> list:
+    """In-scope entity uids that can hold liquid roles (tools left out)."""
+    return [table.uid(e["name"]) for e in grounding.entities
+            if e.get("scope") == "in_scope" and e["name"] not in NON_VESSELS]
 
 
 class _Unbindable(Exception):
@@ -193,8 +206,11 @@ def _require_volume(grounding) -> float:
 
 def _plan_transfer(grounding, uids: list) -> list:
     volume = _require_volume(grounding)
-    source = uids[0] if uids else None
-    target = uids[1] if len(uids) > 1 else None
+    # Two named vessels: source then target. One: it is where the liquid goes
+    # ("Add 50 uL of stop solution to each well of the plate"), as the judge
+    # reads it too; the reagent comes from a stock the scene provides.
+    source = uids[0] if len(uids) > 1 else None
+    target = uids[1] if len(uids) > 1 else (uids[0] if uids else None)
     assumed = {}
     if source is None:
         assumed["source"] = "no vessel in text; scene builder assigns"
@@ -362,7 +378,7 @@ def plan_step(grounding, table: _Entities | None = None) -> PlannedStep:
             if binder is None:
                 step.ops = _plan_learned(grounding.action, grounding)
             else:
-                step.ops = binder(grounding, step.entities)
+                step.ops = binder(grounding, _vessel_uids(grounding, table))
         else:
             step.ops = _plan_primitive(grounding.action, grounding, resolution["entry"])
     except _Unbindable as exc:
@@ -371,10 +387,41 @@ def plan_step(grounding, table: _Entities | None = None) -> PlannedStep:
     return step
 
 
+def _load_empty_dispenses(steps: list) -> None:
+    """A dispense the pipette cannot cover draws the shortfall first.
+
+    "Dispense 25 uL into each spot" or "Add 150 uL of block" plans as a lone
+    dispense; run as written, an empty pipette delivers nothing. Tracking
+    what the pipette holds across the program, each such dispense gets an
+    aspirate of the missing volume from a scene stock just before it,
+    recorded in the op's assumed fields like every other default.
+    """
+    held = 0.0
+    for step in steps:
+        if step.status != "planned":
+            continue
+        ops = []
+        for op in step.ops:
+            volume = op["args"].get("volume_ul")
+            if op["skill"] == "dispense" and isinstance(volume, (int, float)):
+                short = float(volume) - held
+                if short > 1e-9:
+                    ops.append(_op("aspirate", {"volume_ul": round(short, 6)}, at=None,
+                                   assumed={"source": "dispense with an empty pipette: "
+                                                      "reagent drawn from a scene stock"}))
+                    held += short
+                held = max(0.0, held - float(volume))
+            elif op["skill"] == "aspirate" and isinstance(volume, (int, float)):
+                held += float(volume)
+            ops.append(op)
+        step.ops = ops
+
+
 def plan_protocol(protocol_grounding) -> PlannedProgram:
     """Plan every step of a grounded protocol into one program."""
     table = _Entities()
     steps = [plan_step(grounding, table) for grounding in protocol_grounding.steps]
+    _load_empty_dispenses(steps)
     out_of_scope = [OutOfScopeItem(step=s.idx, reason=s.reason or "ambiguous",
                                    detail=s.detail)
                     for s in steps if s.status != "planned"]

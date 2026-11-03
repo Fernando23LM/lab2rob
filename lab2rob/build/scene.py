@@ -329,8 +329,9 @@ def build_scene(program, seed: int = 0, layout=None, demo_props: bool = False) -
                 if uid not in resolved:
                     resolved[uid] = _resolve_named_asset(uid_asset[uid], entries, built)
                 if resolved[uid] is None:
-                    continue  # scene-provided or unplaced equipment
-                built.vessels.setdefault(uid, {"asset": resolved[uid], "slot": None})
+                    uid = None  # scene-provided or unplaced equipment: an unbound role
+                else:
+                    built.vessels.setdefault(uid, {"asset": resolved[uid], "slot": None})
             prefer = "trough" if op["skill"] == "aspirate" else "plate"
             if uid is not None and resolved[uid] in labware.KINDS:
                 slot = _labware_slot(uid, resolved[uid], place, envelope)
@@ -355,6 +356,13 @@ def build_scene(program, seed: int = 0, layout=None, demo_props: bool = False) -
 
     if demo_props:
         _place_demo_props(program, built)
+
+    missing = [f"{step.idx}:{i}" for step in program.steps if step.status == "planned"
+               for i, op in enumerate(step.ops)
+               if op["skill"] in ("aspirate", "dispense")
+               and f"{step.idx}:{i}" not in built.assignments]
+    if missing:  # never a half-assigned scene
+        raise SceneRejected("unassigned", f"pipetting ops without a well: {missing}")
 
     used = {slot: tuple(built.slots[slot]["pos"]) for slot in set(built.assignments.values())}
     violations = check_reach(used)
