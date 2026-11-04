@@ -75,7 +75,7 @@ CARDS = {
         ("Robocurve task format: task.json, scorer, frozen scene, demo, screenshot", FONT, 26, FG),
         ("", FONT, 20, FG),
         ("Across the corpus: 307 weighings -> 2 accepted, 15,519 spins -> 10,466 accepted,", FONT, 24, DIM),
-        ("2,054 pipette-then-spin runs -> 534 accepted multi-step tasks;", FONT, 24, DIM),
+        ("2,054 pipette-then-spin runs -> 611 accepted multi-step tasks;", FONT, 24, DIM),
         ("every rejection says what the scene is missing.", FONT, 24, DIM),
     ]),
 }

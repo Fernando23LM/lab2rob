@@ -30,7 +30,7 @@ Built for the Meta Global AI Developer Hackathon (Indie track).
   microcentrifuge (LabUtopia's model converted to MuJoCo, with a hinged,
   latching lid). Each scene rejects what it cannot represent, with a reason.
 - **Multi-step tasks across scenes.** Pipetting steps that run straight into a
-  spin compile into one task, scored at the spin: 534 accepted in 360 protocols.
+  spin compile into one task, scored at the spin: 611 accepted in 422 protocols.
 - **Three submission-ready benchmark tasks** in the Robocurve format, compiled
   from published protocol steps, each with a scripted full-score demo, a
   20 Hz runtime and a scorer a person can reproduce with a balance or a photo:
@@ -229,7 +229,7 @@ cannot take); every accepted candidate of a family is the same task.
 | grounded by rules / executable | 27.3% of steps / 12.7% (8.4% liquid steps) |
 | task candidates | 1,949 pipetting protocols with a buildable scene; 1,130 with a 3+ step executable segment |
 | frozen pipetting tasks | 37 of the top 40 candidates (oracle passes, two fresh replays agree, idle fails) |
-| task families | weigh: 307 weighings, 2 accepted; centrifuge: 15,519 spins, 10,466 accepted; prep_spin (multi-step): 2,054 spins after additions, 534 accepted in 360 protocols |
+| task families | weigh: 307 weighings, 2 accepted; centrifuge: 15,519 spins, 10,466 accepted; prep_spin (multi-step): 2,054 spins after additions, 611 accepted in 422 protocols |
 | Robocurve tasks | 3 built: weighing (demo 1.0, 3,299 steps), centrifuge (demo 1.0, 2,094 steps), multi-step pipette + balance + spin (demo 1.0, 8,132 steps) |
 | 42-protocol sweep (LLM) | 514 steps; 346 out-of-scope/ambiguous mined into 32 gap clusters |
 | LLM grounding fallback | 84 calls, $0.94 for the sweep |

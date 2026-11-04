@@ -1,6 +1,6 @@
 # Corpus sweep (rules only)
 
-Generated 2026-11-04T22:57:41+00:00. Corpus: BioProBench (protocols.io + Protocol Exchange) (10518 records, 213 duplicate URLs and 156 empty protocols dropped).
+Generated 2026-11-04T23:26:00+00:00. Corpus: BioProBench (protocols.io + Protocol Exchange) (10518 records, 213 duplicate URLs and 156 empty protocols dropped).
 
 ## Funnel
 
@@ -123,7 +123,7 @@ Steps planned for each task scene, and how many its scene builder accepts.
 |---|---|---|---|---|---|
 | weigh | 307 | 187 | 2 | 2 | over_capacity 266, missing_asset 39 |
 | centrifuge | 15519 | 3894 | 10466 | 3223 | missing_asset 5042, over_capacity 11 |
-| prep_spin | 2054 | 1072 | 534 | 360 | ambiguous 1064, missing_asset 331, over_capacity 110, out_of_range 11, unchecked 4 |
+| prep_spin | 2054 | 1072 | 611 | 422 | missing_asset 879, ambiguous 436, over_capacity 108, out_of_range 15, unchecked 5 |
 
 Accepted weigh candidates (first 15):
 
@@ -156,21 +156,21 @@ Accepted prep_spin candidates (first 15):
 
 | protocol | title | step | parameters |
 |---|---|---|---|
-| [Protocol-exchange-14](https://doi.org/10.21203/rs.3.pex-1612/v1) | Comparative two-dimensional fluorescence gel electropho | 10 | additions=1, reagents=alkylation buffer |
 | [Protocol-exchange-43](https://doi.org/10.21203/rs.2.14634/v1) | Time-Resolved Serial Femtosecond Crystallography at the | 18 | additions=1, reagents=enterokinase |
+| [Protocol-exchange-144](https://doi.org/10.1038/protex.2015.067) | An improved method for extraction and quantification of | 20 | additions=1, reagents=chloroform:isoamyl alcohol solution |
 | [Protocol-exchange-170](https://doi.org/10.1038/protex.2013.074) | Fluorescent DNA probes for ultra-sensitive strandspecif | 14 | additions=1, reagents=NaOH |
 | [Protocol-exchange-226](https://doi.org/10.1038/protex.2011.209) | Preparation of materials for flexizyme reactions and ge | 18 | additions=1, reagents=ethanol |
 | [Protocol-exchange-226](https://doi.org/10.1038/protex.2011.209) | Preparation of materials for flexizyme reactions and ge | 41 | additions=1, reagents=ethanol |
 | [Protocol-exchange-226](https://doi.org/10.1038/protex.2011.209) | Preparation of materials for flexizyme reactions and ge | 80 | additions=1, reagents=ethanol |
 | [Protocol-exchange-226](https://doi.org/10.1038/protex.2011.209) | Preparation of materials for flexizyme reactions and ge | 102 | additions=1, reagents=ethanol |
+| [Protocol-exchange-228](https://doi.org/10.1038/protex.2011.216) | Characterisation and quantitation expression analysis o | 28 | additions=1, reagents=hydrolysation solution |
 | [Protocol-exchange-237](https://doi.org/10.1038/nprot.2010.151) | A complete protocol for genome-scale analysis of replic | 39 | additions=1, reagents=ethanol |
 | [Protocol-exchange-461](https://doi.org/10.21203/rs.3.pex-1246/v1) | Mouse fetal liver erythroid population separation using | 39 | additions=1, reagents=ice-cold staining solution |
 | [Protocol-exchange-485](https://doi.org/10.21203/rs.3.pex-896/v1) | Direct Synthesis of Gold Nanoparticles on Cysteinerich  | 30 | additions=1, reagents=PBS-A |
 | [Protocol-exchange-554](https://doi.org/10.1038/protex.2019.010) | Protocol for CRISPR/Cas9-based knock-in using the VIKIN | 21 | additions=1, reagents=Tris HCl |
 | [Protocol-exchange-577](https://doi.org/10.1038/protex.2018.066) | Multiplexed Imaging of Neuronal Synapses Using Nucleic  | 37 | additions=2, reagents=sodium acetate+isopropanol |
 | [Protocol-exchange-585](https://doi.org/10.1038/protex.2018.059) | High Molecular Weight DNA Extraction from Recalcitrant  | 20 | additions=1, reagents=cold NIB |
-| [Protocol-exchange-632](https://doi.org/10.1038/protex.2017.086) | Isolation of exosomal RNA from cell culture supernatant | 16 | additions=1, reagents=Qiazol |
-| [Protocol-exchange-635](https://doi.org/10.1038/protex.2017.083) | Isolation of exosomal RNA from urine using the Qiagen m | 32 | additions=1, reagents=RNase-free water directly |
+| [Protocol-exchange-589](https://doi.org/10.1038/protex.2018.026) | Hox/Wnt interact to pattern the primary body axis of an | 21 | additions=1, reagents=RNase-free 70% EtOH |
 
 ## LLM pass sizing
 

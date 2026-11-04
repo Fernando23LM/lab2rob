@@ -57,11 +57,11 @@ tasks, in MuJoCo with two I2RT YAM arms.
   5,042 are rejected because they spin tubes or plates the microcentrifuge cannot take.
 - **Multi-step tasks across scenes**: pipetting into a tube and then spinning it is the
   most common run of steps that crosses scenes in the corpus. 2,054 spins follow one or
-  more addition steps (in 1,072 protocols). 534 of them pass the compiler and the scene
-  builder (in 360 protocols), 33 with two reagents. The rest are rejected with a reason:
-  1,064 because a step adds several liquids at once or names none, 331 because they
-  spin labware the microcentrifuge cannot take, 110 because there are more additions
-  than the bench has troughs.
+  more addition steps (in 1,072 protocols). 611 of them pass the compiler and the scene
+  builder (in 422 protocols), 41 with two reagents. The rest are rejected with a reason:
+  879 because they add into or spin labware the bench does not have (spin columns,
+  filters, plates), 436 because a step adds several liquids at once or names no
+  reagent, 108 because there are more additions than the bench has troughs.
 - **Three benchmark-ready tasks**, compiled from published steps, each needing both arms:
   - weigh out 0.90 g of NaCl passed between the arms (from a SARS-CoV-2 wastewater
     protocol);
