@@ -106,7 +106,11 @@ def compile_prep_spin(raw, client=None) -> list:
     named reagent and the judge's volume check; the spin needs the judge's rotor checks
     and must pass the centrifuge scene's own rejections (tubes it can take).
     """
-    grounding = ground_protocol(raw, client=client)
+    return prep_spin_records(raw, ground_protocol(raw, client=client))
+
+
+def prep_spin_records(raw, grounding) -> list:
+    """compile_prep_spin on a protocol already grounded (the corpus sweep reuses its grounding)."""
     pipetting = {s.idx: s for s in plan_protocol(grounding, family="pipetting").steps}
     spins = plan_protocol(grounding, family="centrifuge")
     judge = plan_judge(grounding)
