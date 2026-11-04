@@ -331,13 +331,31 @@ def write_video(session: TaskSession, rows, path, camera: str = "bench", every: 
 
 
 # ---------------------------------------------------------------------------- demo
-def run_demo(session: TaskSession) -> dict:
-    """The scripted reference solution (biolab's own weighing policy), recorded as rows."""
+#: biolab's weighing script, with a gentler finish: salt leaves the vial in small
+#: avalanches, so it switches to creeping 0.45 g early, tilts 0.002 rad at a time,
+#: waits 1.5 s for the display each time, and stops within 0.05 g of the target.
+DEMO_POUR = (('get_balance()["reading_g"] < target - 0.3', 'get_balance()["reading_g"] < target - 0.45'),
+             ("tilt += 0.004", "tilt += 0.002"),
+             (">= target - 0.06", ">= target - 0.05"),
+             ("wait(0.8)", "wait(1.5)"))
+
+
+def demo_script() -> str:
     from biolab.api import WEIGH_REFERENCE_POLICY
+    code = WEIGH_REFERENCE_POLICY
+    for old, new in DEMO_POUR:
+        if code.count(old) != 1:
+            raise RuntimeError(f"the reference script changed: {old!r} not found once")
+        code = code.replace(old, new)
+    return code
+
+
+def run_demo(session: TaskSession) -> dict:
+    """The scripted reference solution, recorded as rows like any policy's."""
     session.reset()
     namespace = dict(session.api())
     namespace.update(np=np, print=lambda *a, **k: None)
-    exec(WEIGH_REFERENCE_POLICY, namespace)  # noqa: S102 - our own reference script
+    exec(demo_script(), namespace)  # noqa: S102 - our own reference script
     return session.trajectory()
 
 
