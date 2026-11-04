@@ -100,6 +100,7 @@ def compile_protocol(protocol, client=None) -> dict:
         except Exception as e:  # noqa: BLE001
             scene = {"ok": False, "reason": type(e).__name__, "detail": str(e)[:120]}
     candidates = {family: _family_candidates(grounding, family) for family in TASK_FAMILIES}
+    candidates["prep_spin"] = _prep_spin_candidates(raw, grounding)
     return {
         "candidates": candidates,
         "protocol_id": raw.protocol_id, "dataset": raw.dataset, "title": raw.title,
@@ -119,6 +120,18 @@ def compile_protocol(protocol, client=None) -> dict:
 
 #: Task families and the skill whose ops become their tasks.
 TASK_FAMILIES = {"weigh": "weigh_sample", "centrifuge": "centrifuge"}
+
+
+def _prep_spin_candidates(raw, grounding) -> list:
+    """Multi-step candidates: the additions run into each spin (lab2rob.robocurve.compile)."""
+    from lab2rob.robocurve.compile import prep_spin_records
+    try:
+        records = prep_spin_records(raw, grounding)
+    except Exception as e:  # noqa: BLE001
+        return [{"step": None, "accepted": False, "reason": type(e).__name__}]
+    return [{"step": r["source"]["step"], "additions": len(r["additions"]),
+             "reagents": "+".join(a["name"] for a in r["source"].get("additions", [])) or None,
+             "accepted": r["accepted"], "reason": r["reason"].split(":")[0]} for r in records]
 
 
 def _family_candidates(grounding, family: str) -> list:
@@ -281,7 +294,7 @@ def summarize(records: list, corpus_stats: dict) -> dict:
                                      if not w["accepted"]).most_common()),
             "accepted": [{"protocol_id": r["protocol_id"], "title": r["title"], "url": r["url"], **w}
                          for r in ok for w in r.get("candidates", {}).get(family, []) if w["accepted"]][:200],
-        } for family in TASK_FAMILIES},
+        } for family in (*TASK_FAMILIES, "prep_spin")},
         "segments": sum(r["segments"] for r in ok),
         "scene": dict(Counter("ok" if r["scene"]["ok"] else
                               f"{r['scene']['reason']}: {r['scene']['detail'][:60]}"

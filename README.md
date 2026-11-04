@@ -29,7 +29,9 @@ Built for the Meta Global AI Developer Hackathon (Indie track).
   weighing bench (68 simulated salt grains on a spring balance) and a
   microcentrifuge (LabUtopia's model converted to MuJoCo, with a hinged,
   latching lid). Each scene rejects what it cannot represent, with a reason.
-- **Two submission-ready benchmark tasks** in the Robocurve format, compiled
+- **Multi-step tasks across scenes.** Pipetting steps that run straight into a
+  spin compile into one task, scored at the spin: 611 accepted in 422 protocols.
+- **Three submission-ready benchmark tasks** in the Robocurve format, compiled
   from published protocol steps, each with a scripted full-score demo, a
   20 Hz runtime and a scorer a person can reproduce with a balance or a photo:
 
@@ -38,6 +40,12 @@ Built for the Meta Global AI Developer Hackathon (Indie track).
 | ![weighing setup](demo_assets/task_weigh_setup.png) | ![centrifuge setup](demo_assets/task_centrifuge_setup.png) |
 | [demo video](demo_assets/task_weigh_demo.mp4) · from "weigh out 0.9 g sodium chloride", a SARS-CoV-2 wastewater protocol | [demo video](demo_assets/task_centrifuge_demo.mp4) · from a microcentrifuge spin in a DNA extraction protocol |
 | Two arms: hand-over, then a closed-loop pour; full score within 0.15 g | Two arms: drop tubes into opposite slots, tip the lid shut; a lid shut on an unbalanced rotor scores 0 |
+
+| Multi-step: pipette two reagents, balance, spin |
+|---|
+| ![multi-step setup](demo_assets/task_prep_spin_setup.png) |
+| [demo video](demo_assets/task_prep_spin_demo.mp4) · three consecutive steps of an extracellular-vesicle RNA isolation protocol: add 60 uL lysis solution, add 20 uL protein precipitation solution, centrifuge at 11,000 g |
+| Right arm pipettes both reagents into the sample tube and water into a balance tube; left arm loads them opposite and shuts the lid. Judged at the spin: an unbalanced load scores 0 |
 
 ## How it works
 
@@ -179,6 +187,16 @@ builder that rejects what its scene cannot represent:
 |---|---|---|---|
 | weigh | `weigh_sample` (mass, reagent) | `mass_on_balance` | one salt weighing of 0.5-1.8 g |
 | centrifuge | `centrifuge` (tubes, speed, time) | `rotor_balanced`, `lid_closed` | one spin of two 1.5 mL tubes |
+| prep_spin (multi-step) | the additions before a spin, then `centrifuge` | `volume` per addition, `rotor_balanced`, `lid_closed` | 1-2 named reagents of 2-1000 uL, then a 1.5 mL tube spin |
+
+**Multi-step tasks (`prep_spin`).** The most common run of steps across scenes in the
+corpus is pipetting followed by a spin. `compile_prep_spin` takes the addition steps
+immediately before each centrifugation, each with one named reagent and one volume
+the judge checks. The task is to pipette them into a sample tube (right arm,
+pipette), fill a balance tube with water to match, load both opposite (left arm) and
+shut the lid. It is judged when the lid latches, so the order matters: shutting the
+lid on an unbalanced load scores 0, and a tube missing a reagent loses that part.
+Steps that add several liquids at once, or name none, are rejected as ambiguous.
 
 The centrifuge is LabUtopia's Centrifuge_02 (CC BY-NC 4.0), converted from
 USD by `robocurve/assets/convert_labutopia_centrifuge.py`; its collision
@@ -189,6 +207,7 @@ rotor balanced and shutting the lid, two arms.
 python -m lab2rob.robocurve candidates Protocol-exchange-1154 --family centrifuge
 python -m lab2rob.robocurve build Protocol-exchange-1154 --family centrifuge --out tasks/centrifuge
 python -m lab2rob.robocurve check tasks/centrifuge
+python -m lab2rob.robocurve build Protocol-exchange-758 --family prep_spin --out tasks/prep-spin
 ```
 
 `build` writes a folder for `robocurve/benchmark-tasks`: `task.json`,
@@ -210,8 +229,8 @@ cannot take); every accepted candidate of a family is the same task.
 | grounded by rules / executable | 27.3% of steps / 12.7% (8.4% liquid steps) |
 | task candidates | 1,949 pipetting protocols with a buildable scene; 1,130 with a 3+ step executable segment |
 | frozen pipetting tasks | 37 of the top 40 candidates (oracle passes, two fresh replays agree, idle fails) |
-| task families | weigh: 307 weighings, 2 accepted; centrifuge: 15,519 spins, 10,466 accepted |
-| Robocurve tasks | 2 built: weighing (demo 1.0, 3,299 steps) and centrifuge (demo 1.0, 2,094 steps) |
+| task families | weigh: 307 weighings, 2 accepted; centrifuge: 15,519 spins, 10,466 accepted; prep_spin (multi-step): 2,054 spins after additions, 611 accepted in 422 protocols |
+| Robocurve tasks | 3 built: weighing (demo 1.0, 3,299 steps), centrifuge (demo 1.0, 2,094 steps), multi-step pipette + balance + spin (demo 1.0, 8,132 steps) |
 | 42-protocol sweep (LLM) | 514 steps; 346 out-of-scope/ambiguous mined into 32 gap clusters |
 | LLM grounding fallback | 84 calls, $0.94 for the sweep |
 | learned skill | `dilute` macro in 3 evolve rounds, $0.27 |
@@ -263,7 +282,8 @@ list and narration script for the full ~3-minute narrated cut.
 - Pipetting tasks use a commanded plunger: a real YAM gripper holding a
   pipette cannot press it, so they are not yet real-world reproducible (a
   side grasp with a second-arm press is the planned fix). The weighing and
-  centrifuge tasks use only the arms' 14 joint and gripper targets.
+  centrifuge tasks use only the arms' 14 joint and gripper targets; the
+  multi-step prep_spin tasks pipette, so they have the plunger as a 15th action.
 - The weighing bench models coarse salt only (no powders) and one 2.4 g vial;
   the centrifuge's slots are vertical and nothing spins.
 - The centrifuge meshes are CC BY-NC 4.0 (LabUtopia); the biolab simulator
@@ -278,8 +298,8 @@ list and narration script for the full ~3-minute narrated cut.
 ## Next steps
 
 - Score the rules grounder on the full WLP corpus (precision/recall).
-- Next task families: snap caps (modelled already), then a protocol
-  sequence across scenes (uncap, weigh into the tube, recap).
+- Next task families: snap caps (modelled already); longer sequences across
+  scenes (weigh into a tube, dissolve, spin).
 - Tube racks in the pipetting scenes (1,306 protocols rejected for lack of one).
 - Learn the remaining top gap skills (wash, vortex) through the evolve loop.
 - Camera perception for the remaining tasks; LabOP/Autoprotocol export.

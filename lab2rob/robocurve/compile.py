@@ -9,7 +9,9 @@ checked. Rejections keep their reason.
 
 from __future__ import annotations
 
-from lab2rob.build.scene import SceneRejected, build_scene, skill_programs
+import re
+
+from lab2rob.build.scene import NOT_MICROTUBES, SceneRejected, build_scene, skill_programs
 from lab2rob.ground.rules import ground_protocol
 from lab2rob.specify.judge import plan_judge
 from lab2rob.specify.program import plan_protocol
@@ -60,6 +62,144 @@ def compile_candidates(raw, family: str, client=None) -> list:
                 record["reason"] = f"{e.reason}: {e.detail}"
         out.append(record)
     return out
+
+
+# ------------------------------------------------------------------ prep_spin
+#: The prep bench sets out this many reagent troughs (plus water for the balance tube).
+PREP_MAX_REAGENTS = 2
+PREP_VOLUME_UL = (2.0, 1000.0)    # one addition: above a pipette's floor, inside a 1.5 mL tube
+PREP_TOTAL_UL = 1000.0
+PIPETTING_OPS = {"aspirate", "dispense"}
+
+
+def _is_addition(step) -> bool:
+    return (step.status == "planned" and bool(step.ops)
+            and all(op["skill"] in PIPETTING_OPS for op in step.ops)
+            and any(op["skill"] == "dispense" for op in step.ops))
+
+
+#: A "reagent" the rules read that is really labware or a unit phrase: not a liquid to pour.
+NOT_REAGENT = re.compile(r"\b(column|tube|plate|well|flask|vial|dish|filter|bead|cell|pellet|"
+                         r"supernatant|sample|per|mix|mixture|suspension|lysate|eluate|flow-through|"
+                         r"all|it|them)s?\b", re.I)
+#: An addition into something other than the 1.5 mL tube the bench sets out.
+NOT_INTO_TUBE = re.compile(NOT_MICROTUBES.pattern + r"|\bfilters?\b|\b(?:to|into|onto|in|per)\s+(?:\S+\s+){0,3}?wells?\b", re.I)
+#: The name right after a volume ("600 uL of 24:1 chloroform:isoamyl alcohol solution to ...").
+VOLUME_NAME = re.compile(
+    r"\d[\d.,]*\s*(?:[uµμ]l|ml)\b\)?\s+(?:of\s+)?(?:the\s+)?(?:\d+:\d+\s+\(v/v\)\s+)?"
+    r"(?!(?:to|into|onto|in|from)\b)(?P<name>[A-Za-z0-9][^,;.()]*?)(?=\s+(?:to|into|onto|in|and|for|at|from|stored|then|per|"
+    r"was|is|containing)\b|\s*[,;.(]|\s*$)", re.I)
+
+
+_TRAILING = re.compile(r"\s+(?:and|then|to|for|at|in|on|with|into|until)\b.*$", re.I)
+
+
+def _reagents(grounding) -> list:
+    """The reagent an addition step names: the rules' reading when it is one name, else the
+    name right after the step's volume ("Add 1 ml of chilled acetone to the tube")."""
+    names = [_TRAILING.sub("", str(n)).strip(" ()[],;.:") for n in getattr(grounding, "reagents", []) or []]
+    names = list(dict.fromkeys(n for n in names if re.search(r"[A-Za-z]{2}", n)))
+    if len(names) == 1:
+        return names
+    match = VOLUME_NAME.search(grounding.source_text or "")
+    if match and re.search(r"[A-Za-z]{2}", match.group("name")):
+        return [match.group("name").strip()]
+    return names
+
+
+def _volumes(grounding) -> int:
+    from lab2rob.ground.rules import VOLUME_UNITS
+    return sum(1 for q in getattr(grounding, "quantities", []) if q.unit in VOLUME_UNITS)
+
+
+def compile_prep_spin(raw, client=None) -> list:
+    """Multi-step candidates: the pipetting steps that run straight into a centrifugation.
+
+    For each centrifuge op, the run of addition steps immediately before it (planned in
+    the pipetting scene) becomes one task: add each reagent to the sample tube, make a
+    balance tube to match, load both opposite and shut the lid. Every addition needs one
+    named reagent and the judge's volume check; the spin needs the judge's rotor checks
+    and must pass the centrifuge scene's own rejections (tubes it can take).
+    """
+    return prep_spin_records(raw, ground_protocol(raw, client=client))
+
+
+def prep_spin_records(raw, grounding) -> list:
+    """compile_prep_spin on a protocol already grounded (the corpus sweep reuses its grounding)."""
+    pipetting = {s.idx: s for s in plan_protocol(grounding, family="pipetting").steps}
+    spins = plan_protocol(grounding, family="centrifuge")
+    judge = plan_judge(grounding)
+    preds = {js.idx: js.predicates for js in judge.steps}
+    texts = {g.idx: g.source_text for g in grounding.steps}
+    grounded = {g.idx: g for g in grounding.steps}
+    out = []
+    for single in skill_programs(spins, "centrifuge"):
+        spin = next(s for s in single.steps if s.status == "planned")
+        run, i = [], spin.idx - 1
+        while i in pipetting and _is_addition(pipetting[i]):
+            run.insert(0, pipetting[i])
+            i -= 1
+        if not run:
+            continue  # a centrifugation on its own: the centrifuge family's task
+        source = _source(raw, spin, texts, spin.ops[0], preds.get(spin.idx, []))
+        record = {"accepted": False, "reason": "", "source": source, "program": single,
+                  "judge": judge, "built": None, "additions": [s.idx for s in run]}
+        out.append(record)
+        if not source.pop("checked"):
+            record["reason"] = "unchecked: the judge has no check for the centrifugation"
+            continue
+        if len(run) > PREP_MAX_REAGENTS:
+            record["reason"] = (f"over_capacity: {len(run)} additions before the spin; the bench sets "
+                                f"out {PREP_MAX_REAGENTS} reagent troughs")
+            continue
+        additions, problem = [], ""
+        for step in run:
+            names = _reagents(grounded[step.idx])
+            volume = round(sum(op["args"].get("volume_ul", 0.0) for op in step.ops
+                               if op["skill"] == "dispense"), 6)
+            check = next((p for p in preds.get(step.idx, []) if p.pred == "volume"
+                          and abs(p.target - volume) < 1e-6), None)
+            into = NOT_INTO_TUBE.search(texts.get(step.idx, ""))
+            if into:
+                problem = f"missing_asset: step {step.idx} adds into {into.group(0)}; the bench has one sample tube"
+            elif _volumes(grounded[step.idx]) > 1:
+                problem = f"ambiguous: step {step.idx} gives {_volumes(grounded[step.idx])} volumes"
+            elif len(names) == 1 and NOT_REAGENT.search(names[0]):
+                problem = f"ambiguous: step {step.idx} adds {names[0]!r}, not a named reagent"
+            elif len(names) != 1:
+                problem = f"ambiguous: step {step.idx} names {len(names)} reagents ({', '.join(names) or 'none'})"
+            elif check is None:
+                problem = f"unchecked: the judge has no volume check for step {step.idx}"
+            elif not PREP_VOLUME_UL[0] <= volume <= PREP_VOLUME_UL[1]:
+                problem = (f"out_of_range: step {step.idx} adds {volume:g} uL "
+                           f"(the bench takes {PREP_VOLUME_UL[0]:g} to {PREP_VOLUME_UL[1]:g} uL)")
+            if problem:
+                break
+            additions.append({"name": names[0], "volume_ul": volume, "tol_ul": float(check.tol),
+                              "step": step.idx, "step_text": texts.get(step.idx, "")[:200]})
+        total = sum(a["volume_ul"] for a in additions)
+        if not problem and total > PREP_TOTAL_UL:
+            problem = f"over_capacity: {total:g} uL in the sample tube (at most {PREP_TOTAL_UL:g})"
+        if problem:
+            record["reason"] = problem
+            continue
+        source["additions"] = additions
+        try:
+            record["built"] = build_scene(single, seed=0)
+            record["accepted"] = True
+        except SceneRejected as e:
+            record["reason"] = f"{e.reason}: {e.detail}"
+    return out
+
+
+#: Every family a task can be compiled for; prep_spin spans two scenes (pipetting, then a spin).
+FAMILIES = (*FAMILY_SKILL, "prep_spin")
+
+
+def compile_family(raw, family: str, client=None) -> list:
+    if family == "prep_spin":
+        return compile_prep_spin(raw, client)
+    return compile_candidates(raw, family, client)
 
 
 def compile_weighings(raw, client=None) -> list:

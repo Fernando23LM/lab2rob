@@ -98,81 +98,94 @@ class CentrifugeLayout:
 
     # ------------------------------------------------------------- building
     def add_to(self, spec: mujoco.MjSpec) -> None:
-        spec.compiler.meshdir = str(ASSETS)
-        for part in ("body", "panel", "lid"):
-            spec.add_mesh(name=f"centrifuge_{part}", file=f"{part}.stl")
-        quat = _yaw_quat(self.centrifuge_yaw)
-        cf = spec.worldbody.add_body(name="centrifuge", pos=[*self.centrifuge_xy, 0], quat=quat)
-        # Visual only: no contacts and no mass (a mesh geom gets mass from its volume otherwise).
-        vis = dict(type=mujoco.mjtGeom.mjGEOM_MESH, contype=0, conaffinity=0, group=1, density=0)
-        cf.add_geom(name="centrifuge_body_visual", meshname="centrifuge_body", rgba=[0.93, 0.93, 0.92, 1], **vis)
-        cf.add_geom(name="centrifuge_panel_visual", meshname="centrifuge_panel", rgba=[0.15, 0.6, 0.7, 1], **vis)
-        box = dict(type=mujoco.mjtGeom.mjGEOM_BOX, rgba=[0.9, 0.9, 0.9, 0.0], group=3,
-                   friction=[0.8, 0.01, 0.0005])
-        (x0, x1), (y0, y1) = BODY
-        rx, ry = ROTOR_C
-        # Solid below the slot floors.
-        cf.add_geom(name="centrifuge_base", size=[(x1 - x0) / 2, (y1 - y0) / 2, SLOT_FLOOR / 2],
-                    pos=[(x0 + x1) / 2, (y0 + y1) / 2, SLOT_FLOOR / 2], **box)
-        # The shell around the well, from the slot floor to the rim.
-        hz, zc = (RIM_Z - SLOT_FLOOR) / 2, (RIM_Z + SLOT_FLOOR) / 2
-        cf.add_geom(size=[(rx - WELL_R - x0) / 2, (y1 - y0) / 2, hz], pos=[(x0 + rx - WELL_R) / 2, 0, zc], **box)
-        cf.add_geom(size=[(x1 - rx - WELL_R) / 2, (y1 - y0) / 2, hz], pos=[(x1 + rx + WELL_R) / 2, 0, zc], **box)
-        cf.add_geom(size=[WELL_R, (y1 - ry - WELL_R) / 2, hz], pos=[rx, (y1 + ry + WELL_R) / 2, zc], **box)
-        cf.add_geom(size=[WELL_R, (ry - WELL_R - y0) / 2, hz], pos=[rx, (y0 + ry - WELL_R) / 2, zc], **box)
-        # The well's round wall, as an octagon (fills the corners of the square shell).
-        t = 0.002
-        for i in range(8):
-            a = 2 * np.pi * i / 8 + np.pi / 8
-            cf.add_geom(size=[t / 2, WELL_R * np.tan(np.pi / 8) + t, hz],
-                        pos=[rx + (WELL_R + t / 2) * np.cos(a), ry + (WELL_R + t / 2) * np.sin(a), zc],
-                        quat=_yaw_quat(a), **box)
-        # Slot pockets: six walls round each slot, from the floor to the slot rim.
-        ph, pz = (SLOT_TOP - SLOT_FLOOR) / 2, (SLOT_TOP + SLOT_FLOOR) / 2
-        for k in range(SLOT_COUNT):
-            cx, cy = self.slot_local(k)
-            for j in range(6):
-                a = 2 * np.pi * j / 6
-                cf.add_geom(size=[0.00075, POCKET_R * np.tan(np.pi / 6) + 0.0008, ph],
-                            pos=[cx + (POCKET_R + 0.00075) * np.cos(a), cy + (POCKET_R + 0.00075) * np.sin(a), pz],
-                            quat=_yaw_quat(a), **box)
-            cf.add_site(name=f"slot_{k}", pos=[cx, cy, SLOT_FLOOR], size=[0.002, 0, 0], rgba=[1, 0, 0, 0],
-                        group=4)
-        # The lid, on its hinge; its joint range is its stop, open and shut.
-        lid = cf.add_body(name="centrifuge_lid", pos=list(HINGE))
-        # biolab's scene compiles angles in degrees (MuJoCo's default).
-        lid.add_joint(name="lid_hinge", type=mujoco.mjtJoint.mjJNT_HINGE, axis=[0, 1, 0],
-                      range=[float(np.degrees(LID_OPEN)), float(np.degrees(LID_SHUT))],
-                      damping=0.02, armature=0.0005)
-        lid.add_geom(name="lid_visual", meshname="centrifuge_lid", rgba=[0.93, 0.93, 0.92, 1], **vis)
-        lid.add_geom(name="lid_box", type=mujoco.mjtGeom.mjGEOM_BOX, size=[0.0105, 0.062, 0.063],
-                     pos=[-0.0105, 0, 0.054], mass=LID_MASS, rgba=[0.9, 0.9, 0.9, 0.0], group=3,
-                     friction=[0.8, 0.01, 0.0005])
-        # MuJoCo skips parent-child contacts except with bodies fixed to the world, as the
-        # centrifuge is: exclude the pair, so the joint range alone stops the lid.
-        spec.add_exclude(bodyname1="centrifuge", bodyname2="centrifuge_lid")
-        # Tube rack and tubes.
-        rack = spec.worldbody.add_body(name=self.rack.name, pos=[*self.rack.xy, 0], quat=_yaw_quat(self.rack.yaw))
-        lx, ly = self.rack.n * RACK_PITCH, RACK_PITCH
-        rbox = dict(type=mujoco.mjtGeom.mjGEOM_BOX, rgba=[0.15, 0.55, 0.6, 1])
-        rack.add_geom(size=[lx / 2, ly / 2, RACK_BASE / 2], pos=[0, 0, RACK_BASE / 2], **rbox)
-        zc, hz = (RACK_BASE + RACK_HEIGHT) / 2, (RACK_HEIGHT - RACK_BASE) / 2
-        for i in range(self.rack.n):
-            cx = (i - (self.rack.n - 1) / 2) * RACK_PITCH
-            for sx, sy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
-                rack.add_geom(size=[RACK_WALL / 2 if sx else RACK_HOLE / 2 + RACK_WALL,
-                                    RACK_WALL / 2 if sy else RACK_HOLE / 2 + RACK_WALL, hz],
-                              pos=[cx + sx * (RACK_HOLE / 2 + RACK_WALL / 2), sy * (RACK_HOLE / 2 + RACK_WALL / 2), zc],
-                              **rbox)
+        add_centrifuge(spec, self)
+        add_tube_rack(spec, self.rack)
         for i, (name, cell) in enumerate(self.tubes.items()):
             _add_microtube(spec, name, self.rack.cell_xy(cell), TUBE_COLORS[i % len(TUBE_COLORS)])
-        # A camera on the rack and the centrifuge, from the far side of the bench.
-        target = np.array([*self.to_world(ROTOR_C), 0.06]) * [1, 1, 1] + [0.0, -0.05, 0.0]
-        eye = target + [0.42, 0.05, 0.30]
-        forward = (target - eye) / np.linalg.norm(target - eye)
-        right = np.cross(forward, [0, 0, 1])
-        right /= np.linalg.norm(right)
-        spec.worldbody.add_camera(name="bench", pos=eye, xyaxes=[*right, *np.cross(right, forward)], fovy=50)
+        add_bench_camera(spec, self)
+
+
+def add_centrifuge(spec: mujoco.MjSpec, layout) -> None:
+    """The centrifuge (meshes, collision, hinged lid) at layout.centrifuge_xy, turned by its yaw."""
+    spec.compiler.meshdir = str(ASSETS)
+    for part in ("body", "panel", "lid"):
+        spec.add_mesh(name=f"centrifuge_{part}", file=f"{part}.stl")
+    quat = _yaw_quat(layout.centrifuge_yaw)
+    cf = spec.worldbody.add_body(name="centrifuge", pos=[*layout.centrifuge_xy, 0], quat=quat)
+    # Visual only: no contacts and no mass (a mesh geom gets mass from its volume otherwise).
+    vis = dict(type=mujoco.mjtGeom.mjGEOM_MESH, contype=0, conaffinity=0, group=1, density=0)
+    cf.add_geom(name="centrifuge_body_visual", meshname="centrifuge_body", rgba=[0.93, 0.93, 0.92, 1], **vis)
+    cf.add_geom(name="centrifuge_panel_visual", meshname="centrifuge_panel", rgba=[0.15, 0.6, 0.7, 1], **vis)
+    box = dict(type=mujoco.mjtGeom.mjGEOM_BOX, rgba=[0.9, 0.9, 0.9, 0.0], group=3,
+               friction=[0.8, 0.01, 0.0005])
+    (x0, x1), (y0, y1) = BODY
+    rx, ry = ROTOR_C
+    # Solid below the slot floors.
+    cf.add_geom(name="centrifuge_base", size=[(x1 - x0) / 2, (y1 - y0) / 2, SLOT_FLOOR / 2],
+                pos=[(x0 + x1) / 2, (y0 + y1) / 2, SLOT_FLOOR / 2], **box)
+    # The shell around the well, from the slot floor to the rim.
+    hz, zc = (RIM_Z - SLOT_FLOOR) / 2, (RIM_Z + SLOT_FLOOR) / 2
+    cf.add_geom(size=[(rx - WELL_R - x0) / 2, (y1 - y0) / 2, hz], pos=[(x0 + rx - WELL_R) / 2, 0, zc], **box)
+    cf.add_geom(size=[(x1 - rx - WELL_R) / 2, (y1 - y0) / 2, hz], pos=[(x1 + rx + WELL_R) / 2, 0, zc], **box)
+    cf.add_geom(size=[WELL_R, (y1 - ry - WELL_R) / 2, hz], pos=[rx, (y1 + ry + WELL_R) / 2, zc], **box)
+    cf.add_geom(size=[WELL_R, (ry - WELL_R - y0) / 2, hz], pos=[rx, (y0 + ry - WELL_R) / 2, zc], **box)
+    # The well's round wall, as an octagon (fills the corners of the square shell).
+    t = 0.002
+    for i in range(8):
+        a = 2 * np.pi * i / 8 + np.pi / 8
+        cf.add_geom(size=[t / 2, WELL_R * np.tan(np.pi / 8) + t, hz],
+                    pos=[rx + (WELL_R + t / 2) * np.cos(a), ry + (WELL_R + t / 2) * np.sin(a), zc],
+                    quat=_yaw_quat(a), **box)
+    # Slot pockets: six walls round each slot, from the floor to the slot rim.
+    ph, pz = (SLOT_TOP - SLOT_FLOOR) / 2, (SLOT_TOP + SLOT_FLOOR) / 2
+    for k in range(SLOT_COUNT):
+        cx, cy = layout.slot_local(k)
+        for j in range(6):
+            a = 2 * np.pi * j / 6
+            cf.add_geom(size=[0.00075, POCKET_R * np.tan(np.pi / 6) + 0.0008, ph],
+                        pos=[cx + (POCKET_R + 0.00075) * np.cos(a), cy + (POCKET_R + 0.00075) * np.sin(a), pz],
+                        quat=_yaw_quat(a), **box)
+        cf.add_site(name=f"slot_{k}", pos=[cx, cy, SLOT_FLOOR], size=[0.002, 0, 0], rgba=[1, 0, 0, 0],
+                    group=4)
+    # The lid, on its hinge; its joint range is its stop, open and shut.
+    lid = cf.add_body(name="centrifuge_lid", pos=list(HINGE))
+    # biolab's scene compiles angles in degrees (MuJoCo's default).
+    lid.add_joint(name="lid_hinge", type=mujoco.mjtJoint.mjJNT_HINGE, axis=[0, 1, 0],
+                  range=[float(np.degrees(LID_OPEN)), float(np.degrees(LID_SHUT))],
+                  damping=0.02, armature=0.0005)
+    lid.add_geom(name="lid_visual", meshname="centrifuge_lid", rgba=[0.93, 0.93, 0.92, 1], **vis)
+    lid.add_geom(name="lid_box", type=mujoco.mjtGeom.mjGEOM_BOX, size=[0.0105, 0.062, 0.063],
+                 pos=[-0.0105, 0, 0.054], mass=LID_MASS, rgba=[0.9, 0.9, 0.9, 0.0], group=3,
+                 friction=[0.8, 0.01, 0.0005])
+    # MuJoCo skips parent-child contacts except with bodies fixed to the world, as the
+    # centrifuge is: exclude the pair, so the joint range alone stops the lid.
+    spec.add_exclude(bodyname1="centrifuge", bodyname2="centrifuge_lid")
+
+
+def add_tube_rack(spec: mujoco.MjSpec, rack_def: "TubeRack") -> None:
+    """A low rack, its cells along its own x axis."""
+    rack = spec.worldbody.add_body(name=rack_def.name, pos=[*rack_def.xy, 0], quat=_yaw_quat(rack_def.yaw))
+    lx, ly = rack_def.n * RACK_PITCH, RACK_PITCH
+    rbox = dict(type=mujoco.mjtGeom.mjGEOM_BOX, rgba=[0.15, 0.55, 0.6, 1])
+    rack.add_geom(size=[lx / 2, ly / 2, RACK_BASE / 2], pos=[0, 0, RACK_BASE / 2], **rbox)
+    zc, hz = (RACK_BASE + RACK_HEIGHT) / 2, (RACK_HEIGHT - RACK_BASE) / 2
+    for i in range(rack_def.n):
+        cx = (i - (rack_def.n - 1) / 2) * RACK_PITCH
+        for sx, sy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            rack.add_geom(size=[RACK_WALL / 2 if sx else RACK_HOLE / 2 + RACK_WALL,
+                                RACK_WALL / 2 if sy else RACK_HOLE / 2 + RACK_WALL, hz],
+                          pos=[cx + sx * (RACK_HOLE / 2 + RACK_WALL / 2), sy * (RACK_HOLE / 2 + RACK_WALL / 2), zc],
+                          **rbox)
+
+
+def add_bench_camera(spec: mujoco.MjSpec, layout) -> None:
+    """A camera on the rack and the centrifuge, from the far side of the bench."""
+    target = np.array([*layout.to_world(ROTOR_C), 0.06]) * [1, 1, 1] + [0.0, -0.05, 0.0]
+    eye = target + [0.42, 0.05, 0.30]
+    forward = (target - eye) / np.linalg.norm(target - eye)
+    right = np.cross(forward, [0, 0, 1])
+    right /= np.linalg.norm(right)
+    spec.worldbody.add_camera(name="bench", pos=eye, xyaxes=[*right, *np.cross(right, forward)], fovy=50)
 
 
 def _add_microtube(spec, name: str, xy, rgba) -> None:

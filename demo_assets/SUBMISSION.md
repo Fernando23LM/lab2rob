@@ -24,7 +24,10 @@ tasks, in MuJoCo with two I2RT YAM arms.
    vessel, mass out of range...).
 4. **Freeze** a task only if its reference solution passes the judge, replays to the
    same state in two fresh processes, and doing nothing fails.
-5. **Package** it as a benchmark task with a 20 Hz runtime, a scorer a person could
+5. **Chain** steps across scenes: the pipetting steps that run straight into a
+   centrifugation compile into one multi-step task, judged at the spin, so the
+   order the steps happen in counts.
+6. **Package** it as a benchmark task with a 20 Hz runtime, a scorer a person could
    reproduce with a balance or a photo, a demo video and a setup screenshot.
 
 ## How it uses Meta's models
@@ -52,10 +55,24 @@ tasks, in MuJoCo with two I2RT YAM arms.
   balance) and a microcentrifuge (LabUtopia's model converted to MuJoCo with a hinged,
   latching lid). 15,519 centrifuge steps reach the compiler and 10,466 are accepted;
   5,042 are rejected because they spin tubes or plates the microcentrifuge cannot take.
-- **Two benchmark-ready tasks**, compiled from published steps, each needing both arms:
-  weigh out 0.90 g of NaCl passed between the arms (from a SARS-CoV-2 wastewater
-  protocol), and load a microcentrifuge balanced and shut its lid, where a lid shut on
-  an unbalanced rotor scores 0 (from a DNA-extraction protocol).
+- **Multi-step tasks across scenes**: pipetting into a tube and then spinning it is the
+  most common run of steps that crosses scenes in the corpus. 2,054 spins follow one or
+  more addition steps (in 1,072 protocols). 611 of them pass the compiler and the scene
+  builder (in 422 protocols), 41 with two reagents. The rest are rejected with a reason:
+  879 because they add into or spin labware the bench does not have (spin columns,
+  filters, plates), 436 because a step adds several liquids at once or names no
+  reagent, 108 because there are more additions than the bench has troughs.
+- **Three benchmark-ready tasks**, compiled from published steps, each needing both arms:
+  - weigh out 0.90 g of NaCl passed between the arms (from a SARS-CoV-2 wastewater
+    protocol);
+  - load a microcentrifuge balanced and shut its lid, where a lid shut on an unbalanced
+    rotor scores 0 (from a DNA-extraction protocol);
+  - **multi-step**: pipette 60 uL of lysis solution then 20 uL of protein precipitation
+    solution into a sample tube, fill a balance tube with water to match, load both
+    opposite and shut the lid (three consecutive steps of an extracellular-vesicle RNA
+    isolation protocol). Scored at the spin: shutting the lid on an unbalanced load
+    scores 0, and each missing or wrong reagent loses its share. The demo takes 8,132
+    steps (6.8 minutes at 20 Hz).
 
 ## What is new
 
@@ -65,24 +82,32 @@ tasks, in MuJoCo with two I2RT YAM arms.
   compile, not only on inputs a library already covers.
 - **The judge never sees the program**, and a task exists only if it validates
   (judge, two identical replays, idle fails).
-- **Robot-realistic**: the finished tasks use only the arms' 14 joint and gripper
-  targets at 20 Hz, so they can be run on the real arms.
+- **Multi-step tasks come from the protocol's own order**: the compiler chains the
+  steps the protocol runs back to back, and the scorer checks the state at the moment
+  the order matters (the spin), not only the end state.
+- **Robot-realistic**: the weighing and centrifuge tasks use only the arms' 14 joint and
+  gripper targets at 20 Hz, so they can be run on the real arms. The multi-step task
+  pipettes, so it adds the plunger as a 15th action (see Limitations).
 
 ## Try it
 
 - Repository: lab2rob (see README: results at a glance, quickstart, task builder).
-- Videos: `demo_assets/reel_tasks.mp4` (the two compiled tasks),
+- Videos: `demo_assets/reel_tasks.mp4` (the three compiled tasks),
   `demo_assets/task_weigh_demo.mp4`, `demo_assets/task_centrifuge_demo.mp4`,
+  `demo_assets/task_prep_spin_demo.mp4` (multi-step),
   `demo_assets/demo.mp4` (pipetting, cell culture, safety twin).
 
 ```bash
 python -m lab2rob.coverage.corpus_sweep --out runs/sweep --workers 4
 python -m lab2rob.robocurve build Protocol-exchange-1154 --family centrifuge --out tasks/centrifuge
+python -m lab2rob.robocurve build Protocol-exchange-758 --family prep_spin --out tasks/prep-spin
 ```
 
 ## Limitations
 
-Liquids are bookkeeping, not fluid simulation. The pipetting tasks use a commanded
-plunger that a real gripper-held pipette cannot reproduce. The weighing bench models
+Liquids are bookkeeping, not fluid simulation. The pipetting tasks, including the
+multi-step one, use a commanded plunger that a real gripper-held pipette cannot
+reproduce. The multi-step tasks keep only the pipetting and the spin from their steps
+(mixing and incubating are left out), and take one or two reagents, one per step. The weighing bench models
 coarse salt only, and the centrifuge's slots are vertical and nothing spins. The
 centrifuge meshes are CC BY-NC 4.0 (LabUtopia).
