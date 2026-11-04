@@ -55,6 +55,8 @@ class TaskSession:
         self.instance = instance if isinstance(instance, dict) else json.loads(
             Path(instance).read_text(encoding="utf-8"))
         self.family = family_module(self.instance["family"])
+        # A family may add actions after the arms' 14 (e.g. a pipette plunger).
+        self.action_names = ACTION_NAMES + tuple(getattr(self.family, "EXTRA_ACTIONS", ()))
         self.run_limit = int(self.instance["run_limit_steps"])
         self._check = check
         self.env = None
@@ -70,7 +72,9 @@ class TaskSession:
         if m.nu != len(ACTION_NAMES):
             raise RuntimeError(f"the scene has {m.nu} actuators, not the arms' {len(ACTION_NAMES)}")
         self._substeps = round(CONTROL_DT / m.opt.timestep)
-        self._lo, self._hi = m.actuator_ctrlrange[:, 0].copy(), m.actuator_ctrlrange[:, 1].copy()
+        extra_lo, extra_hi = (getattr(self.family, "extra_range", lambda env: ([], []))(self.env))
+        self._lo = np.append(m.actuator_ctrlrange[:, 0], extra_lo)
+        self._hi = np.append(m.actuator_ctrlrange[:, 1], extra_hi)
         self._rows: list = []
         self._live = True
         self._error = ""
@@ -89,7 +93,10 @@ class TaskSession:
             self._error = f"run limit reached ({self.run_limit} steps)"
             return
         env = self.env
-        self._rows.append(env.data.ctrl.copy())
+        self._rows.append(self.command())
+        before = getattr(self.family, "before_step", None)
+        if before is not None:
+            before(env)
         mujoco.mj_step(env.model, env.data, self._substeps)
         env._after_tick()
         w = env.data.warning
@@ -98,25 +105,35 @@ class TaskSession:
                                      mujoco.mjtWarning.mjWARN_BADQVEL)):
             self._error = "unstable simulation"
 
+    def _set_row(self, a) -> None:
+        a = np.asarray(a, dtype=np.float64).reshape(-1)
+        if a.shape != (len(self.action_names),) or not np.all(np.isfinite(a)):
+            raise ValueError(f"an action is {len(self.action_names)} finite numbers")
+        a = np.clip(a, self._lo, self._hi)
+        n = len(ACTION_NAMES)
+        self.env.data.ctrl[:] = a[:n]
+        if len(a) > n:
+            self.family.set_extra(self.env, a[n:])
+
     def step(self, action, n: int = 1) -> bool:
-        """Hold 14 joint and gripper targets for n control steps (50 ms each)."""
-        a = np.asarray(action, dtype=np.float64).reshape(-1)
-        if a.shape != (len(ACTION_NAMES),) or not np.all(np.isfinite(a)):
-            raise ValueError(f"an action is {len(ACTION_NAMES)} finite numbers")
-        self.env.data.ctrl[:] = np.clip(a, self._lo, self._hi)
+        """Hold one row of targets (the arms' 14, then any of the family's) for n 50 ms steps."""
+        self._set_row(action)
         for _ in range(int(n)):
             self._tick()
         return not self._error
 
     def command(self) -> np.ndarray:
         """The targets in effect: a row that holds the current pose."""
-        return self.env.data.ctrl.copy()
+        extra = getattr(self.family, "extra_command", None)
+        return np.append(self.env.data.ctrl, extra(self.env) if extra else [])
 
     def actuators(self) -> list:
-        m = self.env.model
-        return [{"index": i, "name": name, "unit": "m per finger" if "gripper" in name else "rad",
-                 "range": [float(m.actuator_ctrlrange[i, 0]), float(m.actuator_ctrlrange[i, 1])]}
-                for i, name in enumerate(ACTION_NAMES)]
+        units = getattr(self.family, "EXTRA_UNITS", ())
+        return [{"index": i, "name": name,
+                 "unit": (units[i - len(ACTION_NAMES)] if i >= len(ACTION_NAMES)
+                          else "m per finger" if "gripper" in name else "rad"),
+                 "range": [float(self._lo[i]), float(self._hi[i])]}
+                for i, name in enumerate(self.action_names)]
 
     def cameras(self) -> list:
         m = self.env.model
@@ -141,16 +158,17 @@ class TaskSession:
         return self.family.api(self.env)
 
     def trajectory(self) -> dict:
-        return {"rows": np.array(self._rows, dtype=np.float64).reshape(-1, len(ACTION_NAMES))}
+        return {"rows": np.array(self._rows, dtype=np.float64).reshape(-1, len(self.action_names)),
+                "action": list(self.action_names)}
 
     def replay(self, traj) -> dict:
         """Reset, run the rows open-loop, settle, score."""
-        rows = np.asarray(traj["rows"], dtype=np.float64).reshape(-1, len(ACTION_NAMES))
+        rows = np.asarray(traj["rows"], dtype=np.float64).reshape(-1, len(self.action_names))
         self.reset()
         if len(rows) > self.run_limit:
             return self.score(over_limit=True)
         for row in rows:
-            self.env.data.ctrl[:] = row
+            self._set_row(row)
             self._tick()
             if self._error:
                 break
@@ -176,8 +194,11 @@ class TaskSession:
             return {"score": 0.0, "reason": f"over the run limit ({self.run_limit} steps)"}
         hold = self.command()
         self._live = False  # the settle window is the scorer's, not the policy's
+        before = getattr(self.family, "before_step", None)
         for _ in range(SETTLE_STEPS):
-            self.env.data.ctrl[:] = hold
+            self._set_row(hold)
+            if before is not None:
+                before(self.env)
             mujoco.mj_step(self.env.model, self.env.data, self._substeps)
             self.env._after_tick()
         self._live = True
@@ -193,8 +214,9 @@ class TaskSession:
 # --------------------------------------------------------------------- trajectories
 def save_trajectory(traj: dict, path) -> Path:
     path = Path(path)
-    rows = np.asarray(traj["rows"], dtype=np.float64).reshape(-1, len(ACTION_NAMES))
-    meta = {"format": TRAJECTORY_FORMAT, "control_hz": CONTROL_HZ, "action": list(ACTION_NAMES)}
+    names = list(traj.get("action") or ACTION_NAMES)
+    rows = np.asarray(traj["rows"], dtype=np.float64).reshape(-1, len(names))
+    meta = {"format": TRAJECTORY_FORMAT, "control_hz": CONTROL_HZ, "action": names}
     with open(path, "wb") as handle:
         np.savez(handle, rows=rows, meta=np.array(json.dumps(meta)))
     return path
@@ -205,7 +227,7 @@ def load_trajectory(path) -> dict:
         meta = json.loads(str(data["meta"]))
         if meta.get("format") != TRAJECTORY_FORMAT:
             raise ValueError(f"{path}: not a {TRAJECTORY_FORMAT} file")
-        return {"rows": np.asarray(data["rows"], dtype=np.float64)}
+        return {"rows": np.asarray(data["rows"], dtype=np.float64), "action": meta.get("action")}
 
 
 def write_video(session: TaskSession, rows, path, camera: str = "bench", every: int = 2,
