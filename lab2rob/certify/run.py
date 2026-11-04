@@ -306,7 +306,9 @@ def evaluate_predicates(judge, program, built, snapshots: dict) -> list:
                                status="passed" if result.passed else "failed",
                                detail=result.detail)
             else:
-                row["detail"] = f"unknown predicate {pred.pred!r}" if pred.pred != "volume" else "volume pred has no well ref"
+                row["detail"] = ("checked in the weighing scene" if pred.pred == "mass_on_balance"
+                                 else f"unknown predicate {pred.pred!r}" if pred.pred != "volume"
+                                 else "volume pred has no well ref")
             rows.append(row)
     return rows
 

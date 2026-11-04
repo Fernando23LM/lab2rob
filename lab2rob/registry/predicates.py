@@ -118,6 +118,18 @@ def no_spill(state: dict, tol_ul: float = 0.0) -> CheckResult:
     return CheckResult(False, f"{spilled:.1f} uL spilled, tolerance {tol_ul}")
 
 
+def mass_on_balance(state: dict, target_g: float, tol_g: float) -> CheckResult:
+    """The balance reads the target mass within tolerance, with nothing else on it."""
+    reading = state.get("balance_g") if isinstance(state, dict) else None
+    if reading is None:
+        return CheckResult(False, "no balance reading recorded")
+    if state.get("pan_touched"):
+        return CheckResult(False, f"something other than the sample touches the pan ({reading:.2f} g)")
+    if abs(float(reading) - target_g) <= tol_g:
+        return CheckResult(True, f"balance reads {reading:.2f} g")
+    return CheckResult(False, f"balance reads {reading:.2f} g, want {target_g} +- {tol_g}")
+
+
 PREDICATES = {
     "in_slot": in_slot,
     "capped": capped,
@@ -125,4 +137,5 @@ PREDICATES = {
     "volume": volume,
     "concentration": concentration,
     "no_spill": no_spill,
+    "mass_on_balance": mass_on_balance,
 }

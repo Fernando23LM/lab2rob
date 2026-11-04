@@ -113,14 +113,39 @@ def test_check_task_lists_what_is_missing(tmp_path):
         assert expected in problems
 
 
-def test_find_weigh_step_reads_mass_and_reagent(tmp_path):
-    (tmp_path / "protocols.jsonl").write_text(json.dumps(
-        {"protocol_id": "p1", "title": "T", "url": "https://www.protocols.io/view/x",
-         "license": "CC-BY"}) + "\n")
-    (tmp_path / "steps.jsonl").write_text(json.dumps({"protocol_id": "p1", "steps": [
-        {"idx": 1, "text": "Mix well."},
-        {"idx": 2, "text": "Using a balance, weigh out 900 mg sodium chloride (NaCl)."}]}) + "\n")
-    got = build.find_weigh_step("p1", tmp_path / "steps.jsonl", tmp_path / "protocols.jsonl")
-    assert got["target_g"] == pytest.approx(0.9) and got["reagent"] == "NaCl" and got["step"] == 2
+def _raw(*steps):
+    from lab2rob.ingest.bioprot import RawProtocol
+    return RawProtocol(protocol_id="p1", title="T", description="",
+                       steps_raw="\n".join(f"{i}. {t}" for i, t in enumerate(steps, 1)),
+                       source_url="https://www.protocols.io/view/x", license="CC-BY",
+                       number_of_steps=len(steps), dataset="protocolsio")
+
+
+def test_compile_weighings_goes_through_the_compiler():
+    from lab2rob.robocurve.compile import compile_weighings
+    records = compile_weighings(_raw(
+        "Using an analytical balance, weigh out 0.9 g sodium chloride (NaCl) and 4.0 g PEG 8000.",
+        "Weigh 1 g agarose into a bottle.",
+        "Add 100 uL of buffer to the tube."))
+    got = [(r["source"]["step"], r["source"]["target_g"], r["source"]["reagent"], r["accepted"],
+            r["reason"].split(":")[0]) for r in records]
+    assert got == [(1, 0.9, "sodium chloride", True, ""),
+                   (1, 4.0, "PEG 8000", False, "over_capacity"),
+                   (2, 1.0, "agarose", False, "missing_asset")]
+    accepted = records[0]
+    assert accepted["source"]["full_g"] == 0.15  # from the judge's balance check
+    assert accepted["built"].family == "weigh"
+    assert accepted["built"].substitutions == [{"from": "sodium chloride", "to": "coarse salt"}]
+
+
+def test_scoring_tiers_follow_the_judges_tolerance():
+    assert build.weigh_scoring(0.15) == {"full_g": 0.15, "three_quarter_g": 0.3, "half_g": 0.5,
+                                         "some_salt_g": 0.1, "spill_cap_g": 0.2}
+    assert build.weigh_scoring(0.25)["half_g"] == 0.75
+    spec = build.weigh_task_json(1.6, {"full_g": 0.25}, build.default_weigh_layout(), 5400, 1.0)
+    assert "within 0.25 g of 1.60 g" in spec["scoring"]
+
+
+def test_build_refuses_masses_outside_the_vial(tmp_path):
     with pytest.raises(build.BuildError):
         build.build_weigh_task(tmp_path / "out", {"target_g": 3.0})

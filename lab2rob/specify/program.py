@@ -26,7 +26,7 @@ from pathlib import Path
 
 import pint
 
-from lab2rob.ground.rules import TIME_UNITS, VOLUME_UNITS
+from lab2rob.ground.rules import MASS_UNITS, TIME_UNITS, VOLUME_UNITS
 from lab2rob.registry import resolve_skill
 from lab2rob.schema import Entity, OutOfScopeItem
 
@@ -42,6 +42,7 @@ CATEGORIES = {
     "unmodeled_physics": "missing_physics",
     "ambiguous_text": "ambiguous",
     "needs_llm": "ambiguous",
+    "other_scene": "other_scene",
 }
 
 #: Per-call sim caps the planner splits longer holds across.
@@ -324,8 +325,75 @@ def _plan_primitive(name: str, grounding, entry: dict | None) -> list:
     raise _Unbindable(f"no argument binder for {name!r}")
 
 
+def _clean_reagent(name: str) -> str:
+    """'sodium chloride (NaCl' -> 'sodium chloride (NaCl)': close or drop a cut bracket."""
+    name = " ".join(str(name).split()).strip(" ,;:")
+    if name.count("(") > name.count(")"):
+        head, _, inner = name.rpartition("(")
+        name = f"{head.strip()} ({inner.strip()})" if inner.strip() else head.strip()
+    return name
+
+
+def _plan_weigh(grounding, uids: list) -> list:
+    """One weigh_sample op per stated mass, paired with the reagents in order.
+
+    "weigh out 0.9 g sodium chloride and 4.0 g PEG 8000" weighs two things;
+    each becomes its own op (the weighing scene holds one vial, so each
+    compiles as its own task). A reagent the text does not pair with a mass
+    stays None, for the scene builder to reject rather than guess.
+    """
+    masses = []
+    for quantity in grounding.quantities:
+        if quantity.unit in MASS_UNITS:
+            try:
+                masses.append(float(ureg.Quantity(quantity.value, quantity.unit).to("g").magnitude))
+            except Exception:
+                continue
+    if not masses:
+        raise _Unbindable("no mass mentioned; cannot bind mass_g")
+    reagents = [_clean_reagent(r) for r in grounding.reagents]
+    ops = []
+    for i, grams in enumerate(masses):
+        if len(reagents) == len(masses):
+            reagent, assumed = reagents[i], {}
+        elif len(reagents) == 1 and len(masses) == 1:
+            reagent, assumed = reagents[0], {}
+        else:
+            reagent = None
+            assumed = {"reagent": f"{len(masses)} masses, {len(reagents)} reagents in the text: unpaired"}
+        ops.append(_op("weigh_sample", {"mass_g": round(grams, 6), "reagent": reagent},
+                       assumed=assumed))
+    return ops
+
+
 _MACROS = {"transfer": _plan_transfer, "mix_by_pipetting": _plan_mix,
-           "serial_dilution": _plan_serial}
+           "serial_dilution": _plan_serial, "weigh_sample": _plan_weigh}
+
+#: Skills each scene family runs. A step whose ops belong to another family is
+#: out of scope for this scene ("other_scene") and compiles as its own task.
+FAMILY_SKILLS = {"weigh": frozenset({"weigh_sample"})}
+FAMILIES = ("pipetting", "weigh")
+
+
+def _scene_of(step, action: str | None) -> str | None:
+    """The scene a step belongs to, by its grounded action (or its ops)."""
+    skills = {op["skill"] for op in step.ops} | ({action} if action else set())
+    for family, owned in FAMILY_SKILLS.items():
+        if skills & owned:
+            return family
+    return "pipetting" if step.status == "planned" and step.ops else None
+
+
+def _limit_to_family(steps: list, groundings: list, family: str) -> None:
+    """Steps of another scene, planned or not, are out of scope for this one."""
+    for step, grounding in zip(steps, groundings):
+        scene = _scene_of(step, getattr(grounding, "action", None))
+        if scene is None or scene == family:
+            continue
+        if step.status == "planned" or step.reason == "ambiguous":
+            step.status, step.reason = "out_of_scope", "other_scene"
+            step.detail = f"runs in the {scene} scene; compiled as its own task"
+            step.ops = []
 
 
 def _check_macro_bottoms_out(name: str, entry: dict | None, seen=None) -> None:
@@ -417,11 +485,25 @@ def _load_empty_dispenses(steps: list) -> None:
         step.ops = ops
 
 
-def plan_protocol(protocol_grounding) -> PlannedProgram:
-    """Plan every step of a grounded protocol into one program."""
+def plan_protocol(protocol_grounding, family: str = "pipetting") -> PlannedProgram:
+    """Plan every step of a grounded protocol into one program for one scene.
+
+    family picks the scene the program runs in: "pipetting" (the default:
+    the protein and culture benches) or "weigh" (the balance bench). Steps
+    another scene runs are out of scope here with reason "other_scene".
+    """
+    if family not in FAMILIES:
+        raise ValueError(f"family must be one of {FAMILIES}, got {family!r}")
     table = _Entities()
     steps = [plan_step(grounding, table) for grounding in protocol_grounding.steps]
+    _limit_to_family(steps, list(protocol_grounding.steps), family)
     _load_empty_dispenses(steps)
+    # Entities only another scene's steps named stay out of this scene.
+    used = {uid for step in steps if step.reason != "other_scene" for uid in step.entities}
+    table.entries = [e for e in table.entries if e.uid in used]
+    for step in steps:
+        if step.reason == "other_scene":
+            step.entities = [uid for uid in step.entities if uid in used]
     out_of_scope = [OutOfScopeItem(step=s.idx, reason=s.reason or "ambiguous",
                                    detail=s.detail)
                     for s in steps if s.status != "planned"]

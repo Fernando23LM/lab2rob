@@ -40,6 +40,14 @@ CATEGORIES = ("Impact on jobs", "Impact on AI timelines", "Safety and alignment"
 #: grains (0.05 g each): salt leaves the vial in small avalanches.
 WEIGH_SCORING = {"full_g": 0.15, "three_quarter_g": 0.30, "half_g": 0.50,
                  "some_salt_g": 0.10, "spill_cap_g": 0.20}
+
+
+def weigh_scoring(full_g: float | None) -> dict:
+    """Score tiers around the judge's tolerance: full, twice it, at least 0.5 g."""
+    full = float(full_g) if full_g else WEIGH_SCORING["full_g"]
+    return {"full_g": round(full, 3), "three_quarter_g": round(2 * full, 3),
+            "half_g": round(max(WEIGH_SCORING["half_g"], 3 * full), 3),
+            "some_salt_g": WEIGH_SCORING["some_salt_g"], "spill_cap_g": WEIGH_SCORING["spill_cap_g"]}
 #: Runs get this much more than the scripted demo needs, rounded up.
 RUN_LIMIT_MARGIN = 1.6
 RUN_LIMIT_ROUND = 600  # 30 s at 20 Hz
@@ -126,8 +134,8 @@ def weigh_setup_text(layout: dict) -> str:
 
 
 def weigh_task_json(target_g: float, source: dict, layout: dict, run_limit: int,
-                    demo_score: float) -> dict:
-    s = WEIGH_SCORING
+                    demo_score: float, scoring: dict | None = None) -> dict:
+    s = scoring or weigh_scoring(source.get("full_g"))
     t = f"{target_g:.2f}"
     minutes = run_limit / 20 / 60
     return {
@@ -230,34 +238,6 @@ def default_weigh_layout() -> dict:
             "balance": [float(v) for v in lay.balance], "cell": list(lay.cell)}
 
 
-def find_weigh_step(protocol_id: str, steps_jsonl: Path, protocols_jsonl: Path) -> dict:
-    """The protocol's 'weigh X g of Y' step: target mass, reagent, text, provenance."""
-    rx = re.compile(r"\bweigh\w*\b[^.]{0,60}?\b(\d+(?:\.\d+)?)\s*(g|grams?|mg)\b(?:\s+(?:of\s+)?([A-Za-z][\w ]{1,25}))?",
-                    re.I)
-    meta = None
-    for line in open(protocols_jsonl, encoding="utf-8"):
-        row = json.loads(line)
-        if row["protocol_id"] == protocol_id:
-            meta = row
-            break
-    if meta is None:
-        raise BuildError(f"{protocol_id} not in {protocols_jsonl}")
-    for line in open(steps_jsonl, encoding="utf-8"):
-        row = json.loads(line)
-        if row["protocol_id"] != protocol_id:
-            continue
-        for step in row["steps"]:
-            m = rx.search(step["text"])
-            if m:
-                grams = float(m.group(1)) / (1000 if m.group(2).lower() == "mg" else 1)
-                reagent = "NaCl" if re.search(r"nacl|sodium chloride", step["text"], re.I) else (
-                    (m.group(3) or "salt").strip())
-                return {"protocol_id": protocol_id, "title": meta["title"], "url": meta["url"],
-                        "license": meta["license"], "step": step["idx"], "step_text": step["text"][:200],
-                        "target_g": grams, "reagent": reagent}
-    raise BuildError(f"{protocol_id} has no 'weigh <mass> g' step")
-
-
 def build_weigh_task(out_dir, source: dict, seed: int = 0, video: bool = True) -> dict:
     """Write and validate one weighing task folder; returns a build report."""
     out = Path(out_dir)
@@ -268,11 +248,12 @@ def build_weigh_task(out_dir, source: dict, seed: int = 0, video: bool = True) -
     info = vendor(out)
     layout = default_weigh_layout()
     instance = {"schema": "robocurve-bench-instance/1", "family": "weigh", "seed": seed,
-                "layout": layout, "target_g": round(target, 3), "scoring": dict(WEIGH_SCORING),
+                "layout": layout, "target_g": round(target, 3),
+                "scoring": weigh_scoring(source.get("full_g")),
                 "run_limit_steps": 20 * 60 * 20, "control_hz": 20,
                 "action": None, "biolab_commit": info["biolab_commit"],
-                "source": {k: source[k] for k in ("protocol_id", "url", "step", "target_g", "reagent")
-                           if k in source}}
+                "source": {k: source[k] for k in ("protocol_id", "dataset", "url", "step", "target_g",
+                                                  "reagent", "full_g") if k in source}}
     (out / "instance.json").write_text(json.dumps(instance, indent=1), encoding="utf-8")
     instance.update(_run(out, "hashes"))
     probe = subprocess.run([sys.executable, "-c",
@@ -308,7 +289,7 @@ def build_weigh_task(out_dir, source: dict, seed: int = 0, video: bool = True) -
 
     import mujoco
     import numpy
-    spec = weigh_task_json(target, source, layout, run_limit, demo["score"])
+    spec = weigh_task_json(target, source, layout, run_limit, demo["score"], instance["scoring"])
     (out / "task.json").write_text(json.dumps(spec, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     demo["cameras"] = cameras
     (out / "README.md").write_text(readme_text(spec, instance, demo,

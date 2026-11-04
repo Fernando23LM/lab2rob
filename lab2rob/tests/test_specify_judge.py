@@ -144,3 +144,22 @@ def test_judge_never_checks_volume_in_the_pipette():
                                        steps=[step]))
     volume = [p for p in judge.steps[0].predicates if p.pred == "volume"]
     assert volume[0].args == ["plate_96_well"]
+
+
+def test_judge_checks_the_balance_for_each_weighing():
+    from lab2rob.ground.rules import Grounding, Quantity
+    from types import SimpleNamespace
+
+    def q(v, u):
+        return Quantity(raw=f"{v} {u}", value=float(v), unit=u, approximate=False, pint=f"{v} {u}")
+    step = Grounding(idx=3, source_text="Weigh out 0.9 g NaCl and 4 g PEG.",
+                     quantities=[q(0.9, "g"), q(4, "g")], reagents=["NaCl", "PEG"],
+                     action="weigh_sample", status="grounded", by="rules")
+    judge = plan_judge(SimpleNamespace(protocol_id="t", title="t", description="", steps=[step]))
+    preds = [(p.pred, p.args, p.target, p.tol) for p in judge.steps[0].predicates]
+    assert preds == [("mass_on_balance", ["NaCl"], 0.9, 0.15),
+                     ("mass_on_balance", ["PEG"], 4.0, 0.2)]
+    ok = PREDICATES["mass_on_balance"]({"balance_g": 0.99, "pan_touched": False}, 0.9, 0.15)
+    touched = PREDICATES["mass_on_balance"]({"balance_g": 0.9, "pan_touched": True}, 0.9, 0.15)
+    assert ok.passed and not touched.passed
+    assert not PREDICATES["mass_on_balance"]({}, 0.9, 0.15).passed

@@ -92,6 +92,3 @@ declared_skills:
   - name: wash_plate
     kind: action
     description: Wash plate wells with buffer, one or more cycles.
-  - name: weigh_sample
-    kind: action
-    description: Weigh loose material on an analytical balance (Autoprotocol op weigh).

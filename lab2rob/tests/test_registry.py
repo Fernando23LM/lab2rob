@@ -37,7 +37,7 @@ EXPECTED_IMPLEMENTED = [
     "wait",
 ]
 
-EXPECTED_MACROS = ["dilute", "mix_by_pipetting", "serial_dilution", "transfer"]
+EXPECTED_MACROS = ["dilute", "mix_by_pipetting", "serial_dilution", "transfer", "weigh_sample"]
 
 EXPECTED_DECLARED_SKILLS = [
     "aliquot",
@@ -70,7 +70,6 @@ EXPECTED_DECLARED_SKILLS = [
     "uv_sterilize",
     "vortex",
     "wash_plate",
-    "weigh_sample",
 ]
 
 EXPECTED_ASSETS = [

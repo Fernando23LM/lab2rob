@@ -3,8 +3,9 @@
 plan_judge reads ONLY the grounded protocol — never the planned program —
 so it cannot rubber-stamp the planner's choices. For each grounded liquid
 step it emits step predicates from the registry vocabulary (volume moved +
-no spill); other grounded actions get no predicates because the vocabulary
-cannot express them (no time or position checks exist yet). Vessel
+no spill); for each grounded weighing step, one balance check per stated
+mass (mass_on_balance); other grounded actions get no predicates because the
+vocabulary cannot express them (no time or position checks exist yet). Vessel
 references are entity names, or "unbound" when the text names no vessel;
 the scene builder resolves them to concrete wells at certify time.
 
@@ -31,6 +32,13 @@ ureg = pint.UnitRegistry()
 #: Learned liquid-moving macros (ST-02) join this set on registration.
 LIQUID_ACTIONS = {"transfer", "aspirate", "dispense", "mix_by_pipetting",
                   "serial_dilution", "dilute"}
+
+#: Grounded actions that weigh out a solid and hence get balance checks.
+WEIGH_ACTIONS = {"weigh_sample"}
+
+#: Smallest balance tolerance: about three of the weighing scene's largest
+#: grains (0.05 g each), which leave the vial in small avalanches.
+MIN_MASS_TOL_G = 0.15
 
 #: Marker for a vessel the text never names; resolved at certify time.
 UNBOUND = "unbound"
@@ -113,6 +121,36 @@ def _judge_liquid_step(grounding) -> list:
     return preds
 
 
+def _mass_g(quantities: list) -> list:
+    from lab2rob.ground.rules import MASS_UNITS
+    out = []
+    for quantity in quantities:
+        if quantity.unit in MASS_UNITS:
+            try:
+                out.append(float(ureg.Quantity(quantity.value, quantity.unit).to("g").magnitude))
+            except Exception:
+                continue
+    return out
+
+
+def _judge_weigh_step(grounding) -> list:
+    """One balance check per stated mass: the reading the step asks for."""
+    reagents = list(grounding.reagents)
+    masses = _mass_g(grounding.quantities)
+    return [StepPredicate(step=grounding.idx, pred="mass_on_balance",
+                          args=[reagents[i] if len(reagents) == len(masses) else ""],
+                          target=round(grams, 6), tol=max(MIN_MASS_TOL_G, round(0.05 * grams, 4)))
+            for i, grams in enumerate(masses)]
+
+
+def _judge_step(grounding) -> list:
+    if grounding.action in LIQUID_ACTIONS:
+        return _judge_liquid_step(grounding)
+    if grounding.action in WEIGH_ACTIONS:
+        return _judge_weigh_step(grounding)
+    return []
+
+
 def plan_judge(protocol_grounding) -> PlannedJudge:
     """Write step predicates + outcome checks from grounding alone.
 
@@ -121,9 +159,7 @@ def plan_judge(protocol_grounding) -> PlannedJudge:
     """
     from .outcome import plan_outcomes
 
-    steps = [JudgeStep(idx=g.idx, source_text=g.source_text,
-                       predicates=_judge_liquid_step(g)
-                       if g.action in LIQUID_ACTIONS else [])
+    steps = [JudgeStep(idx=g.idx, source_text=g.source_text, predicates=_judge_step(g))
              for g in protocol_grounding.steps if g.status == "grounded"]
     return PlannedJudge(protocol_id=protocol_grounding.protocol_id,
                         title=protocol_grounding.title, steps=steps,

@@ -24,6 +24,7 @@ sys.path once. Proper packaging is an infra follow-up, not SC-03.
 from __future__ import annotations
 
 import math
+import re
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -255,6 +256,68 @@ def _family_of_layout(layout) -> str:
     raise ValueError(f"unsupported layout type {type(layout).__name__}")
 
 
+#: What the weighing bench's vial can stand in for: coarse grains of salt.
+WEIGH_REAGENTS = re.compile(r"\b(nacl|sodium chloride|kcl|potassium chloride|salt)\b", re.I)
+#: Masses the 2.4 g vial weighs out well (it pours in 0.02 to 0.05 g grains).
+WEIGH_RANGE_G = (0.5, 1.8)
+
+
+def _weigh_ops(program) -> list:
+    return [(step, i, op) for step in program.steps if step.status == "planned"
+            for i, op in enumerate(step.ops) if op["skill"] == "weigh_sample"]
+
+
+def build_weigh_scene(program, seed: int = 0) -> BuiltScene:
+    """The balance bench for a program with exactly one weighing.
+
+    Rejected, never bent: a second weighing (the bench has one vial), a
+    mass outside WEIGH_RANGE_G, or a reagent other than a salt (the vial's
+    68 coarse grains do not behave like agarose or PEG powder).
+    """
+    weighs = _weigh_ops(program)
+    if not weighs:
+        raise SceneRejected("no_weighing", "the program weighs nothing")
+    others = [step.idx for step in program.steps if step.status == "planned"
+              and any(op["skill"] != "weigh_sample" for op in step.ops)]
+    if others:
+        raise SceneRejected("family_conflict", f"steps {others} need another scene")
+    if len(weighs) > 1:
+        raise SceneRejected("over_capacity",
+                            f"{len(weighs)} weighings; the bench has one vial (compile each alone)")
+    step, op_idx, op = weighs[0]
+    grams, reagent = op["args"].get("mass_g"), op["args"].get("reagent")
+    if not isinstance(grams, (int, float)) or not WEIGH_RANGE_G[0] <= grams <= WEIGH_RANGE_G[1]:
+        raise SceneRejected("over_capacity", f"{grams} g is outside the vial's "
+                            f"{WEIGH_RANGE_G[0]}-{WEIGH_RANGE_G[1]} g")
+    if not reagent or not WEIGH_REAGENTS.search(str(reagent)):
+        raise SceneRejected("missing_asset", f"{reagent or 'an unnamed solid'} is not modelled; "
+                            f"the weighing bench has coarse salt only")
+    _, _, scene = _biolab()
+    built = BuiltScene(family="weigh", seed=seed, layout=scene.WeighLayout())
+    built.assignments[f"{step.idx}:{op_idx}"] = "balance"
+    built.vessels["salt_vial"] = {"asset": "salt_vial", "slot": "rack_stock"}
+    if WEIGH_REAGENTS.search(str(reagent)).group(0).lower() not in ("salt",):
+        built.substitutions.append({"from": str(reagent), "to": "coarse salt"})
+    return built
+
+
+def weigh_programs(program) -> list:
+    """One single-weighing program per weighing op, for build_weigh_scene."""
+    import copy
+    out = []
+    for step, op_idx, _ in _weigh_ops(program):
+        single = copy.deepcopy(program)
+        for other in single.steps:
+            if other.idx != step.idx:
+                if other.status == "planned":
+                    other.status, other.reason, other.ops = "out_of_scope", "other_scene", []
+                    other.detail = "another step of the protocol; compiled on its own"
+            else:
+                other.ops = [other.ops[op_idx]]
+        out.append(single)
+    return out
+
+
 def build_scene(program, seed: int = 0, layout=None, demo_props: bool = False) -> BuiltScene:
     """Place a planned program's vessels and reach-check the result.
 
@@ -262,6 +325,8 @@ def build_scene(program, seed: int = 0, layout=None, demo_props: bool = False) -
     demo_props also sets out the AutoBio instruments the program names
     (demo only: unlicensed, so the scene is marked not redistributable).
     """
+    if layout is None and _weigh_ops(program):
+        return build_weigh_scene(program, seed=seed)
     families = _family_table()
     family = _family_of_layout(layout) if layout is not None else pick_family(program)
     spec = families[family]

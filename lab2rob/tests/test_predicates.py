@@ -25,7 +25,7 @@ STATE = {
 
 def test_predicate_names():
     assert sorted(PREDICATES) == ["capped", "concentration", "in_slot",
-                                  "lid_open", "no_spill", "volume"]
+                                  "lid_open", "mass_on_balance", "no_spill", "volume"]
 
 
 def test_in_slot():

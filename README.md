@@ -136,6 +136,31 @@ re-grounded with the LLM fallback, cheapest first, stopping before the
 budget (and at the client's daily cap). The latest sweep's report is
 `lab2rob/coverage/bioprobench_sweep.md`.
 
+## Robocurve tasks (`lab2rob/robocurve/`)
+
+The compiler plans a protocol for one scene at a time: the pipetting
+benches (the default) or the weighing bench. `weigh_sample` is a registered
+skill: the planner binds each stated mass and its reagent, the independent
+judge writes a balance check (`mass_on_balance`, tolerance at least 0.15 g)
+from the step alone, and the scene builder accepts one salt weighing of
+0.5 to 1.8 g per scene and rejects anything else with a reason. Steps of the
+other scene are out of scope with reason `other_scene`.
+
+```bash
+python -m lab2rob.robocurve weighings Protocol.io-2332      # each weighing, accepted or why not
+python -m lab2rob.robocurve build-weigh Protocol.io-2332 --out tasks/weigh-salt
+python -m lab2rob.robocurve check tasks/weigh-salt         # what is left before a pull request
+```
+
+`build-weigh` writes a folder for `robocurve/benchmark-tasks`: `task.json`,
+`README.md`, `task.py` (20 Hz runtime and scorer), the simulator files, the
+frozen `instance.json`, the scripted demo (`demo.npz`, H.264 `demo.mp4`) and
+`setup.png`. The demo is the weighing skill's reference script; the build
+fails unless it scores 1.0 in two agreeing fresh replays and doing nothing
+scores 0. In the BioProBench sweep, 291 weighings in 177 protocols reach the
+weighing bench and 2 are accepted: most masses are outside what the 2.4 g
+vial holds, and agarose or PEG powders are not modelled.
+
 ## Metrics
 
 | metric | value |

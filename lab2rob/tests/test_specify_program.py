@@ -178,3 +178,50 @@ def test_dispense_with_an_empty_pipette_draws_first():
     assert ops[3] == [("dispense", 30.0)]  # covered by step 2's draw
     assert ops[4] == [("aspirate", 5.0), ("dispense", 15.0)]  # only the shortfall
     assert "empty pipette" in program.steps[0].ops[0]["assumed"]["source"]
+
+
+def test_weighing_binds_mass_and_reagent_per_stated_mass():
+    step = make_step(text="Weigh out 0.9 g sodium chloride (NaCl and 4.0 g PEG 8000.",
+                     action="weigh_sample", quantities=[qty(0.9, "g"), qty(4000, "mg")])
+    step.reagents = ["sodium chloride (NaCl", "PEG 8000"]
+    out = plan_step(step)
+    assert out.status == "planned"
+    assert [o["args"] for o in out.ops] == [{"mass_g": 0.9, "reagent": "sodium chloride (NaCl)"},
+                                            {"mass_g": 4.0, "reagent": "PEG 8000"}]
+    unpaired = make_step(text="Weigh 1 g and 2 g.", action="weigh_sample",
+                         quantities=[qty(1, "g"), qty(2, "g")])
+    out = plan_step(unpaired)
+    assert all(o["args"]["reagent"] is None and o["assumed"]["reagent"] for o in out.ops)
+    no_mass = plan_step(make_step(text="Weigh the tube.", action="weigh_sample"))
+    assert (no_mass.status, no_mass.reason) == ("out_of_scope", "ambiguous")
+
+
+def test_each_scene_family_plans_only_its_own_steps():
+    weigh = make_step(idx=1, text="Weigh 0.9 g NaCl.", action="weigh_sample",
+                      quantities=[qty(0.9, "g")])
+    weigh.reagents = ["NaCl"]
+    pipette = make_step(idx=2, text="Add 25 uL to the well", action="transfer",
+                        quantities=[qty(25, "ul")])
+    from types import SimpleNamespace
+    grounding = SimpleNamespace(protocol_id="t", title="t", steps=[weigh, pipette])
+    default = plan_protocol(grounding)
+    assert [(s.status, s.reason) for s in default.steps] == [("out_of_scope", "other_scene"),
+                                                              ("planned", None)]
+    weighing = plan_protocol(grounding, family="weigh")
+    assert [(s.status, s.reason) for s in weighing.steps] == [("planned", None),
+                                                               ("out_of_scope", "other_scene")]
+    import pytest
+    with pytest.raises(ValueError):
+        plan_protocol(grounding, family="centrifuge")
+
+
+def test_a_weighing_that_fails_to_bind_still_belongs_to_the_weighing_scene():
+    """Its equipment must not leak into the pipetting scene (it chose the wrong family)."""
+    from types import SimpleNamespace
+    weigh = make_step(idx=1, text="Shave the tumours off the dish into a tared tube and weigh.",
+                      action="weigh_sample", entities=[ent("culture_dish"), ent("tube_vial")])
+    pipette = make_step(idx=2, text="Add 25 uL to the well", action="transfer",
+                        quantities=[qty(25, "ul")])
+    program = plan_protocol(SimpleNamespace(protocol_id="t", title="t", steps=[weigh, pipette]))
+    assert (program.steps[0].status, program.steps[0].reason) == ("out_of_scope", "other_scene")
+    assert [e.asset for e in program.entities] == []

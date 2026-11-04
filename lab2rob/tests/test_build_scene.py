@@ -137,3 +137,26 @@ def test_every_pipetting_op_gets_a_well_or_the_scene_is_rejected():
                                op("dispense", {"volume_ul": 8.0}, at="e1")]],
                              entities=[("e1", "pipette")]))
     assert set(built.assignments) == {"1:0", "1:1"}
+
+
+def test_weighing_scene_accepts_one_salt_weighing_and_rejects_the_rest():
+    from lab2rob.build.scene import build_weigh_scene, weigh_programs
+
+    def weigh(grams, reagent):
+        return op("weigh_sample", {"mass_g": grams, "reagent": reagent})
+    built = build_scene(prog([[weigh(0.9, "NaCl")]]))
+    assert built.family == "weigh" and built.assignments == {"1:0": "balance"}
+    for steps, reason in (([[weigh(0.9, "NaCl")], [weigh(1.0, "KCl")]], "over_capacity"),
+                          ([[weigh(3.0, "NaCl")]], "over_capacity"),
+                          ([[weigh(1.0, "agarose")]], "missing_asset"),
+                          ([[weigh(1.0, None)]], "missing_asset"),
+                          ([[weigh(1.0, "NaCl")], [op("dispense", {"volume_ul": 5.0})]],
+                           "family_conflict")):
+        with pytest.raises(SceneRejected) as exc:
+            build_weigh_scene(prog(steps))
+        assert exc.value.reason == reason
+    singles = weigh_programs(prog([[weigh(0.9, "NaCl"), weigh(1.0, "KCl")], [weigh(1.2, "salt")]]))
+    assert [[(s.status, [o["args"]["mass_g"] for o in s.ops]) for s in p.steps] for p in singles] == [
+        [("planned", [0.9]), ("out_of_scope", [])],
+        [("planned", [1.0]), ("out_of_scope", [])],
+        [("out_of_scope", []), ("planned", [1.2])]]
