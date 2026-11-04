@@ -26,7 +26,7 @@ from pathlib import Path
 
 import pint
 
-from lab2rob.ground.rules import TIME_UNITS, VOLUME_UNITS
+from lab2rob.ground.rules import MASS_UNITS, TIME_UNITS, VOLUME_UNITS
 from lab2rob.registry import resolve_skill
 from lab2rob.schema import Entity, OutOfScopeItem
 
@@ -42,6 +42,7 @@ CATEGORIES = {
     "unmodeled_physics": "missing_physics",
     "ambiguous_text": "ambiguous",
     "needs_llm": "ambiguous",
+    "other_scene": "other_scene",
 }
 
 #: Per-call sim caps the planner splits longer holds across.
@@ -171,9 +172,22 @@ def _time_s(quantities: list) -> float | None:
     return None
 
 
+#: In-scope entities that are tools or fixtures, never a liquid's source or
+#: target: "pipette to mix" or "use a multichannel pipette" names the tool,
+#: and binding a vessel role to it left the op without a well.
+NON_VESSELS = frozenset({"pipette", "pipette_tip_200ul", "pipette_tip_1000ul",
+                         "tip_rack", "yam_arm", "table", "floor"})
+
+
 def _in_scope_uids(grounding, table: _Entities) -> list:
     return [table.uid(e["name"]) for e in grounding.entities
             if e.get("scope") == "in_scope"]
+
+
+def _vessel_uids(grounding, table: _Entities) -> list:
+    """In-scope entity uids that can hold liquid roles (tools left out)."""
+    return [table.uid(e["name"]) for e in grounding.entities
+            if e.get("scope") == "in_scope" and e["name"] not in NON_VESSELS]
 
 
 class _Unbindable(Exception):
@@ -193,8 +207,11 @@ def _require_volume(grounding) -> float:
 
 def _plan_transfer(grounding, uids: list) -> list:
     volume = _require_volume(grounding)
-    source = uids[0] if uids else None
-    target = uids[1] if len(uids) > 1 else None
+    # Two named vessels: source then target. One: it is where the liquid goes
+    # ("Add 50 uL of stop solution to each well of the plate"), as the judge
+    # reads it too; the reagent comes from a stock the scene provides.
+    source = uids[0] if len(uids) > 1 else None
+    target = uids[1] if len(uids) > 1 else (uids[0] if uids else None)
     assumed = {}
     if source is None:
         assumed["source"] = "no vessel in text; scene builder assigns"
@@ -308,8 +325,103 @@ def _plan_primitive(name: str, grounding, entry: dict | None) -> list:
     raise _Unbindable(f"no argument binder for {name!r}")
 
 
+def _clean_reagent(name: str) -> str:
+    """'sodium chloride (NaCl' -> 'sodium chloride (NaCl)': close or drop a cut bracket."""
+    name = " ".join(str(name).split()).strip(" ,;:")
+    if name.count("(") > name.count(")"):
+        head, _, inner = name.rpartition("(")
+        name = f"{head.strip()} ({inner.strip()})" if inner.strip() else head.strip()
+    return name
+
+
+def _plan_weigh(grounding, uids: list) -> list:
+    """One weigh_sample op per stated mass, paired with the reagents in order.
+
+    "weigh out 0.9 g sodium chloride and 4.0 g PEG 8000" weighs two things;
+    each becomes its own op (the weighing scene holds one vial, so each
+    compiles as its own task). A reagent the text does not pair with a mass
+    stays None, for the scene builder to reject rather than guess.
+    """
+    masses = []
+    for quantity in grounding.quantities:
+        if quantity.unit in MASS_UNITS:
+            try:
+                masses.append(float(ureg.Quantity(quantity.value, quantity.unit).to("g").magnitude))
+            except Exception:
+                continue
+    if not masses:
+        raise _Unbindable("no mass mentioned; cannot bind mass_g")
+    reagents = [_clean_reagent(r) for r in grounding.reagents]
+    ops = []
+    for i, grams in enumerate(masses):
+        if len(reagents) == len(masses):
+            reagent, assumed = reagents[i], {}
+        elif len(reagents) == 1 and len(masses) == 1:
+            reagent, assumed = reagents[0], {}
+        else:
+            reagent = None
+            assumed = {"reagent": f"{len(masses)} masses, {len(reagents)} reagents in the text: unpaired"}
+        ops.append(_op("weigh_sample", {"mass_g": round(grams, 6), "reagent": reagent},
+                       assumed=assumed))
+    return ops
+
+
+_SPEED = re.compile(r"(\d[\d,]*(?:\.\d+)?)\s*(rpm|r\.p\.m\.|x\s*g|×\s*g|rcf|g)\b", re.I)
+_COUNTS = {"two": 2, "three": 3, "four": 4, "six": 6, "eight": 8}
+_TUBES = re.compile(r"\b(\d+|two|three|four|six|eight)\s+(?:sample\s+|micro\w*\s+|1\.5\s*ml\s+)?tubes\b", re.I)
+DEFAULT_TUBES = 2
+
+
+def _plan_centrifuge(grounding, uids: list) -> list:
+    """Load the tubes balanced and shut the lid; speed and time are recorded.
+
+    Nothing spins in the scene, so neither is required. The tube count comes
+    from the text ("spin the two tubes") or defaults to DEFAULT_TUBES, recorded.
+    """
+    text = grounding.source_text
+    speed = _SPEED.search(text)
+    tubes = _TUBES.search(text)
+    assumed = {}
+    if tubes:
+        word = tubes.group(1).lower()
+        count = _COUNTS.get(word) or int(word)
+    else:
+        count = DEFAULT_TUBES
+        assumed["tubes"] = f"the text gives no tube count: {DEFAULT_TUBES} sample tubes"
+    args = {"tubes": count, "time_s": _time_s(grounding.quantities),
+            "speed": " ".join(speed.group(0).split()) if speed else None}
+    return [_op("centrifuge", args, assumed=assumed)]
+
+
 _MACROS = {"transfer": _plan_transfer, "mix_by_pipetting": _plan_mix,
-           "serial_dilution": _plan_serial}
+           "serial_dilution": _plan_serial, "weigh_sample": _plan_weigh,
+           "centrifuge": _plan_centrifuge}
+
+#: Skills each scene family runs. A step whose ops belong to another family is
+#: out of scope for this scene ("other_scene") and compiles as its own task.
+FAMILY_SKILLS = {"weigh": frozenset({"weigh_sample"}), "centrifuge": frozenset({"centrifuge"})}
+FAMILIES = ("pipetting", "weigh", "centrifuge")
+
+
+def _scene_of(step, action: str | None) -> str | None:
+    """The scene a step belongs to, by its grounded action (or its ops)."""
+    skills = {op["skill"] for op in step.ops} | ({action} if action else set())
+    for family, owned in FAMILY_SKILLS.items():
+        if skills & owned:
+            return family
+    return "pipetting" if step.status == "planned" and step.ops else None
+
+
+def _limit_to_family(steps: list, groundings: list, family: str) -> None:
+    """Steps of another scene, planned or not, are out of scope for this one."""
+    for step, grounding in zip(steps, groundings):
+        scene = _scene_of(step, getattr(grounding, "action", None))
+        if scene is None or scene == family:
+            continue
+        if step.status == "planned" or step.reason == "ambiguous":
+            step.status, step.reason = "out_of_scope", "other_scene"
+            step.detail = f"runs in the {scene} scene; compiled as its own task"
+            step.ops = []
 
 
 def _check_macro_bottoms_out(name: str, entry: dict | None, seen=None) -> None:
@@ -362,7 +474,7 @@ def plan_step(grounding, table: _Entities | None = None) -> PlannedStep:
             if binder is None:
                 step.ops = _plan_learned(grounding.action, grounding)
             else:
-                step.ops = binder(grounding, step.entities)
+                step.ops = binder(grounding, _vessel_uids(grounding, table))
         else:
             step.ops = _plan_primitive(grounding.action, grounding, resolution["entry"])
     except _Unbindable as exc:
@@ -371,10 +483,55 @@ def plan_step(grounding, table: _Entities | None = None) -> PlannedStep:
     return step
 
 
-def plan_protocol(protocol_grounding) -> PlannedProgram:
-    """Plan every step of a grounded protocol into one program."""
+def _load_empty_dispenses(steps: list) -> None:
+    """A dispense the pipette cannot cover draws the shortfall first.
+
+    "Dispense 25 uL into each spot" or "Add 150 uL of block" plans as a lone
+    dispense; run as written, an empty pipette delivers nothing. Tracking
+    what the pipette holds across the program, each such dispense gets an
+    aspirate of the missing volume from a scene stock just before it,
+    recorded in the op's assumed fields like every other default.
+    """
+    held = 0.0
+    for step in steps:
+        if step.status != "planned":
+            continue
+        ops = []
+        for op in step.ops:
+            volume = op["args"].get("volume_ul")
+            if op["skill"] == "dispense" and isinstance(volume, (int, float)):
+                short = float(volume) - held
+                if short > 1e-9:
+                    ops.append(_op("aspirate", {"volume_ul": round(short, 6)}, at=None,
+                                   assumed={"source": "dispense with an empty pipette: "
+                                                      "reagent drawn from a scene stock"}))
+                    held += short
+                held = max(0.0, held - float(volume))
+            elif op["skill"] == "aspirate" and isinstance(volume, (int, float)):
+                held += float(volume)
+            ops.append(op)
+        step.ops = ops
+
+
+def plan_protocol(protocol_grounding, family: str = "pipetting") -> PlannedProgram:
+    """Plan every step of a grounded protocol into one program for one scene.
+
+    family picks the scene the program runs in: "pipetting" (the default:
+    the protein and culture benches), "weigh" (the balance bench) or "centrifuge". Steps
+    another scene runs are out of scope here with reason "other_scene".
+    """
+    if family not in FAMILIES:
+        raise ValueError(f"family must be one of {FAMILIES}, got {family!r}")
     table = _Entities()
     steps = [plan_step(grounding, table) for grounding in protocol_grounding.steps]
+    _limit_to_family(steps, list(protocol_grounding.steps), family)
+    _load_empty_dispenses(steps)
+    # Entities only another scene's steps named stay out of this scene.
+    used = {uid for step in steps if step.reason != "other_scene" for uid in step.entities}
+    table.entries = [e for e in table.entries if e.uid in used]
+    for step in steps:
+        if step.reason == "other_scene":
+            step.entities = [uid for uid in step.entities if uid in used]
     out_of_scope = [OutOfScopeItem(step=s.idx, reason=s.reason or "ambiguous",
                                    detail=s.detail)
                     for s in steps if s.status != "planned"]

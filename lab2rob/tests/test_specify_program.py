@@ -30,7 +30,7 @@ def test_unknown_skill_becomes_missing_skill():
 
 
 def test_declared_skill_rejected_despite_grounded():
-    out = plan_step(make_step(text="Spin the tubes", action="centrifuge"))
+    out = plan_step(make_step(text="Vortex the tubes", action="vortex"))
     assert (out.status, out.reason) == ("out_of_scope", "missing_skill")
 
 
@@ -136,3 +136,106 @@ def test_tier1_end_to_end_and_pairs_roundtrip(tmp_path):
     assert len(pairs) == 4
     assert pairs[2]["skills"] == ["aspirate", "dispense"]
     assert pairs[0]["reason"] == "missing_skill"
+
+
+def _program(*groundings):
+    from types import SimpleNamespace
+    return plan_protocol(SimpleNamespace(protocol_id="t", title="t", steps=list(groundings)))
+
+
+def test_tools_never_take_a_vessel_role():
+    """'... pipette to mix' names the tool; binding a role to it left ops unassigned."""
+    out = plan_step(make_step(text="Add 8 uL of glutaraldehyde to each sample. Pipette to mix.",
+                              action="transfer", quantities=[qty(8, "ul")],
+                              entities=[ent("pipette")]))
+    assert out.status == "planned"
+    assert [op["at"] for op in out.ops] == [None, None]
+    assert out.entities  # still recorded for traceability
+
+
+def test_one_named_vessel_is_the_destination():
+    out = plan_step(make_step(text="Add 50 uL of stop solution to each well of the plate.",
+                              action="transfer", quantities=[qty(50, "ul")],
+                              entities=[ent("plate_96_well")]))
+    source, target = out.ops
+    assert source["at"] is None and target["at"] == out.entities[0]
+    assert "source" in source["assumed"]
+
+
+def test_dispense_with_an_empty_pipette_draws_first():
+    program = _program(
+        make_step(idx=1, text="Dispense 25 uL into each spot.", action="dispense",
+                  quantities=[qty(25, "ul")]),
+        make_step(idx=2, text="Aspirate 40 uL of buffer.", action="aspirate",
+                  quantities=[qty(40, "ul")]),
+        make_step(idx=3, text="Dispense 30 uL into the well.", action="dispense",
+                  quantities=[qty(30, "ul")]),
+        make_step(idx=4, text="Dispense 15 uL into the next well.", action="dispense",
+                  quantities=[qty(15, "ul")]))
+    ops = {s.idx: [(o["skill"], o["args"]["volume_ul"]) for o in s.ops] for s in program.steps}
+    assert ops[1] == [("aspirate", 25.0), ("dispense", 25.0)]
+    assert ops[2] == [("aspirate", 40.0)]
+    assert ops[3] == [("dispense", 30.0)]  # covered by step 2's draw
+    assert ops[4] == [("aspirate", 5.0), ("dispense", 15.0)]  # only the shortfall
+    assert "empty pipette" in program.steps[0].ops[0]["assumed"]["source"]
+
+
+def test_weighing_binds_mass_and_reagent_per_stated_mass():
+    step = make_step(text="Weigh out 0.9 g sodium chloride (NaCl and 4.0 g PEG 8000.",
+                     action="weigh_sample", quantities=[qty(0.9, "g"), qty(4000, "mg")])
+    step.reagents = ["sodium chloride (NaCl", "PEG 8000"]
+    out = plan_step(step)
+    assert out.status == "planned"
+    assert [o["args"] for o in out.ops] == [{"mass_g": 0.9, "reagent": "sodium chloride (NaCl)"},
+                                            {"mass_g": 4.0, "reagent": "PEG 8000"}]
+    unpaired = make_step(text="Weigh 1 g and 2 g.", action="weigh_sample",
+                         quantities=[qty(1, "g"), qty(2, "g")])
+    out = plan_step(unpaired)
+    assert all(o["args"]["reagent"] is None and o["assumed"]["reagent"] for o in out.ops)
+    no_mass = plan_step(make_step(text="Weigh the tube.", action="weigh_sample"))
+    assert (no_mass.status, no_mass.reason) == ("out_of_scope", "ambiguous")
+
+
+def test_each_scene_family_plans_only_its_own_steps():
+    weigh = make_step(idx=1, text="Weigh 0.9 g NaCl.", action="weigh_sample",
+                      quantities=[qty(0.9, "g")])
+    weigh.reagents = ["NaCl"]
+    pipette = make_step(idx=2, text="Add 25 uL to the well", action="transfer",
+                        quantities=[qty(25, "ul")])
+    from types import SimpleNamespace
+    grounding = SimpleNamespace(protocol_id="t", title="t", steps=[weigh, pipette])
+    default = plan_protocol(grounding)
+    assert [(s.status, s.reason) for s in default.steps] == [("out_of_scope", "other_scene"),
+                                                              ("planned", None)]
+    weighing = plan_protocol(grounding, family="weigh")
+    assert [(s.status, s.reason) for s in weighing.steps] == [("planned", None),
+                                                               ("out_of_scope", "other_scene")]
+    import pytest
+    with pytest.raises(ValueError):
+        plan_protocol(grounding, family="freezer")
+
+
+def test_a_weighing_that_fails_to_bind_still_belongs_to_the_weighing_scene():
+    """Its equipment must not leak into the pipetting scene (it chose the wrong family)."""
+    from types import SimpleNamespace
+    weigh = make_step(idx=1, text="Shave the tumours off the dish into a tared tube and weigh.",
+                      action="weigh_sample", entities=[ent("culture_dish"), ent("tube_vial")])
+    pipette = make_step(idx=2, text="Add 25 uL to the well", action="transfer",
+                        quantities=[qty(25, "ul")])
+    program = plan_protocol(SimpleNamespace(protocol_id="t", title="t", steps=[weigh, pipette]))
+    assert (program.steps[0].status, program.steps[0].reason) == ("out_of_scope", "other_scene")
+    assert [e.asset for e in program.entities] == []
+
+
+def test_centrifuge_records_speed_and_time_and_counts_tubes():
+    step = make_step(text="Centrifuge the two tubes at 12,000 x g for 5 min.", action="centrifuge",
+                     quantities=[qty(5, "min")])
+    out = plan_step(step)
+    assert out.status == "planned"
+    assert out.ops[0]["args"] == {"tubes": 2, "time_s": 300.0, "speed": "12,000 x g"}
+    assert out.ops[0]["assumed"] == {}
+    brief = plan_step(make_step(text="Spin down briefly.", action="centrifuge"))
+    assert brief.ops[0]["args"] == {"tubes": 2, "time_s": None, "speed": None}
+    assert "no tube count" in brief.ops[0]["assumed"]["tubes"]
+    four = plan_step(make_step(text="Spin the 4 tubes at 1000 rpm.", action="centrifuge"))
+    assert four.ops[0]["args"]["tubes"] == 4 and four.ops[0]["args"]["speed"] == "1000 rpm"

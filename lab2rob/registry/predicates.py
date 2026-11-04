@@ -118,6 +118,35 @@ def no_spill(state: dict, tol_ul: float = 0.0) -> CheckResult:
     return CheckResult(False, f"{spilled:.1f} uL spilled, tolerance {tol_ul}")
 
 
+def mass_on_balance(state: dict, target_g: float, tol_g: float) -> CheckResult:
+    """The balance reads the target mass within tolerance, with nothing else on it."""
+    reading = state.get("balance_g") if isinstance(state, dict) else None
+    if reading is None:
+        return CheckResult(False, "no balance reading recorded")
+    if state.get("pan_touched"):
+        return CheckResult(False, f"something other than the sample touches the pan ({reading:.2f} g)")
+    if abs(float(reading) - target_g) <= tol_g:
+        return CheckResult(True, f"balance reads {reading:.2f} g")
+    return CheckResult(False, f"balance reads {reading:.2f} g, want {target_g} +- {tol_g}")
+
+
+def rotor_balanced(state: dict, tubes: int) -> CheckResult:
+    """The given number of tubes sit in rotor slots that balance it (opposite pairs)."""
+    slots = sorted(k for k in (state.get("slots") or {}).values() if k is not None)
+    if len(slots) != tubes:
+        return CheckResult(False, f"{len(slots)} of {tubes} tubes in rotor slots")
+    if not state.get("balanced"):
+        return CheckResult(False, f"tubes in slots {slots}: not balanced")
+    return CheckResult(True, f"tubes in slots {slots}: balanced")
+
+
+def lid_closed(state: dict) -> CheckResult:
+    """The instrument's lid is shut and latched."""
+    if state.get("lid_closed"):
+        return CheckResult(True, f"lid shut ({state.get('lid_deg')} deg)")
+    return CheckResult(False, f"lid open ({state.get('lid_deg')} deg)")
+
+
 PREDICATES = {
     "in_slot": in_slot,
     "capped": capped,
@@ -125,4 +154,7 @@ PREDICATES = {
     "volume": volume,
     "concentration": concentration,
     "no_spill": no_spill,
+    "mass_on_balance": mass_on_balance,
+    "rotor_balanced": rotor_balanced,
+    "lid_closed": lid_closed,
 }

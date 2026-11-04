@@ -13,7 +13,8 @@ from dataclasses import dataclass, field
 
 import pint
 
-from lab2rob.registry import lexicon_index, load_lexicon, resolve_asset, resolve_skill
+from lab2rob.registry import (lexicon_index, load_lexicon, resolve_asset, resolve_skill,
+                              shared_lexicon)
 
 ureg = pint.UnitRegistry()
 
@@ -168,7 +169,7 @@ def extract_reagents(text: str) -> list[str]:
 
 def _lexicon_kinds() -> dict:
     kinds = {}
-    for entry in load_lexicon():
+    for entry in shared_lexicon():  # read only
         kinds.setdefault(entry["canonical"], entry.get("kind", "action"))
     return kinds
 

@@ -95,7 +95,9 @@ def test_equipment_needs_no_placement():
         prog([[op("aspirate", {"volume_ul": 25.0}, at="e1")]],
              entities=[("e1", "incubator_co2")]))
     assert built.unplaced == ["incubator_co2: no physical model needed"]
-    assert built.assignments == {}
+    # Equipment is not a vessel: the op falls back to a scene stock instead of
+    # being left without a well (which certification then aborted on).
+    assert built.assignments == {"1:0": "stock"}
 
 
 def test_over_capacity_rejected():
@@ -127,3 +129,55 @@ def test_to_mujoco_compiles():
     assert model.nbody > 5
     liquid = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_GEOM, "liquid_A1")
     assert liquid >= 0
+
+
+def test_every_pipetting_op_gets_a_well_or_the_scene_is_rejected():
+    """A tool or equipment ref degrades to an unbound role, never a skipped op."""
+    built = build_scene(prog([[op("aspirate", {"volume_ul": 8.0}, at="e1"),
+                               op("dispense", {"volume_ul": 8.0}, at="e1")]],
+                             entities=[("e1", "pipette")]))
+    assert set(built.assignments) == {"1:0", "1:1"}
+
+
+def test_weighing_scene_accepts_one_salt_weighing_and_rejects_the_rest():
+    from lab2rob.build.scene import build_weigh_scene, weigh_programs
+
+    def weigh(grams, reagent):
+        return op("weigh_sample", {"mass_g": grams, "reagent": reagent})
+    built = build_scene(prog([[weigh(0.9, "NaCl")]]))
+    assert built.family == "weigh" and built.assignments == {"1:0": "balance"}
+    for steps, reason in (([[weigh(0.9, "NaCl")], [weigh(1.0, "KCl")]], "over_capacity"),
+                          ([[weigh(3.0, "NaCl")]], "over_capacity"),
+                          ([[weigh(1.0, "agarose")]], "missing_asset"),
+                          ([[weigh(1.0, None)]], "missing_asset"),
+                          ([[weigh(1.0, "NaCl")], [op("dispense", {"volume_ul": 5.0})]],
+                           "family_conflict")):
+        with pytest.raises(SceneRejected) as exc:
+            build_weigh_scene(prog(steps))
+        assert exc.value.reason == reason
+    singles = weigh_programs(prog([[weigh(0.9, "NaCl"), weigh(1.0, "KCl")], [weigh(1.2, "salt")]]))
+    assert [[(s.status, [o["args"]["mass_g"] for o in s.ops]) for s in p.steps] for p in singles] == [
+        [("planned", [0.9]), ("out_of_scope", [])],
+        [("planned", [1.0]), ("out_of_scope", [])],
+        [("out_of_scope", []), ("planned", [1.2])]]
+
+
+def test_centrifuge_scene_takes_two_microtubes_and_nothing_else():
+    from lab2rob.build.scene import build_centrifuge_scene
+
+    def spin(tubes=2, text="Centrifuge at 12,000 x g for 1 min."):
+        p = prog([[op("centrifuge", {"tubes": tubes, "time_s": 60.0, "speed": "12,000 x g"})]])
+        p.steps[0].source_text = text
+        return p
+    built = build_scene(spin())
+    assert built.family == "centrifuge" and built.assignments == {"1:0": "rotor"}
+    for program, reason in ((spin(4), "over_capacity"),
+                            (spin(text="Spin the 50 mL conical tubes at 300 g."), "missing_asset"),
+                            (spin(text="Centrifuge the plate at 1000 rpm."), "missing_asset")):
+        with pytest.raises(SceneRejected) as exc:
+            build_centrifuge_scene(program)
+        assert exc.value.reason == reason
+    mixed = prog([[op("centrifuge", {"tubes": 2})], [op("dispense", {"volume_ul": 5.0})]])
+    with pytest.raises(SceneRejected) as exc:
+        build_centrifuge_scene(mixed)
+    assert exc.value.reason == "family_conflict"

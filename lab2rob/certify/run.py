@@ -32,6 +32,8 @@ SUBMERGE_M = 0.001  # tip depth below the surface for a draw
 FLOOR_MARGIN_M = 0.0004  # shallow-well tip height (floor-draw covers it)
 TRAVEL_SPEED = 0.15
 WELL_SPEED = 0.04
+TIP_TOL_M = 0.0002  # measured tip within this of its target, per axis
+TIP_CORRECTIONS = 3
 
 
 class RunAborted(Exception):
@@ -163,20 +165,53 @@ def _tip_target(well, extra_mm: float = 0.0) -> float:
     return max(well.floor + 0.0002, target - extra_mm / 1000.0)
 
 
+def _grip_offset(env, grip_above: float) -> np.ndarray:
+    """Pinch point minus pipette tip, measured now.
+
+    The pipette drifts in the grip as the arm moves (a few mm sideways over
+    a handful of transfers), so aiming the pinch point at well centre +
+    GRIP_ABOVE_TIP walks the tip into a narrow well's rim, which then shoves
+    the pipette up the grip and every later well is missed. Aiming with the
+    measured offset keeps the tip on target. Falls back to the nominal
+    straight-down offset when the env has no pipette.
+    """
+    if env is None or not hasattr(env, "tip"):
+        return np.array([0.0, 0.0, grip_above])
+    pinch = env.data.site(env._site["right"]).xpos
+    return np.asarray(pinch, dtype=float) - env.tip()
+
+
 def _move_tip(api, well, tip_z: float, grip_above: float, label: str,
-              approach_m: float = APPROACH_M, well_speed: float = WELL_SPEED) -> None:
+              approach_m: float = APPROACH_M, well_speed: float = WELL_SPEED,
+              env=None) -> None:
     x, y = float(well.center[0]), float(well.center[1])
     top = well.floor + well.depth + approach_m
-    if not api.move_to("right", np.array([x, y, top + grip_above]), 0.0, 0.0, TRAVEL_SPEED):
+    offset = _grip_offset(env, grip_above)
+    if not api.move_to("right", np.array([x, y, top]) + offset, 0.0, 0.0, TRAVEL_SPEED):
         raise RunAborted("move_blocked", f"approach to {label} failed")
-    if not api.move_to("right", np.array([x, y, tip_z + grip_above]), 0.0, 0.0, well_speed):
+    offset = _grip_offset(env, grip_above)  # re-measure above the well
+    goal = np.array([x, y, tip_z])
+    aim = goal + offset
+    if not api.move_to("right", aim, 0.0, 0.0, well_speed):
         raise RunAborted("move_blocked", f"descent into {label} failed")
+    if env is None or not hasattr(env, "tip"):
+        return
+    # The arm settles within ~1 mm of its aim, which is the whole liquid depth
+    # of a shallow well: measure the tip and correct what is left.
+    for _ in range(TIP_CORRECTIONS):
+        error = goal - env.tip()
+        if np.abs(error).max() <= TIP_TOL_M:
+            break
+        aim = aim + error
+        api.move_to("right", aim, 0.0, 0.0, well_speed)
 
 
-def _withdraw(api, well, grip_above: float, approach_m: float = APPROACH_M) -> None:
+def _withdraw(api, well, grip_above: float, approach_m: float = APPROACH_M,
+              env=None) -> None:
     x, y = float(well.center[0]), float(well.center[1])
     top = well.floor + well.depth + approach_m
-    api.move_to("right", np.array([x, y, top + grip_above]), 0.0, 0.0, TRAVEL_SPEED)
+    api.move_to("right", np.array([x, y, top]) + _grip_offset(env, grip_above),
+                0.0, 0.0, TRAVEL_SPEED)
 
 
 def execute_op(api, env, op: dict, slot: str | None, grip_above: float,
@@ -189,9 +224,9 @@ def execute_op(api, env, op: dict, slot: str | None, grip_above: float,
             raise RunAborted("no_slot", f"{skill} has no assigned well")
         well = env.wells[slot]
         _move_tip(api, well, _tip_target(well, tip_extra_mm), grip_above, slot,
-                  approach_m, well_speed)
+                  approach_m, well_speed, env=env)
         result = getattr(api, skill)(float(op["args"].get("volume_ul", 0.0)))
-        _withdraw(api, well, grip_above, approach_m)
+        _withdraw(api, well, grip_above, approach_m, env=env)
         return _jsonable(result)
     if skill == "incubate":
         return _jsonable(api.incubate(float(op["args"].get("hours", 0.0))))
@@ -271,7 +306,9 @@ def evaluate_predicates(judge, program, built, snapshots: dict) -> list:
                                status="passed" if result.passed else "failed",
                                detail=result.detail)
             else:
-                row["detail"] = f"unknown predicate {pred.pred!r}" if pred.pred != "volume" else "volume pred has no well ref"
+                row["detail"] = ("checked in the weighing scene" if pred.pred == "mass_on_balance"
+                                 else f"unknown predicate {pred.pred!r}" if pred.pred != "volume"
+                                 else "volume pred has no well ref")
             rows.append(row)
     return rows
 

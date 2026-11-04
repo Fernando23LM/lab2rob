@@ -129,3 +129,52 @@ def test_tier1_end_to_end():
     volume = next(p for s in judge.steps for p in s.predicates if p.pred == "volume")
     assert (volume.target, volume.tol) == (75.0, 3.75)
     assert judge.outcomes == []
+
+
+def test_judge_never_checks_volume_in_the_pipette():
+    from lab2rob.ground.rules import Grounding, Quantity
+    from types import SimpleNamespace
+    step = Grounding(idx=1, source_text="Add 8 uL to the plate. Pipette to mix.",
+                     quantities=[Quantity(raw="8 ul", value=8.0, unit="ul",
+                                          approximate=False, pint="8 ul")],
+                     entities=[{"name": "pipette", "scope": "in_scope"},
+                               {"name": "plate_96_well", "scope": "in_scope"}],
+                     action="transfer", status="grounded", by="rules")
+    judge = plan_judge(SimpleNamespace(protocol_id="t", title="t", description="",
+                                       steps=[step]))
+    volume = [p for p in judge.steps[0].predicates if p.pred == "volume"]
+    assert volume[0].args == ["plate_96_well"]
+
+
+def test_judge_checks_the_balance_for_each_weighing():
+    from lab2rob.ground.rules import Grounding, Quantity
+    from types import SimpleNamespace
+
+    def q(v, u):
+        return Quantity(raw=f"{v} {u}", value=float(v), unit=u, approximate=False, pint=f"{v} {u}")
+    step = Grounding(idx=3, source_text="Weigh out 0.9 g NaCl and 4 g PEG.",
+                     quantities=[q(0.9, "g"), q(4, "g")], reagents=["NaCl", "PEG"],
+                     action="weigh_sample", status="grounded", by="rules")
+    judge = plan_judge(SimpleNamespace(protocol_id="t", title="t", description="", steps=[step]))
+    preds = [(p.pred, p.args, p.target, p.tol) for p in judge.steps[0].predicates]
+    assert preds == [("mass_on_balance", ["NaCl"], 0.9, 0.15),
+                     ("mass_on_balance", ["PEG"], 4.0, 0.2)]
+    ok = PREDICATES["mass_on_balance"]({"balance_g": 0.99, "pan_touched": False}, 0.9, 0.15)
+    touched = PREDICATES["mass_on_balance"]({"balance_g": 0.9, "pan_touched": True}, 0.9, 0.15)
+    assert ok.passed and not touched.passed
+    assert not PREDICATES["mass_on_balance"]({}, 0.9, 0.15).passed
+
+
+def test_judge_checks_a_balanced_rotor_and_a_shut_lid():
+    from lab2rob.ground.rules import Grounding
+    from types import SimpleNamespace
+    step = Grounding(idx=2, source_text="Spin the four tubes at 1000 rpm.", action="centrifuge",
+                     status="grounded", by="rules")
+    judge = plan_judge(SimpleNamespace(protocol_id="t", title="t", description="", steps=[step]))
+    assert [(p.pred, p.target) for p in judge.steps[0].predicates] == [("rotor_balanced", 4.0),
+                                                                        ("lid_closed", None)]
+    ok = {"slots": {"a": 1, "b": 5}, "balanced": True, "lid_closed": True, "lid_deg": 90}
+    assert PREDICATES["rotor_balanced"](ok, 2).passed and PREDICATES["lid_closed"](ok).passed
+    off = {"slots": {"a": 1, "b": 2}, "balanced": False, "lid_closed": False, "lid_deg": -8.6}
+    assert not PREDICATES["rotor_balanced"](off, 2).passed and not PREDICATES["lid_closed"](off).passed
+    assert not PREDICATES["rotor_balanced"]({"slots": {"a": 1}}, 2).passed

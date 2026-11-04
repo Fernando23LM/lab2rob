@@ -31,9 +31,20 @@ skills:
   kind: action
   description: Remove residual liquid by blotting.
 - name: centrifuge
-  status: declared
+  status: macro
   kind: action
-  description: Spin samples to separate phases or pellet (Autoprotocol op spin).
+  description: 'Centrifuge sample tubes (Autoprotocol op spin): load them into opposite rotor slots so it is balanced, then shut the lid. Runs in the centrifuge scene only; nothing spins, the speed and time are recorded. The expansion is the reference script in lab2rob/robocurve/runtime/centrifuge_family.py (DEMO).'
+  params:
+  - tubes
+  - speed
+  - time_s
+  steps:
+  - get_tube_pose
+  - get_rack
+  - move_to
+  - set_gripper
+  - go_home
+  - wait
 - name: change_tip
   status: declared
   kind: action
@@ -418,6 +429,17 @@ skills:
   kind: action
   description: Wash plate wells with buffer, one or more cycles.
 - name: weigh_sample
-  status: declared
+  status: macro
   kind: action
-  description: Weigh loose material on an analytical balance (Autoprotocol op weigh).
+  description: 'Weigh out a mass of a granular solid onto the balance''s weigh boat (Autoprotocol op weigh): one arm brings the vial to the shared rack, the other pours in small tilts, reading the balance, until it is within the target. Runs in the weighing scene only; the expansion is the reference script in lab2rob/robocurve/runtime/task.py (demo_script).'
+  params:
+  - mass_g
+  - reagent
+  steps:
+  - get_tube_pose
+  - get_rack
+  - get_balance
+  - move_to
+  - set_gripper
+  - go_home
+  - wait

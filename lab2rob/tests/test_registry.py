@@ -37,14 +37,14 @@ EXPECTED_IMPLEMENTED = [
     "wait",
 ]
 
-EXPECTED_MACROS = ["dilute", "mix_by_pipetting", "serial_dilution", "transfer"]
+EXPECTED_MACROS = ["centrifuge", "dilute", "mix_by_pipetting", "serial_dilution", "transfer",
+                   "weigh_sample"]
 
 EXPECTED_DECLARED_SKILLS = [
     "aliquot",
     "attach_tip",
     "autoclave",
     "blot_dry",
-    "centrifuge",
     "change_tip",
     "concentrate_sample",
     "consolidate",
@@ -70,7 +70,6 @@ EXPECTED_DECLARED_SKILLS = [
     "uv_sterilize",
     "vortex",
     "wash_plate",
-    "weigh_sample",
 ]
 
 EXPECTED_ASSETS = [
@@ -166,7 +165,7 @@ def test_resolve_skill_statuses():
     assert resolve_skill("aspirate")["scope"] == "in_scope"
     assert resolve_skill("transfer")["status"] == "macro"
     assert resolve_skill("transfer")["scope"] == "in_scope"
-    decided = resolve_skill("centrifuge")
+    decided = resolve_skill("vortex")  # a declared skill (centrifuge is a macro now)
     assert (decided["status"], decided["scope"], decided["reason"]) == (
         "declared", "out_of_scope", "not_implemented")
     missing = resolve_skill("teleport")
