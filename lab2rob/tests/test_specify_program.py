@@ -30,7 +30,7 @@ def test_unknown_skill_becomes_missing_skill():
 
 
 def test_declared_skill_rejected_despite_grounded():
-    out = plan_step(make_step(text="Spin the tubes", action="centrifuge"))
+    out = plan_step(make_step(text="Vortex the tubes", action="vortex"))
     assert (out.status, out.reason) == ("out_of_scope", "missing_skill")
 
 
@@ -212,7 +212,7 @@ def test_each_scene_family_plans_only_its_own_steps():
                                                                ("out_of_scope", "other_scene")]
     import pytest
     with pytest.raises(ValueError):
-        plan_protocol(grounding, family="centrifuge")
+        plan_protocol(grounding, family="freezer")
 
 
 def test_a_weighing_that_fails_to_bind_still_belongs_to_the_weighing_scene():
@@ -225,3 +225,17 @@ def test_a_weighing_that_fails_to_bind_still_belongs_to_the_weighing_scene():
     program = plan_protocol(SimpleNamespace(protocol_id="t", title="t", steps=[weigh, pipette]))
     assert (program.steps[0].status, program.steps[0].reason) == ("out_of_scope", "other_scene")
     assert [e.asset for e in program.entities] == []
+
+
+def test_centrifuge_records_speed_and_time_and_counts_tubes():
+    step = make_step(text="Centrifuge the two tubes at 12,000 x g for 5 min.", action="centrifuge",
+                     quantities=[qty(5, "min")])
+    out = plan_step(step)
+    assert out.status == "planned"
+    assert out.ops[0]["args"] == {"tubes": 2, "time_s": 300.0, "speed": "12,000 x g"}
+    assert out.ops[0]["assumed"] == {}
+    brief = plan_step(make_step(text="Spin down briefly.", action="centrifuge"))
+    assert brief.ops[0]["args"] == {"tubes": 2, "time_s": None, "speed": None}
+    assert "no tube count" in brief.ops[0]["assumed"]["tubes"]
+    four = plan_step(make_step(text="Spin the 4 tubes at 1000 rpm.", action="centrifuge"))
+    assert four.ops[0]["args"]["tubes"] == 4 and four.ops[0]["args"]["speed"] == "1000 rpm"

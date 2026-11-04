@@ -31,9 +31,20 @@ skills:
   kind: action
   description: Remove residual liquid by blotting.
 - name: centrifuge
-  status: declared
+  status: macro
   kind: action
-  description: Spin samples to separate phases or pellet (Autoprotocol op spin).
+  description: 'Centrifuge sample tubes (Autoprotocol op spin): load them into opposite rotor slots so it is balanced, then shut the lid. Runs in the centrifuge scene only; nothing spins, the speed and time are recorded. The expansion is the reference script in lab2rob/robocurve/runtime/centrifuge_family.py (DEMO).'
+  params:
+  - tubes
+  - speed
+  - time_s
+  steps:
+  - get_tube_pose
+  - get_rack
+  - move_to
+  - set_gripper
+  - go_home
+  - wait
 - name: change_tip
   status: declared
   kind: action

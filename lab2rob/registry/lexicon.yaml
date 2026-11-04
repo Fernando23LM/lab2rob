@@ -34,7 +34,8 @@ lexicon:
   - canonical: centrifuge
     kind: action
     ontology_id: null
-    synonyms: [spin, spin down, pellet]
+    synonyms: [spin, spin down, pellet, centrifuge at, centrifuge for, centrifuge the, centrifuge briefly,
+               centrifuge them, centrifugation, centrifuged, centrifuging]
   - canonical: vortex
     kind: action
     ontology_id: null

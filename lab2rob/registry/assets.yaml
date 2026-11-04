@@ -335,12 +335,20 @@ assets:
     license: Apache-2.0 (Opentrons labware definition opentrons_6_tuberack_falcon_50ml_conical); geometry built by lab2rob
     source: lab2rob/build/labware.py from labware_defs/opentrons/opentrons_6_tuberack_falcon_50ml_conical.json
   - name: centrifuge_mini
-    status: declared
-    description: Benchtop mini centrifuge for tubes and plates.
-    dimensions: {}
-    affordances: [fixed]
-    license: UNKNOWN (vendor instrument)
-    source: declared (no simulator support)
+    status: implemented
+    description: >-
+      Benchtop microcentrifuge with a hinged, latching lid and an 8-slot rotor for 1.5 mL
+      tubes (the centrifuge scene; visual model LabUtopia Centrifuge_02, collision by hand).
+    dimensions:
+      footprint_m: [0.157, 0.128]
+      body_height_m: 0.087
+      slots: 8
+      slot_radius_m: 0.0265
+      slot_rim_height_m: 0.069
+      slot_depth_m: 0.0244
+    affordances: [containable, openable, fixed]
+    license: CC BY-NC 4.0 (LabUtopia Centrifuge_02 meshes; collision, hinge and latch new)
+    source: lab2rob/robocurve/runtime/centrifuge_family.py
     demo_model: 'lab2rob/build/autobio/model/instrument/centrifuge_tiangen_tgear_mini.xml (AutoBio, UNLICENSED: demo only, build_scene(demo_props=True); skill stays declared)'
   - name: incubator_co2
     status: declared

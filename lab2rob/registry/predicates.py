@@ -130,6 +130,23 @@ def mass_on_balance(state: dict, target_g: float, tol_g: float) -> CheckResult:
     return CheckResult(False, f"balance reads {reading:.2f} g, want {target_g} +- {tol_g}")
 
 
+def rotor_balanced(state: dict, tubes: int) -> CheckResult:
+    """The given number of tubes sit in rotor slots that balance it (opposite pairs)."""
+    slots = sorted(k for k in (state.get("slots") or {}).values() if k is not None)
+    if len(slots) != tubes:
+        return CheckResult(False, f"{len(slots)} of {tubes} tubes in rotor slots")
+    if not state.get("balanced"):
+        return CheckResult(False, f"tubes in slots {slots}: not balanced")
+    return CheckResult(True, f"tubes in slots {slots}: balanced")
+
+
+def lid_closed(state: dict) -> CheckResult:
+    """The instrument's lid is shut and latched."""
+    if state.get("lid_closed"):
+        return CheckResult(True, f"lid shut ({state.get('lid_deg')} deg)")
+    return CheckResult(False, f"lid open ({state.get('lid_deg')} deg)")
+
+
 PREDICATES = {
     "in_slot": in_slot,
     "capped": capped,
@@ -138,4 +155,6 @@ PREDICATES = {
     "concentration": concentration,
     "no_spill": no_spill,
     "mass_on_balance": mass_on_balance,
+    "rotor_balanced": rotor_balanced,
+    "lid_closed": lid_closed,
 }

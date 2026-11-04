@@ -25,6 +25,8 @@ import sys
 import time
 from pathlib import Path
 
+import numpy as np
+
 REPO = Path(__file__).resolve().parents[2]
 RUNTIME = Path(__file__).resolve().parent / "runtime"
 #: Asset folders (under runtime/assets) each family's scene loads.
@@ -218,11 +220,11 @@ setup.png` renders the setup screenshot.
 
 ## Demo result
 
-{json.dumps({k: demo[k] for k in ('score', 'reason', 'reading_g', 'error_g', 'salt_spilled_g', 'steps')})}
+{json.dumps({k: v for k, v in demo.items() if k not in ('state_sha', 'cameras')})}
 
 ## Provenance
 
-- Target: {source.get('step_text', '')!r} ({source.get('title', '')}, {source.get('url', '')}).
+- Protocol step: {source.get('step_text', '')!r} ({source.get('title', '')}, {source.get('url', '')}).
 - Simulator: see `sim/SOURCE.md`.
 """
 
@@ -245,22 +247,17 @@ def default_weigh_layout() -> dict:
             "balance": [float(v) for v in lay.balance], "cell": list(lay.cell)}
 
 
-def build_weigh_task(out_dir, source: dict, seed: int = 0, video: bool = True) -> dict:
-    """Write and validate one weighing task folder; returns a build report."""
-    out = Path(out_dir)
-    target = float(source["target_g"])
-    if not 0.5 <= target <= 1.8:
-        raise BuildError(f"{target} g is outside what the {TOTAL_SALT_G} g vial can weigh out well "
-                         f"(0.5 to 1.8 g)")
-    info = vendor(out)
-    layout = default_weigh_layout()
-    instance = {"schema": "robocurve-bench-instance/1", "family": "weigh", "seed": seed,
-                "layout": layout, "target_g": round(target, 3),
-                "scoring": weigh_scoring(source.get("full_g")),
-                "run_limit_steps": 20 * 60 * 20, "control_hz": 20,
-                "action": None, "biolab_commit": info["biolab_commit"],
-                "source": {k: source[k] for k in ("protocol_id", "dataset", "url", "step", "target_g",
-                                                  "reagent", "full_g") if k in source}}
+def _build_folder(out: Path, family: str, instance: dict, make_spec, source: dict,
+                  video: bool = True) -> dict:
+    """The build every family shares: freeze, demo, validate, write the task text.
+
+    make_spec(run_limit, demo_score, instance) returns task.json. Fails unless
+    the demo scores 1.0 in two agreeing fresh replays and doing nothing scores 0.
+    """
+    info = vendor(out, family)
+    instance = {"schema": "robocurve-bench-instance/1", "family": family, "seed": 0,
+                "run_limit_steps": 20 * 60 * 20, "control_hz": 20, "action": None,
+                **instance, "biolab_commit": info["biolab_commit"]}
     (out / "instance.json").write_text(json.dumps(instance, indent=1), encoding="utf-8")
     instance.update(_run(out, "hashes"))
     probe = subprocess.run([sys.executable, "-c",
@@ -284,10 +281,9 @@ def build_weigh_task(out_dir, source: dict, seed: int = 0, video: bool = True) -
     score_s = time.time() - t0
     if scored.get("score") != 1.0 or not scored.get("deterministic"):
         raise BuildError(f"the demo does not score 1.0 in two agreeing fresh replays: {scored}")
-    nop = subprocess.run([sys.executable, "-c",
-                          "import numpy as np,task;task.save_trajectory({'rows':np.zeros((0,14))},'nop.npz')"],
-                         cwd=out, capture_output=True, text=True, check=True)
-    del nop
+    subprocess.run([sys.executable, "-c",
+                    "import numpy as np,task;task.save_trajectory({'rows':np.zeros((0,14))},'nop.npz')"],
+                   cwd=out, capture_output=True, text=True, check=True)
     idle = _run(out, "score", "--traj", "nop.npz", "--repeat", "1")
     (out / "nop.npz").unlink()
     if idle.get("score") != 0.0:
@@ -296,7 +292,7 @@ def build_weigh_task(out_dir, source: dict, seed: int = 0, video: bool = True) -
 
     import mujoco
     import numpy
-    spec = weigh_task_json(target, source, layout, run_limit, demo["score"], instance["scoring"])
+    spec = make_spec(run_limit, demo["score"], instance)
     (out / "task.json").write_text(json.dumps(spec, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     demo["cameras"] = cameras
     (out / "README.md").write_text(readme_text(spec, instance, demo,
@@ -305,12 +301,127 @@ def build_weigh_task(out_dir, source: dict, seed: int = 0, video: bool = True) -
                                                source), encoding="utf-8")
     for cache in out.rglob("__pycache__"):  # not part of the submission
         shutil.rmtree(cache, ignore_errors=True)
-    report = {"out": str(out), "demo": demo, "run_limit_steps": run_limit,
+    report = {"out": str(out), "family": family, "demo": demo, "run_limit_steps": run_limit,
               "score_seconds": round(score_s, 1), "demo_seconds": round(demo_s, 1),
               "problems": check_task(out)}
     # The build report stays out of the submission folder.
     out.with_name(out.name + ".build.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     return report
+
+
+def build_weigh_task(out_dir, source: dict, seed: int = 0, video: bool = True) -> dict:
+    """Write and validate one weighing task folder; returns a build report."""
+    target = float(source["target_g"])
+    if not 0.5 <= target <= 1.8:
+        raise BuildError(f"{target} g is outside what the {TOTAL_SALT_G} g vial can weigh out well "
+                         f"(0.5 to 1.8 g)")
+    layout = default_weigh_layout()
+    instance = {"seed": seed, "layout": layout, "target_g": round(target, 3),
+                "scoring": weigh_scoring(source.get("full_g")),
+                "source": {k: source[k] for k in ("protocol_id", "dataset", "url", "step", "target_g",
+                                                  "reagent", "full_g") if k in source}}
+    return _build_folder(Path(out_dir), "weigh", instance,
+                         lambda limit, score, inst: weigh_task_json(target, source, layout, limit, score,
+                                                                    inst["scoring"]),
+                         source, video)
+
+
+# ------------------------------------------------------------------- centrifuge
+def _runtime_module(name: str):
+    """A runtime family module, imported from the repository (for its layout and constants)."""
+    _biolab_path()
+    runtime = str(RUNTIME)
+    if runtime not in sys.path:
+        sys.path.insert(0, runtime)
+    import importlib
+    return importlib.import_module(name)
+
+
+def default_centrifuge_layout() -> dict:
+    cf = _runtime_module("centrifuge_family")
+    return cf.layout_to_json(cf.CentrifugeLayout())
+
+
+def centrifuge_setup_text(layout: dict) -> str:
+    cf = _runtime_module("centrifuge_family")
+    from biolab import scene as sc
+    lay = cf.layout_from(layout)
+
+    def place(xy):
+        x, y = xy
+        side = "left" if y > 0 else "right"
+        lat = f"{_cm(abs(y))} cm {side} of the midline" if abs(y) > 1e-4 else "on the midline"
+        return f"{_cm(x - sc.ARM_BASE['left'][0])} cm in front of the arm bases, {lat}"
+
+    rotor = lay.to_world(cf.ROTOR_C)
+    cells = [lay.rack.cell_xy(c) for c in lay.tubes.values()]
+    (x0, x1), (y0, y1) = cf.BODY
+    return (
+        f"Two I2RT YAM arms (6 joints and a parallel gripper each) stand on a flat, rigid, matte bench "
+        f"(90 x 120 cm), facing the same way, their bases {_cm(2 * sc.ARM_BASE['left'][1])} cm apart; "
+        f"positions are measured from the line through the bases, left and right as seen from behind "
+        f"the arms. A white plastic benchtop microcentrifuge ({_cm(x1 - x0)} x {_cm(y1 - y0)} cm, body "
+        f"{_cm(cf.RIM_Z)} cm tall) has its rotor centred {place(rotor)}; its lid is hinged on the side "
+        f"towards the left arm and stands open, leaning back {abs(np.degrees(cf.LID_OPEN)):.1f} degrees "
+        f"from upright (the lid is {_cm(0.117)} cm long and {_cm(0.021)} cm thick, and latches when "
+        f"pressed flat). The rotor has {cf.SLOT_COUNT} vertical slots for 1.5 mL tubes, evenly spaced on "
+        f"a {_cm(cf.SLOT_RADIUS)} cm radius, {_cm(2 * cf.POCKET_R)} cm across, with rims "
+        f"{_cm(cf.SLOT_TOP)} cm above the bench and {_cm(cf.SLOT_TOP - cf.SLOT_FLOOR)} cm deep. A teal "
+        f"plastic tube rack ({lay.rack.n} cells of {_cm(cf.RACK_HOLE)} cm, {_cm(cf.RACK_PITCH)} cm pitch, "
+        f"{_cm(cf.RACK_HEIGHT)} cm tall) is centred {place(lay.rack.xy)}. Two capped 1.5 mL plastic "
+        f"tubes ({_cm(2 * cf.TUBE_R)} cm across, {_cm(cf.TUBE_BODY + cf.CAP_H)} cm tall, "
+        f"{1000 * cf.TUBE_MASS:.0f} g with their sample; yellow and blue caps) stand in the rack's cells "
+        f"{' and '.join(str(c + 1) for c in lay.tubes.values())} (counted from the arms' right), at "
+        f"{place(cells[0])} and {place(cells[1])}. Both arms start at their home pose with the grippers "
+        f"open.")
+
+
+def centrifuge_task_json(source: dict, layout: dict, run_limit: int, demo_score: float) -> dict:
+    cf = _runtime_module("centrifuge_family")
+    minutes = run_limit / 20 / 60
+    step = source.get("step_text", "")
+    speed = f" ({source['speed']})" if source.get("speed") else ""
+    return {
+        "title": "Load a microcentrifuge balanced and shut its lid",
+        "category": "Impact on jobs",
+        "keywords": ["bimanual", "insertion", "balancing", "articulated lid", "laboratory", "centrifuge"],
+        "instruction": "Load the two sample tubes into opposite slots of the centrifuge rotor so it is "
+                       "balanced, then close the lid.",
+        "context": (f"Centrifuging is one of the most common steps in published wet-lab protocols; this "
+                    f"one is a published step{speed}. An unbalanced rotor is a real hazard, so the tubes "
+                    f"must sit opposite each other before the lid is shut."),
+        "setup": centrifuge_setup_text(layout),
+        "scoring": (
+            f"Judged 1 s after the last action. A tube is in a slot when it stands within 10 degrees of "
+            f"upright with its bottom on the slot's floor. The lid is shut when it lies within 5 degrees "
+            f"of flat on the body. 1.0 if the two tubes are in opposite slots (four slots apart) and the "
+            f"lid is shut; 0.6 if they are in opposite slots and the lid is open; 0.3 if only one tube is "
+            f"in a slot, or both are but not opposite, with the lid open; 0 if the lid is shut on any "
+            f"other load (one tube, or two not opposite, or none), or if no tube is in a slot. The score "
+            f"is at most 0.3 if a tube ends anywhere but the rack or the centrifuge."),
+        "run_limit": f"{run_limit:,} steps ({minutes:.1f} minutes at 20 Hz)".replace(".0 minutes", " minutes"),
+        "reset_notes": ("Stand the tubes back in rack cells 1 and 3 and open the lid until it rests back "
+                        "on its stop."),
+        "fidelity": ("Approximate: the rotor's slots are vertical (a real fixed-angle rotor's are tilted) "
+                     "and nothing spins; collision shapes are simplified boxes inside the centrifuge's "
+                     "visual model; the lid latches by a holding torque once within 10 degrees of flat; "
+                     "the tubes are rigid cylinders with a cap disc; the grippers are position-controlled "
+                     "springs with a 40 N limit."),
+        "scores": f"Dream-1 run: not run yet; demo: {demo_score:.1f}",
+    }
+
+
+def build_centrifuge_task(out_dir, source: dict, video: bool = True) -> dict:
+    """Write and validate one centrifuge task folder; returns a build report."""
+    if source.get("tubes", 2) != 2:
+        raise BuildError(f"{source.get('tubes')} tubes; the centrifuge bench sets out 2")
+    layout = default_centrifuge_layout()
+    instance = {"layout": layout, "scoring": {},
+                "source": {k: source[k] for k in ("protocol_id", "dataset", "url", "step", "tubes",
+                                                  "speed", "time_s") if k in source}}
+    return _build_folder(Path(out_dir), "centrifuge", instance,
+                         lambda limit, score, inst: centrifuge_task_json(source, layout, limit, score),
+                         source, video)
 
 
 # ------------------------------------------------------------------------- check

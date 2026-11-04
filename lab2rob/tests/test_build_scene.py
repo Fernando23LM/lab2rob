@@ -160,3 +160,24 @@ def test_weighing_scene_accepts_one_salt_weighing_and_rejects_the_rest():
         [("planned", [0.9]), ("out_of_scope", [])],
         [("planned", [1.0]), ("out_of_scope", [])],
         [("out_of_scope", []), ("planned", [1.2])]]
+
+
+def test_centrifuge_scene_takes_two_microtubes_and_nothing_else():
+    from lab2rob.build.scene import build_centrifuge_scene
+
+    def spin(tubes=2, text="Centrifuge at 12,000 x g for 1 min."):
+        p = prog([[op("centrifuge", {"tubes": tubes, "time_s": 60.0, "speed": "12,000 x g"})]])
+        p.steps[0].source_text = text
+        return p
+    built = build_scene(spin())
+    assert built.family == "centrifuge" and built.assignments == {"1:0": "rotor"}
+    for program, reason in ((spin(4), "over_capacity"),
+                            (spin(text="Spin the 50 mL conical tubes at 300 g."), "missing_asset"),
+                            (spin(text="Centrifuge the plate at 1000 rpm."), "missing_asset")):
+        with pytest.raises(SceneRejected) as exc:
+            build_centrifuge_scene(program)
+        assert exc.value.reason == reason
+    mixed = prog([[op("centrifuge", {"tubes": 2})], [op("dispense", {"volume_ul": 5.0})]])
+    with pytest.raises(SceneRejected) as exc:
+        build_centrifuge_scene(mixed)
+    assert exc.value.reason == "family_conflict"

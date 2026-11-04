@@ -36,6 +36,9 @@ LIQUID_ACTIONS = {"transfer", "aspirate", "dispense", "mix_by_pipetting",
 #: Grounded actions that weigh out a solid and hence get balance checks.
 WEIGH_ACTIONS = {"weigh_sample"}
 
+#: Grounded actions that centrifuge samples: balanced rotor + shut lid.
+CENTRIFUGE_ACTIONS = {"centrifuge"}
+
 #: Smallest balance tolerance: about three of the weighing scene's largest
 #: grains (0.05 g each), which leave the vial in small avalanches.
 MIN_MASS_TOL_G = 0.15
@@ -143,7 +146,18 @@ def _judge_weigh_step(grounding) -> list:
             for i, grams in enumerate(masses)]
 
 
+def _judge_centrifuge_step(grounding) -> list:
+    """Load it balanced, shut it: what must hold before a centrifuge may run."""
+    from .program import _COUNTS, _TUBES, DEFAULT_TUBES  # the text's own tube count
+    match = _TUBES.search(grounding.source_text)
+    tubes = (_COUNTS.get(match.group(1).lower()) or int(match.group(1))) if match else DEFAULT_TUBES
+    return [StepPredicate(step=grounding.idx, pred="rotor_balanced", args=[], target=float(tubes)),
+            StepPredicate(step=grounding.idx, pred="lid_closed", args=[])]
+
+
 def _judge_step(grounding) -> list:
+    if grounding.action in CENTRIFUGE_ACTIONS:
+        return _judge_centrifuge_step(grounding)
     if grounding.action in LIQUID_ACTIONS:
         return _judge_liquid_step(grounding)
     if grounding.action in WEIGH_ACTIONS:

@@ -366,13 +366,41 @@ def _plan_weigh(grounding, uids: list) -> list:
     return ops
 
 
+_SPEED = re.compile(r"(\d[\d,]*(?:\.\d+)?)\s*(rpm|r\.p\.m\.|x\s*g|×\s*g|rcf|g)\b", re.I)
+_COUNTS = {"two": 2, "three": 3, "four": 4, "six": 6, "eight": 8}
+_TUBES = re.compile(r"\b(\d+|two|three|four|six|eight)\s+(?:sample\s+|micro\w*\s+|1\.5\s*ml\s+)?tubes\b", re.I)
+DEFAULT_TUBES = 2
+
+
+def _plan_centrifuge(grounding, uids: list) -> list:
+    """Load the tubes balanced and shut the lid; speed and time are recorded.
+
+    Nothing spins in the scene, so neither is required. The tube count comes
+    from the text ("spin the two tubes") or defaults to DEFAULT_TUBES, recorded.
+    """
+    text = grounding.source_text
+    speed = _SPEED.search(text)
+    tubes = _TUBES.search(text)
+    assumed = {}
+    if tubes:
+        word = tubes.group(1).lower()
+        count = _COUNTS.get(word) or int(word)
+    else:
+        count = DEFAULT_TUBES
+        assumed["tubes"] = f"the text gives no tube count: {DEFAULT_TUBES} sample tubes"
+    args = {"tubes": count, "time_s": _time_s(grounding.quantities),
+            "speed": " ".join(speed.group(0).split()) if speed else None}
+    return [_op("centrifuge", args, assumed=assumed)]
+
+
 _MACROS = {"transfer": _plan_transfer, "mix_by_pipetting": _plan_mix,
-           "serial_dilution": _plan_serial, "weigh_sample": _plan_weigh}
+           "serial_dilution": _plan_serial, "weigh_sample": _plan_weigh,
+           "centrifuge": _plan_centrifuge}
 
 #: Skills each scene family runs. A step whose ops belong to another family is
 #: out of scope for this scene ("other_scene") and compiles as its own task.
-FAMILY_SKILLS = {"weigh": frozenset({"weigh_sample"})}
-FAMILIES = ("pipetting", "weigh")
+FAMILY_SKILLS = {"weigh": frozenset({"weigh_sample"}), "centrifuge": frozenset({"centrifuge"})}
+FAMILIES = ("pipetting", "weigh", "centrifuge")
 
 
 def _scene_of(step, action: str | None) -> str | None:
@@ -489,7 +517,7 @@ def plan_protocol(protocol_grounding, family: str = "pipetting") -> PlannedProgr
     """Plan every step of a grounded protocol into one program for one scene.
 
     family picks the scene the program runs in: "pipetting" (the default:
-    the protein and culture benches) or "weigh" (the balance bench). Steps
+    the protein and culture benches), "weigh" (the balance bench) or "centrifuge". Steps
     another scene runs are out of scope here with reason "other_scene".
     """
     if family not in FAMILIES:

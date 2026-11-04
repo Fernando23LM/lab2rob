@@ -149,3 +149,81 @@ def test_scoring_tiers_follow_the_judges_tolerance():
 def test_build_refuses_masses_outside_the_vial(tmp_path):
     with pytest.raises(build.BuildError):
         build.build_weigh_task(tmp_path / "out", {"target_g": 3.0})
+
+
+@pytest.fixture(scope="module")
+def centrifuge_dir(tmp_path_factory):
+    """A vendored centrifuge task folder with a frozen instance (no demo run)."""
+    out = tmp_path_factory.mktemp("centrifuge")
+    build.vendor(out, "centrifuge")
+    instance = {"schema": "robocurve-bench-instance/1", "family": "centrifuge", "seed": 0,
+                "layout": build.default_centrifuge_layout(), "scoring": {}, "run_limit_steps": 400,
+                "control_hz": 20}
+    (out / "instance.json").write_text(json.dumps(instance))
+    instance.update(build._run(out, "hashes"))
+    (out / "instance.json").write_text(json.dumps(instance))
+    return out
+
+
+def test_centrifuge_scene_keeps_the_arms_action_layout(centrifuge_dir):
+    assert (centrifuge_dir / "assets" / "centrifuge_02" / "ATTRIBUTION.md").is_file()
+    out = _py(centrifuge_dir, """
+import json, task
+s = task.TaskSession()
+print(json.dumps([s.env.model.nu, round(s.env.lid_angle(), 1), s.measure()]))""")
+    nu, lid, got = out
+    assert nu == 14 and lid == -8.6
+    assert got["where"] == {"tube_a": "rack", "tube_b": "rack"} and got["seated"] == 0
+
+
+def test_centrifuge_idle_scores_zero_and_replays_agree(centrifuge_dir):
+    out = _py(centrifuge_dir, """
+import json, task
+s = task.TaskSession()
+s.step(s.command(), n=30)
+print(json.dumps([s.replay(s.trajectory()), task.TaskSession().replay(s.trajectory())]))""")
+    a, b = out
+    assert a["score"] == 0.0 and a["reason"] == "no tube seated in a slot"
+    assert a["state_sha"] == b["state_sha"]
+
+
+@pytest.mark.parametrize("slots,lid,where,want", [
+    ({"tube_a": 1, "tube_b": 5}, True, {}, 1.0),
+    ({"tube_a": 1, "tube_b": 5}, False, {}, 0.6),
+    ({"tube_a": 1, "tube_b": None}, False, {}, 0.3),
+    ({"tube_a": 1, "tube_b": 2}, False, {}, 0.3),
+    ({"tube_a": 1, "tube_b": 2}, True, {}, 0.0),
+    ({"tube_a": 1, "tube_b": None}, True, {}, 0.0),
+    ({"tube_a": None, "tube_b": None}, False, {}, 0.0),
+    ({"tube_a": None, "tube_b": None}, True, {}, 0.0),
+    ({"tube_a": 1, "tube_b": 5}, False, {"tube_b": "elsewhere"}, 0.3),
+])
+def test_centrifuge_scoring_rules_match_the_task_text(centrifuge_dir, slots, lid, where, want):
+    got = _py(centrifuge_dir, f"""
+import json, task
+slots = {slots!r}
+seated = sorted(k for k in slots.values() if k is not None)
+where = {{t: ("slot" if k is not None else "rack") for t, k in slots.items()}}
+where.update({where!r})
+fake = {{"slots": slots, "where": where, "seated": len(seated), "lid_deg": 90 if {lid} else -8.6,
+         "balanced": len(seated) == 2 and seated[1] - seated[0] == 4, "lid_closed": {lid}}}
+s = task.TaskSession()
+s.measure = lambda: fake
+print(json.dumps(s.score()))""")
+    assert got["score"] == want, got["reason"]
+
+
+def test_centrifuge_task_json_and_compile():
+    from lab2rob.robocurve.compile import compile_candidates
+    spec = build.centrifuge_task_json({"speed": "12,000 x g"}, build.default_centrifuge_layout(), 4200, 1.0)
+    assert not [k for k in build.REQUIRED if k != "media" and not spec.get(k)]
+    for word in ("microcentrifuge", "rotor", "lid", "tube rack", "1.5 mL", "YAM"):
+        assert word in spec["setup"]
+    assert "opposite slots" in spec["scoring"] and "at most 0.3" in spec["scoring"]
+    assert not any(build.IDENTIFYING.search(str(v)) for v in spec.values())
+    records = compile_candidates(_raw("Add 100 uL of buffer to the tube.",
+                                      "Centrifuge the tubes at 12,000 x g for 5 min.",
+                                      "Spin the conical tubes at 300 g for 5 min."), "centrifuge")
+    assert [(r["source"]["step"], r["accepted"], r["reason"].split(":")[0]) for r in records] == [
+        (2, True, ""), (3, False, "missing_asset")]
+    assert records[0]["source"]["speed"] == "12,000 x g" and records[0]["source"]["time_s"] == 300.0

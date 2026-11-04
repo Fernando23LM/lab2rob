@@ -99,9 +99,9 @@ def compile_protocol(protocol, client=None) -> dict:
             scene = {"ok": False, "reason": e.reason, "detail": e.detail[:120]}
         except Exception as e:  # noqa: BLE001
             scene = {"ok": False, "reason": type(e).__name__, "detail": str(e)[:120]}
-    weighings = _weighings(grounding)
+    candidates = {family: _family_candidates(grounding, family) for family in TASK_FAMILIES}
     return {
-        "weighings": weighings,
+        "candidates": candidates,
         "protocol_id": raw.protocol_id, "dataset": raw.dataset, "title": raw.title,
         "url": raw.source_url, "license": raw.license, "n_steps": len(steps),
         "n_rules_grounded": sum(s["status"] == "grounded" for s in steps),
@@ -117,15 +117,18 @@ def compile_protocol(protocol, client=None) -> dict:
     }
 
 
-def _weighings(grounding) -> list:
-    """Each weighing op, planned for the weighing scene: accepted or why not."""
-    from lab2rob.build.scene import SceneRejected, build_scene, weigh_programs
+#: Task families and the skill whose ops become their tasks.
+TASK_FAMILIES = {"weigh": "weigh_sample", "centrifuge": "centrifuge"}
+
+
+def _family_candidates(grounding, family: str) -> list:
+    """Each op of the family's skill, planned for its scene: accepted or why not."""
+    from lab2rob.build.scene import SceneRejected, build_scene, skill_programs
     out = []
-    for single in weigh_programs(plan_protocol(grounding, family="weigh")):
+    for single in skill_programs(plan_protocol(grounding, family=family), TASK_FAMILIES[family]):
         step = next(s for s in single.steps if s.status == "planned")
         args = step.ops[0]["args"]
-        row = {"step": step.idx, "mass_g": args.get("mass_g"), "reagent": args.get("reagent"),
-               "accepted": False, "reason": ""}
+        row = {"step": step.idx, **{k: v for k, v in args.items()}, "accepted": False, "reason": ""}
         try:
             build_scene(single, seed=0)
             row["accepted"] = True
@@ -268,16 +271,17 @@ def summarize(records: list, corpus_stats: dict) -> dict:
         "liquid_steps": sum(s["liquid"] for s in steps),
         "fully_planned_protocols": sum(1 for r in ok if r["n_steps"] and not r["blockers"]),
         "protocols_with_segment": sum(1 for r in ok if r["segments"]),
-        "weighing": {
-            "ops": sum(len(r.get("weighings", [])) for r in ok),
-            "protocols": sum(1 for r in ok if r.get("weighings")),
-            "accepted_ops": sum(w["accepted"] for r in ok for w in r.get("weighings", [])),
-            "protocols_accepted": sum(1 for r in ok if any(w["accepted"] for w in r.get("weighings", []))),
-            "rejected": dict(Counter(w["reason"] for r in ok for w in r.get("weighings", [])
+        "families": {family: {
+            "ops": sum(len(r.get("candidates", {}).get(family, [])) for r in ok),
+            "protocols": sum(1 for r in ok if r.get("candidates", {}).get(family)),
+            "accepted_ops": sum(w["accepted"] for r in ok for w in r.get("candidates", {}).get(family, [])),
+            "protocols_accepted": sum(1 for r in ok if any(w["accepted"] for w in
+                                                         r.get("candidates", {}).get(family, []))),
+            "rejected": dict(Counter(w["reason"] for r in ok for w in r.get("candidates", {}).get(family, [])
                                      if not w["accepted"]).most_common()),
             "accepted": [{"protocol_id": r["protocol_id"], "title": r["title"], "url": r["url"], **w}
-                         for r in ok for w in r.get("weighings", []) if w["accepted"]][:200],
-        },
+                         for r in ok for w in r.get("candidates", {}).get(family, []) if w["accepted"]][:200],
+        } for family in TASK_FAMILIES},
         "segments": sum(r["segments"] for r in ok),
         "scene": dict(Counter("ok" if r["scene"]["ok"] else
                               f"{r['scene']['reason']}: {r['scene']['detail'][:60]}"
@@ -384,15 +388,19 @@ def write_report(out_dir: Path, summary: dict) -> Path:
         "| add | unlocks | protocols with a segment after |", "|---|---|---|",
         *[f"| {u['add']} | {u['unlocks']} | {u['protocols_with_segment']} |"
           for u in s["unlock"]],
-        "", "## Weighing tasks", "",
-        f"Weighing steps planned for the balance bench: {s['weighing']['ops']} in "
-        f"{s['weighing']['protocols']} protocols; {s['weighing']['accepted_ops']} accepted (in "
-        f"{s['weighing']['protocols_accepted']} protocols): a salt within the vial's range.", "",
-        "| rejected because | weighings |", "|---|---|",
-        *[f"| {k} | {v} |" for k, v in s["weighing"]["rejected"].items()],
-        "", "| protocol | title | step | mass | reagent |", "|---|---|---|---|---|",
-        *[f"| [{w['protocol_id']}]({w['url']}) | {w['title'][:60]} | {w['step']} | {w['mass_g']:g} g | "
-          f"{w['reagent']} |" for w in s["weighing"]["accepted"][:25]],
+        "", "## Task families", "",
+        "Steps planned for each task scene, and how many its scene builder accepts.", "",
+        "| family | ops | in protocols | accepted | in protocols | rejected because |",
+        "|---|---|---|---|---|---|",
+        *[f"| {f} | {v['ops']} | {v['protocols']} | {v['accepted_ops']} | {v['protocols_accepted']} | "
+          f"{', '.join(f'{k} {n}' for k, n in v['rejected'].items()) or '-'} |"
+          for f, v in s["families"].items()],
+        *[line for f, v in s["families"].items() for line in (
+            ["", f"Accepted {f} candidates (first 15):", "", "| protocol | title | step | parameters |",
+             "|---|---|---|---|"]
+            + [f"| [{w['protocol_id']}]({w['url']}) | {w['title'][:55]} | {w['step']} | "
+               f"{', '.join(f'{k}={w[k]}' for k in w if k not in ('protocol_id', 'title', 'url', 'step', 'accepted', 'reason') and w[k] is not None)} |"
+               for w in v["accepted"][:15]])],
         "", "## LLM pass sizing", "",
         f"- needs_llm steps in total: {s['llm_pass']['needs_llm_steps_total']} "
         f"(about ${s['llm_pass']['est_usd_all']} at placeholder prices)",

@@ -163,3 +163,18 @@ def test_judge_checks_the_balance_for_each_weighing():
     touched = PREDICATES["mass_on_balance"]({"balance_g": 0.9, "pan_touched": True}, 0.9, 0.15)
     assert ok.passed and not touched.passed
     assert not PREDICATES["mass_on_balance"]({}, 0.9, 0.15).passed
+
+
+def test_judge_checks_a_balanced_rotor_and_a_shut_lid():
+    from lab2rob.ground.rules import Grounding
+    from types import SimpleNamespace
+    step = Grounding(idx=2, source_text="Spin the four tubes at 1000 rpm.", action="centrifuge",
+                     status="grounded", by="rules")
+    judge = plan_judge(SimpleNamespace(protocol_id="t", title="t", description="", steps=[step]))
+    assert [(p.pred, p.target) for p in judge.steps[0].predicates] == [("rotor_balanced", 4.0),
+                                                                        ("lid_closed", None)]
+    ok = {"slots": {"a": 1, "b": 5}, "balanced": True, "lid_closed": True, "lid_deg": 90}
+    assert PREDICATES["rotor_balanced"](ok, 2).passed and PREDICATES["lid_closed"](ok).passed
+    off = {"slots": {"a": 1, "b": 2}, "balanced": False, "lid_closed": False, "lid_deg": -8.6}
+    assert not PREDICATES["rotor_balanced"](off, 2).passed and not PREDICATES["lid_closed"](off).passed
+    assert not PREDICATES["rotor_balanced"]({"slots": {"a": 1}}, 2).passed

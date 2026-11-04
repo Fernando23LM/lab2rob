@@ -14,9 +14,6 @@ declared_skills:
   - name: blot_dry
     kind: action
     description: Remove residual liquid by blotting.
-  - name: centrifuge
-    kind: action
-    description: Spin samples to separate phases or pellet (Autoprotocol op spin).
   - name: change_tip
     kind: action
     description: Eject the used tip and fit a fresh one (no tip model in the sim yet).
