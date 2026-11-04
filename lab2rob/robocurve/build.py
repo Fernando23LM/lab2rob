@@ -30,7 +30,11 @@ import numpy as np
 REPO = Path(__file__).resolve().parents[2]
 RUNTIME = Path(__file__).resolve().parent / "runtime"
 #: Asset folders (under runtime/assets) each family's scene loads.
-FAMILY_ASSETS = {"weigh": (), "centrifuge": ("centrifuge_02",)}
+FAMILY_ASSETS = {"weigh": (), "centrifuge": ("centrifuge_02",), "prep_spin": ("centrifuge_02",)}
+#: Runtime family modules each family imports besides its own.
+FAMILY_MODULES = {"prep_spin": ("centrifuge_family.py",)}
+#: biolab files each family needs besides BIOLAB_FILES.
+FAMILY_BIOLAB = {"prep_spin": ("liquid.py", "protein.py")}
 BIOLAB = REPO / "Code-as-a-Policy-Evolving-Skill"
 BIOLAB_FILES = ("__init__.py", "env.py", "scene.py", "judge.py", "api.py")
 YAM_DIR = Path("third_party") / "mujoco_menagerie" / "i2rt_yam"
@@ -66,7 +70,7 @@ class BuildError(Exception):
 def vendor(out: Path, family: str = "weigh") -> dict:
     """Copy the runtime and the simulator files into the task folder."""
     out.mkdir(parents=True, exist_ok=True)
-    for name in ("task.py", "rc_base.py", f"{family}_family.py"):
+    for name in ("task.py", "rc_base.py", f"{family}_family.py", *FAMILY_MODULES.get(family, ())):
         shutil.copy2(RUNTIME / name, out / name)
     if (out / "assets").exists():
         shutil.rmtree(out / "assets")
@@ -76,7 +80,8 @@ def vendor(out: Path, family: str = "weigh") -> dict:
     if sim.exists():
         shutil.rmtree(sim)
     (sim / "biolab").mkdir(parents=True)
-    for name in BIOLAB_FILES:
+    biolab_files = BIOLAB_FILES + FAMILY_BIOLAB.get(family, ())
+    for name in biolab_files:
         shutil.copy2(BIOLAB / "biolab" / name, sim / "biolab" / name)
     shutil.copytree(BIOLAB / YAM_DIR, sim / YAM_DIR,
                     ignore=shutil.ignore_patterns("*.png", "CHANGELOG.md"))
@@ -84,7 +89,7 @@ def vendor(out: Path, family: str = "weigh") -> dict:
                             capture_output=True, text=True).stdout.strip()
     (sim / "SOURCE.md").write_text(
         "# Simulator files\n\n"
-        f"- `biolab/`: {', '.join(BIOLAB_FILES)} from the biolab simulator at commit "
+        f"- `biolab/`: {', '.join(biolab_files)} from the biolab simulator at commit "
         f"`{commit or 'unknown'}`, unchanged.\n"
         "- `third_party/mujoco_menagerie/i2rt_yam/`: the I2RT YAM arm model from MuJoCo "
         "Menagerie (MIT, see its LICENSE).\n", encoding="utf-8")
@@ -262,7 +267,7 @@ def _build_folder(out: Path, family: str, instance: dict, make_spec, source: dic
     instance.update(_run(out, "hashes"))
     probe = subprocess.run([sys.executable, "-c",
                             "import json,task;s=task.TaskSession(check=False);"
-                            "print(json.dumps([list(task.ACTION_NAMES), s.cameras()]))"],
+                            "print(json.dumps([list(s.action_names), s.cameras()]))"],
                            cwd=out, capture_output=True, text=True, check=True)
     instance["action"], cameras = json.loads(probe.stdout.strip().splitlines()[-1])
     (out / "instance.json").write_text(json.dumps(instance, indent=1), encoding="utf-8")
@@ -422,6 +427,139 @@ def build_centrifuge_task(out_dir, source: dict, video: bool = True) -> dict:
                                                   "speed", "time_s") if k in source}}
     return _build_folder(Path(out_dir), "centrifuge", instance,
                          lambda limit, score, inst: centrifuge_task_json(source, layout, limit, score),
+                         source, video)
+
+
+# -------------------------------------------------------------------- prep_spin
+def prep_spin_instance(source: dict) -> dict:
+    """Layout, reagents and scoring for a prep-then-spin task, from its compiled additions.
+
+    One trough per distinct reagent (an addition repeated in two steps draws twice from it),
+    and the reagent's target is the sum of its additions, with their judge tolerances summed.
+    """
+    ps = _runtime_module("prep_spin_family")
+    names = list(dict.fromkeys(a["name"] for a in source["additions"]))
+    if len(names) > 2:
+        raise BuildError(f"{len(names)} reagents; the prep bench sets out 2 reagent troughs")
+    trough = {n: f"reagent_{i + 1}" for i, n in enumerate(names)}
+    layout = ps.layout_to_json(ps.PrepLayout(troughs=(*trough.values(), ps.WATER)))
+    reagents = [{"name": a["name"], "trough": trough[a["name"]], "volume_ul": float(a["volume_ul"]),
+                 "step": a["step"]} for a in source["additions"]]
+    targets = {}
+    for a in source["additions"]:
+        t = targets.setdefault(a["name"], {"target_ul": 0.0, "tol_ul": 0.0})
+        t["target_ul"] = round(t["target_ul"] + float(a["volume_ul"]), 6)
+        t["tol_ul"] = round(t["tol_ul"] + float(a["tol_ul"]), 6)
+    return {"layout": layout, "reagents": reagents, "scoring": {"reagents": targets}}
+
+
+def _ul(v: float) -> str:
+    return f"{v:g}"
+
+
+def prep_spin_setup_text(instance: dict) -> str:
+    cf = _runtime_module("centrifuge_family")
+    ps = _runtime_module("prep_spin_family")
+    from biolab import scene as sc
+    lay = ps.layout_from(instance["layout"])
+
+    def place(xy):
+        x, y = xy
+        side = "left" if y > 0 else "right"
+        lat = f"{_cm(abs(y))} cm {side} of the midline" if abs(y) > 1e-4 else "on the midline"
+        return f"{_cm(x - sc.ARM_BASE['left'][0])} cm in front of the arm bases, {lat}"
+
+    rotor = lay.to_world(cf.ROTOR_C)
+    tubes = {n: lay.rack.cell_xy(c) for n, c in lay.tubes.items()}
+    troughs = {w.name: w for w in lay.trough_wells()}
+    held = {}
+    for r in instance["reagents"]:
+        held[r["trough"]] = r["name"]
+    contents = "; ".join(f"the {i + 1}{'st' if i == 0 else 'nd' if i == 1 else 'rd'} trough, "
+                         f"{place(troughs[t].center)}, holds {held.get(t, 'water')}"
+                         for i, t in enumerate(lay.troughs))
+    (x0, x1), (y0, y1) = cf.BODY
+    return (
+        f"Two I2RT YAM arms (6 joints and a parallel gripper each) stand on a flat, rigid, matte bench "
+        f"(90 x 120 cm), facing the same way, their bases {_cm(2 * sc.ARM_BASE['left'][1])} cm apart; "
+        f"positions are measured from the line through the bases, left and right as seen from behind "
+        f"the arms (the screenshot faces the arms, so its left is their right). The right gripper holds "
+        f"a single-channel 200 uL pipette straight down, with a tip on; its plunger is the task's 15th "
+        f"action (the volume drawn into the tip, 0 to 200 uL). A reagent reservoir of "
+        f"{len(lay.troughs)} square troughs ({_cm(ps.TROUGH_OPENING)} cm openings, "
+        f"{_cm(ps.TROUGH_DEPTH)} cm deep) stands on the right arm's side: {contents}. A teal plastic "
+        f"tube rack ({lay.rack.n} cells of {_cm(cf.RACK_HOLE)} cm, {_cm(cf.RACK_PITCH)} cm pitch) is "
+        f"centred {place(lay.rack.xy)}, between the arms. Two empty open 1.5 mL tubes "
+        f"({_cm(2 * (ps.TUBE_IN_R + ps.TUBE_WALL))} cm across, {_cm(ps.TUBE_H)} cm tall) stand in it: "
+        f"the sample tube, with a yellow band, {place(tubes[ps.SAMPLE])}, and the balance tube, with a "
+        f"blue band, {place(tubes[ps.BALANCE])}. A white plastic benchtop microcentrifuge "
+        f"({_cm(x1 - x0)} x {_cm(y1 - y0)} cm, body {_cm(cf.RIM_Z)} cm tall) has its rotor centred "
+        f"{place(rotor)}, on the left arm's side; its lid is hinged on the side towards the left arm and "
+        f"stands open, leaning back {abs(np.degrees(cf.LID_OPEN)):.1f} degrees from upright, and latches "
+        f"when pressed flat. The rotor has {cf.SLOT_COUNT} vertical slots for 1.5 mL tubes, evenly spaced "
+        f"on a {_cm(cf.SLOT_RADIUS)} cm radius, with rims {_cm(cf.SLOT_TOP)} cm above the bench. Both "
+        f"arms start at their home pose; the left gripper is open.")
+
+
+def prep_spin_task_json(source: dict, instance: dict, run_limit: int, demo_score: float) -> dict:
+    ps = _runtime_module("prep_spin_family")
+    minutes = run_limit / 20 / 60
+    adds = source["additions"]
+    recipe = " then ".join(f"{_ul(a['volume_ul'])} uL of {a['name']}" for a in adds)
+    total = sum(a["volume_ul"] for a in adds)
+    targets = instance["scoring"]["reagents"]
+    checks = "; ".join(f"{n}: {_ul(t['target_ul'])} +- {_ul(t['tol_ul'])} uL" for n, t in targets.items())
+    speed = f" ({source['speed']})" if source.get("speed") else ""
+    return {
+        "title": "Add reagents to a sample tube, balance it, and centrifuge it",
+        "category": "Impact on jobs",
+        "keywords": ["bimanual", "multi-step", "pipetting", "insertion", "balancing", "articulated lid",
+                     "laboratory", "centrifuge"],
+        "instruction": (f"Pipette {recipe} into the yellow sample tube. Fill the blue balance tube with "
+                        f"water to the same volume. Load both tubes into opposite slots of the centrifuge "
+                        f"and close the lid."),
+        "context": (f"Adding reagents to a tube and spinning it down is one of the most common runs of "
+                    f"steps in published wet-lab protocols; these {len(adds) + 1} steps are published "
+                    f"ones{speed}. The tube must hold the right volumes before the spin, and the rotor "
+                    f"must be balanced by a tube of matching volume opposite it before the lid is shut."),
+        "setup": prep_spin_setup_text(instance),
+        "scoring": (
+            f"Judged when the lid first latches (it is shut when within 5 degrees of flat), or 1 s after "
+            f"the last action if it never does. A tube is in a slot when it stands within 10 degrees of "
+            f"upright with its bottom on the slot's floor. The balance tube matches when it holds liquid "
+            f"within 10% of the sample tube's volume (the sample should total {_ul(total)} uL). Score 0 "
+            f"if the lid shuts while the two tubes are not in opposite slots (four apart) or the balance "
+            f"tube does not match. Otherwise the score is the sum of: 0.4 times the fraction of reagents "
+            f"whose volume in the sample tube is within tolerance ({checks}), and 0 for this part if the "
+            f"sample tube holds anything else; 0.2 if the balance tube matches; 0.2 if the tubes are in "
+            f"opposite slots; 0.2 if the lid is shut. The score is at most 0.5 if more than "
+            f"{_ul(ps.SPILL_CAP_UL)} uL is spilled, and at most 0.3 if a tube ends anywhere but the rack "
+            f"or the centrifuge."),
+        "run_limit": f"{run_limit:,} steps ({minutes:.1f} minutes at 20 Hz)".replace(".0 minutes", " minutes"),
+        "reset_notes": ("Empty and dry both tubes, stand them back in rack cells 1 and 3, refill the troughs "
+                        "as described, put a fresh tip on the pipette and open the lid until it rests back "
+                        "on its stop."),
+        "fidelity": ("Approximate: liquids are bookkeeping (volumes move between wells, tip and tubes when "
+                     "the tip is in the liquid; a tip moved out of a well while dispensing spills), not "
+                     "fluid simulation; the pipette's plunger is a commanded action, not pressed by a "
+                     "finger; the rotor's slots are vertical and nothing spins; collision shapes are "
+                     "simplified boxes inside the centrifuge's visual model; the lid latches by a holding "
+                     "torque once within 10 degrees of flat; the grippers are position-controlled springs "
+                     "with a 40 N limit. Other actions in the published steps (mixing, incubating) are "
+                     "left out."),
+        "scores": f"Dream-1 run: not run yet; demo: {demo_score:.1f}",
+    }
+
+
+def build_prep_spin_task(out_dir, source: dict, video: bool = True) -> dict:
+    """Write and validate one multi-step task folder (pipette, balance, spin); returns a build report."""
+    if not source.get("additions"):
+        raise BuildError("no additions before the spin; build it with --family centrifuge")
+    instance = prep_spin_instance(source)
+    instance["source"] = {k: source[k] for k in ("protocol_id", "dataset", "url", "step", "tubes",
+                                                 "speed", "time_s", "additions") if k in source}
+    return _build_folder(Path(out_dir), "prep_spin", instance,
+                         lambda limit, score, inst: prep_spin_task_json(source, inst, limit, score),
                          source, video)
 
 

@@ -5,7 +5,8 @@ build       compile a protocol and build a task folder from one accepted candida
 check       what a task folder still needs before a pull request
 
 Families: weigh (weigh out a salt, two arms), centrifuge (load a microcentrifuge balanced and
-shut the lid). `weighings` and `build-weigh` are kept as shorthands for --family weigh.
+shut the lid), prep_spin (multi-step: pipette the reagents of the steps before a spin into a
+sample tube, make a matching balance tube, load both opposite and shut the lid). `weighings` and `build-weigh` are kept as shorthands for --family weigh.
 """
 
 from __future__ import annotations
@@ -14,12 +15,13 @@ import argparse
 import json
 import sys
 
-from lab2rob.robocurve.build import (BuildError, build_centrifuge_task, build_weigh_task,
-                                     check_task)
-from lab2rob.robocurve.compile import FAMILY_SKILL, compile_candidates, load_raw
+from lab2rob.robocurve.build import (BuildError, build_centrifuge_task, build_prep_spin_task,
+                                     build_weigh_task, check_task)
+from lab2rob.robocurve.compile import FAMILIES, compile_family, load_raw
 
-BUILDERS = {"weigh": build_weigh_task, "centrifuge": build_centrifuge_task}
-SHOWN = ("step", "target_g", "reagent", "full_g", "tubes", "speed", "time_s", "assumed")
+BUILDERS = {"weigh": build_weigh_task, "centrifuge": build_centrifuge_task,
+            "prep_spin": build_prep_spin_task}
+SHOWN = ("step", "target_g", "reagent", "full_g", "tubes", "speed", "time_s", "assumed", "additions")
 
 
 def _summary(record: dict) -> dict:
@@ -35,12 +37,12 @@ def main(argv=None) -> int:
         p = sub.add_parser(name, help="a protocol's task candidates for one family")
         p.add_argument("protocol", help="protocol id (BioProBench, cached protocols.io, or BioProt)")
         if name == "candidates":
-            p.add_argument("--family", required=True, choices=sorted(FAMILY_SKILL))
+            p.add_argument("--family", required=True, choices=sorted(FAMILIES))
     for name in ("build", "build-weigh"):
         b = sub.add_parser(name, help="build a task folder from a compiled candidate")
         b.add_argument("protocol")
         if name == "build":
-            b.add_argument("--family", required=True, choices=sorted(FAMILY_SKILL))
+            b.add_argument("--family", required=True, choices=sorted(FAMILIES))
         b.add_argument("--out", required=True, help="the task folder to write (tasks/<name>/)")
         b.add_argument("--candidate", type=int, default=None,
                        help="which candidate (its position in `candidates`); default the first accepted")
@@ -55,7 +57,7 @@ def main(argv=None) -> int:
         return 1 if problems else 0
 
     family = getattr(args, "family", None) or "weigh"
-    records = compile_candidates(load_raw(args.protocol), family)
+    records = compile_family(load_raw(args.protocol), family)
     if args.cmd in ("candidates", "weighings"):
         for i, record in enumerate(records):
             print(i, json.dumps(_summary(record)))

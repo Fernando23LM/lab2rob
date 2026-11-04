@@ -227,3 +227,108 @@ def test_centrifuge_task_json_and_compile():
     assert [(r["source"]["step"], r["accepted"], r["reason"].split(":")[0]) for r in records] == [
         (2, True, ""), (3, False, "missing_asset")]
     assert records[0]["source"]["speed"] == "12,000 x g" and records[0]["source"]["time_s"] == 300.0
+
+
+# --------------------------------------------------------------------- prep_spin
+PREP_SOURCE = {"protocol_id": "p1", "step": 3, "speed": "11,000 x g", "additions": [
+    {"name": "lysis solution", "volume_ul": 60.0, "tol_ul": 3.0, "step": 1},
+    {"name": "precipitation solution", "volume_ul": 20.0, "tol_ul": 1.0, "step": 2}]}
+
+
+def test_compile_prep_spin_takes_the_additions_before_a_spin():
+    from lab2rob.robocurve.compile import compile_prep_spin
+    records = compile_prep_spin(_raw(
+        "Add 60 uL lysis solution, vortex 5 seconds.",
+        "Add 20 uL ethanol, vortex 5 seconds.",
+        "Centrifuge the tubes at 11,000 x g for 3 min.",
+        "Add 50 uL ethanol and 100 uL isopropanol, mix well.",
+        "Centrifuge the tubes at 11,000 x g for 3 min.",
+        "Centrifuge the tubes at 11,000 x g for 1 min."))
+    got = [(r["source"]["step"], r["additions"], r["accepted"], r["reason"].split(":")[0]) for r in records]
+    # A spin straight after another spin has no additions: the centrifuge family's task, not listed.
+    assert got == [(3, [1, 2], True, ""), (5, [4], False, "ambiguous")]
+    adds = records[0]["source"]["additions"]
+    assert [(a["name"], a["volume_ul"], a["tol_ul"]) for a in adds] == [
+        ("lysis solution", 60.0, 3.0), ("ethanol", 20.0, 1.0)]
+    assert records[0]["built"].family == "centrifuge"
+
+
+def test_prep_spin_instance_and_task_json():
+    inst = build.prep_spin_instance(PREP_SOURCE)
+    assert inst["layout"]["troughs"] == ["reagent_1", "reagent_2", "water"]
+    assert [r["trough"] for r in inst["reagents"]] == ["reagent_1", "reagent_2"]
+    assert inst["scoring"]["reagents"]["lysis solution"] == {"target_ul": 60.0, "tol_ul": 3.0}
+    twice = build.prep_spin_instance({"additions": [dict(PREP_SOURCE["additions"][0], step=1),
+                                                    dict(PREP_SOURCE["additions"][0], step=2)]})
+    assert twice["layout"]["troughs"] == ["reagent_1", "water"]
+    assert twice["scoring"]["reagents"]["lysis solution"] == {"target_ul": 120.0, "tol_ul": 6.0}
+    spec = build.prep_spin_task_json(PREP_SOURCE, inst, 13200, 1.0)
+    assert not [k for k in build.REQUIRED if k != "media" and not spec.get(k)]
+    assert "60 uL of lysis solution then 20 uL of precipitation solution" in spec["instruction"]
+    for word in ("pipette", "15th action", "microcentrifuge", "troughs", "balance tube"):
+        assert word in spec["setup"] + spec["instruction"]
+    assert "lysis solution: 60 +- 3 uL" in spec["scoring"] and "Score 0" in spec["scoring"]
+    assert not any(build.IDENTIFYING.search(str(v)) for v in spec.values())
+    with pytest.raises(build.BuildError):
+        build.build_prep_spin_task("unused", {"additions": []})
+
+
+@pytest.fixture(scope="module")
+def prep_dir(tmp_path_factory):
+    """A vendored prep_spin task folder with a frozen instance (no demo run)."""
+    out = tmp_path_factory.mktemp("prep_spin")
+    build.vendor(out, "prep_spin")
+    instance = {"schema": "robocurve-bench-instance/1", "family": "prep_spin", "seed": 0,
+                **build.prep_spin_instance(PREP_SOURCE), "run_limit_steps": 400, "control_hz": 20}
+    (out / "instance.json").write_text(json.dumps(instance))
+    instance.update(build._run(out, "hashes"))
+    (out / "instance.json").write_text(json.dumps(instance))
+    return out
+
+
+def test_prep_spin_scene_starts_ready_and_idle_scores_zero(prep_dir):
+    out = _py(prep_dir, """
+import json, task
+s = task.TaskSession()
+got = s.measure()
+s.step(s.command(), n=30)
+print(json.dumps([len(s.action_names), s.env.model.nu, got, s.replay(s.trajectory()),
+                  task.TaskSession().replay(s.trajectory())]))""")
+    n_actions, nu, got, a, b = out
+    assert n_actions == 15 and nu == 14
+    assert got["where"] == {"sample": "rack", "balance": "rack"} and got["spin"] is None
+    assert got["tubes"]["sample"]["volume_ul"] == 0.0
+    assert a["score"] == 0.0 and a["state_sha"] == b["state_sha"]
+
+
+def _prep_state(sample, balance, opposite, where=None):
+    tube = lambda reagents: {"volume_ul": sum(reagents.values()), "reagents": reagents}
+    return {"slots": {}, "where": where or {"sample": "slot", "balance": "slot"}, "opposite": opposite,
+            "tubes": {"sample": tube(sample), "balance": tube(balance)}}
+
+
+GOOD = {"lysis solution": 60.0, "precipitation solution": 20.0}
+
+
+@pytest.mark.parametrize("state,spun,spilled,want", [
+    (_prep_state(GOOD, {"water": 80.0}, True), True, 0.0, 1.0),
+    (_prep_state(GOOD, {"water": 80.0}, True), False, 0.0, 0.8),
+    (_prep_state({"lysis solution": 60.0}, {"water": 60.0}, True), True, 0.0, 0.8),
+    (_prep_state(dict(GOOD, ethanol=5.0), {"water": 85.0}, True), True, 0.0, 0.6),
+    (_prep_state(GOOD, {"water": 40.0}, True), True, 0.0, 0.0),
+    (_prep_state(GOOD, {"water": 80.0}, False), True, 0.0, 0.0),
+    (_prep_state(GOOD, {"water": 80.0}, False), False, 0.0, 0.6),
+    (_prep_state(GOOD, {"water": 80.0}, True), True, 12.0, 0.5),
+    (_prep_state(GOOD, {}, False, {"sample": "rack", "balance": "elsewhere"}), False, 0.0, 0.3),
+    (_prep_state({}, {}, False, {"sample": "rack", "balance": "rack"}), False, 0.0, 0.0),
+])
+def test_prep_spin_scoring_rules_match_the_task_text(prep_dir, state, spun, spilled, want):
+    got = _py(prep_dir, f"""
+import json, task
+state = {state!r}
+fake = dict(state, lid_deg=0.0, lid_closed={spun}, spilled_ul={spilled},
+            spin=(dict(state, time=1.0) if {spun} else None))
+s = task.TaskSession()
+s.measure = lambda: fake
+print(json.dumps(s.score()))""")
+    assert got["score"] == want, got["reason"]
