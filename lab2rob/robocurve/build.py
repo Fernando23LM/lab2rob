@@ -109,15 +109,16 @@ def weigh_setup_text(layout: dict) -> str:
         f"Two I2RT YAM arms (6 joints and a parallel gripper each) stand on a flat, rigid, matte bench "
         f"({_cm(2 * 0.45)} x {_cm(2 * 0.60)} cm), facing the same way, their bases "
         f"{_cm(2 * sc.ARM_BASE['left'][1])} cm apart; positions are measured from the line through the bases, "
-        f"left and right as seen from behind the arms. "
-        f"A stock rack (rigid plastic, {st['nx']} x {st['ny']} square cells of {_cm(hole)} cm, "
+        f"left and right as seen from behind the arms (the screenshot faces the arms, so its left is "
+        f"their right). "
+        f"A teal stock rack (rigid plastic, {st['nx']} x {st['ny']} square cells of {_cm(hole)} cm, "
         f"{_cm(pitch)} cm pitch, {_cm(height)} cm tall) is centred {place(*st['xy'])}, reachable by the left "
-        f"arm only. A hand-over rack (the same, {ho['nx']} x {ho['ny']} cells) is centred {place(*ho['xy'])}, "
+        f"arm only. A purple hand-over rack (the same, {ho['nx']} x {ho['ny']} cells) is centred {place(*ho['xy'])}, "
         f"reachable by both arms. An open plastic vial ({_cm(2 * sc.TUBE_RADIUS)} cm across, "
         f"{_cm(sc.TUBE_LENGTH)} cm tall, 30 g; solid except a {_cm(sc.CUP_DEPTH)} cm deep cup in its top, "
         f"{_cm(2 * sc.CUP_RADIUS)} cm across at the floor and flaring 20 degrees) stands in the stock rack's "
         f"cell {place(*cell)}, holding {TOTAL_SALT_G:.2f} g of coarse salt (68 grains, 2.8 to 3.6 mm). "
-        f"A balance (0.01 g readability; a {_cm(0.07)} cm square base and a {_cm(0.09)} cm square pan whose "
+        f"A grey balance (0.01 g readability; a {_cm(0.07)} cm square base and a {_cm(0.09)} cm square pan whose "
         f"top is {_cm(sc.PAN_TOP)} cm above the bench) is centred {place(*bal)}, reachable by the right arm "
         f"only; a square polystyrene weigh boat ({_cm(sc.BOAT_SIZE)} cm inside, {_cm(sc.BOAT_RIM)} cm rim) "
         f"sits on the pan, and the balance is tared with it. Both arms start at their home pose with "
@@ -156,7 +157,7 @@ def weigh_task_json(target_g: float, source: dict, layout: dict, run_limit: int,
                      "salt rather than fine crystals; the balance is a pan on a stiff spring read through a "
                      "0.5 s average; the vial is a solid cylinder with a cup in its top; the grippers are "
                      "position-controlled springs with a 40 N limit; no static, drafts or vibration."),
-        "scores": f"Dream-1 run: not run yet; demo: {demo_score:g}",
+        "scores": f"Dream-1 run: not run yet; demo: {demo_score:.1f}",
     }
 
 
@@ -314,10 +315,13 @@ def build_weigh_task(out_dir, source: dict, seed: int = 0, video: bool = True) -
                                                {"score": score_s, "demo": demo_s,
                                                 "mujoco": mujoco.__version__, "numpy": numpy.__version__},
                                                source), encoding="utf-8")
+    for cache in out.rglob("__pycache__"):  # not part of the submission
+        shutil.rmtree(cache, ignore_errors=True)
     report = {"out": str(out), "demo": demo, "run_limit_steps": run_limit,
               "score_seconds": round(score_s, 1), "demo_seconds": round(demo_s, 1),
               "problems": check_task(out)}
-    (out / ".build.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+    # The build report stays out of the submission folder.
+    out.with_name(out.name + ".build.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     return report
 
 
