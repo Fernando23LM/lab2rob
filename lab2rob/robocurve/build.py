@@ -360,7 +360,8 @@ def centrifuge_setup_text(layout: dict) -> str:
         f"Two I2RT YAM arms (6 joints and a parallel gripper each) stand on a flat, rigid, matte bench "
         f"(90 x 120 cm), facing the same way, their bases {_cm(2 * sc.ARM_BASE['left'][1])} cm apart; "
         f"positions are measured from the line through the bases, left and right as seen from behind "
-        f"the arms. A white plastic benchtop microcentrifuge ({_cm(x1 - x0)} x {_cm(y1 - y0)} cm, body "
+        f"the arms (the screenshot faces the arms, so its left is their right). A white plastic "
+        f"benchtop microcentrifuge ({_cm(x1 - x0)} x {_cm(y1 - y0)} cm, body "
         f"{_cm(cf.RIM_Z)} cm tall) has its rotor centred {place(rotor)}; its lid is hinged on the side "
         f"towards the left arm and stands open, leaning back {abs(np.degrees(cf.LID_OPEN)):.1f} degrees "
         f"from upright (the lid is {_cm(0.117)} cm long and {_cm(0.021)} cm thick, and latches when "
@@ -371,8 +372,8 @@ def centrifuge_setup_text(layout: dict) -> str:
         f"{_cm(cf.RACK_HEIGHT)} cm tall) is centred {place(lay.rack.xy)}. Two capped 1.5 mL plastic "
         f"tubes ({_cm(2 * cf.TUBE_R)} cm across, {_cm(cf.TUBE_BODY + cf.CAP_H)} cm tall, "
         f"{1000 * cf.TUBE_MASS:.0f} g with their sample; yellow and blue caps) stand in the rack's cells "
-        f"{' and '.join(str(c + 1) for c in lay.tubes.values())} (counted from the arms' right), at "
-        f"{place(cells[0])} and {place(cells[1])}. Both arms start at their home pose with the grippers "
+        f"{' and '.join(str(c + 1) for c in lay.tubes.values())} (counted from the end nearest the arms): "
+        f"{place(cells[0])}, and {place(cells[1])}. Both arms start at their home pose with the grippers "
         f"open.")
 
 

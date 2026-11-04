@@ -138,28 +138,37 @@ budget (and at the client's daily cap). The latest sweep's report is
 
 ## Robocurve tasks (`lab2rob/robocurve/`)
 
-The compiler plans a protocol for one scene at a time: the pipetting
-benches (the default) or the weighing bench. `weigh_sample` is a registered
-skill: the planner binds each stated mass and its reagent, the independent
-judge writes a balance check (`mass_on_balance`, tolerance at least 0.15 g)
-from the step alone, and the scene builder accepts one salt weighing of
-0.5 to 1.8 g per scene and rejects anything else with a reason. Steps of the
-other scene are out of scope with reason `other_scene`.
+The compiler plans a protocol for one scene at a time: the pipetting benches
+(the default), the weighing bench, or the centrifuge bench. Steps of another
+scene are out of scope with reason `other_scene`. Each task family is a
+registered skill, a planner binding, an independent judge check and a scene
+builder that rejects what its scene cannot represent:
+
+| family | skill | judge checks | scene accepts |
+|---|---|---|---|
+| weigh | `weigh_sample` (mass, reagent) | `mass_on_balance` | one salt weighing of 0.5-1.8 g |
+| centrifuge | `centrifuge` (tubes, speed, time) | `rotor_balanced`, `lid_closed` | one spin of two 1.5 mL tubes |
+
+The centrifuge is LabUtopia's Centrifuge_02 (CC BY-NC 4.0), converted from
+USD by `robocurve/assets/convert_labutopia_centrifuge.py`; its collision
+shapes, lid hinge and latch are new. Nothing spins: the task is loading the
+rotor balanced and shutting the lid, two arms.
 
 ```bash
-python -m lab2rob.robocurve weighings Protocol.io-2332      # each weighing, accepted or why not
-python -m lab2rob.robocurve build-weigh Protocol.io-2332 --out tasks/weigh-salt
-python -m lab2rob.robocurve check tasks/weigh-salt         # what is left before a pull request
+python -m lab2rob.robocurve candidates Protocol-exchange-1154 --family centrifuge
+python -m lab2rob.robocurve build Protocol-exchange-1154 --family centrifuge --out tasks/centrifuge
+python -m lab2rob.robocurve check tasks/centrifuge
 ```
 
-`build-weigh` writes a folder for `robocurve/benchmark-tasks`: `task.json`,
-`README.md`, `task.py` (20 Hz runtime and scorer), the simulator files, the
-frozen `instance.json`, the scripted demo (`demo.npz`, H.264 `demo.mp4`) and
-`setup.png`. The demo is the weighing skill's reference script; the build
-fails unless it scores 1.0 in two agreeing fresh replays and doing nothing
-scores 0. In the BioProBench sweep, 291 weighings in 177 protocols reach the
-weighing bench and 2 are accepted: most masses are outside what the 2.4 g
-vial holds, and agarose or PEG powders are not modelled.
+`build` writes a folder for `robocurve/benchmark-tasks`: `task.json`,
+`README.md`, `task.py` (the 20 Hz runtime and scorer) with the family's
+module and assets, the simulator files, the frozen `instance.json`, the
+scripted demo (`demo.npz`, H.264 `demo.mp4`) and `setup.png`. It fails
+unless the demo scores 1.0 in two agreeing fresh replays and doing nothing
+scores 0. In the BioProBench sweep, 2 of 307 weighings are accepted (most
+masses are outside the vial's range, and powders are not modelled), and
+10,466 of 15,519 spins (5,042 name tubes, plates or flasks the microcentrifuge
+cannot take); every accepted candidate of a family is the same task.
 
 ## Metrics
 
