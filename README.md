@@ -179,6 +179,16 @@ builder that rejects what its scene cannot represent:
 |---|---|---|---|
 | weigh | `weigh_sample` (mass, reagent) | `mass_on_balance` | one salt weighing of 0.5-1.8 g |
 | centrifuge | `centrifuge` (tubes, speed, time) | `rotor_balanced`, `lid_closed` | one spin of two 1.5 mL tubes |
+| prep_spin (multi-step) | the additions before a spin, then `centrifuge` | `volume` per addition, `rotor_balanced`, `lid_closed` | 1-2 named reagents of 2-1000 uL, then a 1.5 mL tube spin |
+
+**Multi-step tasks (`prep_spin`).** The most common run of steps across scenes in the
+corpus is pipetting followed by a spin. `compile_prep_spin` takes the addition steps
+immediately before each centrifugation, each with one named reagent and one volume
+the judge checks. The task is to pipette them into a sample tube (right arm,
+pipette), fill a balance tube with water to match, load both opposite (left arm) and
+shut the lid. It is judged when the lid latches, so the order matters: shutting the
+lid on an unbalanced load scores 0, and a tube missing a reagent loses that part.
+Steps that add several liquids at once, or name none, are rejected as ambiguous.
 
 The centrifuge is LabUtopia's Centrifuge_02 (CC BY-NC 4.0), converted from
 USD by `robocurve/assets/convert_labutopia_centrifuge.py`; its collision
@@ -189,6 +199,7 @@ rotor balanced and shutting the lid, two arms.
 python -m lab2rob.robocurve candidates Protocol-exchange-1154 --family centrifuge
 python -m lab2rob.robocurve build Protocol-exchange-1154 --family centrifuge --out tasks/centrifuge
 python -m lab2rob.robocurve check tasks/centrifuge
+python -m lab2rob.robocurve build Protocol-exchange-758 --family prep_spin --out tasks/prep-spin
 ```
 
 `build` writes a folder for `robocurve/benchmark-tasks`: `task.json`,
@@ -263,7 +274,8 @@ list and narration script for the full ~3-minute narrated cut.
 - Pipetting tasks use a commanded plunger: a real YAM gripper holding a
   pipette cannot press it, so they are not yet real-world reproducible (a
   side grasp with a second-arm press is the planned fix). The weighing and
-  centrifuge tasks use only the arms' 14 joint and gripper targets.
+  centrifuge tasks use only the arms' 14 joint and gripper targets; the
+  multi-step prep_spin tasks pipette, so they have the plunger as a 15th action.
 - The weighing bench models coarse salt only (no powders) and one 2.4 g vial;
   the centrifuge's slots are vertical and nothing spins.
 - The centrifuge meshes are CC BY-NC 4.0 (LabUtopia); the biolab simulator
@@ -278,8 +290,8 @@ list and narration script for the full ~3-minute narrated cut.
 ## Next steps
 
 - Score the rules grounder on the full WLP corpus (precision/recall).
-- Next task families: snap caps (modelled already), then a protocol
-  sequence across scenes (uncap, weigh into the tube, recap).
+- Next task families: snap caps (modelled already); longer sequences across
+  scenes (weigh into a tube, dissolve, spin).
 - Tube racks in the pipetting scenes (1,306 protocols rejected for lack of one).
 - Learn the remaining top gap skills (wash, vortex) through the evolve loop.
 - Camera perception for the remaining tasks; LabOP/Autoprotocol export.
