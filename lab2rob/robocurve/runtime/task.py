@@ -2,7 +2,8 @@
 """A Robocurve task: one frozen bench scene, two YAM arms at 20 Hz, and its scorer.
 
 This file is copied into every task folder next to ``instance.json`` (the frozen
-scene and its scoring parameters) and ``sim/`` (the simulator it runs on). It
+scene and its scoring parameters), its family module (``weigh_family.py``,
+``centrifuge_family.py``, ...) and ``sim/`` (the simulator it runs on). It
 depends only on numpy, mujoco and, for videos, imageio with ffmpeg.
 
     python task.py score --traj trajectory.npz             # two fresh replays, one score
@@ -19,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib
 import json
 import subprocess
 import sys
@@ -28,73 +30,21 @@ import numpy as np
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE / "sim"))
+sys.path.insert(0, str(HERE))
 
 import mujoco  # noqa: E402
 
-from biolab import judge  # noqa: E402
-from biolab.env import WeighEnv  # noqa: E402
-from biolab.scene import (ARM_JOINTS, ARMS, BOAT_SIZE, PAN_TOP, TUBE_LENGTH,  # noqa: E402
-                          Rack, WeighLayout)
+from biolab.scene import ARM_JOINTS, ARMS  # noqa: E402
+from rc_base import CONTROL_DT, CONTROL_HZ, model_sha  # noqa: E402,F401
 
-CONTROL_HZ = 20
-CONTROL_DT = 1.0 / CONTROL_HZ
 ACTION_NAMES = tuple([f"left_{j}" for j in ARM_JOINTS] + ["left_gripper"]
                      + [f"right_{j}" for j in ARM_JOINTS] + ["right_gripper"])
 SETTLE_STEPS = 20  # the scorer holds the last targets this long (1 s) before reading
 TRAJECTORY_FORMAT = "robocurve-bench-trajectory/1"
 
 
-# --------------------------------------------------------------------------- scene
-def layout_from(doc: dict) -> WeighLayout:
-    def rack(r):
-        return Rack(r["name"], tuple(r["xy"]), nx=r["nx"], ny=r["ny"], yaw=r["yaw"])
-    return WeighLayout(rack(doc["stock"]), rack(doc["handover"]), tuple(doc["balance"]),
-                       tuple(doc["cell"]), None)
-
-
-class _Env(WeighEnv):
-    """biolab's weighing bench, pinned to the instance and ticking at 20 Hz."""
-
-    READING_WINDOW = 10  # the display averages half a second (10 steps at 20 Hz)
-
-    def __init__(self, instance: dict, session: "TaskSession"):
-        self._instance, self._session = instance, session
-        super().__init__(seed=instance["seed"], randomize=False)
-
-    def _new_episode(self, rng):
-        super()._new_episode(rng)
-        self.layout = layout_from(self._instance["layout"])
-        self.task.target_g = float(self._instance["target_g"])
-        self.task.tolerance_g = float(self._instance["scoring"]["full_g"])
-
-    def step(self, seconds: float) -> None:  # every biolab motion ticks here
-        session = getattr(self, "_session", None)
-        n = max(1, round(float(seconds) / CONTROL_DT))
-        if session is None or not session._live:
-            sub = round(CONTROL_DT / self.model.opt.timestep)
-            for _ in range(n):
-                mujoco.mj_step(self.model, self.data, sub)
-                self._after_tick()
-            return
-        for _ in range(n):
-            session._tick()
-
-
-def model_sha(model) -> str:
-    """Every array and option of the model except the install paths of its meshes."""
-    h = hashlib.sha256()
-    for name in sorted(dir(model)):
-        if name.startswith("_") or name in ("paths", "npaths", "nbuffer") or name.endswith("_pathadr"):
-            continue
-        try:
-            value = getattr(model, name)
-        except Exception:  # noqa: BLE001
-            continue
-        if isinstance(value, np.ndarray):
-            h.update(name.encode() + np.ascontiguousarray(value).tobytes())
-        elif isinstance(value, (int, float, bool)):
-            h.update(name.encode() + repr(value).encode())
-    return h.hexdigest()[:16]
+def family_module(name: str):
+    return importlib.import_module(f"{name}_family")
 
 
 # ------------------------------------------------------------------------- session
@@ -104,6 +54,7 @@ class TaskSession:
     def __init__(self, instance=HERE / "instance.json", check: bool = True):
         self.instance = instance if isinstance(instance, dict) else json.loads(
             Path(instance).read_text(encoding="utf-8"))
+        self.family = family_module(self.instance["family"])
         self.run_limit = int(self.instance["run_limit_steps"])
         self._check = check
         self.env = None
@@ -114,8 +65,10 @@ class TaskSession:
         if self.env is not None and self.env._renderer is not None:
             self.env._renderer.close()
         self._live = False
-        self.env = _Env(self.instance, self)
+        self.env = self.family.make_env(self.instance, self)
         m = self.env.model
+        if m.nu != len(ACTION_NAMES):
+            raise RuntimeError(f"the scene has {m.nu} actuators, not the arms' {len(ACTION_NAMES)}")
         self._substeps = round(CONTROL_DT / m.opt.timestep)
         self._lo, self._hi = m.actuator_ctrlrange[:, 0].copy(), m.actuator_ctrlrange[:, 1].copy()
         self._rows: list = []
@@ -185,8 +138,7 @@ class TaskSession:
 
     # skills for scripted demos (the reference solution); they write rows like any policy
     def api(self) -> dict:
-        from biolab.api import WeighApi
-        return WeighApi(self.env).functions()
+        return self.family.api(self.env)
 
     def trajectory(self) -> dict:
         return {"rows": np.array(self._rows, dtype=np.float64).reshape(-1, len(ACTION_NAMES))}
@@ -210,82 +162,32 @@ class TaskSession:
         for arr in (d.qpos, d.qvel, d.act, d.ctrl, d.qacc_warmstart):
             h.update(np.ascontiguousarray(arr, dtype=np.float64).tobytes())
         h.update(np.float64(d.time).tobytes())
-        h.update(json.dumps([list(self.env._deflection), self.env._tare]).encode())
+        h.update(json.dumps(self.family.state_extra(self.env)).encode())
         return h.hexdigest()[:16]
 
     # ---------------------------------------------------------------------- scoring
-    def _grains(self) -> list:
-        m = self.env.model
-        return [b for b in range(m.nbody) if m.body(b).name.startswith(f"{self.env.VIAL}_grain_")]
-
     def measure(self) -> dict:
-        """What a person would measure: balance, salt left in the vial, spills, contacts."""
-        env, m, d = self.env, self.env.model, self.env.data
-        vial = d.body(env.VIAL)
-        frame = vial.xmat.reshape(3, 3)
-        bx, by = env.layout.balance
-        in_vial = on_boat = elsewhere = 0.0
-        for b in self._grains():
-            p, mass = d.xpos[b], float(m.body_mass[b])
-            local = frame.T @ (p - vial.xpos)
-            if np.hypot(local[0], local[1]) < 0.0145 and 0.058 < local[2] < 0.082:
-                in_vial += mass
-            elif (abs(p[0] - bx) < BOAT_SIZE / 2 and abs(p[1] - by) < BOAT_SIZE / 2
-                  and PAN_TOP - 0.004 < p[2] < PAN_TOP + 0.04):
-                on_boat += mass
-            else:
-                elsewhere += mass
-        pan = m.body("balance_pan").id
-        others = {b for b in range(m.nbody) if m.body(b).name.split("/")[0] in ARMS} | {vial.id}
-        touched = any({m.geom_bodyid[c.geom1], m.geom_bodyid[c.geom2]} & {pan}
-                      and {m.geom_bodyid[c.geom1], m.geom_bodyid[c.geom2]} & others
-                      for c in d.contact[: d.ncon])
-        tilt = float(np.degrees(np.arccos(np.clip(frame[2, 2], -1, 1))))
-        rack = env.layout.handover
-        in_handover = any(judge._in_cell(env, env.VIAL, rack, c) for c in rack.cells()) and tilt < 15
-        return {"reading_g": float(env.balance_reading()),
-                "salt_in_vial_g": round(in_vial * 1000, 3),
-                "salt_on_boat_g": round(on_boat * 1000, 3),
-                "salt_spilled_g": round(elsewhere * 1000, 3),
-                "pan_touched": bool(touched), "vial_tilt_deg": round(tilt, 1),
-                "vial_in_handover_rack": bool(in_handover)}
+        """What a person would measure on the bench (the family says what)."""
+        return self.family.measure(self.env)
 
     def score(self, over_limit: bool = False) -> dict:
         """The task's score, exactly as task.json's scoring text states it."""
-        s = self.instance["scoring"]
         if over_limit:
             return {"score": 0.0, "reason": f"over the run limit ({self.run_limit} steps)"}
         hold = self.command()
         self._live = False  # the settle window is the scorer's, not the policy's
-        sub = self._substeps
         for _ in range(SETTLE_STEPS):
             self.env.data.ctrl[:] = hold
-            mujoco.mj_step(self.env.model, self.env.data, sub)
+            mujoco.mj_step(self.env.model, self.env.data, self._substeps)
             self.env._after_tick()
         self._live = True
         got = self.measure()
-        target = float(self.instance["target_g"])
-        err = abs(got["reading_g"] - target)
         if self._error and "unstable" in self._error:
-            value, reason = 0.0, self._error
-        elif got["pan_touched"]:
-            value, reason = 0.0, "something other than salt touches the pan or the boat"
-        elif err <= s["full_g"]:
-            value, reason = 1.0, f"within {s['full_g']} g of the target"
-        elif err <= s["three_quarter_g"]:
-            value, reason = 0.75, f"within {s['three_quarter_g']} g"
-        elif err <= s["half_g"]:
-            value, reason = 0.5, f"within {s['half_g']} g"
-        elif got["reading_g"] >= s["some_salt_g"]:
-            value, reason = 0.25, f"at least {s['some_salt_g']} g on the boat"
-        elif got["vial_in_handover_rack"]:
-            value, reason = 0.1, "vial upright in the hand-over rack"
+            value, reason, extra = 0.0, self._error, {}
         else:
-            value, reason = 0.0, "no salt on the boat"
-        if got["salt_spilled_g"] > s["spill_cap_g"] and value > 0.5:
-            value, reason = 0.5, reason + f"; capped: {got['salt_spilled_g']} g spilled"
-        return {"score": value, "reason": reason, "target_g": target, "error_g": round(err, 3),
-                "steps": len(self._rows), "state_sha": self.state_sha(), **got}
+            value, reason, extra = self.family.score(got, self.instance)
+        return {"score": value, "reason": reason, **extra, "steps": len(self._rows),
+                "state_sha": self.state_sha(), **got}
 
 
 # --------------------------------------------------------------------- trajectories
@@ -322,7 +224,8 @@ def write_video(session: TaskSession, rows, path, camera: str = "bench", every: 
                 writer.append_data(session.render(camera, width, height))
         hold = session.command()
         for i in range(SETTLE_STEPS):
-            session.step(hold) if len(session._rows) < session.run_limit else None
+            if len(session._rows) < session.run_limit:
+                session.step(hold)
             if i % every == every - 1:
                 writer.append_data(session.render(camera, width, height))
     finally:
@@ -331,23 +234,8 @@ def write_video(session: TaskSession, rows, path, camera: str = "bench", every: 
 
 
 # ---------------------------------------------------------------------------- demo
-#: biolab's weighing script, with a gentler finish: salt leaves the vial in small
-#: avalanches, so it switches to creeping 0.45 g early, tilts 0.002 rad at a time,
-#: waits 1.5 s for the display each time, and stops within 0.05 g of the target.
-DEMO_POUR = (('get_balance()["reading_g"] < target - 0.3', 'get_balance()["reading_g"] < target - 0.45'),
-             ("tilt += 0.004", "tilt += 0.002"),
-             (">= target - 0.06", ">= target - 0.05"),
-             ("wait(0.8)", "wait(1.5)"))
-
-
-def demo_script() -> str:
-    from biolab.api import WEIGH_REFERENCE_POLICY
-    code = WEIGH_REFERENCE_POLICY
-    for old, new in DEMO_POUR:
-        if code.count(old) != 1:
-            raise RuntimeError(f"the reference script changed: {old!r} not found once")
-        code = code.replace(old, new)
-    return code
+def demo_script(session: TaskSession) -> str:
+    return session.family.demo_script()
 
 
 def run_demo(session: TaskSession) -> dict:
@@ -355,7 +243,7 @@ def run_demo(session: TaskSession) -> dict:
     session.reset()
     namespace = dict(session.api())
     namespace.update(np=np, print=lambda *a, **k: None)
-    exec(demo_script(), namespace)  # noqa: S102 - our own reference script
+    exec(demo_script(session), namespace)  # noqa: S102 - our own reference script
     return session.trajectory()
 
 
@@ -390,7 +278,7 @@ def _demo_main(args) -> int:
     save_trajectory(traj, out / "demo.npz")
     result = session.replay(traj)
     if not args.no_video:
-        write_video(session, traj["rows"], out / "demo.mp4")
+        write_video(session, traj["rows"], out / "demo.mp4", camera=session.family.CAMERA)
     print(json.dumps(result))
     return 0
 

@@ -26,7 +26,9 @@ import time
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
-RUNTIME = Path(__file__).resolve().parent / "runtime" / "task.py"
+RUNTIME = Path(__file__).resolve().parent / "runtime"
+#: Asset folders (under runtime/assets) each family's scene loads.
+FAMILY_ASSETS = {"weigh": (), "centrifuge": ("centrifuge_02",)}
 BIOLAB = REPO / "Code-as-a-Policy-Evolving-Skill"
 BIOLAB_FILES = ("__init__.py", "env.py", "scene.py", "judge.py", "api.py")
 YAM_DIR = Path("third_party") / "mujoco_menagerie" / "i2rt_yam"
@@ -59,10 +61,15 @@ class BuildError(Exception):
 
 
 # --------------------------------------------------------------------------- vendor
-def vendor(out: Path) -> dict:
+def vendor(out: Path, family: str = "weigh") -> dict:
     """Copy the runtime and the simulator files into the task folder."""
     out.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(RUNTIME, out / "task.py")
+    for name in ("task.py", "rc_base.py", f"{family}_family.py"):
+        shutil.copy2(RUNTIME / name, out / name)
+    if (out / "assets").exists():
+        shutil.rmtree(out / "assets")
+    for folder in FAMILY_ASSETS[family]:
+        shutil.copytree(RUNTIME / "assets" / folder, out / "assets" / folder)
     sim = out / "sim"
     if sim.exists():
         shutil.rmtree(sim)
