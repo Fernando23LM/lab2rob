@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import re
 
-from lab2rob.build.scene import SceneRejected, build_scene, skill_programs
+from lab2rob.build.scene import NOT_MICROTUBES, SceneRejected, build_scene, skill_programs
 from lab2rob.ground.rules import ground_protocol
 from lab2rob.specify.judge import plan_judge
 from lab2rob.specify.program import plan_protocol
@@ -80,16 +80,31 @@ def _is_addition(step) -> bool:
 
 #: A "reagent" the rules read that is really labware or a unit phrase: not a liquid to pour.
 NOT_REAGENT = re.compile(r"\b(column|tube|plate|well|flask|vial|dish|filter|bead|cell|pellet|"
-                         r"supernatant|sample|per)s?\b", re.I)
+                         r"supernatant|sample|per|mix|mixture|suspension|lysate|eluate|flow-through|"
+                         r"all|it|them)s?\b", re.I)
+#: An addition into something other than the 1.5 mL tube the bench sets out.
+NOT_INTO_TUBE = re.compile(NOT_MICROTUBES.pattern + r"|\bfilters?\b|\b(?:to|into|onto|in|per)\s+(?:\S+\s+){0,3}?wells?\b", re.I)
+#: The name right after a volume ("600 uL of 24:1 chloroform:isoamyl alcohol solution to ...").
+VOLUME_NAME = re.compile(
+    r"\d[\d.,]*\s*(?:[uµμ]l|ml)\b\)?\s+(?:of\s+)?(?:the\s+)?(?:\d+:\d+\s+\(v/v\)\s+)?"
+    r"(?!(?:to|into|onto|in|from)\b)(?P<name>[A-Za-z0-9][^,;.()]*?)(?=\s+(?:to|into|onto|in|and|for|at|from|stored|then|per|"
+    r"was|is|containing)\b|\s*[,;.(]|\s*$)", re.I)
 
 
 _TRAILING = re.compile(r"\s+(?:and|then|to|for|at|in|on|with|into|until)\b.*$", re.I)
 
 
 def _reagents(grounding) -> list:
-    """Reagent names the rules read, without stray punctuation or the words that follow a name."""
+    """The reagent an addition step names: the rules' reading when it is one name, else the
+    name right after the step's volume ("Add 1 ml of chilled acetone to the tube")."""
     names = [_TRAILING.sub("", str(n)).strip(" ()[],;.:") for n in getattr(grounding, "reagents", []) or []]
-    return list(dict.fromkeys(n for n in names if re.search(r"[A-Za-z]{2}", n)))
+    names = list(dict.fromkeys(n for n in names if re.search(r"[A-Za-z]{2}", n)))
+    if len(names) == 1:
+        return names
+    match = VOLUME_NAME.search(grounding.source_text or "")
+    if match and re.search(r"[A-Za-z]{2}", match.group("name")):
+        return [match.group("name").strip()]
+    return names
 
 
 def _volumes(grounding) -> int:
@@ -131,7 +146,7 @@ def prep_spin_records(raw, grounding) -> list:
                   "judge": judge, "built": None, "additions": [s.idx for s in run]}
         out.append(record)
         if not source.pop("checked"):
-            record["reason"] = "the judge has no check for the centrifugation"
+            record["reason"] = "unchecked: the judge has no check for the centrifugation"
             continue
         if len(run) > PREP_MAX_REAGENTS:
             record["reason"] = (f"over_capacity: {len(run)} additions before the spin; the bench sets "
@@ -144,14 +159,17 @@ def prep_spin_records(raw, grounding) -> list:
                                if op["skill"] == "dispense"), 6)
             check = next((p for p in preds.get(step.idx, []) if p.pred == "volume"
                           and abs(p.target - volume) < 1e-6), None)
-            if _volumes(grounded[step.idx]) > 1:
+            into = NOT_INTO_TUBE.search(texts.get(step.idx, ""))
+            if into:
+                problem = f"missing_asset: step {step.idx} adds into {into.group(0)}; the bench has one sample tube"
+            elif _volumes(grounded[step.idx]) > 1:
                 problem = f"ambiguous: step {step.idx} gives {_volumes(grounded[step.idx])} volumes"
             elif len(names) == 1 and NOT_REAGENT.search(names[0]):
                 problem = f"ambiguous: step {step.idx} adds {names[0]!r}, not a named reagent"
             elif len(names) != 1:
                 problem = f"ambiguous: step {step.idx} names {len(names)} reagents ({', '.join(names) or 'none'})"
             elif check is None:
-                problem = f"the judge has no volume check for step {step.idx}"
+                problem = f"unchecked: the judge has no volume check for step {step.idx}"
             elif not PREP_VOLUME_UL[0] <= volume <= PREP_VOLUME_UL[1]:
                 problem = (f"out_of_range: step {step.idx} adds {volume:g} uL "
                            f"(the bench takes {PREP_VOLUME_UL[0]:g} to {PREP_VOLUME_UL[1]:g} uL)")

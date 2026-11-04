@@ -332,3 +332,17 @@ s = task.TaskSession()
 s.measure = lambda: fake
 print(json.dumps(s.score()))""")
     assert got["score"] == want, got["reason"]
+
+
+def test_prep_spin_reads_names_after_volumes_and_rejects_columns():
+    from lab2rob.robocurve.compile import compile_prep_spin
+    records = compile_prep_spin(_raw(
+        "Add 1 ml of chilled acetone to the tube and keep it for 10 minutes at -20 C.",
+        "Centrifuge the tubes at 12,000 x g for 10 min.",
+        "Pipet 500 uL Buffer RPE onto the spin column.",
+        "Centrifuge for 1 min at 8,000 x g.",
+        "Transfer 500 uL to a new tube.",
+        "Centrifuge at 8,000 x g for 1 min."))
+    got = [(r["source"]["step"], r["accepted"], r["reason"].split(":")[0]) for r in records]
+    assert got == [(2, True, ""), (4, False, "missing_asset"), (6, False, "ambiguous")]
+    assert records[0]["source"]["additions"][0]["name"] == "chilled acetone"

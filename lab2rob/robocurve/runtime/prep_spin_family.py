@@ -94,6 +94,21 @@ class PrepLayout(cf.CentrifugeLayout):
         _add_block(spec, self.reservoir(), TROUGH_OPENING, TROUGH_WALL, TROUGH_DEPTH, [0.75, 0.8, 0.85, 1])
         # Liquid in the troughs, the pipette, and the "bench" camera over the whole bench.
         add_liquids_and_pipette(spec, self.trough_wells(), target=(0.0, -0.06, 0.03))
+        _frame_bench(spec, self)
+
+
+def _frame_bench(spec: mujoco.MjSpec, layout) -> None:
+    """Re-aim the "bench" camera so it frames the troughs, the rack and the centrifuge at once."""
+    ys = [layout.reservoir_xy[1], layout.rack.xy[1], layout.centrifuge_xy[1]]
+    target = np.array([0.02, (min(ys) + max(ys)) / 2, 0.03])
+    eye = target + [0.40, 0.0, 0.42]
+    forward = (target - eye) / np.linalg.norm(target - eye)
+    right = np.cross(forward, [0, 0, 1])
+    right /= np.linalg.norm(right)
+    quat = np.zeros(4)  # camera frame: x right, y up, looking down its -z
+    mujoco.mju_mat2Quat(quat, np.column_stack([right, np.cross(right, forward), -forward]).ravel())
+    cam = spec.camera("bench")
+    cam.pos, cam.quat, cam.fovy = eye, quat, 52
 
 
 def _add_open_tube(spec, name: str, xy, rgba) -> None:

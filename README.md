@@ -29,7 +29,9 @@ Built for the Meta Global AI Developer Hackathon (Indie track).
   weighing bench (68 simulated salt grains on a spring balance) and a
   microcentrifuge (LabUtopia's model converted to MuJoCo, with a hinged,
   latching lid). Each scene rejects what it cannot represent, with a reason.
-- **Two submission-ready benchmark tasks** in the Robocurve format, compiled
+- **Multi-step tasks across scenes.** Pipetting steps that run straight into a
+  spin compile into one task, scored at the spin: 534 accepted in 360 protocols.
+- **Three submission-ready benchmark tasks** in the Robocurve format, compiled
   from published protocol steps, each with a scripted full-score demo, a
   20 Hz runtime and a scorer a person can reproduce with a balance or a photo:
 
@@ -38,6 +40,12 @@ Built for the Meta Global AI Developer Hackathon (Indie track).
 | ![weighing setup](demo_assets/task_weigh_setup.png) | ![centrifuge setup](demo_assets/task_centrifuge_setup.png) |
 | [demo video](demo_assets/task_weigh_demo.mp4) · from "weigh out 0.9 g sodium chloride", a SARS-CoV-2 wastewater protocol | [demo video](demo_assets/task_centrifuge_demo.mp4) · from a microcentrifuge spin in a DNA extraction protocol |
 | Two arms: hand-over, then a closed-loop pour; full score within 0.15 g | Two arms: drop tubes into opposite slots, tip the lid shut; a lid shut on an unbalanced rotor scores 0 |
+
+| Multi-step: pipette two reagents, balance, spin |
+|---|
+| ![multi-step setup](demo_assets/task_prep_spin_setup.png) |
+| [demo video](demo_assets/task_prep_spin_demo.mp4) · three consecutive steps of an extracellular-vesicle RNA isolation protocol: add 60 uL lysis solution, add 20 uL protein precipitation solution, centrifuge at 11,000 g |
+| Right arm pipettes both reagents into the sample tube and water into a balance tube; left arm loads them opposite and shuts the lid. Judged at the spin: an unbalanced load scores 0 |
 
 ## How it works
 
@@ -221,8 +229,8 @@ cannot take); every accepted candidate of a family is the same task.
 | grounded by rules / executable | 27.3% of steps / 12.7% (8.4% liquid steps) |
 | task candidates | 1,949 pipetting protocols with a buildable scene; 1,130 with a 3+ step executable segment |
 | frozen pipetting tasks | 37 of the top 40 candidates (oracle passes, two fresh replays agree, idle fails) |
-| task families | weigh: 307 weighings, 2 accepted; centrifuge: 15,519 spins, 10,466 accepted |
-| Robocurve tasks | 2 built: weighing (demo 1.0, 3,299 steps) and centrifuge (demo 1.0, 2,094 steps) |
+| task families | weigh: 307 weighings, 2 accepted; centrifuge: 15,519 spins, 10,466 accepted; prep_spin (multi-step): 2,054 spins after additions, 534 accepted in 360 protocols |
+| Robocurve tasks | 3 built: weighing (demo 1.0, 3,299 steps), centrifuge (demo 1.0, 2,094 steps), multi-step pipette + balance + spin (demo 1.0, 8,132 steps) |
 | 42-protocol sweep (LLM) | 514 steps; 346 out-of-scope/ambiguous mined into 32 gap clusters |
 | LLM grounding fallback | 84 calls, $0.94 for the sweep |
 | learned skill | `dilute` macro in 3 evolve rounds, $0.27 |

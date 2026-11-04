@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build demo_assets/reel_tasks.mp4: protocol step -> compiled task -> robot demo, twice.
+"""Build demo_assets/reel_tasks.mp4: protocol step -> compiled task -> robot demo, for each task.
 
     python demo_assets/make_task_reel.py
 
@@ -55,17 +55,32 @@ CARDS = {
         ("Two arms: drop tubes into opposite slots, tip the lid shut. Unbalanced + shut = 0.", FONT, 24, FG),
         ("Scripted demo, 3x speed.", FONT, 22, DIM),
     ]),
+    "prep_spin": (8, [
+        ("3. Three steps in a row, across scenes", BOLD, 34, ACCENT),
+        ('"Add 60 uL Lysis Solution BF ..."  "Add 20 uL Protein Precipitation Solution BF ..."', FONT, 22, FG),
+        ('"Centrifuge at 11,000g for 3 minutes at room temperature."', FONT, 22, FG),
+        ("Extracellular-vesicle RNA isolation (Protocol Exchange)", FONT, 22, DIM),
+        ("", FONT, 14, FG),
+        ("compiled:  aspirate/dispense x2 -> centrifuge(tubes=2, speed=11,000g, time_s=180)", MONO, 22, FG),
+        ("judge:     volume(60 +- 3 uL), volume(20 +- 1 uL), rotor_balanced(2), lid_closed", MONO, 22, FG),
+        ("scene:     reagent troughs + tube rack + microcentrifuge   accepted", MONO, 22, OK),
+        ("", FONT, 14, FG),
+        ("Right arm pipettes both reagents, then a water balance; left arm loads and shuts the lid.", FONT, 23, FG),
+        ("Scored at the spin: unbalanced = 0. Scripted demo, 8x speed.", FONT, 22, DIM),
+    ]),
     "end": (6, [
         ("Benchmark-ready tasks", BOLD, 40, FG),
-        ("20 Hz control, the arms' 14 joint and gripper targets", FONT, 26, FG),
+        ("20 Hz control: the arms' 14 joint and gripper targets (+ the pipette plunger)", FONT, 26, FG),
         ("scored with a balance or a photo, partial credit for every outcome", FONT, 26, FG),
         ("Robocurve task format: task.json, scorer, frozen scene, demo, screenshot", FONT, 26, FG),
         ("", FONT, 20, FG),
-        ("Across the corpus: 307 weighings -> 2 accepted, 15,519 spins -> 10,466 accepted;", FONT, 24, DIM),
+        ("Across the corpus: 307 weighings -> 2 accepted, 15,519 spins -> 10,466 accepted,", FONT, 24, DIM),
+        ("2,054 pipette-then-spin runs -> 534 accepted multi-step tasks;", FONT, 24, DIM),
         ("every rejection says what the scene is missing.", FONT, 24, DIM),
     ]),
 }
-CLIPS = {"weigh": (HERE / "task_weigh_demo.mp4", 4.0), "centrifuge": (HERE / "task_centrifuge_demo.mp4", 3.0)}
+CLIPS = {"weigh": (HERE / "task_weigh_demo.mp4", 4.0), "centrifuge": (HERE / "task_centrifuge_demo.mp4", 3.0),
+         "prep_spin": (HERE / "task_prep_spin_demo.mp4", 8.0)}
 
 
 def card(lines) -> Image.Image:
@@ -90,7 +105,7 @@ def main() -> None:
     parts = []
     enc = ["-c:v", "libx264", "-pix_fmt", "yuv420p", "-r", str(FPS)]
     scale = f"scale={W}:{H}:force_original_aspect_ratio=decrease,pad={W}:{H}:(ow-iw)/2:(oh-ih)/2:color=black"
-    for name in ("title", "weigh", "centrifuge", "end"):
+    for name in ("title", "weigh", "centrifuge", "prep_spin", "end"):
         seconds, lines = CARDS[name]
         png = work / f"{name}.png"
         card(lines).save(png)
