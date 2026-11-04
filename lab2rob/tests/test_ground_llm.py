@@ -45,9 +45,9 @@ def test_llm_grounds_to_implemented_skill():
 
 
 def test_llm_declared_skill_becomes_not_implemented():
-    client = FakeClient(['{"skill": "centrifuge", "out_of_scope_reason": null, '
-                         '"ambiguous": false, "detail": "spin needed"}'])
-    out = ground_step_llm(make_step("Spin the tubes"), client)
+    client = FakeClient(['{"skill": "vortex", "out_of_scope_reason": null, '
+                         '"ambiguous": false, "detail": "mix needed"}'])
+    out = ground_step_llm(make_step("Vortex the tubes"), client)
     assert (out.status, out.reason) == ("out_of_scope", "not_implemented")
 
 
