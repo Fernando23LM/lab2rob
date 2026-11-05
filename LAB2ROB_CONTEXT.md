@@ -359,7 +359,7 @@ lab2rob produces four kinds of training data. The hackathon only needs dataset A
 5. **No privileged state in observations.** Simulator ground truth may be stored as labels/metadata, never
    inside the observation fields a policy trains on.
 6. **Sim-to-real readiness:** match camera names, control rate and action space to the real I2RT YAM setup
-   (Robocurve kit) so real demonstrations can be mixed into the same dataset later.
+   (the benchmark's recording kit) so real demonstrations can be mixed into the same dataset later.
 
 ---
 

@@ -6,8 +6,8 @@
 
 Robots for wet labs are judged on hand-made tasks: a few dozen scenarios someone
 wrote by hand, mostly two to four steps, rarely tied to how biologists actually work.
-Meanwhile thousands of real protocols sit on protocols.io as free text. There is no
-way to turn that text into robot tasks you can trust: tasks that are physically
+Meanwhile thousands of real protocols sit on protocols.io as free text, with no
+reliable way to turn that text into robot tasks you can trust: tasks that are physically
 runnable, scored by something other than the program that solves them, and honest
 about what they leave out.
 
@@ -35,8 +35,8 @@ tasks, in MuJoCo with two I2RT YAM arms.
 - **Grounding fallback:** steps the rules cannot read go to Muse Spark, schema-validated,
   retried once, and cost-logged under a daily cap (84 calls, $0.94 for a 42-protocol
   sweep).
-- **Visual certification:** a Meta vision model checks rendered keyframes against what
-  the program expects before a task is certified.
+- **Visual certification:** Muse Spark, with vision input, checks rendered keyframes
+  against what the program expects before a task is certified.
 - **Learning missing skills:** a self-evolving code-as-policy loop on Muse Spark learned
   the `dilute` skill from the coverage-gap queue in 3 rounds ($0.27).
 - **Spending only where it pays:** the corpus sweep sizes a targeted LLM pass before
@@ -46,9 +46,9 @@ tasks, in MuJoCo with two I2RT YAM arms.
 ## Results
 
 - **10,149 protocols** (BioProBench: protocols.io and Protocol Exchange), 246,169 steps,
-  compiled offline in about 100 s. 27% of steps grounded by rules alone, 12.7%
-  executable, every other step with a categorized reason. The report ranks which
-  missing capability unlocks the most protocols.
+  compiled offline in under 2.5 minutes on 3 CPU cores. 27% of steps are grounded by
+  rules alone and 12.7% are executable; every other step has a categorized reason. The
+  report ranks which missing capability unlocks the most protocols.
 - **37 of the 40 top pipetting candidates** freeze into validated tasks, up from 2,
   after the validation gate exposed pipette-aiming and planning bugs.
 - **Three scene families**: pipetting, weighing (68 simulated salt grains on a spring
@@ -99,8 +99,8 @@ tasks, in MuJoCo with two I2RT YAM arms.
 
 ```bash
 python -m lab2rob.coverage.corpus_sweep --out runs/sweep --workers 4
-python -m lab2rob.robocurve build Protocol-exchange-1154 --family centrifuge --out tasks/centrifuge
-python -m lab2rob.robocurve build Protocol-exchange-758 --family prep_spin --out tasks/prep-spin
+python -m lab2rob.bench build Protocol-exchange-1154 --family centrifuge --out tasks/centrifuge
+python -m lab2rob.bench build Protocol-exchange-758 --family prep_spin --out tasks/prep-spin
 ```
 
 ## Limitations
@@ -108,6 +108,6 @@ python -m lab2rob.robocurve build Protocol-exchange-758 --family prep_spin --out
 Liquids are bookkeeping, not fluid simulation. The pipetting tasks, including the
 multi-step one, use a commanded plunger that a real gripper-held pipette cannot
 reproduce. The multi-step tasks keep only the pipetting and the spin from their steps
-(mixing and incubating are left out), and take one or two reagents, one per step. The weighing bench models
-coarse salt only, and the centrifuge's slots are vertical and nothing spins. The
-centrifuge meshes are CC BY-NC 4.0 (LabUtopia).
+(mixing and incubating are left out), and take one or two reagents, one per step.
+The weighing bench models coarse salt only, and the centrifuge's slots are vertical
+and nothing spins. The centrifuge meshes are CC BY-NC 4.0 (LabUtopia).

@@ -348,7 +348,7 @@ assets:
       slot_depth_m: 0.0244
     affordances: [containable, openable, fixed]
     license: CC BY-NC 4.0 (LabUtopia Centrifuge_02 meshes; collision, hinge and latch new)
-    source: lab2rob/robocurve/runtime/centrifuge_family.py
+    source: lab2rob/bench/runtime/centrifuge_family.py
     demo_model: 'lab2rob/build/autobio/model/instrument/centrifuge_tiangen_tgear_mini.xml (AutoBio, UNLICENSED: demo only, build_scene(demo_props=True); skill stays declared)'
   - name: incubator_co2
     status: declared

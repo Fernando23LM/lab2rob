@@ -14,7 +14,7 @@ Built for the Meta Global AI Developer Hackathon (Indie track).
 ## Results at a glance
 
 - **Corpus scale, offline.** All 10,149 BioProBench protocols (246,169
-  steps) compile with the rules in about 100 s on 4 cores: 27% of steps
+  steps) compile with the rules in about 2.5 minutes on 3 cores: 27% of steps
   grounded by rules alone, 12.7% become executable robot programs, and every
   other step gets a categorized reason. The report ranks which missing
   capability unlocks the most protocols (centrifuge first: +854 protocols with
@@ -31,7 +31,7 @@ Built for the Meta Global AI Developer Hackathon (Indie track).
   latching lid). Each scene rejects what it cannot represent, with a reason.
 - **Multi-step tasks across scenes.** Pipetting steps that run straight into a
   spin compile into one task, scored at the spin: 611 accepted in 422 protocols.
-- **Three submission-ready benchmark tasks** in the Robocurve format, compiled
+- **Three submission-ready benchmark tasks** in a standard benchmark-task format, compiled
   from published protocol steps, each with a scripted full-score demo, a
   20 Hz runtime and a scorer a person can reproduce with a balance or a photo:
 
@@ -175,7 +175,7 @@ re-grounded with the LLM fallback, cheapest first, stopping before the
 budget (and at the client's daily cap). The latest sweep's report is
 `lab2rob/coverage/bioprobench_sweep.md`.
 
-## Robocurve tasks (`lab2rob/robocurve/`)
+## Benchmark tasks (`lab2rob/bench/`)
 
 The compiler plans a protocol for one scene at a time: the pipetting benches
 (the default), the weighing bench, or the centrifuge bench. Steps of another
@@ -199,18 +199,18 @@ lid on an unbalanced load scores 0, and a tube missing a reagent loses that part
 Steps that add several liquids at once, or name none, are rejected as ambiguous.
 
 The centrifuge is LabUtopia's Centrifuge_02 (CC BY-NC 4.0), converted from
-USD by `robocurve/assets/convert_labutopia_centrifuge.py`; its collision
+USD by `bench/assets/convert_labutopia_centrifuge.py`; its collision
 shapes, lid hinge and latch are new. Nothing spins: the task is loading the
 rotor balanced and shutting the lid, two arms.
 
 ```bash
-python -m lab2rob.robocurve candidates Protocol-exchange-1154 --family centrifuge
-python -m lab2rob.robocurve build Protocol-exchange-1154 --family centrifuge --out tasks/centrifuge
-python -m lab2rob.robocurve check tasks/centrifuge
-python -m lab2rob.robocurve build Protocol-exchange-758 --family prep_spin --out tasks/prep-spin
+python -m lab2rob.bench candidates Protocol-exchange-1154 --family centrifuge
+python -m lab2rob.bench build Protocol-exchange-1154 --family centrifuge --out tasks/centrifuge
+python -m lab2rob.bench check tasks/centrifuge
+python -m lab2rob.bench build Protocol-exchange-758 --family prep_spin --out tasks/prep-spin
 ```
 
-`build` writes a folder for `robocurve/benchmark-tasks`: `task.json`,
+`build` writes a self-contained benchmark task folder: `task.json`,
 `README.md`, `task.py` (the 20 Hz runtime and scorer) with the family's
 module and assets, the simulator files, the frozen `instance.json`, the
 scripted demo (`demo.npz`, H.264 `demo.mp4`) and `setup.png`. It fails
@@ -225,12 +225,12 @@ cannot take); every accepted candidate of a family is the same task.
 | metric | value |
 |---|---|
 | registry | 55 skills (20 implemented, 6 macros, 29 declared), 31 assets (25 implemented) |
-| corpus sweep (BioProBench) | 10,149 protocols, 246,169 steps, rules only, about 100 s on 4 cores |
+| corpus sweep (BioProBench) | 10,149 protocols, 246,169 steps, rules only, about 2.5 min on 3 cores |
 | grounded by rules / executable | 27.3% of steps / 12.7% (8.4% liquid steps) |
 | task candidates | 1,949 pipetting protocols with a buildable scene; 1,130 with a 3+ step executable segment |
 | frozen pipetting tasks | 37 of the top 40 candidates (oracle passes, two fresh replays agree, idle fails) |
 | task families | weigh: 307 weighings, 2 accepted; centrifuge: 15,519 spins, 10,466 accepted; prep_spin (multi-step): 2,054 spins after additions, 611 accepted in 422 protocols |
-| Robocurve tasks | 3 built: weighing (demo 1.0, 3,299 steps), centrifuge (demo 1.0, 2,094 steps), multi-step pipette + balance + spin (demo 1.0, 8,132 steps) |
+| benchmark tasks | 3 built: weighing (demo 1.0, 3,299 steps), centrifuge (demo 1.0, 2,094 steps), multi-step pipette + balance + spin (demo 1.0, 8,132 steps) |
 | 42-protocol sweep (LLM) | 514 steps; 346 out-of-scope/ambiguous mined into 32 gap clusters |
 | LLM grounding fallback | 84 calls, $0.94 for the sweep |
 | learned skill | `dilute` macro in 3 evolve rounds, $0.27 |
@@ -309,7 +309,7 @@ list and narration script for the full ~3-minute narrated cut.
 
 - `lab2rob/` — the compiler: `ingest/`, `ground/`, `specify/`, `build/`,
   `certify/`, `safety/`, `coverage/`, `eval/`, `export/`, `review/`, `llm/`,
-  `registry/`, `perception/`, `report/`, `sim/`, `robocurve/`, `cli.py`
+  `registry/`, `perception/`, `report/`, `sim/`, `bench/`, `cli.py`
 - `Code-as-a-Policy-Evolving-Skill/biolab/` — the MuJoCo simulator, tasks,
   reference policies, and evolve loop (pre-existing)
 - `runs/` — per-run inputs, traces, costs (never committed)

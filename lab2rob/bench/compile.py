@@ -1,4 +1,4 @@
-"""Protocol -> Robocurve task candidates, through the compiler.
+"""Protocol -> benchmark task candidates, through the compiler.
 
 compile_candidates grounds a protocol (rules), plans it for one scene family,
 writes the independent judge, and builds one scene per op of that family's

@@ -33,7 +33,7 @@ skills:
 - name: centrifuge
   status: macro
   kind: action
-  description: 'Centrifuge sample tubes (Autoprotocol op spin): load them into opposite rotor slots so it is balanced, then shut the lid. Runs in the centrifuge scene only; nothing spins, the speed and time are recorded. The expansion is the reference script in lab2rob/robocurve/runtime/centrifuge_family.py (DEMO).'
+  description: 'Centrifuge sample tubes (Autoprotocol op spin): load them into opposite rotor slots so it is balanced, then shut the lid. Runs in the centrifuge scene only; nothing spins, the speed and time are recorded. The expansion is the reference script in lab2rob/bench/runtime/centrifuge_family.py (DEMO).'
   params:
   - tubes
   - speed
@@ -431,7 +431,7 @@ skills:
 - name: weigh_sample
   status: macro
   kind: action
-  description: 'Weigh out a mass of a granular solid onto the balance''s weigh boat (Autoprotocol op weigh): one arm brings the vial to the shared rack, the other pours in small tilts, reading the balance, until it is within the target. Runs in the weighing scene only; the expansion is the reference script in lab2rob/robocurve/runtime/task.py (demo_script).'
+  description: 'Weigh out a mass of a granular solid onto the balance''s weigh boat (Autoprotocol op weigh): one arm brings the vial to the shared rack, the other pours in small tilts, reading the balance, until it is within the target. Runs in the weighing scene only; the expansion is the reference script in lab2rob/bench/runtime/task.py (demo_script).'
   params:
   - mass_g
   - reagent

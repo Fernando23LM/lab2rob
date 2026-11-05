@@ -1,4 +1,4 @@
-"""python -m lab2rob.robocurve candidates | build | check
+"""python -m lab2rob.bench candidates | build | check
 
 candidates  compile a protocol for a scene family and list its task candidates, accepted or why not
 build       compile a protocol and build a task folder from one accepted candidate
@@ -15,9 +15,9 @@ import argparse
 import json
 import sys
 
-from lab2rob.robocurve.build import (BuildError, build_centrifuge_task, build_prep_spin_task,
+from lab2rob.bench.build import (BuildError, build_centrifuge_task, build_prep_spin_task,
                                      build_weigh_task, check_task)
-from lab2rob.robocurve.compile import FAMILIES, compile_family, load_raw
+from lab2rob.bench.compile import FAMILIES, compile_family, load_raw
 
 BUILDERS = {"weigh": build_weigh_task, "centrifuge": build_centrifuge_task,
             "prep_spin": build_prep_spin_task}
@@ -31,7 +31,7 @@ def _summary(record: dict) -> dict:
 
 
 def main(argv=None) -> int:
-    ap = argparse.ArgumentParser(prog="python -m lab2rob.robocurve")
+    ap = argparse.ArgumentParser(prog="python -m lab2rob.bench")
     sub = ap.add_subparsers(dest="cmd", required=True)
     for name in ("candidates", "weighings"):
         p = sub.add_parser(name, help="a protocol's task candidates for one family")
