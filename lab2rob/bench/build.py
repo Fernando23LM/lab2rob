@@ -70,7 +70,7 @@ class BuildError(Exception):
 def vendor(out: Path, family: str = "weigh") -> dict:
     """Copy the runtime and the simulator files into the task folder."""
     out.mkdir(parents=True, exist_ok=True)
-    for name in ("task.py", "rc_base.py", f"{family}_family.py", *FAMILY_MODULES.get(family, ())):
+    for name in ("task.py", "bench_base.py", f"{family}_family.py", *FAMILY_MODULES.get(family, ())):
         shutil.copy2(RUNTIME / name, out / name)
     if (out / "assets").exists():
         shutil.rmtree(out / "assets")

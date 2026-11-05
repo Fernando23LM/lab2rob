@@ -23,7 +23,7 @@ import numpy as np
 from biolab.env import TubeRackEnv
 from biolab.scene import ARMS, _yaw_quat
 
-from rc_base import RoutedStep
+from bench_base import RoutedStep
 
 CAMERA = "bench"
 ASSETS = Path(__file__).resolve().parent / "assets" / "centrifuge_02"

@@ -35,7 +35,7 @@ sys.path.insert(0, str(HERE))
 import mujoco  # noqa: E402
 
 from biolab.scene import ARM_JOINTS, ARMS  # noqa: E402
-from rc_base import CONTROL_DT, CONTROL_HZ, model_sha  # noqa: E402,F401
+from bench_base import CONTROL_DT, CONTROL_HZ, model_sha  # noqa: E402,F401
 
 ACTION_NAMES = tuple([f"left_{j}" for j in ARM_JOINTS] + ["left_gripper"]
                      + [f"right_{j}" for j in ARM_JOINTS] + ["right_gripper"])
