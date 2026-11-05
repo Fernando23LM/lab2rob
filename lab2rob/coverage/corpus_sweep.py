@@ -123,8 +123,8 @@ TASK_FAMILIES = {"weigh": "weigh_sample", "centrifuge": "centrifuge"}
 
 
 def _prep_spin_candidates(raw, grounding) -> list:
-    """Multi-step candidates: the additions run into each spin (lab2rob.robocurve.compile)."""
-    from lab2rob.robocurve.compile import prep_spin_records
+    """Multi-step candidates: the additions run into each spin (lab2rob.bench.compile)."""
+    from lab2rob.bench.compile import prep_spin_records
     try:
         records = prep_spin_records(raw, grounding)
     except Exception as e:  # noqa: BLE001

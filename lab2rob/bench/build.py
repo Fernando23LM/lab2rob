@@ -1,6 +1,6 @@
-"""Build a Robocurve task folder (robocurve/benchmark-tasks, tasks/<name>/).
+"""Build a self-contained benchmark task folder (tasks/<name>/).
 
-    python -m lab2rob.robocurve build-weigh --out runs/robocurve/weigh-nacl \\
+    python -m lab2rob.bench build-weigh --out runs/bench/weigh-nacl \\
         --protocol Protocol.io-2332
 
 The folder is self-contained: ``task.py`` (the runtime and scorer), ``sim/``
@@ -9,8 +9,8 @@ scoring thresholds), ``demo.npz`` and ``demo.mp4`` (the scripted full-score
 demo), ``setup.png``, ``task.json`` and ``README.md``. Building fails unless the
 demo scores 1.0 in two fresh replays that agree and doing nothing scores 0.
 
-What it cannot make: the Dream-1 run video (Robocurve runs Dream-1) and the
-media ID (``tools/upload_media.py`` in the Robocurve repository writes it).
+What it cannot make: the Dream-1 run video (the benchmark runs Dream-1) and the
+media ID (the benchmark repository's ``tools/upload_media.py`` writes it).
 ``check_task`` lists what is still missing before a pull request.
 """
 
@@ -70,7 +70,7 @@ class BuildError(Exception):
 def vendor(out: Path, family: str = "weigh") -> dict:
     """Copy the runtime and the simulator files into the task folder."""
     out.mkdir(parents=True, exist_ok=True)
-    for name in ("task.py", "rc_base.py", f"{family}_family.py", *FAMILY_MODULES.get(family, ())):
+    for name in ("task.py", "bench_base.py", f"{family}_family.py", *FAMILY_MODULES.get(family, ())):
         shutil.copy2(RUNTIME / name, out / name)
     if (out / "assets").exists():
         shutil.rmtree(out / "assets")
@@ -260,7 +260,7 @@ def _build_folder(out: Path, family: str, instance: dict, make_spec, source: dic
     the demo scores 1.0 in two agreeing fresh replays and doing nothing scores 0.
     """
     info = vendor(out, family)
-    instance = {"schema": "robocurve-bench-instance/1", "family": family, "seed": 0,
+    instance = {"schema": "lab2rob-bench-instance/1", "family": family, "seed": 0,
                 "run_limit_steps": 20 * 60 * 20, "control_hz": 20, "action": None,
                 **instance, "biolab_commit": info["biolab_commit"]}
     (out / "instance.json").write_text(json.dumps(instance, indent=1), encoding="utf-8")
@@ -570,7 +570,7 @@ IDENTIFYING = re.compile(r"lab2rob|biolab|fernando|/home/|/users/|\\\\users\\\\|
 
 
 def check_task(task_dir) -> list:
-    """What still stands between this folder and a Robocurve pull request."""
+    """What still stands between this folder and a submission to the benchmark."""
     task_dir = Path(task_dir)
     problems = []
     try:

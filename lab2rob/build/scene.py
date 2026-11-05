@@ -285,7 +285,7 @@ def build_centrifuge_scene(program, seed: int = 0) -> BuiltScene:
 
     Rejected, never bent: a second centrifugation (compile each alone), a
     tube count the bench does not set out, or steps of another scene. The
-    layout itself is the runtime's (lab2rob/robocurve/runtime/centrifuge_family.py).
+    layout itself is the runtime's (lab2rob/bench/runtime/centrifuge_family.py).
     """
     spins = _skill_ops(program, "centrifuge")
     if not spins:

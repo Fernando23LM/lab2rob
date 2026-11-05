@@ -30,7 +30,7 @@ from biolab.protein import (BASE, TROUGH_DEPTH, TROUGH_OPENING, TROUGH_WALL, Pip
 from biolab.scene import Rack, _yaw_quat
 
 import centrifuge_family as cf
-from rc_base import RoutedStep
+from bench_base import RoutedStep
 
 CAMERA = "bench"
 EXTRA_ACTIONS = ("pipette_plunger",)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""A Robocurve task: one frozen bench scene, two YAM arms at 20 Hz, and its scorer.
+"""A benchmark task: one frozen bench scene, two YAM arms at 20 Hz, and its scorer.
 
 This file is copied into every task folder next to ``instance.json`` (the frozen
 scene and its scoring parameters), its family module (``weigh_family.py``,
@@ -35,12 +35,12 @@ sys.path.insert(0, str(HERE))
 import mujoco  # noqa: E402
 
 from biolab.scene import ARM_JOINTS, ARMS  # noqa: E402
-from rc_base import CONTROL_DT, CONTROL_HZ, model_sha  # noqa: E402,F401
+from bench_base import CONTROL_DT, CONTROL_HZ, model_sha  # noqa: E402,F401
 
 ACTION_NAMES = tuple([f"left_{j}" for j in ARM_JOINTS] + ["left_gripper"]
                      + [f"right_{j}" for j in ARM_JOINTS] + ["right_gripper"])
 SETTLE_STEPS = 20  # the scorer holds the last targets this long (1 s) before reading
-TRAJECTORY_FORMAT = "robocurve-bench-trajectory/1"
+TRAJECTORY_FORMAT = "lab2rob-bench-trajectory/1"
 
 
 def family_module(name: str):

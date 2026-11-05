@@ -1,4 +1,4 @@
-"""Robocurve task builder: vendored runtime, scoring rules, task.json and checks."""
+"""Benchmark task builder: vendored runtime, scoring rules, task.json and checks."""
 
 import json
 import subprocess
@@ -6,7 +6,7 @@ import sys
 
 import pytest
 
-from lab2rob.robocurve import build
+from lab2rob.bench import build
 
 
 @pytest.fixture(scope="module")
@@ -14,7 +14,7 @@ def task_dir(tmp_path_factory):
     """A vendored task folder with a frozen 0.9 g instance (no demo run)."""
     out = tmp_path_factory.mktemp("task")
     build.vendor(out)
-    instance = {"schema": "robocurve-bench-instance/1", "family": "weigh", "seed": 0,
+    instance = {"schema": "lab2rob-bench-instance/1", "family": "weigh", "seed": 0,
                 "layout": build.default_weigh_layout(), "target_g": 0.9,
                 "scoring": dict(build.WEIGH_SCORING), "run_limit_steps": 400, "control_hz": 20}
     (out / "instance.json").write_text(json.dumps(instance))
@@ -122,7 +122,7 @@ def _raw(*steps):
 
 
 def test_compile_weighings_goes_through_the_compiler():
-    from lab2rob.robocurve.compile import compile_weighings
+    from lab2rob.bench.compile import compile_weighings
     records = compile_weighings(_raw(
         "Using an analytical balance, weigh out 0.9 g sodium chloride (NaCl) and 4.0 g PEG 8000.",
         "Weigh 1 g agarose into a bottle.",
@@ -156,7 +156,7 @@ def centrifuge_dir(tmp_path_factory):
     """A vendored centrifuge task folder with a frozen instance (no demo run)."""
     out = tmp_path_factory.mktemp("centrifuge")
     build.vendor(out, "centrifuge")
-    instance = {"schema": "robocurve-bench-instance/1", "family": "centrifuge", "seed": 0,
+    instance = {"schema": "lab2rob-bench-instance/1", "family": "centrifuge", "seed": 0,
                 "layout": build.default_centrifuge_layout(), "scoring": {}, "run_limit_steps": 400,
                 "control_hz": 20}
     (out / "instance.json").write_text(json.dumps(instance))
@@ -214,7 +214,7 @@ print(json.dumps(s.score()))""")
 
 
 def test_centrifuge_task_json_and_compile():
-    from lab2rob.robocurve.compile import compile_candidates
+    from lab2rob.bench.compile import compile_candidates
     spec = build.centrifuge_task_json({"speed": "12,000 x g"}, build.default_centrifuge_layout(), 4200, 1.0)
     assert not [k for k in build.REQUIRED if k != "media" and not spec.get(k)]
     for word in ("microcentrifuge", "rotor", "lid", "tube rack", "1.5 mL", "YAM"):
@@ -236,7 +236,7 @@ PREP_SOURCE = {"protocol_id": "p1", "step": 3, "speed": "11,000 x g", "additions
 
 
 def test_compile_prep_spin_takes_the_additions_before_a_spin():
-    from lab2rob.robocurve.compile import compile_prep_spin
+    from lab2rob.bench.compile import compile_prep_spin
     records = compile_prep_spin(_raw(
         "Add 60 uL lysis solution, vortex 5 seconds.",
         "Add 20 uL ethanol, vortex 5 seconds.",
@@ -278,7 +278,7 @@ def prep_dir(tmp_path_factory):
     """A vendored prep_spin task folder with a frozen instance (no demo run)."""
     out = tmp_path_factory.mktemp("prep_spin")
     build.vendor(out, "prep_spin")
-    instance = {"schema": "robocurve-bench-instance/1", "family": "prep_spin", "seed": 0,
+    instance = {"schema": "lab2rob-bench-instance/1", "family": "prep_spin", "seed": 0,
                 **build.prep_spin_instance(PREP_SOURCE), "run_limit_steps": 400, "control_hz": 20}
     (out / "instance.json").write_text(json.dumps(instance))
     instance.update(build._run(out, "hashes"))
@@ -335,7 +335,7 @@ print(json.dumps(s.score()))""")
 
 
 def test_prep_spin_reads_names_after_volumes_and_rejects_columns():
-    from lab2rob.robocurve.compile import compile_prep_spin
+    from lab2rob.bench.compile import compile_prep_spin
     records = compile_prep_spin(_raw(
         "Add 1 ml of chilled acetone to the tube and keep it for 10 minutes at -20 C.",
         "Centrifuge the tubes at 12,000 x g for 10 min.",

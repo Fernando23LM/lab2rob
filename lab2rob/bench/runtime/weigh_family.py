@@ -8,7 +8,7 @@ from biolab import judge
 from biolab.env import WeighEnv
 from biolab.scene import ARMS, BOAT_SIZE, PAN_TOP, Rack, WeighLayout
 
-from rc_base import RoutedStep
+from bench_base import RoutedStep
 
 CAMERA = "bench"
 
